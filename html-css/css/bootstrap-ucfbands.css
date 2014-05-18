@@ -45,7 +45,7 @@ h3.line {
 	text-align: left;
 }
 
-.home-newsletter {
+.home-feature-fluid {
 	padding-top: 120px;
 	padding-bottom: 120px;
 	background-image: url(../images/fluid-bg-3.jpg);
@@ -54,19 +54,43 @@ h3.line {
 	background-attachment: fixed;
 }
 
-.home-newsletter .container {
+.home-feature-fluid .container {
 	padding-left: 120px;
 	padding-right: 120px;
 }
 
+footer {
+	background-color: #F5f5f5;
+}
 
+.social-icon {
+	display: inline-block;
+	margin-right: 5px;
+	padding-right: 17px;
+	color: #fff;
+	text-decoration: none;
+}
 
+.social-icon:hover {
+	text-decoration: none;
+	color: #fff;
+}
 
+.social-icon img {
+	margin-right: 4px;
+}
 
+.facebook-icon {
+	background-color: rgb(59,89,152);
+}
 
+.twitter-icon {
+	background-color: #00aced;
+}
 
-
-
+.youtube-icon {
+	background-color: #bb0000;
+}
 
 
 
