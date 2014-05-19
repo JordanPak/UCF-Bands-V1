@@ -1,6 +1,113 @@
-.navbar {
-	margin-bottom: 0px;
+/*===============================================*/
+/*        UCFBANDS TWITTER BOOSTRAP THEME        */
+/*===============================================*/
+/*	                                             */
+/*	Author: Jordan Pakrosnis (JpakMedia.com)     */
+/*	                                             */
+/*===============================================*/
+
+body {
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
 }
+
+
+/*================*/
+/*==  MAIN NAV  ==*/
+/*================*/
+
+/*==// NORMAL //==*/
+.navbar {
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #ffca06;
+	box-shadow: 0px 1px 0px #998268;
+	margin-bottom: 0px;
+	background-color: #fff;
+	padding-top: 15px;
+	padding-bottom: 35px;
+	-webkit-transition: padding 200ms;
+	transition: padding 200ms;
+	font-family: 'Droid Serif', Georgia, sans-serif;
+}
+
+.navbar .container {
+	padding-left: 40px;
+}
+
+.navbar-brand {
+	padding: 0px;
+	margin: 0px;
+}
+
+.navbar-brand img {
+	width: 183px;
+	height: 72px;
+    -webkit-transition: width 200ms ease-in-out, height 200ms ease-in-out;
+    -moz-transition: width 200ms ease-in-out, height 200ms ease-in-out;
+    -o-transition: width 200ms ease-in-out, height 200ms ease-in-out;
+    transition: width 200ms ease-in-out, height 200ms ease-in-out;
+}
+
+.navbar ul {
+	margin: 0px;
+	padding: 0px;
+	margin-top: 24px;
+}
+
+.navbar-default .navbar-nav > li > a {
+	padding: 0px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-bottom: 1px;
+	color: #000;
+	font-size: 15px;
+	border-bottom: 2px solid rgba(255,202,6,0);
+    -webkit-transition: border linear 300ms;
+    -moz-transition: border linear 300ms;
+    -o-transition: border linear 300ms;
+	transition: border linear 300ms;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	border-bottom: 2px solid rgba(255,202,6,1);
+}
+
+.navbar-default .navbar-nav > .active > a {
+	background: none;
+	color: #000;
+	border-bottom: 2px solid rgba(255,202,6,1);
+}
+
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+	background: none;
+	color: #000;
+}
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus {
+	color: #000;
+}
+
+/*==// SHRUNK  //==*/
+.shrink {
+	padding: 0px;
+	padding-top: 4px;
+}
+
+.shrink .navbar-brand img {
+	height: 43px;
+	width: 110px;
+}
+
+div.shrink ul {
+	margin-top: 14px;
+}
+
+
+/*==============*/
+/*==  SLIDER  ==*/
+/*==============*/
 
 .carousel img {
 	min-width: 100%;
@@ -13,29 +120,14 @@
 	position: relative;
 	overflow: hidden;
 	max-height: 500px;
+	border-bottom: 1px solid #998268;	
+	box-shadow: 0px 2px 0px rgba(255,202,6,1);
 }
 
 
-.home-bands {
-	padding: 30px;
-	padding-bottom: 40px;
-	background-color: #EAEAEA;
-}
-
-.home-bands img {
-	max-width: 168px;
-	max-height: 168px;
-	height: auto;
-	margin-bottom: 25px;
-}
-
-.btn-group-centered {
-	text-align: center;
-}
-
-.btn-group-centered .btn-group ul li a {
-	text-align: left;
-}
+/*=================*/
+/*==  HOME PAGE  ==*/
+/*=================*/
 
 .home-feature-fluid {
 	padding-top: 120px;
@@ -51,10 +143,44 @@
 	padding-right: 120px;
 }
 
-footer {
-	background-color: #F5f5f5;
+.home-widgets {
+	background-image: url(../images/pegasus-bg.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-position: -150px 0px;
 }
 
+.announcements-widget {
+	padding: 20px;
+	padding-top: 1px;
+	background-color: #fff;
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+	border: 1px solid rgba(0,0,0,0.5);
+}
+
+/*==============*/
+/*==  FOOTER  ==*/
+/*==============*/
+
+footer {
+	background-color: #F5f5f5;
+	/*background-color: #fff4ca;*/
+	border-top: 2px solid rgba(255,202,6,1);
+	box-shadow: inset 0px 1px 0px #666;
+}
+
+.social-icon {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.logo-footer {
+	
+}
+
+
+/*------------------*/
+/*--  FOOTER NAV  --*/
 
 nav#footer ul {
 	list-style-type: none;
@@ -74,18 +200,38 @@ nav#footer ul li:last-child:after {
 	content: '';
 }
 
-.social-icon {
-	display: inline-block;
-	margin-right: 5px;
+
+/*=======================*/
+/*==  BUTTONS & STUFF  ==*/
+/*=======================*/
+
+.btn {
+	border-radius: 0;
+	transition: all 150ms;
 }
 
-.logo-footer {
-	
+.btn:hover {
+	color: #fff;
+	text-shadow: 1px 1px 1px #f49500;
+	background: #ffca06;
+	border-color: #f8a900;
 }
 
+/*==================*/
+/*==  TYPOGRAPHY  ==*/
+/*==================*/
 
-.home-bands h4 {
-	font-weight: bold;
+a {
+	color: #efbc00;
+}
+
+a:hover {
+	color: #efbc00;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Droid Serif', serif;
+	color: #000;
 }
 
 h3.line {
@@ -93,3 +239,6 @@ h3.line {
 	border-bottom: 1px solid #eeeeee;
 }
 
+.home-bands h4 {
+	font-weight: bold;
+}
