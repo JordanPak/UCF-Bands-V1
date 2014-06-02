@@ -1,0 +1,113 @@
+/*===============================================*/
+/*        UCFBANDS TWITTER BOOSTRAP THEME        */
+/*===============================================*/
+/*	                                             */
+/*	Author: Jordan Pakrosnis (JpakMedia.com)     */
+/*	                                             */
+/*===============================================*/
+
+/*========================*/
+/*==  GLOBAL STRUCTURE  ==*/
+/*========================*/
+
+body {
+	padding-top: 50px;
+	background-color: #fff;
+}
+
+a.logo-header {
+	display: block;
+	padding: 30px;
+}
+
+a.logo-header img {
+	display: block;
+	width: 100%;
+}
+
+.page-header {
+	margin-top: 20px;
+}
+
+#page-wrapper {
+	margin-left: 0px;
+	background-color: #f8f8f8;
+}
+
+
+
+/*================*/
+/*==  MAIN NAV  ==*/
+/*================*/
+
+.navbar {
+	margin-top: 0px;
+}
+
+.navbar-default {
+	background-color: #fff;
+}
+
+.navbar-static-side {
+	width: 330px;
+}
+
+.nav > li > a {
+	font-size: 1.25em;
+	text-align: center;
+	font-family: 'Droid Serif', Georgia, Sans-serif;
+	color: #000;
+}
+
+.nav > li > a:hover {
+	background-color: #ffca06;
+}
+
+.nav-second-level > li > a {
+	font-size: 1em;
+	color: #fff;
+}
+
+.navbar-static-side ul li.active a {
+	background-color: #ffca06;
+}
+
+.navbar-static-side ul li.active ul.nav-second-level > li > a {
+	background-color: #231f20;
+}
+
+.navbar-static-side ul li.active ul.nav-second-level > li > a:hover {
+	background-color: #000;
+}
+
+
+
+/*==================*/
+/*==  TYPOGRAPHY  ==*/
+/*==================*/
+
+
+/*==// ANCHORS //==*/
+
+
+/*==// HEADERS //==*/
+
+
+
+/*=====================*/
+/*==  MEDIA QUERIES  ==*/
+/*=====================*/
+
+@media(min-width:768px) {
+    body {
+        padding-top: 0px;
+    }
+	
+	.navbar {
+		margin-top: -50px;
+	}
+	
+	#page-wrapper {
+		margin-left: 330px;
+	}
+}
