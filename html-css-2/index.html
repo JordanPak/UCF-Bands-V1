@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+   		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>UCFBands HTML Layout</title>
+        
+        <!-- Bootstrap Styles -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-ucfbands.css" rel="stylesheet">
+        
+        <!-- FontAwesome Icons -->
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">    
+          
+        <!-- Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        		
+    </head>
+    
+    <body>        
+        
+		
+        <!--// MAIN CONTAINER //-->
+        <div class="container-fluid">
+        
+        	
+            
+            <!--// NAV //-->
+        	<div class="main-sidebar">
+            
+            	<a class="logo-header" href="#"><img class="logo-header" src="images/logo-header.png" alt="Home"></a>
+                
+                <ul class="main-nav">
+                	<li><a href="#">Home</a></li>
+                	<li><a href="#">About</a></li>
+                	<li><a href="#">Wind Ensemble</a></li>
+                	<li><a href="#">Symphonic Band</a></li>
+                	<li><a href="#">Concert Band</a></li>
+                	<li><a href="#">Marching Knights</a></li>
+                	<li><a href="#">Jammin' Knights</a></li>
+                	<li><a href="#">Contact</a></li>
+                </ul>
+            	
+            </div><!-- /.col (NAV) -->
+            
+            
+            
+            <!--// PAGE CONTENT //-->
+            <div class="page-content">
+
+        
+                <!--// CAROUSEL //--> 
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+                
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        
+                        
+                        <!-- Slide 1 -->
+                        <div class="item active">
+                            <img src="images/slides/slide2.jpg">
+                            
+                            <div class="carousel-caption">
+                                
+                            </div>
+                            
+                        </div><!-- /.item active -->
+        
+                        
+                        <!-- Slide 2 -->
+                        <div class="item">
+                            <img src="images/slides/slide3.jpg">
+                            
+                            <div class="carousel-caption">
+                                
+                            </div>
+                            
+                        </div><!-- /.item active -->
+        
+                        
+                        <!-- Slide 3 -->
+                        <div class="item">
+                            <img src="images/slides/slide1.jpg">
+                            
+                            <div class="carousel-caption">
+                                
+                            </div>
+                            
+                        </div><!-- /.item active -->
+                    
+                    
+                    </div><!-- /.carousel-inner -->
+                
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                
+                </div><!-- /.carousel -->
+            
+            
+            </div><!-- /.col (Page Content) -->
+        
+        
+        </div><!-- /.container-fluid (Main) -->
+        
+
+        
+    
+        
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>    
+
+        <script>
+			
+			<!-- ToolTips -->
+			$('.social-icon').tooltip();
+				
+			
+			<!-- Shrink Nav on Scroll -->
+			$(window).scroll(function() {
+			  if ($(document).scrollTop() > 120) {
+				$('div.navbar-fixed-top').addClass('shrink');
+			  } else {
+				$('div.navbar-fixed-top').removeClass('shrink');
+			  }
+			});
+			
+		</script>
+    
+    </body>
+
+</html>
