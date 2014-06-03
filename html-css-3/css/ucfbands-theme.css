@@ -13,11 +13,13 @@
 body {
 	padding-top: 50px;
 	background-color: #fff;
+	font-size: 16px;
 }
 
 a.logo-header {
 	display: block;
 	padding: 30px;
+	padding-right: 33px;
 }
 
 a.logo-header img {
@@ -30,10 +32,54 @@ a.logo-header img {
 }
 
 #page-wrapper {
+	padding: 0px;
 	margin-left: 0px;
-	background-color: #f8f8f8;
+	background-color: #FCFCFC;
+	border-left: 2px solid #ffca06;
 }
 
+#page-content {
+	padding: 0px 30px; 
+	background-image: url(../images/pegasus-bg.png);
+	background-repeat: no-repeat;
+	background-position: -100px 25px;
+}
+
+
+/*=================*/
+/*==  HOME PAGE  ==*/
+/*=================*/
+
+.timeline > li > .timeline-panel {
+	width: 85%;
+	background: #fff;
+}
+
+.timeline:before { 
+	right: 5%;
+	left: auto;
+}
+
+.timeline > li > .timeline-badge {
+	right: 0%;
+	left: auto;
+}
+
+.timeline-title {
+	color: #000;
+}
+
+.home-announcements {
+	background-color: #fff;
+	padding: 20px;
+	-webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+	border: 1px solid #d4d4d4;
+}
+
+.home-announcements h2 {
+	margin-top: 5px;
+}
 
 
 /*================*/
@@ -52,11 +98,20 @@ a.logo-header img {
 	width: 330px;
 }
 
+
 .nav > li > a {
-	font-size: 1.25em;
+	display: block;
+	font-size: 1.2em;
 	text-align: center;
 	font-family: 'Droid Serif', Georgia, Sans-serif;
 	color: #000;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	transition: background 500ms ease-in-out;
+}
+
+.nav > li > a i {
+	display: none;
 }
 
 .nav > li > a:hover {
@@ -74,10 +129,38 @@ a.logo-header img {
 
 .navbar-static-side ul li.active ul.nav-second-level > li > a {
 	background-color: #231f20;
+	padding-left: 15px;
 }
 
 .navbar-static-side ul li.active ul.nav-second-level > li > a:hover {
 	background-color: #000;
+}
+
+.nav-social {
+	position: fixed;
+	bottom: 30px;
+	left: 0px;
+	padding-left: 30px;
+}
+
+
+/*==============*/
+/*==  SLIDER  ==*/
+/*==============*/
+
+.carousel img {
+	min-width: 100%;
+	min-width: 100%;
+	height: 500px;
+	max-width: none;
+}
+
+.carousel {
+	position: relative;
+	overflow: hidden;
+	max-height: 500px;
+	border-bottom: 1px solid #231f20;	
+	box-shadow: 0px 2px 0px #ffca06;
 }
 
 
@@ -86,9 +169,22 @@ a.logo-header img {
 /*==  TYPOGRAPHY  ==*/
 /*==================*/
 
+h1, h2, h3, h4, h5 {
+	font-family: 'Droid Serif', Georgia, Serif;
+	color: #000;
+}
+
 
 /*==// ANCHORS //==*/
 
+a {
+	color: #efbc00;
+}
+
+a:hover {
+	color: #efbc00;
+	text-decoration: underline;
+}
 
 /*==// HEADERS //==*/
 
@@ -108,6 +204,28 @@ a.logo-header img {
 	}
 	
 	#page-wrapper {
+		margin-left: 250px;
+	}
+	
+	.navbar-static-side {
+		width: 250px;
+	}
+}
+
+@media(min-width:1370px) {
+    body {
+        padding-top: 0px;
+    }
+	
+	.navbar {
+		margin-top: -50px;
+	}
+	
+	#page-wrapper {
 		margin-left: 330px;
+	}
+	
+	.navbar-static-side {
+		width: 330px;
 	}
 }
