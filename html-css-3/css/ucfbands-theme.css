@@ -16,8 +16,17 @@ body {
 	font-size: 16px;
 }
 
+.top-line {
+	display: none;
+	width: 100%;
+	height: 2px; 
+	position: fixed;
+	background: #000; 
+	z-index: 5000;
+}
+
 a.logo-header {
-	display: block;
+	display: none;
 	padding: 30px;
 	padding-right: 33px;
 }
@@ -25,6 +34,18 @@ a.logo-header {
 a.logo-header img {
 	display: block;
 	width: 100%;
+}
+
+a.navbar-brand {
+	height: auto;
+	display: block;
+}
+
+a.navbar-brand img {
+	display: block;
+	width: auto;
+	height: auto;
+	max-height: 50px;
 }
 
 .page-header {
@@ -90,23 +111,55 @@ a.logo-header img {
 	margin-top: 0px;
 }
 
-.navbar-default {
+.navbar-header {
+	border-bottom: 3px solid #ffca06;
+}
+
+.navbar-toggle { 
+	margin-top: 23px;
+	border-radius: 0px;
+	background-color: #333;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: #ffca06;
+	border-color: #f9b000;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
 	background-color: #fff;
 }
 
-.navbar-static-side {
-	width: 330px;
+.collapse.in {
+	border-bottom: 3px solid #ffca06;
 }
 
+.navbar-fixed-top {
+	position: fixed;
+}
+
+.navbar-default {
+	background-color: #fff;
+	border: none;
+}
+
+.navbar-static-side {
+	width: 100%; /* 330px; */
+	height: auto;
+}
+
+.navbar-static-side ul li:last-child {
+	border-bottom: none;
+}
 
 .nav > li > a {
 	display: block;
-	font-size: 1.2em;
+	font-size: 1em;
 	text-align: center;
 	font-family: 'Droid Serif', Georgia, Sans-serif;
 	color: #000;
-	padding-top: 12px;
-	padding-bottom: 12px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 	transition: background 500ms ease-in-out;
 }
 
@@ -121,6 +174,8 @@ a.logo-header img {
 .nav-second-level > li > a {
 	font-size: 1em;
 	color: #fff;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 .navbar-static-side ul li.active a {
@@ -194,13 +249,55 @@ a:hover {
 /*==  MEDIA QUERIES  ==*/
 /*=====================*/
 
+
+@media(min-height: 0px) and (max-height: 699px) {
+	
+	/* If the window height is less than 700px, make the nav absolute */	
+	.navbar-fixed-top {
+		position: absolute;
+	}
+	
+}
+
+@media(min-width: 0px) and (max-width: 767px) {
+	
+	/* If the window width is less than 768px, make the nav fixed
+	/* no matter what. This is here to overwrite the abosolute 
+	/* position when the height is under 700. */
+	.navbar-fixed-top {
+		position: fixed;
+	}
+	
+}
+
 @media(min-width:768px) {
+
     body {
         padding-top: 0px;
     }
+
+	.top-line {
+		display: block;
+	}
 	
 	.navbar {
 		margin-top: -50px;
+	}
+	
+	a.navbar-brand {
+		display: none;
+	}
+	
+	a.navbar-brand img {
+		display: none;
+	}
+
+	.navbar-fixed-top {
+		/*position: absolute;*/
+	}
+	
+	a.logo-header {
+		display: block;
 	}
 	
 	#page-wrapper {
@@ -210,13 +307,19 @@ a:hover {
 	.navbar-static-side {
 		width: 250px;
 	}
+
+	.nav-second-level > li > a {
+		font-size: .8em;
+	}
+
 }
 
 @media(min-width:1370px) {
-    body {
+    
+	body {
         padding-top: 0px;
     }
-	
+		
 	.navbar {
 		margin-top: -50px;
 	}
@@ -228,4 +331,25 @@ a:hover {
 	.navbar-static-side {
 		width: 330px;
 	}
+
+	.nav > li > a {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		font-size: 1.2em;
+	}
+	
+	.nav-second-level > li > a {
+		font-size: 1em;
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
 }
+
+
+
+
+
+
+
+
