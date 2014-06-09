@@ -59,7 +59,7 @@ a.navbar-brand img {
 	position: fixed;
 }*/
 
-.page-title {
+.section-title {
 	display: block;
 	width: 100%;
 	background-image: url(../images/page-title-sample-bg1.jpg);
@@ -68,6 +68,14 @@ a.navbar-brand img {
 	padding: 75px;
 	padding-left: 30px;
 	padding-right: 30px;
+}
+
+.section-title-faculty {
+	background-image: url(../images/page-title-sample-bg2.jpg);
+}
+
+.section-title-armory {
+	background-image: url(../images/page-title-sample-bg3.jpg);
 }
 
 #page-wrapper {
@@ -97,9 +105,25 @@ a.navbar-brand img {
 	margin-top: 5px;
 }
 
-.featured-block {
+.block-featured {
 	border-top: 5px solid gold;
 	border-bottom: 5px solid #555;
+}
+
+.block-no-box {
+	padding: 0px;
+	background: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;	
+	border: none;
+}
+
+.block-staff {
+	min-height: 320px;
+}
+
+.block-announcement {
+	min-height: 150px;
 }
 
 
@@ -299,6 +323,9 @@ nav.sub ul.dropdown-menu li a {
 	width: auto;
 	padding-top: 6px;
 	padding-bottom: 6px;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
 	transition: none;
 	color: #000;
 	border: none;
@@ -322,6 +349,78 @@ nav.sub ul.dropdown-menu li a:hover {
 
 
 /*==============*/
+/*==  PANELS  ==*/
+/*==============*/
+
+.panel {
+	border-radius: 0px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+	border: 1px solid #d4d4d4;
+	margin-bottom: 35px;
+}
+
+.panel-heading {
+	border-radius: 0px;
+	color: #fff;
+}
+
+.panel-heading h1, .panel-heading h2, .panel-heading h3, .panel-heading h4, .panel-heading h5 {
+	/*color: #fff;*/
+}
+
+
+/*==============*/
+/*==  IMAGES  ==*/
+/*==============*/
+
+#page-content img {
+	padding: 10px;
+	border: 1px solid #d4d4d4;
+	background-color: #EFEFEF;
+}
+
+img.pull-right {
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+
+img.pull-left {
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+
+img.no-frame {
+	padding: 0px;
+	background: none;
+	border: none;
+}
+
+
+/*=============*/
+/*==  LISTS  ==*/
+/*=============*/
+
+.block ul li {
+	margin-bottom: 10px;
+}
+
+
+/*==============*/
+/*==  ALERTS  ==*/
+/*==============*/
+
+.alert-success a {
+	color: #3c763d;
+	text-decoration: underline;
+}
+
+.alert-success a:hover {
+	color: #030;
+}
+
+/*==============*/
 /*==  SLIDER  ==*/
 /*==============*/
 
@@ -341,6 +440,53 @@ nav.sub ul.dropdown-menu li a:hover {
 }
 
 
+/*==============================*/
+/*==  BOOTSTRAP BLACK & GOLD  ==*/
+/*==============================*/
+
+.gold, .btn-gold {
+	color: #fff;
+	background-color: #ffca06;
+	border-color: #efbc00;
+	text-shadow: 0px 0px 3px #efbc00, 1px 1px 1px #efbc00;
+}
+
+.gold a:hover , .btn-gold:hover {
+	color: #fff;
+	background-color: #fdb900;
+	border-color: #ef9d00;
+	text-shadow: 0px 0px 3px #ef9d00, 1px 1px 1px #ef9d00;	
+}
+
+.panel-gold .panel-heading {
+	color: #fff;
+	background-color: #ffca06;
+	border-color: #efbc00;
+}
+
+.ucf-gray, .btn-ucf-gray {
+	color: #fff;
+	background-color: #231f20;
+	border-color: #000;
+	text-shadow: 0px 0px 3px #000, 1px 1px 1px #000;
+}
+
+.ucf-gray a:hover , .btn-ucf-gray:hover {
+	color: #fff;
+	background-color: #333;
+}
+
+.panel-ucf-gray .panel-heading {
+	color: #fff;
+	background-color: #231f20;
+	border-color: #000;
+	border-bottom: 5px solid #000;
+}
+
+
+.black, .btn-black, .panel-black {
+}
+
 
 /*==================*/
 /*==  TYPOGRAPHY  ==*/
@@ -348,16 +494,27 @@ nav.sub ul.dropdown-menu li a:hover {
 
 h1, h2, h3, h4, h5 {
 	font-family: 'Droid Serif', Georgia, Serif;
-	color: #000;
 }
 
-.page-title h1 {
+.section-title h1 {
 	display: block;
 	margin: 0px;
 	text-align: center;
 	font-size: 3em;
 	color: #fff;
 	text-shadow: 0px 0px 8px #000, 0px 0px 2px #000, 1px 1px 2px rgba(0,0,0,0.5), 2px 2px 3px rgba(0,0,0,0.4);
+}
+
+.section-title h1 small {
+	color: #efefef;
+}
+
+.block-staff h3, .block-announcement h3 {
+	margin: 0px;
+}
+
+.block-announcement h3 {
+	margin-bottom: 10px;
 }
 
 
@@ -379,6 +536,33 @@ a h1, a h2, a h3, a h4, a h5, a h6 {
 
 
 /*==// HEADERS //==*/
+
+.section-title h1 {
+}
+
+.section-title a:hover {
+	text-decoration: none;
+}
+
+.section-title a h1 {
+	color: #fff;
+    -webkit-transition: 250ms ease-in-out;
+    -moz-transition: 250ms ease-in-out;
+    -o-transition: 250ms ease-in-out;
+	transition: 250ms ease-in-out;
+}
+
+.section-title a h1:hover {
+	color: #ffca06;
+}
+
+h1.page-title {
+	margin: 0px;
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 45px;
+	padding: 0px;
+}
 
 
 
@@ -466,7 +650,7 @@ a h1, a h2, a h3, a h4, a h5, a h6 {
 		border-left: 3px solid #ffca06;
 	}
 	
-	.page-title h1 {
+	.section-title h1 {
 		text-align: left;
 	}
 }
