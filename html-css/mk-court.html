@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UCFBands HTML Layout</title>
+
+    <!-- Core CSS - Include with every page -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Page-Level Plugin CSS - Dashboard -->
+    <link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+    <link href="css/plugins/timeline/timeline.css" rel="stylesheet">
+
+    <!-- THEME CSS - Include with every page -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="css/ucfbands-theme.css" rel="stylesheet">
+
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+	<!-- TOP LINE -->
+    <div class="top-line"></div>
+
+	<!--// WRAPPER //-->
+    <div id="wrapper">
+		
+        
+        <!--// NAV BAR (TOP) //-->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            
+            <div class="navbar-header">
+                
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="index.html"><img src="images/logo-header.png"></a>
+            
+            </div><!-- /.navbar-header -->
+
+			
+            <!--// SIDEBAR NAVIGATION //-->
+            <div class="navbar-default navbar-static-side" role="navigation">
+            	
+
+                <!--// MAIN LOGO //-->
+                <a class="logo-header" href="index.html"><img src="images/logo-header.png"></a>
+            
+                
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="side-menu">
+                        
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Home</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Faculty &amp; Staff<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="faculty.html">Faculty</a>
+                                </li>
+                                <li>
+                                    <a href="faculty.html">Staff</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+
+
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i>Wind Ensemble</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i>Symphonic Band</a>
+                        </li>
+
+
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i>Concert Band</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="mk-about.html"><i class="fa fa-sitemap fa-fw"></i>Marching Knights</a>
+                            <!--<ul class="nav nav-second-level">
+                                <li>
+                                    <a href="mk-about.html">About</a>
+                                </li>
+                                <li>
+                                    <a href="#">Student Staff</a>
+                                </li>
+                                <li>
+                                    <a href="#">History</a>
+                                </li>
+                                <li>
+                                    <a href="#">Camp</a>
+                                </li>
+                                <li>
+                                    <a href="#">Join Us<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Community College Students</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Drumline Auditions</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Starlet Knights Auditions</a>
+                                        </li>
+                                    </ul>-->
+                                    <!-- /.nav-third-level -->
+                                <!--</li>
+                                <li>
+                                    <a href="#">Members</a>
+                                </li>
+                                <li>
+                                    <a href="#">Media</a>
+                                </li>
+                            </ul>-->
+                            <!-- /.nav-second-level -->
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> Jammin' Knights</a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="concert-about.html">About</a>
+                                </li>
+                                <li>
+                                    <a href="concert-media.html">Media</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        
+                        
+                    </ul>
+                    <!-- /#side-menu -->
+                    
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+
+		
+        <!--// PAGE WRAPPER //-->
+        <div id="page-wrapper">            
+			
+            
+            <!--// FIX AFFIX //-->
+            <div class="top-fixed">
+            
+            
+                <!--// SECTION TITLE //-->
+                <div class="section-title section-title-armory">
+                
+                    <a href="mk-about.html"><h1>MK ARMORY <small>#ChargeOn</small></h1></a>
+                
+                </div><!-- /.section-title -->
+                
+                
+                <!--// SUB NAV //-->                
+                <nav class="sub" role="navigation">
+                
+                    <ul class="sub">
+                
+                        <li><a href="mk-court.html">Dashboard</a></li>
+                        <li><a href="mk-music.html">Music</a></li>
+                        <li><a href="#">Marching Drill</a></li>
+                        <li><a href="#">Videos</a></li>
+                        <li><a href="#">Docs &amp; Forms</a></li>
+                        <li><a href="#">Report Issue</a></li>
+                        
+                    </ul>
+                    
+                </nav>
+                
+            </div><!-- /.top-fixed -->
+            
+			
+            <!--// PAGE CONTENT //-->
+            <div id="page-content">
+                
+                <br><br>     
+                
+                
+                <div class="row">
+                                
+
+                    <!--// BAND CAMP //-->
+                    <div class="col-lg-4">
+                        
+                        <div class="block block-featured">
+                        
+                            <h2><i class="fa fa-exclamation-triangle"></i> MK Handbook &amp; Info Form</h2>
+                            
+                            <p>
+                                Please be sure you have:
+                            </p>
+                            
+                            <ul>
+                            	<li>Read the <a href="#">2014 Handbook</a></li>
+                                <li>Submitted the <a href="#">Acknowledgement Form</a></li>
+                                <li>Submitted the <a href="#">MK Info Form</a></li>
+                            </ul>
+                            
+                            <br>
+                            
+                            <h2>Summer Newsletter</h2>
+                            
+                            <p>
+                            	Please read through the summer newsletter to get important information pertaining to band camp, our performance calendar, halftime shows, instruments, and other topics.
+                            </p>
+                            
+                            <a class="btn btn-md btn-ucf-gray" href="#">Download</a>
+                                                                                
+                        </div><!-- /.home-announcements -->
+                        
+                    </div><!-- /.col-lg-4 (Announcements) -->
+                        
+                    
+                    
+                    <!--// ANNOUNCEMENTS //-->
+                    <div class="col-lg-4">
+                        
+                        <div class="block">
+                        
+                            <h2><i class="fa fa-tasks"></i> Rehearsal Schedules</h2>
+                            
+                            <br>
+                                                                                
+                            <h4>Sign Up for MKs!</h4>
+                            <b>12/5/13 @ 4:00pm</b><br>
+                            <a href="#">2014 Intent To March Form</a>
+                            
+                            <br><br>
+                            
+                            <h4>Student Staff Report to Camp</h4>
+                            <b>12/8/14 @ 4:00pm</b><br>
+                            <a href="#">Schedule</a>
+    
+                        </div><!-- /.home-announcements -->
+                        
+                    </div><!-- /.col-lg-4 (Announcements) -->    
+
+
+
+                    <!--// SOCIAL //-->
+                    <div class="col-lg-4">
+                    
+                        <div class="block">
+                    
+                            <h2><i class="fa fa-facebook-square"></i> MKs on Facebook</h2>
+                            
+                            <p>Get the latest news and announcements on our FaceBook Group! We guarantee you're on there more than your #KnightsMail.</p>
+                            
+                            <br>
+                            
+                            <a class="btn btn-lg btn-primary" href="#"><i class="fa fa-facebook-square"></i>  &nbsp;Facebook</a>
+                                                   
+                        </div><!-- Featured Block -->
+                    
+                    </div><!-- /.col-lg-4 (Welcome) -->
+ 
+
+
+                    <!--// CALENDAR //-->
+                    <div class="col-lg-8">
+                    
+                        <div class="block">
+                    
+                            <h2><i class="fa fa-calendar"></i> MK Calendar</h2>
+                            
+                            <br>
+                            
+                            <div class="alert alert-success fade in">
+                              	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            	<strong>Have a smartphone?</strong> <a href="#">Here's how you can put this calendar on it</a>.
+                            </div>                            
+                            
+                            <br>
+                            
+                            <p>Calendar will be here</p>
+                                                   
+                        </div><!-- Featured Block -->
+                    
+                    </div><!-- /.col-lg-4 (Welcome) -->
+
+    
+    
+                      
+                    <!--// SOCIAL ICONS //-->
+                    <div class="row">
+                    
+                        <div class="col-md-4">
+                    
+                            <div class="nav-social">
+                            
+                                <a href="#"><img class="social-icon" data-toggle="tooltip" data-placement="top" title="UCFBands on Facebook" src="images/flat-social-media/color-square/facebook.png"></a> 
+                                
+                                <a href="#"><img class="social-icon" data-toggle="tooltip" data-placement="top" title="UCFBands on Twitter" src="images/flat-social-media/color-square/twitter.png"></a> 
+                                
+                                <a href="#"><img class="social-icon" data-toggle="tooltip" data-placement="top" title="UCFBands on YouTube" src="images/flat-social-media/color-square/youtube.png"></a> 
+                            
+                            </div><!-- /.nav-social -->
+                        
+                        </div><!-- /.col-sm-4 -->
+                        
+                    </div><!-- ./row -->
+            
+            	
+                </div><!-- /.row -->    
+            
+            </div><!-- /#page-content -->
+        
+        </div><!-- /#page-wrapper -->    
+    
+    </div><!-- /#wrapper -->
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+	<script>
+	
+		<!-- ToolTips -->
+		$('.social-icon').tooltip();
+				
+	</script>
+
+    <!-- Page-Level Plugin Scripts - Dashboard -->
+    <script src="js/plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="js/plugins/morris/morris.js"></script>
+
+    <!-- SB Admin Scripts - Include with every page -->
+    <script src="js/sb-admin.js"></script>
+
+    <!-- Page-Level Demo Scripts - Dashboard - Use for reference -->
+    <script src="js/demo/dashboard-demo.js"></script>
+
+</body>
+
+</html>
