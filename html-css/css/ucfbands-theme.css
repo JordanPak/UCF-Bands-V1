@@ -499,6 +499,30 @@ img.no-frame {
 /*==  TYPOGRAPHY  ==*/
 /*==================*/
 
+li.ucfb-label {
+	color: gold;
+}
+
+p span.ucfb-label {
+	font-size: 1em;
+}
+
+span.ucfb-label {
+	color: #999;
+	font-size: .65em;
+}
+
+.section-title h1 span.ucfb-label {
+	color: #EFEFEF;
+	font-size: .5em;
+}
+
+/* LABEL CONTROL */
+.ucfb-label {
+/*	display: none !important; */
+}
+
+
 h1, h2, h3, h4, h5 {
 	font-family: 'Droid Serif', Georgia, Serif;
 }
