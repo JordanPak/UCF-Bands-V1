@@ -1,37 +1,130 @@
-<?php
-/**
- * The Header for our theme.
- *
- * Displays all of the <head> section and everything up till <div id="content">
- *
- * @package UCFBands
- */
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php wp_title( '|', true, 'right' ); ?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<!doctype html>  
 
-<?php wp_head(); ?>
-</head>
+<!--[if IEMobile 7 ]> <html <?php language_attributes(); ?>class="no-js iem7"> <![endif]-->
+<!--[if lt IE 7 ]> <html <?php language_attributes(); ?> class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html <?php language_attributes(); ?> class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html <?php language_attributes(); ?> class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
+	
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title><?php wp_title( '|', true, 'right' ); ?></title>	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-<body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'ucfbands' ); ?></a>
+		<!-- wordpress head functions -->
+		<?php wp_head(); ?>
+		<!-- end of wordpress head -->
+		<!-- IE8 fallback moved below head to work properly. Added respond as well. Tested to work. -->
+			<!-- media-queries.js (fallback) -->
+		<!--[if lt IE 9]>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>			
+		<![endif]-->
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div>
+		<!-- html5.js -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->	
+		
+			<!-- respond.js -->
+		<!--[if lt IE 9]>
+		          <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->	
+	</head>
+	
+    
+    
+<body>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'ucfbands' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	<!-- TOP LINE -->
+    <div class="top-line"></div>
 
-	<div id="content" class="site-content">
+	<!--// WRAPPER //-->
+    <div id="wrapper">
+		
+        
+        <!--// NAV BAR (TOP) //-->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            
+            <div class="navbar-header">
+                
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo home_url(); ?>/wp-content/themes/ucfbands/images/logo-header.png"></a>
+            
+            </div><!-- /.navbar-header -->
+
+			
+            <!--// SIDEBAR NAVIGATION //-->
+            <div class="navbar-default navbar-static-side" role="navigation">
+            	
+
+                <!--// MAIN LOGO //-->
+                <a class="logo-header" href="<?php echo home_url(); ?>"><img src="<?php echo home_url(); ?>/wp-content/themes/ucfbands/images/logo-header.png"></a>
+            
+                
+                <div class="sidebar-collapse">
+                    <!-- <ul class="nav" id="side-menu"> -->                        
+                    	<?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>    
+                    <!-- </ul> -->
+                    <!-- /#side-menu --> 
+                    
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+		
+        <!--// PAGE WRAPPER //-->
+        <div id="page-wrapper">
+
+    
+
+    
+    
+    <?php  /* ORIGINAL
+    
+	<body <?php body_class(); ?>>
+				
+		<header role="banner">
+				
+			<div class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
+          
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+
+						<a class="navbar-brand" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+					</div>
+
+					<div class="collapse navbar-collapse navbar-responsive-collapse">
+						<?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+
+						<?php //if(of_get_option('search_bar', '1')) {?>
+						<form class="navbar-form navbar-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+							<div class="form-group">
+								<input name="s" id="s" type="text" class="search-query form-control" autocomplete="off" placeholder="<?php _e('Search','wpbootstrap'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
+							</div>
+						</form>
+						<?php //} ?>
+					</div>
+
+				</div> <!-- end .container -->
+			</div> <!-- end .navbar -->
+		
+		</header> <!-- end header -->
+		
+		<div class="container">
+	
+	*/ ?>

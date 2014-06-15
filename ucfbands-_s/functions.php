@@ -88,6 +88,18 @@ function ucfbands_widgets_init() {
 }
 add_action( 'widgets_init', 'ucfbands_widgets_init' );
 
+
+
+
+/**
+ * LOAD JQUERY
+ */
+/*function ucfbands_load_jquery() {
+    wp_enqueue_script('jquery');
+}
+add_action( 'wp_enqueue_scripts', 'ucfbands_load_jquery' );
+*/
+
 /**
  * Enqueue scripts and styles.
  */
@@ -98,11 +110,65 @@ function ucfbands_scripts() {
 
 	wp_enqueue_script( 'ucfbands-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+
+	//-- UCFB FOOTER SCRIPTS --//
+	
+	// Bootstrap
+	wp_enqueue_script( 'bootstrap-scripts', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '1', true );
+	
+	
+	// Metis Menu
+	wp_enqueue_script( 'metis-menu-script', get_template_directory_uri() . '/js/jquery.metisMenu.js', array(), '1', true );
+
+
+	// SB Admin
+	wp_enqueue_script( 'sb-admin-script', get_template_directory_uri() . '/js/sb-admin.js', array(), '1', true );	
+	
+
+
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	
+	
+	//----------------------//
+	// LOAD UCFBANDS STYLES //
+	//----------------------//
+
+    // Social Buttons Plugin
+    wp_enqueue_style( 'social-buttons-style', get_template_directory_uri() . '/css/plugins/social-buttons.css', array(), '1' );
+	
+	
+	// Timeline Plugin
+    wp_enqueue_style( 'timeline-style', get_template_directory_uri() . '/css/plugins/timeline.css', array(), '1' );
+
+    
+	// Bootstrap style
+    wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '1' );      
+		
+
+	// FontAwesome Styles
+    wp_enqueue_style( 'fontawesome-style', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '1' );
+
+	
+	// SB-Admin Styles
+    wp_enqueue_style( 'sb-admin-style', get_template_directory_uri() . '/css/sb-admin.css', array(), '1' );
+
+	
+	// UCFBands Theme
+    wp_enqueue_style( 'ucfbands-custom-style', get_template_directory_uri() . '/css/ucfbands-theme.css', array(), '1' );	
+	
+
+	// Google Fonts
+	wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Droid+Serif:400,400italic,700,700italic', array(), '1');
+
 }
+
 add_action( 'wp_enqueue_scripts', 'ucfbands_scripts' );
+
+
+
 
 /**
  * Implement the Custom Header feature.

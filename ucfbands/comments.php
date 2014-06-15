@@ -1,69 +1,71 @@
 <?php
-/**
- * The template for displaying Comments.
- *
- * The area of the page that contains both current comments
- * and the comment form.
- *
- * @package UCFBands
- */
-
 /*
- * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
- * return early without loading the comments.
- */
-if ( post_password_required() ) {
-	return;
-}
+The comments page for Bones
+*/
+
+// Do not delete these lines
+  if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
+    die ('Please do not load this page directly. Thanks!');
+
+  if ( post_password_required() ) { ?>
+  	<div class="alert alert-info"><?php _e("This post is password protected. Enter the password to view comments.","wpbootstrap"); ?></div>
+  <?php
+    return;
+  }
 ?>
 
-<div id="comments" class="comments-area">
+<!-- You can start editing here. -->
 
-	<?php // You can start editing here -- including this comment! ?>
+<?php if ( have_comments() ) : ?>
+	<?php if ( ! empty($comments_by_type['comment']) ) : ?>
+	<h3 id="comments"><?php comments_number('<span>' . __("No","wpbootstrap") . '</span> ' . __("Responses","wpbootstrap") . '', '<span>' . __("One","wpbootstrap") . '</span> ' . __("Response","wpbootstrap") . '', '<span>%</span> ' . __("Responses","wpbootstrap") );?> <?php _e("to","wpbootstrap"); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
 
-	<?php if ( have_comments() ) : ?>
-		<h2 class="comments-title">
-			<?php
-				printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'ucfbands' ),
-					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-			?>
-		</h2>
-
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'ucfbands' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'ucfbands' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'ucfbands' ) ); ?></div>
-		</nav><!-- #comment-nav-above -->
-		<?php endif; // check for comment navigation ?>
-
-		<ol class="comment-list">
-			<?php
-				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				) );
-			?>
-		</ol><!-- .comment-list -->
-
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'ucfbands' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'ucfbands' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'ucfbands' ) ); ?></div>
-		</nav><!-- #comment-nav-below -->
-		<?php endif; // check for comment navigation ?>
-
-	<?php endif; // have_comments() ?>
-
-	<?php
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'ucfbands' ); ?></p>
+	<nav id="comment-nav">
+		<ul class="clearfix">
+	  		<li><?php previous_comments_link( __("Older comments","wpbootstrap") ) ?></li>
+	  		<li><?php next_comments_link( __("Newer comments","wpbootstrap") ) ?></li>
+	 	</ul>
+	</nav>
+	
+	<ol class="commentlist">
+		<?php wp_list_comments('type=comment&callback=wp_bootstrap_comments'); ?>
+	</ol>
+	
 	<?php endif; ?>
+	
+	<?php if ( ! empty($comments_by_type['pings']) ) : ?>
+		<h3 id="pings">Trackbacks/Pingbacks</h3>
+		
+		<ol class="pinglist">
+			<?php wp_list_comments('type=pings&callback=list_pings'); ?>
+		</ol>
+	<?php endif; ?>
+	
+	<nav id="comment-nav">
+		<ul class="clearfix">
+	  		<li><?php previous_comments_link( __("Older comments","wpbootstrap") ) ?></li>
+	  		<li><?php next_comments_link( __("Newer comments","wpbootstrap") ) ?></li>
+		</ul>
+	</nav>
+  
+	<?php else : // this is displayed if there are no comments so far ?>
+
+	<?php if ( comments_open() ) : ?>
+    	<!-- If comments are open, but there are no comments. -->
+
+	<?php else : // comments are closed 
+	?>
+		
+	<!-- If comments are closed. -->
+	<p class="alert alert-info"><?php _e("Comments are closed","wpbootstrap"); ?>.</p>
+				
+	<?php endif; ?>
+
+<?php endif; ?>
+
+
+<?php if ( comments_open() ) : ?>
 
 	<?php comment_form(); ?>
 
-</div><!-- #comments -->
+<?php endif; // if you delete this the sky will fall on your head ?>
