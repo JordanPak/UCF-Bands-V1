@@ -57,8 +57,10 @@ The comments page for Bones
 	?>
 		
 	<!-- If comments are closed. -->
-	<p class="alert alert-info"><?php _e("Comments are closed","wpbootstrap"); ?>.</p>
-				
+	<!-- DISABLED FOR UCFBANDS 
+    <p class="alert alert-info"><?php // _e("Comments are closed","wpbootstrap"); ?>.</p>
+	-->			
+     
 	<?php endif; ?>
 
 <?php endif; ?>

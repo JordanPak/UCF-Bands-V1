@@ -10,6 +10,15 @@
 /*==  GLOBAL STRUCTURE  ==*/
 /*========================*/
 
+::selection {
+	background: rgba(255,202,6,0.8);
+	color: #fff;
+}
+::-moz-selection {
+	background: rgba(255,202,6,0.8);
+	color: #fff;
+}
+
 body {
 	padding-top: 50px;
 	background-color: #fff;
@@ -522,6 +531,9 @@ span.ucfb-label {
 	display: none !important;
 }
 
+.lead {
+	font-size: inherit;
+}
 
 h1, h2, h3, h4, h5 {
 	font-family: 'Droid Serif', Georgia, Serif;

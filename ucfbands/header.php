@@ -70,15 +70,11 @@
             
                 
                 <div class="sidebar-collapse">
-                    <!-- <ul class="nav" id="side-menu"> -->                        
-                    	<?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>    
-                    <!-- </ul> -->
-                    <!-- /#side-menu --> 
-                    
-                </div>
-                <!-- /.sidebar-collapse -->
-            </div>
-            <!-- /.navbar-static-side -->
+                    	<?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>                        
+                </div><!-- /.sidebar-collapse -->
+                
+            </div><!-- /.navbar-static-side -->
+            
         </nav>
 
 		

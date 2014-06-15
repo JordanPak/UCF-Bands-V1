@@ -366,6 +366,8 @@ function first_paragraph( $content ){
 }
 add_filter( 'the_content', 'first_paragraph' );
 
+
+
 // Menu output mods
 class Bootstrap_walker extends Walker_Nav_Menu{
 
@@ -486,12 +488,14 @@ if( !function_exists( "theme_js" ) ) {
 	wp_register_script( 'metis-menu',
 	  get_template_directory_uri() . '/library/js/jquery.metisMenu.js',
 	  array('jquery'),
-	  '1' );
+	  '1',
+	  true);
 
 	wp_register_script( 'sb-admin',
 	  get_template_directory_uri() . '/library/js/sb-admin.js',
 	  array('jquery'),
-	  '1' );
+	  '1',
+	  true);
   
     wp_register_script( 'bootstrap', 
       get_template_directory_uri() . '/library/js/bootstrap.min.js', 

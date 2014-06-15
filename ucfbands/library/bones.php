@@ -87,10 +87,12 @@ add_action( 'widgets_init', 'wp_bootstrap_register_sidebars' );
 
 function wp_bootstrap_main_nav() {
 	// display the wp3 menu if available
+
     wp_nav_menu( 
     	array( 
     		'menu' => 'main_nav', /* menu name */
-    		'menu_class' => 'nav navbar-nav',
+    		'menu_class' => 'nav',
+			'menu_id' => 'side-menu',
     		'theme_location' => 'main_nav', /* where in the theme it's assigned */
     		'container' => 'false', /* container class */
     		'fallback_cb' => 'wp_bootstrap_main_nav_fallback', /* menu fallback */
@@ -98,6 +100,22 @@ function wp_bootstrap_main_nav() {
     		'walker' => new Bootstrap_walker()
     	)
     );
+
+
+	
+//	ORIGINAL
+//    wp_nav_menu( 
+//    	array( 
+//    		'menu' => 'main_nav', /* menu name */
+//    		'menu_class' => 'nav navbar-nav',
+//    		'theme_location' => 'main_nav', /* where in the theme it's assigned */
+//    		'container' => 'false', /* container class */
+//    		'fallback_cb' => 'wp_bootstrap_main_nav_fallback', /* menu fallback */
+//    		// 'depth' => '2',  suppress lower levels for now 
+//    		'walker' => new Bootstrap_walker()
+//    	)
+//    ); 
+
 }
 
 function wp_bootstrap_footer_links() { 
