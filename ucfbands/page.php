@@ -11,7 +11,7 @@
 
                 
                 <!--// PAGE TITLE //-->
-                <h1 class="page-title"><i class="fa fa-umbrella"></i> <?php the_title(); ?></h1>    
+                <h1 class="page-title"><?php the_title(); ?></h1>    
                                 
 
 				<div class="row">
