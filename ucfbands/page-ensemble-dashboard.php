@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: Ensemble Dashboard
+*/
+?>
+
 <?php get_header(); ?>
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -28,7 +34,7 @@
             <!--// PAGE CONTENT //-->
             <div id="page-content">
                 
-                <br><br>
+                <br> 
                 
 				<div class="row">
 				

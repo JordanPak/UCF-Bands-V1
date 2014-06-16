@@ -77,6 +77,7 @@ a.navbar-brand img {
 	padding: 75px;
 	padding-left: 30px;
 	padding-right: 30px;
+	border-bottom: 3px solid #231f20;
 }
 
 .section-title-faculty {
@@ -96,7 +97,7 @@ a.navbar-brand img {
 
 #page-content {
 	padding: 0px 30px; 
-	background-image: url(../images/pegasus-bg.png);
+	background-image: url(../../images/pegasus-bg.png);
 	background-repeat: no-repeat;
 	background-position: -100px 25px;
 }
@@ -418,6 +419,12 @@ img.no-frame {
 	margin-left: 30px;
 	margin-bottom: 30px;
 }*/
+
+.block-staff img {
+	float: right;
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
 
 
 /*=============*/
