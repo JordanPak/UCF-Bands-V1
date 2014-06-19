@@ -146,7 +146,7 @@ function ucfbands_announcement() {
 		'label'               => __( 'ucfbands_announcement', 'text_domain' ),
 		'description'         => __( 'Announcement that can be placed on the home page and optional other pages', 'text_domain' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'revisions', 'custom-fields', ),
+		'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'revisions'),
 		'taxonomies'          => array( 'category', 'post_tag' ),
 		'hierarchical'        => false,
 		'public'              => true,
@@ -204,5 +204,3 @@ function be_initialize_cmb_meta_boxes() {
         require_once( 'lib/metabox/init.php' );
     }
 }
-
-?>

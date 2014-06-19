@@ -436,6 +436,25 @@ img.no-frame {
 }
 
 
+/*======================*/
+/*==  ESSENTIAL GRID  ==*/
+/*======================*/
+
+.esg-overflowtrick {
+	overflow: visible !important;
+}
+
+.eg-ucfbands-announcement-wrapper {
+	-webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+}
+
+/*.eg-ucfbands-announcement-content {
+	-webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+}*/
+
+
 /*==============*/
 /*==  ALERTS  ==*/
 /*==============*/
@@ -588,6 +607,11 @@ a:hover {
 
 a h1, a h2, a h3, a h4, a h5, a h6 {
 	color: #efbc00;
+	text-decoration: none;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+	text-decoration: none;
 }
 
 

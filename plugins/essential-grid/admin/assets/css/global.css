@@ -1,0 +1,7 @@
+/***
+Visual Composer Icon
+***/
+.wpb-layout-element-button .icon-wpb-ess-grid, 
+.wpb_Essential_Grid .wpb_element_wrapper  { background-image: url("../images/vc-icon.png") !important;}
+
+.wpb_ess_grid.wpb_content_element .wpb_element_wrapper { background-image: url("../images/vc-icon.png") !important; background-position: contain !important; }

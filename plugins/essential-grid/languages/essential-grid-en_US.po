@@ -1,0 +1,5678 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Essential Grid v0.9.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-04-21 13:46:48+0000\n"
+"Last-Translator: themepunch <info@themepunch.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: admin/essential-grid-admin.class.php:109
+#@ essential-grid
+msgid "Hi! Please activate your copy of the Essential Grid to receive automatic updates & get premium support."
+msgstr "Hi! Please activate your copy of the Essential Grid to receive automatic updates & get premium support."
+
+#. translators: plugin header field 'Name'
+#: admin/essential-grid-admin.class.php:257
+#: admin/essential-grid-admin.class.php:590
+#: admin/essential-grid-admin.class.php:604
+#: essential-grid.php:0
+#: includes/grids-widget.class.php:15
+#@ essential-grid
+msgid "Essential Grid"
+msgstr ""
+
+#: admin/essential-grid-admin.class.php:257
+#: public/essential-grid.class.php:203
+#@ essential-grid
+msgid "Ess. Grid"
+msgstr "Ess. Grid"
+
+#: admin/essential-grid-admin.class.php:258
+#: admin/views/grid-import-export.php:135
+#: admin/views/grid-import-export.php:424
+#@ essential-grid
+msgid "Punch Fonts"
+msgstr "Punch Fonts"
+
+#: admin/essential-grid-admin.class.php:260
+#@ essential-grid
+msgid "Item Skin Editor"
+msgstr "Item Skin Editor"
+
+#: admin/essential-grid-admin.class.php:261
+#: admin/includes/dialogs.class.php:333
+#: admin/views/elements/grid-meta-box.php:249
+#: admin/views/grid-import-export.php:119
+#: admin/views/grid-import-export.php:386
+#@ essential-grid
+msgid "Custom Meta"
+msgstr "Custom Meta"
+
+#: admin/essential-grid-admin.class.php:262
+#@ essential-grid
+msgid "Import/Export"
+msgstr "Import/Export"
+
+#: admin/essential-grid-admin.class.php:284
+#@ essential-grid
+msgid "Essential Grid Custom Settings"
+msgstr "Essential Grid Custom Settings"
+
+#: admin/essential-grid-admin.class.php:594
+#@ essential-grid
+msgid "MultiPurpose Grid by ThemePunch"
+msgstr "MultiPurpose Grid by ThemePunch"
+
+#: admin/essential-grid-admin.class.php:600
+#: admin/views/elements/grid-item-skin-editor.php:99
+#: admin/views/elements/grid-item-skin-editor.php:203
+#@ essential-grid
+msgid "Content"
+msgstr "Content"
+
+#: admin/essential-grid-admin.class.php:608
+#@ essential-grid
+msgid "Select your Essential Grid"
+msgstr "Select your Essential Grid"
+
+#: admin/essential-grid-admin.class.php:622
+#@ essential-grid
+msgid "Title needs to have at least 2 characters"
+msgstr "Title needs to have at least 2 characters"
+
+#: admin/essential-grid-admin.class.php:623
+#@ essential-grid
+msgid "Alias needs to have at least 2 characters"
+msgstr "Alias needs to have at least 2 characters"
+
+#: admin/essential-grid-admin.class.php:624
+#@ essential-grid
+msgid "No setting informations received!"
+msgstr "No setting informations received!"
+
+#: admin/essential-grid-admin.class.php:627
+#: includes/base.class.php:246
+#@ essential-grid
+msgid "Please add at least one element in Custom Grid mode"
+msgstr "Please add at least one element in Custom Grid mode"
+
+#: admin/essential-grid-admin.class.php:629
+#@ essential-grid
+msgid "Please select a Post Type"
+msgstr "Please select a Post Type"
+
+#: admin/essential-grid-admin.class.php:637
+#@ essential-grid
+msgid "Please select a Post Categorie"
+msgstr "Please select a Post Categorie"
+
+#: admin/essential-grid-admin.class.php:647
+#: admin/essential-grid-admin.class.php:671
+#@ essential-grid
+msgid "Ess. Grid with chosen alias already exists, please choose a different alias"
+msgstr "Ess. Grid with chosen alias already exists, please choose a different alias"
+
+#: admin/essential-grid-admin.class.php:662
+#@ essential-grid
+msgid "Ess. Grid could not be changed"
+msgstr "Ess. Grid could not be changed"
+
+#: admin/essential-grid-admin.class.php:691
+#: admin/essential-grid-admin.class.php:709
+#: includes/item-skin.class.php:256
+#: includes/item-skin.class.php:386
+#: includes/item-skin.class.php:419
+#@ essential-grid
+msgid "Invalid ID"
+msgstr "Invalid ID"
+
+#: admin/essential-grid-admin.class.php:696
+#@ essential-grid
+msgid "Ess. Grid could not be deleted"
+msgstr "Ess. Grid could not be deleted"
+
+#: admin/essential-grid-admin.class.php:717
+#: admin/essential-grid-admin.class.php:723
+#: admin/essential-grid-admin.class.php:741
+#@ essential-grid
+msgid "Ess. Grid could not be duplicated"
+msgstr "Ess. Grid could not be duplicated"
+
+#: admin/essential-grid-admin.class.php:778
+#@ essential-grid
+msgid "Purchase Code already registered!"
+msgstr "Purchase Code already registered!"
+
+#: admin/essential-grid-admin.class.php:780
+#@ essential-grid
+msgid "Purchase Code is not valid!"
+msgstr "Purchase Code is not valid!"
+
+#: admin/essential-grid-admin.class.php:844
+#@ essential-grid
+msgid "Font successfully created!"
+msgstr "Font successfully created!"
+
+#: admin/essential-grid-admin.class.php:850
+#@ essential-grid
+msgid "Font not found"
+msgstr "Font not found"
+
+#: admin/essential-grid-admin.class.php:857
+#@ essential-grid
+msgid "Font successfully removed!"
+msgstr "Font successfully removed!"
+
+#: admin/essential-grid-admin.class.php:863
+#: admin/essential-grid-admin.class.php:901
+#@ essential-grid
+msgid "No handle given"
+msgstr "No handle given"
+
+#: admin/essential-grid-admin.class.php:864
+#@ essential-grid
+msgid "No parameters given"
+msgstr "No parameters given"
+
+#: admin/essential-grid-admin.class.php:871
+#@ essential-grid
+msgid "Font successfully changed!"
+msgstr "Font successfully changed!"
+
+#: admin/essential-grid-admin.class.php:882
+#@ essential-grid
+msgid "Meta successfully created!"
+msgstr "Meta successfully created!"
+
+#: admin/essential-grid-admin.class.php:888
+#@ essential-grid
+msgid "Meta not found"
+msgstr "Meta not found"
+
+#: admin/essential-grid-admin.class.php:895
+#@ essential-grid
+msgid "Meta successfully removed!"
+msgstr "Meta successfully removed!"
+
+#: admin/essential-grid-admin.class.php:902
+#@ essential-grid
+msgid "No name given"
+msgstr "No name given"
+
+#: admin/essential-grid-admin.class.php:909
+#@ essential-grid
+msgid "Meta successfully changed!"
+msgstr "Meta successfully changed!"
+
+#: admin/essential-grid-admin.class.php:928
+#@ essential-grid
+msgid "Global Settings did not change!"
+msgstr "Global Settings did not change!"
+
+#: admin/essential-grid-admin.class.php:930
+#@ essential-grid
+msgid "Global Settings succesfully saved!"
+msgstr "Global Settings succesfully saved!"
+
+#: admin/essential-grid-admin.class.php:940
+#: admin/essential-grid-admin.class.php:942
+#@ essential-grid
+msgid "Grid successfully saved/changed!"
+msgstr "Grid successfully saved/changed!"
+
+#: admin/essential-grid-admin.class.php:951
+#@ essential-grid
+msgid "Grid deleted"
+msgstr "Grid deleted"
+
+#: admin/essential-grid-admin.class.php:959
+#@ essential-grid
+msgid "Grid duplicated"
+msgstr "Grid duplicated"
+
+#: admin/essential-grid-admin.class.php:969
+#@ essential-grid
+msgid "Item Skin changed"
+msgstr "Item Skin changed"
+
+#: admin/essential-grid-admin.class.php:971
+#@ essential-grid
+msgid "Item Skin created/changed"
+msgstr "Item Skin created/changed"
+
+#: admin/essential-grid-admin.class.php:980
+#@ essential-grid
+msgid "CSS saved!"
+msgstr "CSS saved!"
+
+#: admin/essential-grid-admin.class.php:983
+#@ essential-grid
+msgid "No CSS Received"
+msgstr "No CSS Received"
+
+#: admin/essential-grid-admin.class.php:991
+#@ essential-grid
+msgid "Item Skin deleted"
+msgstr "Item Skin deleted"
+
+#: admin/essential-grid-admin.class.php:999
+#@ essential-grid
+msgid "Item Skin duplicated"
+msgstr "Item Skin duplicated"
+
+#: admin/essential-grid-admin.class.php:1007
+#@ essential-grid
+msgid "Favorite Changed"
+msgstr "Favorite Changed"
+
+#: admin/essential-grid-admin.class.php:1015
+#@ essential-grid
+msgid "Item Element created/changed"
+msgstr "Item Element created/changed"
+
+#: admin/essential-grid-admin.class.php:1044
+#@ essential-grid
+msgid "Item Element successfully deleted"
+msgstr "Item Element successfully deleted"
+
+#: admin/essential-grid-admin.class.php:1064
+#@ essential-grid
+msgid "Navigation Skin successfully changed!"
+msgstr "Navigation Skin successfully changed!"
+
+#: admin/essential-grid-admin.class.php:1066
+#@ essential-grid
+msgid "Navigation Skin successfully created"
+msgstr "Navigation Skin successfully created"
+
+#: admin/essential-grid-admin.class.php:1086
+#@ essential-grid
+msgid "Navigation Skin successfully deleted!"
+msgstr "Navigation Skin successfully deleted!"
+
+#: admin/essential-grid-admin.class.php:1091
+#: admin/essential-grid-admin.class.php:1118
+#: admin/essential-grid-admin.class.php:1144
+#@ essential-grid
+msgid "No Post ID/Wrong Post ID!"
+msgstr "No Post ID/Wrong Post ID!"
+
+#: admin/essential-grid-admin.class.php:1095
+#: admin/essential-grid-admin.class.php:1123
+#: admin/essential-grid-admin.class.php:1148
+#@ essential-grid
+msgid "Please save the grid first to use this feature!"
+msgstr "Please save the grid first to use this feature!"
+
+#: admin/essential-grid-admin.class.php:1111
+#: admin/essential-grid-admin.class.php:1137
+#@ essential-grid
+msgid "Post not found!"
+msgstr "Post not found!"
+
+#: admin/essential-grid-admin.class.php:1135
+#@ essential-grid
+msgid "Post Meta saved!"
+msgstr "Post Meta saved!"
+
+#: admin/essential-grid-admin.class.php:1178
+#@ essential-grid
+msgid "Visibility of Post for this Grid changed!"
+msgstr "Visibility of Post for this Grid changed!"
+
+#: admin/essential-grid-admin.class.php:1183
+#@ essential-grid
+msgid "Wrong Image ID given"
+msgstr "Wrong Image ID given"
+
+#: admin/essential-grid-admin.class.php:1189
+#@ essential-grid
+msgid "Image with given ID does not exist"
+msgstr "Image with given ID does not exist"
+
+#: admin/essential-grid-admin.class.php:1199
+#@ essential-grid
+msgid "The API key, the Purchase Code and the Username need to be set!"
+msgstr "The API key, the Purchase Code and the Username need to be set!"
+
+#: admin/essential-grid-admin.class.php:1203
+#@ essential-grid
+msgid "Purchase Code Successfully Activated"
+msgstr "Purchase Code Successfully Activated"
+
+#: admin/essential-grid-admin.class.php:1208
+#@ essential-grid
+msgid "Purchase Code is invalid"
+msgstr "Purchase Code is invalid"
+
+#: admin/essential-grid-admin.class.php:1218
+#@ essential-grid
+msgid "Successfully removed validation"
+msgstr "Successfully removed validation"
+
+#: admin/essential-grid-admin.class.php:1223
+#@ essential-grid
+msgid "Could not remove Validation!"
+msgstr "Could not remove Validation!"
+
+#: admin/essential-grid-admin.class.php:1231
+#@ default
+msgid "."
+msgstr "."
+
+#: admin/essential-grid-admin.class.php:1269
+#@ essential-grid
+msgid "Demo data successfully imported"
+msgstr "Demo data successfully imported"
+
+#: admin/essential-grid-admin.class.php:1272
+#: admin/essential-grid-admin.class.php:1423
+#@ essential-grid
+msgid "Something went wrong, please contact the developer"
+msgstr "Something went wrong, please contact the developer"
+
+#: admin/essential-grid-admin.class.php:1333
+#@ essential-grid
+msgid "No data for import selected"
+msgstr "No data for import selected"
+
+#: admin/essential-grid-admin.class.php:1420
+#@ essential-grid
+msgid "Successfully imported data"
+msgstr "Successfully imported data"
+
+#: admin/essential-grid-admin.class.php:1435
+#@ essential-grid
+msgid "Wrong Request!"
+msgstr "Wrong Request!"
+
+#: admin/essential-grid-admin.class.php:1437
+#@ essential-grid
+msgid "Ajax Error: "
+msgstr "Ajax Error: "
+
+#: admin/includes/dialogs.class.php:21
+#: admin/views/grid-overview.php:17
+#@ essential-grid
+msgid "Global Settings"
+msgstr "Global Settings"
+
+#: admin/includes/dialogs.class.php:23
+#@ essential-grid
+msgid "View Plugin Permissions"
+msgstr "View Plugin Permissions"
+
+#: admin/includes/dialogs.class.php:25
+#@ essential-grid
+msgid "Admin"
+msgstr "Admin"
+
+#: admin/includes/dialogs.class.php:26
+#@ essential-grid
+msgid "Editor, Admin"
+msgstr "Editor, Admin"
+
+#: admin/includes/dialogs.class.php:27
+#@ essential-grid
+msgid "Author, Editor, Admin"
+msgstr "Author, Editor, Admin"
+
+#: admin/includes/dialogs.class.php:31
+#@ essential-grid
+msgid "Advanced Tooltips"
+msgstr "Advanced Tooltips"
+
+#: admin/includes/dialogs.class.php:33
+#: admin/includes/dialogs.class.php:40
+#: admin/views/elements/grid-item-skin-editor.php:264
+#: admin/views/elements/grid-settings.php:301
+#: admin/views/elements/grid-settings.php:960
+#: admin/views/elements/grid-settings.php:965
+#: admin/views/elements/grid-settings.php:1054
+#: admin/views/elements/grid-settings.php:1059
+#: admin/views/elements/grid-settings.php:1068
+#: admin/views/elements/grid-settings.php:1108
+#@ essential-grid
+msgid "On"
+msgstr "On"
+
+#: admin/includes/dialogs.class.php:34
+#: admin/includes/dialogs.class.php:41
+#: admin/views/elements/grid-item-skin-editor.php:265
+#: admin/views/elements/grid-settings.php:302
+#: admin/views/elements/grid-settings.php:961
+#: admin/views/elements/grid-settings.php:966
+#: admin/views/elements/grid-settings.php:1055
+#: admin/views/elements/grid-settings.php:1060
+#: admin/views/elements/grid-settings.php:1069
+#: admin/views/elements/grid-settings.php:1109
+#@ essential-grid
+msgid "Off"
+msgstr "Off"
+
+#: admin/includes/dialogs.class.php:38
+#@ essential-grid
+msgid "Wait for Fonts"
+msgstr "Wait for Fonts"
+
+#: admin/includes/dialogs.class.php:45
+#@ essential-grid
+msgid "Output Filter Protection"
+msgstr "Output Filter Protection"
+
+#: admin/includes/dialogs.class.php:47
+#: admin/views/elements/grid-item-skin-editor.php:588
+#: admin/views/elements/grid-item-skin-editor.php:687
+#: admin/views/elements/grid-item-skin-editor.php:703
+#: admin/views/elements/grid-item-skin-editor.php:1016
+#: admin/views/elements/grid-item-skin-editor.php:1032
+#: admin/views/elements/grid-item-skin-editor.php:1248
+#: admin/views/elements/grid-settings.php:283
+#: admin/views/elements/grid-settings.php:769
+#: includes/item-element.class.php:1047
+#: includes/item-element.class.php:1055
+#: includes/item-element.class.php:1070
+#@ essential-grid
+msgid "None"
+msgstr "None"
+
+#: admin/includes/dialogs.class.php:48
+#@ essential-grid
+msgid "By Compressing Output"
+msgstr "By Compressing Output"
+
+#: admin/includes/dialogs.class.php:49
+#@ essential-grid
+msgid "By Echo Output"
+msgstr "By Echo Output"
+
+#: admin/includes/dialogs.class.php:64
+#: admin/includes/dialogs.class.php:65
+#@ essential-grid
+msgid "Choose Pages"
+msgstr "Choose Pages"
+
+#: admin/includes/dialogs.class.php:68
+#@ essential-grid
+msgid "Select All"
+msgstr "Select All"
+
+#: admin/includes/dialogs.class.php:90
+#@ essential-grid
+msgid "Global Custom CSS"
+msgstr "Global Custom CSS"
+
+#: admin/includes/dialogs.class.php:103
+#@ essential-grid
+msgid "Navigation Skin CSS"
+msgstr "Navigation Skin CSS"
+
+#: admin/includes/dialogs.class.php:335
+#: admin/includes/dialogs.class.php:357
+#: admin/views/grid-custom-meta.php:23
+#: admin/views/themepunch-google-fonts.php:34
+#@ essential-grid
+msgid "Handle:"
+msgstr "Handle:"
+
+#: admin/includes/dialogs.class.php:336
+#: admin/views/grid-custom-meta.php:27
+#@ essential-grid
+msgid "Name:"
+msgstr "Name:"
+
+#: admin/includes/dialogs.class.php:337
+#: admin/views/grid-custom-meta.php:33
+#@ essential-grid
+msgid "Default:"
+msgstr "Default:"
+
+#: admin/includes/dialogs.class.php:338
+#: admin/views/grid-custom-meta.php:29
+#@ default
+#@ essential-grid
+msgid "Type:"
+msgstr "Type:"
+
+#: admin/includes/dialogs.class.php:338
+#@ default
+msgid "Text"
+msgstr "Text"
+
+#: admin/includes/dialogs.class.php:338
+#@ default
+msgid "Select"
+msgstr "Select"
+
+#: admin/includes/dialogs.class.php:338
+#: admin/includes/dialogs.class.php:454
+#@ essential-grid
+msgid "Image"
+msgstr "Image"
+
+#: admin/includes/dialogs.class.php:340
+#@ essential-grid
+msgid "Comma Seperated List of Elements:"
+msgstr "Comma Seperated List of Elements:"
+
+#: admin/includes/dialogs.class.php:355
+#@ essential-grid
+msgid "Add Font"
+msgstr "Add Font"
+
+#: admin/includes/dialogs.class.php:359
+#@ essential-grid
+msgid "Unique WordPress handle (Internal use only)"
+msgstr "Unique WordPress handle (Internal use only)"
+
+#: admin/includes/dialogs.class.php:361
+#: admin/views/themepunch-google-fonts.php:35
+#@ essential-grid
+msgid "Parameter:"
+msgstr "Parameter:"
+
+#: admin/includes/dialogs.class.php:363
+#@ essential-grid
+msgid "Copy the Google Font Family from <a href=\"http://www.google.com/fonts\" target=\"_blank\">http://www.google.com/fonts</a><br/>i.e.:<strong>Open+Sans:400,600,700</strong>"
+msgstr "Copy the Google Font Family from <a href=\"http://www.google.com/fonts\" target=\"_blank\">http://www.google.com/fonts</a><br/>i.e.:<strong>Open+Sans:400,600,700</strong>"
+
+#: admin/includes/dialogs.class.php:382
+#: admin/views/elements/grid-item-skin-editor.php:1251
+#@ essential-grid
+msgid "Meta"
+msgstr "Meta"
+
+#: admin/includes/dialogs.class.php:384
+#@ essential-grid
+msgid "Meta Handle"
+msgstr "Meta Handle"
+
+#: admin/includes/dialogs.class.php:384
+#@ essential-grid
+msgid "Description"
+msgstr "Description"
+
+#: admin/includes/dialogs.class.php:414
+#@ essential-grid
+msgid "Post Meta Editor"
+msgstr "Post Meta Editor"
+
+#: admin/includes/dialogs.class.php:432
+#: admin/views/elements/grid-element-style.php:8
+#@ essential-grid
+msgid "Element Settings"
+msgstr "Element Settings"
+
+#: admin/includes/dialogs.class.php:436
+#@ essential-grid
+msgid "Media:"
+msgstr "Media:"
+
+#: admin/includes/dialogs.class.php:440
+#: admin/views/elements/grid-meta-box.php:363
+#@ essential-grid
+msgid "SoundCloud Track"
+msgstr "SoundCloud Track"
+
+#: admin/includes/dialogs.class.php:443
+#: admin/views/elements/grid-meta-box.php:337
+#@ essential-grid
+msgid "YouTube ID"
+msgstr "YouTube ID"
+
+#: admin/includes/dialogs.class.php:446
+#: admin/views/elements/grid-meta-box.php:346
+#@ essential-grid
+msgid "Vimeo ID"
+msgstr "Vimeo ID"
+
+#: admin/includes/dialogs.class.php:449
+#: admin/views/elements/grid-meta-box.php:318
+#@ essential-grid
+msgid "MP4"
+msgstr "MP4"
+
+#: admin/includes/dialogs.class.php:450
+#: admin/views/elements/grid-meta-box.php:319
+#@ essential-grid
+msgid "OGV"
+msgstr "OGV"
+
+#: admin/includes/dialogs.class.php:451
+#: admin/views/elements/grid-meta-box.php:320
+#@ essential-grid
+msgid "WEBM"
+msgstr "WEBM"
+
+#: admin/includes/dialogs.class.php:456
+#: admin/includes/dialogs.class.php:504
+#: admin/views/elements/grid-meta-box.php:291
+#: admin/views/elements/grid-meta-box.php:380
+#: includes/base.class.php:188
+#: includes/base.class.php:191
+#@ essential-grid
+msgid "Choose Image"
+msgstr "Choose Image"
+
+#: admin/includes/dialogs.class.php:457
+#: admin/includes/dialogs.class.php:505
+#: admin/views/elements/grid-meta-box.php:292
+#: admin/views/elements/grid-meta-box.php:381
+#@ essential-grid
+msgid "Remove Image"
+msgstr "Remove Image"
+
+#: admin/includes/dialogs.class.php:464
+#@ essential-grid
+msgid "Video Ratio"
+msgstr "Video Ratio"
+
+#: admin/includes/dialogs.class.php:466
+#@ essential-grid
+msgid "4:3"
+msgstr "4:3"
+
+#: admin/includes/dialogs.class.php:467
+#@ essential-grid
+msgid "16:9"
+msgstr "16:9"
+
+#: admin/includes/dialogs.class.php:477
+#@ essential-grid
+msgid "Custom Meta:"
+msgstr "Custom Meta:"
+
+#: admin/includes/dialogs.class.php:492
+#: admin/views/elements/grid-meta-box.php:268
+#@ essential-grid
+msgid "---"
+msgstr "---"
+
+#: admin/includes/dialogs.class.php:517
+#: admin/views/elements/grid-meta-box.php:304
+#@ essential-grid
+msgid "No metas available yet. Add some through the Custom Meta menu of Essential Grid."
+msgstr "No metas available yet. Add some through the Custom Meta menu of Essential Grid."
+
+#: admin/includes/dialogs.class.php:522
+#: admin/views/elements/grid-item-skin-editor.php:1249
+#@ essential-grid
+msgid "Post"
+msgstr "Post"
+
+#: admin/includes/dialogs.class.php:522
+#@ essential-grid
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: admin/includes/dialogs.class.php:535
+#@ essential-grid
+msgid "Link To:"
+msgstr "Link To:"
+
+#: admin/includes/dialogs.class.php:538
+#@ essential-grid
+msgid "Post Link"
+msgstr "Post Link"
+
+#: admin/includes/dialogs.class.php:541
+#@ essential-grid
+msgid "Other:"
+msgstr "Other:"
+
+#: admin/includes/dialogs.class.php:544
+#@ essential-grid
+msgid "Filter (comma seperated)"
+msgstr "Filter (comma seperated)"
+
+#: admin/includes/dialogs.class.php:548
+#@ essential-grid
+msgid "Cobbles Element Size:"
+msgstr "Cobbles Element Size:"
+
+#: admin/includes/dialogs.class.php:551
+#: admin/views/elements/grid-meta-box.php:239
+#@ default
+msgid "width 1, height 1"
+msgstr "width 1, height 1"
+
+#: admin/includes/dialogs.class.php:552
+#: admin/views/elements/grid-meta-box.php:240
+#@ default
+msgid "width 1, height 2"
+msgstr "width 1, height 2"
+
+#: admin/includes/dialogs.class.php:553
+#: admin/views/elements/grid-meta-box.php:241
+#@ default
+msgid "width 2, height 1"
+msgstr "width 2, height 1"
+
+#: admin/includes/dialogs.class.php:554
+#: admin/views/elements/grid-meta-box.php:242
+#@ default
+msgid "width 2, height 2"
+msgstr "width 2, height 2"
+
+#: admin/views/elements/grid-element-style.php:12
+#: admin/views/elements/grid-element-style.php:20
+#: admin/views/elements/grid-item-skin-editor.php:512
+#: admin/views/elements/grid-item-skin-editor.php:524
+#: admin/views/grid-create.php:105
+#: admin/views/grid-create.php:146
+#@ essential-grid
+msgid "Source"
+msgstr "Source"
+
+#: admin/views/elements/grid-element-style.php:13
+#: admin/views/elements/grid-item-skin-editor.php:513
+#: admin/views/elements/grid-item-skin-editor.php:635
+#: admin/views/elements/grid-item-skin-editor.php:965
+#@ essential-grid
+msgid "Style"
+msgstr "Style"
+
+#: admin/views/elements/grid-element-style.php:14
+#: admin/views/elements/grid-item-skin-editor.php:85
+#: admin/views/elements/grid-item-skin-editor.php:515
+#@ essential-grid
+msgid "Animation"
+msgstr "Animation"
+
+#: admin/views/elements/grid-element-style.php:32
+#: admin/views/elements/grid-item-skin-editor.php:545
+#@ essential-grid
+msgid "Element"
+msgstr "Element"
+
+#: admin/views/elements/grid-element-style.php:53
+#: admin/views/elements/grid-item-skin-editor.php:802
+#@ essential-grid
+msgid "Float Element"
+msgstr "Float Element"
+
+#: admin/views/elements/grid-element-style.php:57
+#: admin/views/elements/grid-item-skin-editor.php:647
+#: admin/views/elements/grid-item-skin-editor.php:976
+#@ essential-grid
+msgid "Font Size"
+msgstr "Font Size"
+
+#: admin/views/elements/grid-element-style.php:62
+#: admin/views/elements/grid-item-skin-editor.php:150
+#: admin/views/elements/grid-item-skin-editor.php:852
+#: admin/views/elements/grid-item-skin-editor.php:1047
+#: includes/item-element.class.php:1075
+#@ essential-grid
+msgid "Background Color"
+msgstr "Background Color"
+
+#: admin/views/elements/grid-element-style.php:66
+#: admin/views/elements/grid-item-skin-editor.php:834
+#: admin/views/elements/grid-settings.php:327
+#@ essential-grid
+msgid "Paddings"
+msgstr "Paddings"
+
+#: admin/views/elements/grid-element-style.php:71
+#: admin/views/elements/grid-item-skin-editor.php:827
+#@ essential-grid
+msgid "Margin"
+msgstr "Margin"
+
+#: admin/views/elements/grid-element-style.php:76
+#: admin/views/elements/grid-item-skin-editor.php:637
+#: admin/views/elements/grid-item-skin-editor.php:920
+#: admin/views/elements/grid-item-skin-editor.php:966
+#: admin/views/elements/grid-item-skin-editor.php:1116
+#@ essential-grid
+msgid "Border"
+msgstr "Border"
+
+#: admin/views/elements/grid-element-style.php:81
+#: admin/views/elements/grid-item-skin-editor.php:841
+#@ essential-grid
+msgid "Height"
+msgstr "Height"
+
+#: admin/views/elements/grid-element-style.php:86
+#: admin/views/elements/grid-item-skin-editor.php:1166
+#@ essential-grid
+msgid "Hide Under Width"
+msgstr "Hide Under Width"
+
+#: admin/views/elements/grid-element-style.php:91
+#: admin/views/elements/grid-item-skin-editor.php:84
+#: admin/views/elements/grid-item-skin-editor.php:353
+#: admin/views/elements/grid-item-skin-editor.php:639
+#: admin/views/elements/grid-item-skin-editor.php:906
+#: admin/views/elements/grid-item-skin-editor.php:968
+#: admin/views/elements/grid-item-skin-editor.php:1101
+#@ essential-grid
+msgid "Shadow"
+msgstr "Shadow"
+
+#: admin/views/elements/grid-element-style.php:99
+#: admin/views/elements/grid-item-skin-editor.php:1234
+#@ essential-grid
+msgid "Delay"
+msgstr "Delay"
+
+#: admin/views/elements/grid-element-style.php:104
+#: admin/views/elements/grid-item-skin-editor.php:1198
+#: includes/item-element.class.php:1089
+#@ essential-grid
+msgid "Transition"
+msgstr "Transition"
+
+#: admin/views/elements/grid-element-style.php:119
+#@ essential-grid
+msgid "Delete"
+msgstr "Delete"
+
+#: admin/views/elements/grid-element-style.php:120
+#: admin/views/elements/grid-item-skin-editor.php:51
+#@ essential-grid
+msgid "Save"
+msgstr "Save"
+
+#: admin/views/elements/grid-info.php:19
+#@ essential-grid
+msgid "How To Use Essential Grid"
+msgstr "How To Use Essential Grid"
+
+#: admin/views/elements/grid-info.php:23
+#@ essential-grid
+msgid "From the <b>page and/or post editor</b> insert the shortcode from the sliders table"
+msgstr "From the <b>page and/or post editor</b> insert the shortcode from the sliders table"
+
+#: admin/views/elements/grid-info.php:24
+#@ essential-grid
+msgid "From the <b>widgets panel</b> drag the \"Essential Grid\" widget to the desired sidebar"
+msgstr "From the <b>widgets panel</b> drag the \"Essential Grid\" widget to the desired sidebar"
+
+#: admin/views/elements/grid-info.php:32
+#@ essential-grid
+msgid "Version Information"
+msgstr "Version Information"
+
+#: admin/views/elements/grid-info.php:37
+#@ essential-grid
+msgid "Installed Version"
+msgstr "Installed Version"
+
+#: admin/views/elements/grid-info.php:38
+#@ essential-grid
+msgid "Available Version"
+msgstr "Available Version"
+
+#: admin/views/elements/grid-info.php:50
+#@ default
+msgid "Need Premium Support and Auto Updates ?"
+msgstr "Need Premium Support and Auto Updates ?"
+
+#: admin/views/elements/grid-info.php:50
+#@ essential-grid
+msgid "Why is this Important ?"
+msgstr "Why is this Important ?"
+
+#: admin/views/elements/grid-info.php:55
+#@ essential-grid
+msgid "Benefits"
+msgstr "Benefits"
+
+#: admin/views/elements/grid-info.php:57
+#@ default
+msgid "Get Premium Support"
+msgstr "Get Premium Support"
+
+#: admin/views/elements/grid-info.php:57
+#@ essential-grid
+msgid " - We help you in case of Bugs, installation problems, and Conflicts with other plugins and Themes "
+msgstr " - We help you in case of Bugs, installation problems, and Conflicts with other plugins and Themes "
+
+#: admin/views/elements/grid-info.php:58
+#@ default
+msgid "Auto Updates"
+msgstr "Auto Updates"
+
+#: admin/views/elements/grid-info.php:58
+#@ essential-grid
+msgid " - Get the latest version of our Plugin.  New Features and Bug Fixes are available regularly !"
+msgstr " - Get the latest version of our Plugin.  New Features and Bug Fixes are available regularly !"
+
+#: admin/views/elements/grid-info.php:85
+#@ essential-grid
+msgid "Username:"
+msgstr "Username:"
+
+#: admin/views/elements/grid-info.php:88
+#@ essential-grid
+msgid "Your Envato username."
+msgstr "Your Envato username."
+
+#: admin/views/elements/grid-info.php:93
+#@ essential-grid
+msgid "Envato API Key:"
+msgstr "Envato API Key:"
+
+#: admin/views/elements/grid-info.php:96
+#@ essential-grid
+msgid "You can find API key by visiting your Envato Account page, then clicking the My Settings tab. At the bottom of he page you will find your accounts API key."
+msgstr "You can find API key by visiting your Envato Account page, then clicking the My Settings tab. At the bottom of he page you will find your accounts API key."
+
+#: admin/views/elements/grid-info.php:100
+#@ essential-grid
+msgid "Purchase code:"
+msgstr "Purchase code:"
+
+#: admin/views/elements/grid-info.php:103
+#@ default
+msgid "Please enter your "
+msgstr "Please enter your "
+
+#: admin/views/elements/grid-info.php:103
+#@ default
+msgid "CodeCanyon Essential Grid purchase code / license key"
+msgstr "CodeCanyon Essential Grid purchase code / license key"
+
+#: admin/views/elements/grid-info.php:103
+#@ default
+msgid ". You can find your key by following the instructions on"
+msgstr ". You can find your key by following the instructions on"
+
+#: admin/views/elements/grid-info.php:103
+#@ essential-grid
+msgid " this page."
+msgstr " this page."
+
+#: admin/views/elements/grid-info.php:107
+#@ essential-grid
+msgid "Please Wait..."
+msgstr "Please Wait..."
+
+#: admin/views/elements/grid-info.php:109
+#@ essential-grid
+msgid "Activate"
+msgstr "Activate"
+
+#: admin/views/elements/grid-info.php:111
+#@ essential-grid
+msgid "Deactivate"
+msgstr "Deactivate"
+
+#: admin/views/elements/grid-info.php:117
+#@ essential-grid
+msgid "Search for Updates"
+msgstr "Search for Updates"
+
+#: admin/views/elements/grid-info.php:130
+#@ essential-grid
+msgid "How to get Support ?"
+msgstr "How to get Support ?"
+
+#: admin/views/elements/grid-info.php:132
+#@ default
+msgid "Please feel free to contact us via our "
+msgstr "Please feel free to contact us via our "
+
+#: admin/views/elements/grid-info.php:132
+#@ default
+msgid "Support Forum "
+msgstr "Support Forum "
+
+#: admin/views/elements/grid-info.php:132
+#@ default
+msgid "and/or via the "
+msgstr "and/or via the "
+
+#: admin/views/elements/grid-info.php:132
+#@ essential-grid
+msgid "Item Disscussion Forum"
+msgstr "Item Disscussion Forum"
+
+#: admin/views/elements/grid-info.php:139
+#@ default
+msgid "Click Here to get "
+msgstr "Click Here to get "
+
+#: admin/views/elements/grid-info.php:139
+#@ essential-grid
+msgid "Premium Support and Auto Updates"
+msgstr "Premium Support and Auto Updates"
+
+#: admin/views/elements/grid-info.php:151
+#@ default
+msgid "Update History"
+msgstr "Update History"
+
+#: admin/views/elements/grid-item-skin-editor.php:17
+#: admin/views/grid-item-skin.php:138
+#@ essential-grid
+msgid "Create New Item Skin"
+msgstr "Create New Item Skin"
+
+#: admin/views/elements/grid-item-skin-editor.php:18
+#@ essential-grid
+msgid "Save Item Skin"
+msgstr "Save Item Skin"
+
+#: admin/views/elements/grid-item-skin-editor.php:23
+#: admin/views/elements/grid-item-skin-editor.php:24
+#@ essential-grid
+msgid "Change Item Skin"
+msgstr "Change Item Skin"
+
+#: admin/views/elements/grid-item-skin-editor.php:48
+#@ essential-grid
+msgid "CSS"
+msgstr "CSS"
+
+#: admin/views/elements/grid-item-skin-editor.php:54
+#@ essential-grid
+msgid "Back"
+msgstr "Back"
+
+#: admin/views/elements/grid-item-skin-editor.php:66
+#@ essential-grid
+msgid "Item Skin Name:"
+msgstr "Item Skin Name:"
+
+#: admin/views/elements/grid-item-skin-editor.php:66
+#@ essential-grid
+msgid "Class Prefix = "
+msgstr "Class Prefix = "
+
+#: admin/views/elements/grid-item-skin-editor.php:66
+#@ essential-grid
+msgid "Each element in the Skin becomes this CSS Prefix"
+msgstr "Each element in the Skin becomes this CSS Prefix"
+
+#: admin/views/elements/grid-item-skin-editor.php:75
+#: admin/views/grid-create.php:92
+#@ essential-grid
+msgid "Layout Composition"
+msgstr "Layout Composition"
+
+#: admin/views/elements/grid-item-skin-editor.php:81
+#: admin/views/elements/grid-settings.php:33
+#: admin/views/elements/grid-settings.php:37
+#@ essential-grid
+msgid "Layout"
+msgstr "Layout"
+
+#: admin/views/elements/grid-item-skin-editor.php:82
+#: admin/views/elements/grid-item-skin-editor.php:164
+#@ essential-grid
+msgid "Cover"
+msgstr "Cover"
+
+#: admin/views/elements/grid-item-skin-editor.php:83
+#@ essential-grid
+msgid "Spaces"
+msgstr "Spaces"
+
+#: admin/views/elements/grid-item-skin-editor.php:92
+#: admin/views/elements/grid-settings.php:47
+#@ essential-grid
+msgid "Grid Layout"
+msgstr "Grid Layout"
+
+#: admin/views/elements/grid-item-skin-editor.php:93
+#@ essential-grid
+msgid "Each item gets Same Height. Width and Height are Item Ratio dependent."
+msgstr "Each item gets Same Height. Width and Height are Item Ratio dependent."
+
+#: admin/views/elements/grid-item-skin-editor.php:93
+#: admin/views/elements/grid-settings.php:49
+#@ essential-grid
+msgid "Even"
+msgstr "Even"
+
+#: admin/views/elements/grid-item-skin-editor.php:94
+#@ essential-grid
+msgid "Items height are depending on Media height and Content height."
+msgstr "Items height are depending on Media height and Content height."
+
+#: admin/views/elements/grid-item-skin-editor.php:94
+#: admin/views/elements/grid-settings.php:50
+#@ essential-grid
+msgid "Masonry"
+msgstr "Masonry"
+
+#: admin/views/elements/grid-item-skin-editor.php:101
+#: admin/views/elements/grid-item-skin-editor.php:109
+#: admin/views/elements/grid-item-skin-editor.php:140
+#: admin/views/elements/grid-item-skin-editor.php:162
+#: admin/views/elements/grid-item-skin-editor.php:174
+#: admin/views/elements/grid-item-skin-editor.php:251
+#: admin/views/elements/grid-item-skin-editor.php:311
+#: admin/views/elements/grid-item-skin-editor.php:330
+#: admin/views/elements/grid-item-skin-editor.php:373
+#: admin/views/elements/grid-item-skin-editor.php:382
+#: admin/views/elements/grid-item-skin-editor.php:398
+#: admin/views/elements/grid-item-skin-editor.php:407
+#: admin/views/elements/grid-item-skin-editor.php:423
+#: admin/views/elements/grid-item-skin-editor.php:432
+#: admin/views/elements/grid-item-skin-editor.php:451
+#: admin/views/elements/grid-item-skin-editor.php:468
+#: admin/views/elements/grid-item-skin-editor.php:502
+#: admin/views/elements/grid-item-skin-editor.php:526
+#: admin/views/elements/grid-item-skin-editor.php:550
+#: admin/views/elements/grid-item-skin-editor.php:585
+#: admin/views/elements/grid-item-skin-editor.php:668
+#: admin/views/elements/grid-item-skin-editor.php:685
+#: admin/views/elements/grid-item-skin-editor.php:701
+#: admin/views/elements/grid-item-skin-editor.php:720
+#: admin/views/elements/grid-item-skin-editor.php:731
+#: admin/views/elements/grid-item-skin-editor.php:781
+#: admin/views/elements/grid-item-skin-editor.php:792
+#: admin/views/elements/grid-item-skin-editor.php:804
+#: admin/views/elements/grid-item-skin-editor.php:816
+#: admin/views/elements/grid-item-skin-editor.php:947
+#: admin/views/elements/grid-item-skin-editor.php:997
+#: admin/views/elements/grid-item-skin-editor.php:1014
+#: admin/views/elements/grid-item-skin-editor.php:1030
+#: admin/views/elements/grid-item-skin-editor.php:1143
+#: admin/views/elements/grid-item-skin-editor.php:1200
+#: admin/views/elements/grid-item-skin-editor.php:1212
+#: admin/views/elements/grid-item-skin-editor.php:1223
+#: admin/views/elements/grid-item-skin-editor.php:1246
+#: admin/views/elements/grid-item-skin-editor.php:1274
+#@ essential-grid
+msgid "Not uppercased"
+msgstr "Not uppercased"
+
+#: admin/views/elements/grid-item-skin-editor.php:102
+#@ essential-grid
+msgid "Position of Fixed Content"
+msgstr "Position of Fixed Content"
+
+#: admin/views/elements/grid-item-skin-editor.php:103
+#: admin/views/elements/grid-item-skin-editor.php:421
+#: admin/views/elements/grid-item-skin-editor.php:754
+#: admin/views/elements/grid-item-skin-editor.php:830
+#: admin/views/elements/grid-item-skin-editor.php:837
+#: admin/views/elements/grid-settings.php:953
+#: includes/base.class.php:201
+#@ essential-grid
+msgid "Bottom"
+msgstr "Bottom"
+
+#: admin/views/elements/grid-item-skin-editor.php:104
+#: admin/views/elements/grid-item-skin-editor.php:371
+#: admin/views/elements/grid-item-skin-editor.php:749
+#: admin/views/elements/grid-item-skin-editor.php:828
+#: admin/views/elements/grid-item-skin-editor.php:835
+#: admin/views/elements/grid-settings.php:954
+#: includes/base.class.php:199
+#@ essential-grid
+msgid "Top"
+msgstr "Top"
+
+#: admin/views/elements/grid-item-skin-editor.php:105
+#: includes/base.class.php:203
+#@ essential-grid
+msgid "Hide"
+msgstr "Hide"
+
+#: admin/views/elements/grid-item-skin-editor.php:110
+#@ essential-grid
+msgid "Content Text Align Globaly"
+msgstr "Content Text Align Globaly"
+
+#: admin/views/elements/grid-item-skin-editor.php:111
+#: admin/views/elements/grid-item-skin-editor.php:750
+#: admin/views/elements/grid-item-skin-editor.php:765
+#: admin/views/elements/grid-item-skin-editor.php:831
+#: admin/views/elements/grid-item-skin-editor.php:838
+#: admin/views/elements/grid-settings.php:646
+#: admin/views/elements/grid-settings.php:656
+#: admin/views/elements/grid-settings.php:665
+#: admin/views/elements/grid-settings.php:675
+#: includes/base.class.php:202
+#@ essential-grid
+msgid "Left"
+msgstr "Left"
+
+#: admin/views/elements/grid-item-skin-editor.php:112
+#: admin/views/elements/grid-item-skin-editor.php:396
+#: admin/views/elements/grid-settings.php:647
+#: admin/views/elements/grid-settings.php:657
+#: admin/views/elements/grid-settings.php:666
+#: admin/views/elements/grid-settings.php:676
+#@ essential-grid
+msgid "Center"
+msgstr "Center"
+
+#: admin/views/elements/grid-item-skin-editor.php:113
+#: admin/views/elements/grid-item-skin-editor.php:829
+#: admin/views/elements/grid-item-skin-editor.php:836
+#: admin/views/elements/grid-settings.php:648
+#: admin/views/elements/grid-settings.php:658
+#: admin/views/elements/grid-settings.php:667
+#: admin/views/elements/grid-settings.php:677
+#: includes/base.class.php:200
+#@ essential-grid
+msgid "Right"
+msgstr "Right"
+
+#: admin/views/elements/grid-item-skin-editor.php:122
+#@ essential-grid
+msgid "Ratio X"
+msgstr "Ratio X"
+
+#: admin/views/elements/grid-item-skin-editor.php:123
+#@ essential-grid
+msgid "Width Ratio of Item."
+msgstr "Width Ratio of Item."
+
+#: admin/views/elements/grid-item-skin-editor.php:126
+#@ essential-grid
+msgid "Ratio Y"
+msgstr "Ratio Y"
+
+#: admin/views/elements/grid-item-skin-editor.php:127
+#@ essential-grid
+msgid "Height Ratio of Item."
+msgstr "Height Ratio of Item."
+
+#: admin/views/elements/grid-item-skin-editor.php:138
+#@ essential-grid
+msgid "Cover Type"
+msgstr "Cover Type"
+
+#: admin/views/elements/grid-item-skin-editor.php:141
+#@ essential-grid
+msgid "Dynamic Covering Content Type. Show Cover Background on full Media, or only under Cover Contents ?"
+msgstr "Dynamic Covering Content Type. Show Cover Background on full Media, or only under Cover Contents ?"
+
+#: admin/views/elements/grid-item-skin-editor.php:142
+#: admin/views/elements/grid-item-skin-editor.php:1225
+#@ essential-grid
+msgid "Full"
+msgstr "Full"
+
+#: admin/views/elements/grid-item-skin-editor.php:143
+#@ essential-grid
+msgid "Content Based"
+msgstr "Content Based"
+
+#: admin/views/elements/grid-item-skin-editor.php:150
+#@ essential-grid
+msgid "Background Color of Covers"
+msgstr "Background Color of Covers"
+
+#: admin/views/elements/grid-item-skin-editor.php:154
+#@ essential-grid
+msgid "Opacity"
+msgstr "Opacity"
+
+#: admin/views/elements/grid-item-skin-editor.php:155
+#: admin/views/elements/grid-item-skin-editor.php:156
+#@ essential-grid
+msgid "Cover Background Color opacity"
+msgstr "Cover Background Color opacity"
+
+#: admin/views/elements/grid-item-skin-editor.php:160
+#@ essential-grid
+msgid "Background Fit"
+msgstr "Background Fit"
+
+#: admin/views/elements/grid-item-skin-editor.php:165
+#@ essential-grid
+msgid "Contain"
+msgstr "Contain"
+
+#: admin/views/elements/grid-item-skin-editor.php:166
+#@ essential-grid
+msgid "%"
+msgstr "%"
+
+#: admin/views/elements/grid-item-skin-editor.php:167
+#: admin/views/elements/grid-settings.php:1021
+#: admin/views/elements/grid-settings.php:1036
+#: includes/item-element.class.php:1039
+#@ essential-grid
+msgid "Normal"
+msgstr "Normal"
+
+#: admin/views/elements/grid-item-skin-editor.php:172
+#@ essential-grid
+msgid "Background Repeat"
+msgstr "Background Repeat"
+
+#: admin/views/elements/grid-item-skin-editor.php:176
+#@ essential-grid
+msgid "no-repeat"
+msgstr "no-repeat"
+
+#: admin/views/elements/grid-item-skin-editor.php:177
+#@ essential-grid
+msgid "repeat"
+msgstr "repeat"
+
+#: admin/views/elements/grid-item-skin-editor.php:178
+#@ essential-grid
+msgid "repeat-x"
+msgstr "repeat-x"
+
+#: admin/views/elements/grid-item-skin-editor.php:179
+#@ essential-grid
+msgid "repeat-y"
+msgstr "repeat-y"
+
+#: admin/views/elements/grid-item-skin-editor.php:193
+#@ essential-grid
+msgid "Click to<br>Select<br>Image"
+msgstr "Click to<br>Select<br>Image"
+
+#: admin/views/elements/grid-item-skin-editor.php:194
+#: admin/views/elements/grid-item-skin-editor.php:1306
+#: admin/views/grid-custom-meta.php:42
+#: admin/views/themepunch-google-fonts.php:39
+#@ essential-grid
+msgid "Remove"
+msgstr "Remove"
+
+#: admin/views/elements/grid-item-skin-editor.php:202
+#@ essential-grid
+msgid "Padding and border of the full item"
+msgstr "Padding and border of the full item"
+
+#: admin/views/elements/grid-item-skin-editor.php:202
+#@ essential-grid
+msgid "Full Item"
+msgstr "Full Item"
+
+#: admin/views/elements/grid-item-skin-editor.php:203
+#@ essential-grid
+msgid "Padding and border of the Fixed Content"
+msgstr "Padding and border of the Fixed Content"
+
+#: admin/views/elements/grid-item-skin-editor.php:211
+#: includes/item-element.class.php:1115
+#@ essential-grid
+msgid "Item BG Color"
+msgstr "Item BG Color"
+
+#: admin/views/elements/grid-item-skin-editor.php:212
+#@ default
+msgid "Background Color of Full Item"
+msgstr "Background Color of Full Item"
+
+#: admin/views/elements/grid-item-skin-editor.php:218
+#@ essential-grid
+msgid "Item Paddings"
+msgstr "Item Paddings"
+
+#: admin/views/elements/grid-item-skin-editor.php:219
+#@ essential-grid
+msgid "Top Padding of Item"
+msgstr "Top Padding of Item"
+
+#: admin/views/elements/grid-item-skin-editor.php:220
+#@ essential-grid
+msgid "Right Padding of Item"
+msgstr "Right Padding of Item"
+
+#: admin/views/elements/grid-item-skin-editor.php:221
+#@ essential-grid
+msgid "Bottom Padding of Item"
+msgstr "Bottom Padding of Item"
+
+#: admin/views/elements/grid-item-skin-editor.php:222
+#@ essential-grid
+msgid "Left Padding of Item"
+msgstr "Left Padding of Item"
+
+#: admin/views/elements/grid-item-skin-editor.php:228
+#@ essential-grid
+msgid "Item Border"
+msgstr "Item Border"
+
+#: admin/views/elements/grid-item-skin-editor.php:229
+#@ essential-grid
+msgid "Top Border Width of Item"
+msgstr "Top Border Width of Item"
+
+#: admin/views/elements/grid-item-skin-editor.php:230
+#@ essential-grid
+msgid "Right Border Width of Item"
+msgstr "Right Border Width of Item"
+
+#: admin/views/elements/grid-item-skin-editor.php:231
+#@ essential-grid
+msgid "Bottom Border Width of Item"
+msgstr "Bottom Border Width of Item"
+
+#: admin/views/elements/grid-item-skin-editor.php:232
+#@ essential-grid
+msgid "Left Border Width of Item"
+msgstr "Left Border Width of Item"
+
+#: admin/views/elements/grid-item-skin-editor.php:238
+#: admin/views/elements/grid-item-skin-editor.php:298
+#: admin/views/elements/grid-item-skin-editor.php:927
+#: admin/views/elements/grid-item-skin-editor.php:1123
+#@ essential-grid
+msgid "Border Radius"
+msgstr "Border Radius"
+
+#: admin/views/elements/grid-item-skin-editor.php:239
+#@ essential-grid
+msgid "Top Left Border Radius of Item"
+msgstr "Top Left Border Radius of Item"
+
+#: admin/views/elements/grid-item-skin-editor.php:240
+#@ essential-grid
+msgid "Top Right Border Radius of Item"
+msgstr "Top Right Border Radius of Item"
+
+#: admin/views/elements/grid-item-skin-editor.php:241
+#@ essential-grid
+msgid "Bottom Right Border Radius of Item"
+msgstr "Bottom Right Border Radius of Item"
+
+#: admin/views/elements/grid-item-skin-editor.php:242
+#@ essential-grid
+msgid "Bottom Left Border Radius of Item"
+msgstr "Bottom Left Border Radius of Item"
+
+#: admin/views/elements/grid-item-skin-editor.php:245
+#: admin/views/elements/grid-item-skin-editor.php:305
+#: admin/views/elements/grid-item-skin-editor.php:941
+#: admin/views/elements/grid-item-skin-editor.php:1137
+#: includes/item-element.class.php:1060
+#@ essential-grid
+msgid "Border Color"
+msgstr "Border Color"
+
+#: admin/views/elements/grid-item-skin-editor.php:249
+#: admin/views/elements/grid-item-skin-editor.php:309
+#: admin/views/elements/grid-item-skin-editor.php:945
+#: admin/views/elements/grid-item-skin-editor.php:1141
+#: includes/item-element.class.php:1067
+#@ essential-grid
+msgid "Border Style"
+msgstr "Border Style"
+
+#: admin/views/elements/grid-item-skin-editor.php:252
+#: admin/views/elements/grid-item-skin-editor.php:312
+#@ essential-grid
+msgid "Border Line Style"
+msgstr "Border Line Style"
+
+#: admin/views/elements/grid-item-skin-editor.php:253
+#: admin/views/elements/grid-item-skin-editor.php:313
+#: admin/views/elements/grid-item-skin-editor.php:332
+#: admin/views/elements/grid-item-skin-editor.php:806
+#: admin/views/elements/grid-item-skin-editor.php:818
+#: admin/views/elements/grid-item-skin-editor.php:949
+#: admin/views/elements/grid-item-skin-editor.php:1145
+#@ essential-grid
+msgid "none"
+msgstr "none"
+
+#: admin/views/elements/grid-item-skin-editor.php:254
+#: admin/views/elements/grid-item-skin-editor.php:314
+#: admin/views/elements/grid-item-skin-editor.php:950
+#: admin/views/elements/grid-item-skin-editor.php:1146
+#: includes/item-element.class.php:1070
+#@ essential-grid
+msgid "solid"
+msgstr "solid"
+
+#: admin/views/elements/grid-item-skin-editor.php:255
+#: admin/views/elements/grid-item-skin-editor.php:315
+#: admin/views/elements/grid-item-skin-editor.php:951
+#: admin/views/elements/grid-item-skin-editor.php:1147
+#: includes/item-element.class.php:1070
+#@ essential-grid
+msgid "dotted"
+msgstr "dotted"
+
+#: admin/views/elements/grid-item-skin-editor.php:256
+#: admin/views/elements/grid-item-skin-editor.php:316
+#: admin/views/elements/grid-item-skin-editor.php:952
+#: admin/views/elements/grid-item-skin-editor.php:1148
+#: includes/item-element.class.php:1070
+#@ essential-grid
+msgid "dashed"
+msgstr "dashed"
+
+#: admin/views/elements/grid-item-skin-editor.php:257
+#: admin/views/elements/grid-item-skin-editor.php:317
+#: admin/views/elements/grid-item-skin-editor.php:953
+#: admin/views/elements/grid-item-skin-editor.php:1149
+#: includes/item-element.class.php:1070
+#@ essential-grid
+msgid "double"
+msgstr "double"
+
+#: admin/views/elements/grid-item-skin-editor.php:263
+#@ essential-grid
+msgid "Overflow Hidden"
+msgstr "Overflow Hidden"
+
+#: admin/views/elements/grid-item-skin-editor.php:264
+#@ default
+msgid "Hide Overflow (fix border Radius issues)"
+msgstr "Hide Overflow (fix border Radius issues)"
+
+#: admin/views/elements/grid-item-skin-editor.php:265
+#@ default
+msgid "Show Overflowed content"
+msgstr "Show Overflowed content"
+
+#: admin/views/elements/grid-item-skin-editor.php:271
+#: includes/item-element.class.php:1121
+#@ essential-grid
+msgid "Content BG Color"
+msgstr "Content BG Color"
+
+#: admin/views/elements/grid-item-skin-editor.php:278
+#@ essential-grid
+msgid "Content Paddings"
+msgstr "Content Paddings"
+
+#: admin/views/elements/grid-item-skin-editor.php:279
+#@ essential-grid
+msgid "Top Padding of Fix Content"
+msgstr "Top Padding of Fix Content"
+
+#: admin/views/elements/grid-item-skin-editor.php:280
+#@ essential-grid
+msgid "Right Padding of Fix Content"
+msgstr "Right Padding of Fix Content"
+
+#: admin/views/elements/grid-item-skin-editor.php:281
+#@ essential-grid
+msgid "Bottom Padding of Fix Content"
+msgstr "Bottom Padding of Fix Content"
+
+#: admin/views/elements/grid-item-skin-editor.php:282
+#@ essential-grid
+msgid "Left Padding of Fix Content"
+msgstr "Left Padding of Fix Content"
+
+#: admin/views/elements/grid-item-skin-editor.php:288
+#@ essential-grid
+msgid "Content Border"
+msgstr "Content Border"
+
+#: admin/views/elements/grid-item-skin-editor.php:289
+#@ essential-grid
+msgid "Top Border Width of Fix Content"
+msgstr "Top Border Width of Fix Content"
+
+#: admin/views/elements/grid-item-skin-editor.php:290
+#@ essential-grid
+msgid "Right Border Width of Fix Content"
+msgstr "Right Border Width of Fix Content"
+
+#: admin/views/elements/grid-item-skin-editor.php:291
+#@ essential-grid
+msgid "Bottom Border Width of Fix Content"
+msgstr "Bottom Border Width of Fix Content"
+
+#: admin/views/elements/grid-item-skin-editor.php:292
+#@ essential-grid
+msgid "Left Border Width of Fix Content"
+msgstr "Left Border Width of Fix Content"
+
+#: admin/views/elements/grid-item-skin-editor.php:299
+#@ essential-grid
+msgid "Top Left Border Radius of Fix Content"
+msgstr "Top Left Border Radius of Fix Content"
+
+#: admin/views/elements/grid-item-skin-editor.php:300
+#@ essential-grid
+msgid "Top Right Border Radius of Fix Content"
+msgstr "Top Right Border Radius of Fix Content"
+
+#: admin/views/elements/grid-item-skin-editor.php:301
+#@ essential-grid
+msgid "Bottom Right Border Radius of Fix Content"
+msgstr "Bottom Right Border Radius of Fix Content"
+
+#: admin/views/elements/grid-item-skin-editor.php:302
+#@ essential-grid
+msgid "Bottom Left Border Radius of Fix Content"
+msgstr "Bottom Left Border Radius of Fix Content"
+
+#: admin/views/elements/grid-item-skin-editor.php:328
+#@ essential-grid
+msgid "Use Shadow"
+msgstr "Use Shadow"
+
+#: admin/views/elements/grid-item-skin-editor.php:331
+#@ essential-grid
+msgid "Drop Shadow of Element(s)"
+msgstr "Drop Shadow of Element(s)"
+
+#: admin/views/elements/grid-item-skin-editor.php:333
+#@ essential-grid
+msgid "media"
+msgstr "media"
+
+#: admin/views/elements/grid-item-skin-editor.php:334
+#@ essential-grid
+msgid "content"
+msgstr "content"
+
+#: admin/views/elements/grid-item-skin-editor.php:335
+#: admin/views/elements/grid-item-skin-editor.php:821
+#@ essential-grid
+msgid "both"
+msgstr "both"
+
+#: admin/views/elements/grid-item-skin-editor.php:341
+#: admin/views/elements/grid-item-skin-editor.php:897
+#: admin/views/elements/grid-item-skin-editor.php:1092
+#@ essential-grid
+msgid "Shadow Color"
+msgstr "Shadow Color"
+
+#: admin/views/elements/grid-item-skin-editor.php:345
+#: admin/views/elements/grid-item-skin-editor.php:901
+#: admin/views/elements/grid-item-skin-editor.php:1096
+#@ essential-grid
+msgid "Shadow Alpha"
+msgstr "Shadow Alpha"
+
+#: admin/views/elements/grid-item-skin-editor.php:346
+#: admin/views/elements/grid-item-skin-editor.php:347
+#@ essential-grid
+msgid "Shadow Opacity"
+msgstr "Shadow Opacity"
+
+#: admin/views/elements/grid-item-skin-editor.php:354
+#: admin/views/elements/grid-item-skin-editor.php:907
+#: admin/views/elements/grid-item-skin-editor.php:1102
+#@ essential-grid
+msgid "The position of the horizontal shadow. Negative values are allowed"
+msgstr "The position of the horizontal shadow. Negative values are allowed"
+
+#: admin/views/elements/grid-item-skin-editor.php:355
+#: admin/views/elements/grid-item-skin-editor.php:908
+#: admin/views/elements/grid-item-skin-editor.php:1103
+#@ essential-grid
+msgid "The position of the vertical shadow. Negative values are allowed"
+msgstr "The position of the vertical shadow. Negative values are allowed"
+
+#: admin/views/elements/grid-item-skin-editor.php:356
+#: admin/views/elements/grid-item-skin-editor.php:909
+#: admin/views/elements/grid-item-skin-editor.php:1104
+#@ essential-grid
+msgid "The blur distance"
+msgstr "The blur distance"
+
+#: admin/views/elements/grid-item-skin-editor.php:357
+#: admin/views/elements/grid-item-skin-editor.php:910
+#@ essential-grid
+msgid "The size of shadow"
+msgstr "The size of shadow"
+
+#: admin/views/elements/grid-item-skin-editor.php:360
+#@ essential-grid
+msgid "The Container under or over the Media Container."
+msgstr "The Container under or over the Media Container."
+
+#: admin/views/elements/grid-item-skin-editor.php:367
+#@ essential-grid
+msgid "Cover Animation"
+msgstr "Cover Animation"
+
+#: admin/views/elements/grid-item-skin-editor.php:374
+#: admin/views/elements/grid-item-skin-editor.php:399
+#: admin/views/elements/grid-item-skin-editor.php:424
+#@ essential-grid
+msgid "Show or Hide on hover. In = Show on Hover, Out = Hide on hover"
+msgstr "Show or Hide on hover. In = Show on Hover, Out = Hide on hover"
+
+#: admin/views/elements/grid-item-skin-editor.php:375
+#: admin/views/elements/grid-item-skin-editor.php:400
+#: admin/views/elements/grid-item-skin-editor.php:425
+#: admin/views/elements/grid-item-skin-editor.php:1214
+#@ essential-grid
+msgid "in"
+msgstr "in"
+
+#: admin/views/elements/grid-item-skin-editor.php:376
+#: admin/views/elements/grid-item-skin-editor.php:401
+#: admin/views/elements/grid-item-skin-editor.php:426
+#: admin/views/elements/grid-item-skin-editor.php:1215
+#@ essential-grid
+msgid "out"
+msgstr "out"
+
+#: admin/views/elements/grid-item-skin-editor.php:378
+#: admin/views/elements/grid-item-skin-editor.php:379
+#: admin/views/elements/grid-item-skin-editor.php:403
+#: admin/views/elements/grid-item-skin-editor.php:404
+#: admin/views/elements/grid-item-skin-editor.php:428
+#: admin/views/elements/grid-item-skin-editor.php:429
+#: admin/views/elements/grid-item-skin-editor.php:478
+#: admin/views/elements/grid-item-skin-editor.php:479
+#@ essential-grid
+#@ default
+msgid "Delay before the Animation starts"
+msgstr "Delay before the Animation starts"
+
+#: admin/views/elements/grid-item-skin-editor.php:383
+#: admin/views/elements/grid-item-skin-editor.php:408
+#: admin/views/elements/grid-item-skin-editor.php:433
+#@ essential-grid
+msgid "Animation Effect on Cover"
+msgstr "Animation Effect on Cover"
+
+#: admin/views/elements/grid-item-skin-editor.php:449
+#@ essential-grid
+msgid "Group Animation"
+msgstr "Group Animation"
+
+#: admin/views/elements/grid-item-skin-editor.php:452
+#@ essential-grid
+msgid "Animation Effect on Cover and on All Cover elements Grouped. This will not replace the Animation but add a global animation extra."
+msgstr "Animation Effect on Cover and on All Cover elements Grouped. This will not replace the Animation but add a global animation extra."
+
+#: admin/views/elements/grid-item-skin-editor.php:466
+#@ essential-grid
+msgid "Media Animation"
+msgstr "Media Animation"
+
+#: admin/views/elements/grid-item-skin-editor.php:469
+#@ essential-grid
+msgid "Animation of Media on Hover. All Media animation hide, or partly hide the Media on hover."
+msgstr "Animation of Media on Hover. All Media animation hide, or partly hide the Media on hover."
+
+#: admin/views/elements/grid-item-skin-editor.php:495
+#@ essential-grid
+msgid "Layer Settings - "
+msgstr "Layer Settings - "
+
+#: admin/views/elements/grid-item-skin-editor.php:514
+#@ essential-grid
+msgid "Show/Hide"
+msgstr "Show/Hide"
+
+#: admin/views/elements/grid-item-skin-editor.php:516
+#@ essential-grid
+msgid "Link/SEO"
+msgstr "Link/SEO"
+
+#: admin/views/elements/grid-item-skin-editor.php:527
+#@ essential-grid
+msgid "Select The Source of this Element"
+msgstr "Select The Source of this Element"
+
+#: admin/views/elements/grid-item-skin-editor.php:535
+#@ essential-grid
+msgid "Icon"
+msgstr "Icon"
+
+#: admin/views/elements/grid-item-skin-editor.php:536
+#@ essential-grid
+msgid "Text/HTML"
+msgstr "Text/HTML"
+
+#: admin/views/elements/grid-item-skin-editor.php:551
+#@ essential-grid
+msgid "Narrow down your selection"
+msgstr "Narrow down your selection"
+
+#: admin/views/elements/grid-item-skin-editor.php:566
+#@ essential-grid
+msgid "Separate By"
+msgstr "Separate By"
+
+#: admin/views/elements/grid-item-skin-editor.php:567
+#@ essential-grid
+msgid "Separator Char in the Listed element"
+msgstr "Separator Char in the Listed element"
+
+#: admin/views/elements/grid-item-skin-editor.php:574
+#: admin/views/elements/grid-item-skin-editor.php:1263
+#@ essential-grid
+msgid "Meta Key"
+msgstr "Meta Key"
+
+#: admin/views/elements/grid-item-skin-editor.php:575
+#@ essential-grid
+msgid "The Handle or ID of Meta Key"
+msgstr "The Handle or ID of Meta Key"
+
+#: admin/views/elements/grid-item-skin-editor.php:582
+#@ essential-grid
+msgid "Limit By"
+msgstr "Limit By"
+
+#: admin/views/elements/grid-item-skin-editor.php:587
+#@ essential-grid
+msgid "Text Length Limitation calculated based on..."
+msgstr "Text Length Limitation calculated based on..."
+
+#: admin/views/elements/grid-item-skin-editor.php:589
+#@ essential-grid
+msgid "Words"
+msgstr "Words"
+
+#: admin/views/elements/grid-item-skin-editor.php:590
+#@ essential-grid
+msgid "Characters"
+msgstr "Characters"
+
+#: admin/views/elements/grid-item-skin-editor.php:594
+#@ essential-grid
+msgid "Max visible amount of Chars or  Words"
+msgstr "Max visible amount of Chars or  Words"
+
+#: admin/views/elements/grid-item-skin-editor.php:605
+#@ essential-grid
+msgid "Click on the Field to change the Icon"
+msgstr "Click on the Field to change the Icon"
+
+#: admin/views/elements/grid-item-skin-editor.php:613
+#, php-format
+#@ essential-grid
+msgid "Use %meta-key-handle% to insert meta data. Most can be found "
+msgstr "Use %meta-key-handle% to insert meta data. Most can be found "
+
+#: admin/views/elements/grid-item-skin-editor.php:613
+#@ essential-grid
+msgid "here"
+msgstr "here"
+
+#: admin/views/elements/grid-item-skin-editor.php:626
+#@ essential-grid
+msgid "Style of Element in Idle State"
+msgstr "Style of Element in Idle State"
+
+#: admin/views/elements/grid-item-skin-editor.php:626
+#@ essential-grid
+msgid "Idle"
+msgstr "Idle"
+
+#: admin/views/elements/grid-item-skin-editor.php:627
+#@ essential-grid
+msgid "Style of Element in Hover state (only if Hover Box Checked)"
+msgstr "Style of Element in Hover state (only if Hover Box Checked)"
+
+#: admin/views/elements/grid-item-skin-editor.php:627
+#@ essential-grid
+msgid "Hover"
+msgstr "Hover"
+
+#: admin/views/elements/grid-item-skin-editor.php:636
+#@ essential-grid
+msgid "Spacing"
+msgstr "Spacing"
+
+#: admin/views/elements/grid-item-skin-editor.php:638
+#: admin/views/elements/grid-item-skin-editor.php:967
+#@ essential-grid
+msgid "BG"
+msgstr "BG"
+
+#: admin/views/elements/grid-item-skin-editor.php:652
+#: admin/views/elements/grid-item-skin-editor.php:981
+#@ essential-grid
+msgid "Line Height"
+msgstr "Line Height"
+
+#: admin/views/elements/grid-item-skin-editor.php:657
+#: admin/views/elements/grid-item-skin-editor.php:986
+#: includes/item-element.class.php:1029
+#@ essential-grid
+msgid "Font Color"
+msgstr "Font Color"
+
+#: admin/views/elements/grid-item-skin-editor.php:661
+#: admin/views/elements/grid-item-skin-editor.php:990
+#@ essential-grid
+msgid "Font Family"
+msgstr "Font Family"
+
+#: admin/views/elements/grid-item-skin-editor.php:665
+#: admin/views/elements/grid-item-skin-editor.php:994
+#@ essential-grid
+msgid "Font Weight"
+msgstr "Font Weight"
+
+#: admin/views/elements/grid-item-skin-editor.php:670
+#: admin/views/elements/grid-item-skin-editor.php:999
+#@ essential-grid
+msgid "400"
+msgstr "400"
+
+#: admin/views/elements/grid-item-skin-editor.php:671
+#: admin/views/elements/grid-item-skin-editor.php:1000
+#@ essential-grid
+msgid "100"
+msgstr "100"
+
+#: admin/views/elements/grid-item-skin-editor.php:672
+#: admin/views/elements/grid-item-skin-editor.php:1001
+#@ essential-grid
+msgid "200"
+msgstr "200"
+
+#: admin/views/elements/grid-item-skin-editor.php:673
+#: admin/views/elements/grid-item-skin-editor.php:1002
+#@ essential-grid
+msgid "300"
+msgstr "300"
+
+#: admin/views/elements/grid-item-skin-editor.php:674
+#: admin/views/elements/grid-item-skin-editor.php:1003
+#@ essential-grid
+msgid "500"
+msgstr "500"
+
+#: admin/views/elements/grid-item-skin-editor.php:675
+#: admin/views/elements/grid-item-skin-editor.php:1004
+#@ essential-grid
+msgid "600"
+msgstr "600"
+
+#: admin/views/elements/grid-item-skin-editor.php:676
+#: admin/views/elements/grid-item-skin-editor.php:1005
+#@ essential-grid
+msgid "700"
+msgstr "700"
+
+#: admin/views/elements/grid-item-skin-editor.php:677
+#: admin/views/elements/grid-item-skin-editor.php:1006
+#@ essential-grid
+msgid "800"
+msgstr "800"
+
+#: admin/views/elements/grid-item-skin-editor.php:678
+#: admin/views/elements/grid-item-skin-editor.php:1007
+#@ essential-grid
+msgid "900"
+msgstr "900"
+
+#: admin/views/elements/grid-item-skin-editor.php:683
+#: admin/views/elements/grid-item-skin-editor.php:1012
+#: includes/item-element.class.php:1044
+#@ essential-grid
+msgid "Text Decoration"
+msgstr "Text Decoration"
+
+#: admin/views/elements/grid-item-skin-editor.php:688
+#: admin/views/elements/grid-item-skin-editor.php:1017
+#: includes/item-element.class.php:1047
+#@ essential-grid
+msgid "Underline"
+msgstr "Underline"
+
+#: admin/views/elements/grid-item-skin-editor.php:689
+#: admin/views/elements/grid-item-skin-editor.php:1018
+#: includes/item-element.class.php:1047
+#@ essential-grid
+msgid "Overline"
+msgstr "Overline"
+
+#: admin/views/elements/grid-item-skin-editor.php:690
+#: admin/views/elements/grid-item-skin-editor.php:1019
+#: includes/item-element.class.php:1047
+#@ essential-grid
+msgid "Line Through"
+msgstr "Line Through"
+
+#: admin/views/elements/grid-item-skin-editor.php:695
+#: admin/views/elements/grid-item-skin-editor.php:1024
+#: includes/item-element.class.php:1036
+#@ essential-grid
+msgid "Font Style"
+msgstr "Font Style"
+
+#: admin/views/elements/grid-item-skin-editor.php:696
+#: admin/views/elements/grid-item-skin-editor.php:1025
+#: includes/item-element.class.php:1039
+#@ essential-grid
+msgid "Italic"
+msgstr "Italic"
+
+#: admin/views/elements/grid-item-skin-editor.php:699
+#: admin/views/elements/grid-item-skin-editor.php:1028
+#: includes/item-element.class.php:1052
+#@ essential-grid
+msgid "Text Transform"
+msgstr "Text Transform"
+
+#: admin/views/elements/grid-item-skin-editor.php:704
+#: admin/views/elements/grid-item-skin-editor.php:1033
+#: includes/item-element.class.php:1055
+#@ essential-grid
+msgid "Capitalize"
+msgstr "Capitalize"
+
+#: admin/views/elements/grid-item-skin-editor.php:705
+#: admin/views/elements/grid-item-skin-editor.php:1034
+#: includes/item-element.class.php:1055
+#@ essential-grid
+msgid "Uppercase"
+msgstr "Uppercase"
+
+#: admin/views/elements/grid-item-skin-editor.php:706
+#: admin/views/elements/grid-item-skin-editor.php:1035
+#: includes/item-element.class.php:1055
+#@ essential-grid
+msgid "Lowercase"
+msgstr "Lowercase"
+
+#: admin/views/elements/grid-item-skin-editor.php:710
+#: admin/views/elements/grid-item-skin-editor.php:845
+#: admin/views/elements/grid-item-skin-editor.php:889
+#: admin/views/elements/grid-item-skin-editor.php:912
+#: admin/views/elements/grid-item-skin-editor.php:957
+#@ essential-grid
+msgid "Drop Element from Available Layers here to overwrite Styling of Current Element"
+msgstr "Drop Element from Available Layers here to overwrite Styling of Current Element"
+
+#: admin/views/elements/grid-item-skin-editor.php:710
+#: admin/views/elements/grid-item-skin-editor.php:845
+#: admin/views/elements/grid-item-skin-editor.php:889
+#: admin/views/elements/grid-item-skin-editor.php:912
+#: admin/views/elements/grid-item-skin-editor.php:957
+#@ essential-grid
+msgid "Drop for<br>Style<br>Change"
+msgstr "Drop for<br>Style<br>Change"
+
+#: admin/views/elements/grid-item-skin-editor.php:718
+#@ essential-grid
+msgid "Position"
+msgstr "Position"
+
+#: admin/views/elements/grid-item-skin-editor.php:722
+#@ essential-grid
+msgid "Relative"
+msgstr "Relative"
+
+#: admin/views/elements/grid-item-skin-editor.php:723
+#@ essential-grid
+msgid "Absolute"
+msgstr "Absolute"
+
+#: admin/views/elements/grid-item-skin-editor.php:729
+#@ essential-grid
+msgid "Align"
+msgstr "Align"
+
+#: admin/views/elements/grid-item-skin-editor.php:733
+#@ essential-grid
+msgid "Top/Left"
+msgstr "Top/Left"
+
+#: admin/views/elements/grid-item-skin-editor.php:734
+#@ essential-grid
+msgid "Top/Right"
+msgstr "Top/Right"
+
+#: admin/views/elements/grid-item-skin-editor.php:735
+#@ essential-grid
+msgid "Bottom/Left"
+msgstr "Bottom/Left"
+
+#: admin/views/elements/grid-item-skin-editor.php:736
+#@ essential-grid
+msgid "Bottom/Right"
+msgstr "Bottom/Right"
+
+#: admin/views/elements/grid-item-skin-editor.php:779
+#@ essential-grid
+msgid "Display"
+msgstr "Display"
+
+#: admin/views/elements/grid-item-skin-editor.php:783
+#@ essential-grid
+msgid "block"
+msgstr "block"
+
+#: admin/views/elements/grid-item-skin-editor.php:784
+#@ essential-grid
+msgid "inline-block"
+msgstr "inline-block"
+
+#: admin/views/elements/grid-item-skin-editor.php:790
+#@ essential-grid
+msgid "Text Align"
+msgstr "Text Align"
+
+#: admin/views/elements/grid-item-skin-editor.php:794
+#@ essential-grid
+msgid "center"
+msgstr "center"
+
+#: admin/views/elements/grid-item-skin-editor.php:795
+#: admin/views/elements/grid-item-skin-editor.php:807
+#: admin/views/elements/grid-item-skin-editor.php:819
+#@ essential-grid
+msgid "left"
+msgstr "left"
+
+#: admin/views/elements/grid-item-skin-editor.php:796
+#: admin/views/elements/grid-item-skin-editor.php:808
+#: admin/views/elements/grid-item-skin-editor.php:820
+#@ essential-grid
+msgid "right"
+msgstr "right"
+
+#: admin/views/elements/grid-item-skin-editor.php:814
+#@ essential-grid
+msgid "Clear"
+msgstr "Clear"
+
+#: admin/views/elements/grid-item-skin-editor.php:856
+#: admin/views/elements/grid-item-skin-editor.php:1051
+#@ essential-grid
+msgid "Background Alpha"
+msgstr "Background Alpha"
+
+#: admin/views/elements/grid-item-skin-editor.php:921
+#: admin/views/elements/grid-item-skin-editor.php:1117
+#@ essential-grid
+msgid "Top Border Width"
+msgstr "Top Border Width"
+
+#: admin/views/elements/grid-item-skin-editor.php:922
+#: admin/views/elements/grid-item-skin-editor.php:1118
+#@ essential-grid
+msgid "Right Border Width"
+msgstr "Right Border Width"
+
+#: admin/views/elements/grid-item-skin-editor.php:923
+#: admin/views/elements/grid-item-skin-editor.php:1119
+#@ essential-grid
+msgid "Bottom Border Width"
+msgstr "Bottom Border Width"
+
+#: admin/views/elements/grid-item-skin-editor.php:924
+#: admin/views/elements/grid-item-skin-editor.php:1120
+#@ essential-grid
+msgid "Left Border Width"
+msgstr "Left Border Width"
+
+#: admin/views/elements/grid-item-skin-editor.php:928
+#: admin/views/elements/grid-item-skin-editor.php:1124
+#@ essential-grid
+msgid "Top Left Radius"
+msgstr "Top Left Radius"
+
+#: admin/views/elements/grid-item-skin-editor.php:929
+#: admin/views/elements/grid-item-skin-editor.php:1125
+#@ essential-grid
+msgid "Top Right Radius"
+msgstr "Top Right Radius"
+
+#: admin/views/elements/grid-item-skin-editor.php:930
+#: admin/views/elements/grid-item-skin-editor.php:1126
+#@ essential-grid
+msgid "Bottom Right Radius"
+msgstr "Bottom Right Radius"
+
+#: admin/views/elements/grid-item-skin-editor.php:931
+#: admin/views/elements/grid-item-skin-editor.php:1127
+#@ essential-grid
+msgid "Bottom Left Radius"
+msgstr "Bottom Left Radius"
+
+#: admin/views/elements/grid-item-skin-editor.php:1039
+#: admin/views/elements/grid-item-skin-editor.php:1084
+#: admin/views/elements/grid-item-skin-editor.php:1107
+#: admin/views/elements/grid-item-skin-editor.php:1153
+#@ essential-grid
+msgid "Reset from Idle"
+msgstr "Reset from Idle"
+
+#: admin/views/elements/grid-item-skin-editor.php:1105
+#@ essential-grid
+msgid "The size of Shadow"
+msgstr "The size of Shadow"
+
+#: admin/views/elements/grid-item-skin-editor.php:1167
+#@ essential-grid
+msgid "Dont Show Element if Item Width is smaller than:"
+msgstr "Dont Show Element if Item Width is smaller than:"
+
+#: admin/views/elements/grid-item-skin-editor.php:1170
+#@ essential-grid
+msgid "Hide if Media is Video"
+msgstr "Hide if Media is Video"
+
+#: admin/views/elements/grid-item-skin-editor.php:1171
+#@ essential-grid
+msgid "Dont Show Element if the Media this Entry gains is a Video"
+msgstr "Dont Show Element if the Media this Entry gains is a Video"
+
+#: admin/views/elements/grid-item-skin-editor.php:1179
+#@ essential-grid
+msgid "Show if Product is on Sale"
+msgstr "Show if Product is on Sale"
+
+#: admin/views/elements/grid-item-skin-editor.php:1180
+#@ essential-grid
+msgid "Show the Element only if it is on Sale. This is a WooCommerce setting"
+msgstr "Show the Element only if it is on Sale. This is a WooCommerce setting"
+
+#: admin/views/elements/grid-item-skin-editor.php:1183
+#@ essential-grid
+msgid "Show if Product is featured"
+msgstr "Show if Product is featured"
+
+#: admin/views/elements/grid-item-skin-editor.php:1184
+#@ essential-grid
+msgid "Show the Element only if it is featured. This is a WooCommerce setting"
+msgstr "Show the Element only if it is featured. This is a WooCommerce setting"
+
+#: admin/views/elements/grid-item-skin-editor.php:1201
+#@ essential-grid
+msgid "Select Animation of Element on Hover"
+msgstr "Select Animation of Element on Hover"
+
+#: admin/views/elements/grid-item-skin-editor.php:1213
+#@ essential-grid
+msgid "Hide or Show element on hover. In = Show, Out = Hide"
+msgstr "Hide or Show element on hover. In = Show, Out = Hide"
+
+#: admin/views/elements/grid-item-skin-editor.php:1221
+#@ essential-grid
+msgid "Transition Split"
+msgstr "Transition Split"
+
+#: admin/views/elements/grid-item-skin-editor.php:1226
+#@ essential-grid
+msgid "Line"
+msgstr "Line"
+
+#: admin/views/elements/grid-item-skin-editor.php:1227
+#@ essential-grid
+msgid "Word"
+msgstr "Word"
+
+#: admin/views/elements/grid-item-skin-editor.php:1228
+#@ essential-grid
+msgid "Character"
+msgstr "Character"
+
+#: admin/views/elements/grid-item-skin-editor.php:1235
+#: admin/views/elements/grid-item-skin-editor.php:1236
+#@ essential-grid
+msgid "Delay before Element Animation starts"
+msgstr "Delay before Element Animation starts"
+
+#: admin/views/elements/grid-item-skin-editor.php:1244
+#@ essential-grid
+msgid "Link To"
+msgstr "Link To"
+
+#: admin/views/elements/grid-item-skin-editor.php:1250
+#@ essential-grid
+msgid "URL"
+msgstr "URL"
+
+#: admin/views/elements/grid-item-skin-editor.php:1252
+#@ essential-grid
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: admin/views/elements/grid-item-skin-editor.php:1253
+#: admin/views/grid-create.php:111
+#@ essential-grid
+msgid "Lightbox"
+msgstr "Lightbox"
+
+#: admin/views/elements/grid-item-skin-editor.php:1254
+#@ essential-grid
+msgid "Play Embedded Video"
+msgstr "Play Embedded Video"
+
+#: admin/views/elements/grid-item-skin-editor.php:1259
+#@ essential-grid
+msgid "Link To URL"
+msgstr "Link To URL"
+
+#: admin/views/elements/grid-item-skin-editor.php:1268
+#@ essential-grid
+msgid "Link JavaScript"
+msgstr "Link JavaScript"
+
+#: admin/views/elements/grid-item-skin-editor.php:1272
+#@ essential-grid
+msgid "Use Tag"
+msgstr "Use Tag"
+
+#: admin/views/elements/grid-item-skin-editor.php:1276
+#@ essential-grid
+msgid "DIV"
+msgstr "DIV"
+
+#: admin/views/elements/grid-item-skin-editor.php:1277
+#@ essential-grid
+msgid "P"
+msgstr "P"
+
+#: admin/views/elements/grid-item-skin-editor.php:1278
+#@ essential-grid
+msgid "H2"
+msgstr "H2"
+
+#: admin/views/elements/grid-item-skin-editor.php:1279
+#@ essential-grid
+msgid "H3"
+msgstr "H3"
+
+#: admin/views/elements/grid-item-skin-editor.php:1280
+#@ essential-grid
+msgid "H4"
+msgstr "H4"
+
+#: admin/views/elements/grid-item-skin-editor.php:1281
+#@ essential-grid
+msgid "H5"
+msgstr "H5"
+
+#: admin/views/elements/grid-item-skin-editor.php:1282
+#@ essential-grid
+msgid "H6"
+msgstr "H6"
+
+#: admin/views/elements/grid-item-skin-editor.php:1287
+#@ essential-grid
+msgid "Fix: !important"
+msgstr "Fix: !important"
+
+#: admin/views/elements/grid-item-skin-editor.php:1288
+#@ essential-grid
+msgid "Force !important in styles"
+msgstr "Force !important in styles"
+
+#: admin/views/elements/grid-item-skin-editor.php:1291
+#@ essential-grid
+msgid "Attribute"
+msgstr "Attribute"
+
+#: admin/views/elements/grid-item-skin-editor.php:1295
+#@ essential-grid
+msgid "Class"
+msgstr "Class"
+
+#: admin/views/elements/grid-item-skin-editor.php:1299
+#@ essential-grid
+msgid "Rel"
+msgstr "Rel"
+
+#: admin/views/elements/grid-item-skin-editor.php:1305
+#@ essential-grid
+msgid "Save as Template"
+msgstr "Save as Template"
+
+#: admin/views/elements/grid-item-skin-editor.php:1312
+#@ essential-grid
+msgid "Please Drop some Element from the AVAILABLE LAYERS into the ITEM LAYOUT drop zone to be able to edit any Elements here"
+msgstr "Please Drop some Element from the AVAILABLE LAYERS into the ITEM LAYOUT drop zone to be able to edit any Elements here"
+
+#: admin/views/elements/grid-item-skin-editor.php:1321
+#@ essential-grid
+msgid "Item Layout"
+msgstr "Item Layout"
+
+#: admin/views/elements/grid-item-skin-editor.php:1325
+#@ essential-grid
+msgid "Show at Width:"
+msgstr "Show at Width:"
+
+#: admin/views/elements/grid-item-skin-editor.php:1337
+#@ essential-grid
+msgid "Schematic"
+msgstr "Schematic"
+
+#: admin/views/elements/grid-item-skin-editor.php:1342
+#@ essential-grid
+msgid "Hide DropZones"
+msgstr "Hide DropZones"
+
+#: admin/views/elements/grid-item-skin-editor.php:1365
+#: admin/views/elements/grid-item-skin-editor.php:1372
+#: admin/views/elements/grid-item-skin-editor.php:1378
+#: admin/views/elements/grid-item-skin-editor.php:1388
+#@ essential-grid
+msgid "DROP ZONE"
+msgstr "DROP ZONE"
+
+#: admin/views/elements/grid-item-skin-editor.php:1423
+#@ essential-grid
+msgid "Layers"
+msgstr "Layers"
+
+#: admin/views/elements/grid-item-skin-editor.php:1424
+#@ essential-grid
+msgid "Covers"
+msgstr "Covers"
+
+#: admin/views/elements/grid-item-skin-editor.php:1425
+#@ essential-grid
+msgid "Media"
+msgstr "Media"
+
+#: admin/views/elements/grid-item-skin-editor.php:1426
+#@ essential-grid
+msgid "Content & Layers"
+msgstr "Content & Layers"
+
+#: admin/views/elements/grid-item-skin-editor.php:1441
+#@ essential-grid
+msgid "Available Layers"
+msgstr "Available Layers"
+
+#: admin/views/elements/grid-item-skin-editor.php:1454
+#: admin/views/elements/grid-settings.php:727
+#: includes/navigation.class.php:34
+#: public/essential-grid.class.php:529
+#: public/essential-grid.class.php:753
+#@ essential-grid
+msgid "Filter - All"
+msgstr "Filter - All"
+
+#: admin/views/elements/grid-item-skin-editor.php:1455
+#@ essential-grid
+msgid "Icons"
+msgstr "Icons"
+
+#: admin/views/elements/grid-item-skin-editor.php:1456
+#@ essential-grid
+msgid "Texts"
+msgstr "Texts"
+
+#: admin/views/elements/grid-item-skin-editor.php:1457
+#@ essential-grid
+msgid "Default"
+msgstr "Default"
+
+#: admin/views/elements/grid-item-skin-editor.php:1484
+#@ essential-grid
+msgid "Drag and Drop Elements into the Item Layout - Note You only see here the elements which fits well in your Cover Colors !"
+msgstr "Drag and Drop Elements into the Item Layout - Note You only see here the elements which fits well in your Cover Colors !"
+
+#: admin/views/elements/grid-item-skin-editor.php:1485
+#@ essential-grid
+msgid "Move ELement Template over to Remove from Available Layers"
+msgstr "Move ELement Template over to Remove from Available Layers"
+
+#: admin/views/elements/grid-item-skin-editor.php:1485
+#@ essential-grid
+msgid "DROP<br>HERE"
+msgstr "DROP<br>HERE"
+
+#: admin/views/elements/grid-meta-box.php:233
+#@ essential-grid
+msgid "Grid specific settings"
+msgstr "Grid specific settings"
+
+#: admin/views/elements/grid-meta-box.php:236
+#@ essential-grid
+msgid "Cobbles Element Size"
+msgstr "Cobbles Element Size"
+
+#: admin/views/elements/grid-meta-box.php:309
+#@ essential-grid
+msgid "Create New Meta Keys"
+msgstr "Create New Meta Keys"
+
+#: admin/views/elements/grid-meta-box.php:313
+#@ essential-grid
+msgid "Alternative Sources"
+msgstr "Alternative Sources"
+
+#: admin/views/elements/grid-meta-box.php:315
+#@ essential-grid
+msgid "HTML5 Video Source`s"
+msgstr "HTML5 Video Source`s"
+
+#: admin/views/elements/grid-meta-box.php:322
+#: admin/views/elements/grid-meta-box.php:339
+#: admin/views/elements/grid-meta-box.php:348
+#@ essential-grid
+msgid "Video Ratio:"
+msgstr "Video Ratio:"
+
+#: admin/views/elements/grid-meta-box.php:323
+#: admin/views/elements/grid-meta-box.php:340
+#: admin/views/elements/grid-meta-box.php:349
+#@ essential-grid
+msgid "Choose the Video Ratio"
+msgstr "Choose the Video Ratio"
+
+#: admin/views/elements/grid-meta-box.php:333
+#@ essential-grid
+msgid "YouTube or Vimeo Video Source`s"
+msgstr "YouTube or Vimeo Video Source`s"
+
+#: admin/views/elements/grid-meta-box.php:359
+#@ essential-grid
+msgid "Sound Cloud"
+msgstr "Sound Cloud"
+
+#: admin/views/elements/grid-meta-box.php:365
+#@ essential-grid
+msgid "Frame Ratio:"
+msgstr "Frame Ratio:"
+
+#: admin/views/elements/grid-meta-box.php:366
+#@ essential-grid
+msgid "Choose the SoundCloud iFrame Ratio"
+msgstr "Choose the SoundCloud iFrame Ratio"
+
+#: admin/views/elements/grid-meta-box.php:375
+#@ essential-grid
+msgid "Image Source`s"
+msgstr "Image Source`s"
+
+#: admin/views/elements/grid-meta-box.php:378
+#@ essential-grid
+msgid "Alt. Image"
+msgstr "Alt. Image"
+
+#: admin/views/elements/grid-meta-box.php:388
+#@ essential-grid
+msgid "iFrame HTML Markup"
+msgstr "iFrame HTML Markup"
+
+#: admin/views/elements/grid-meta-box.php:398
+#@ essential-grid
+msgid "Custom Post Based Skin Modifications"
+msgstr "Custom Post Based Skin Modifications"
+
+#: admin/views/elements/grid-meta-box.php:403
+#@ essential-grid
+msgid "Add New Custom Skin Rule"
+msgstr "Add New Custom Skin Rule"
+
+#: admin/views/elements/grid-meta-box.php:406
+#@ essential-grid
+msgid "For default Skin Settings please use the Essential Grid Skin Editor.<br> Only add Rules here to change the Skin Element Styles only for this Post !<br>Every rule defined here will overwrite the Global Skin settings explicit for this Post in the Grid where the Skin is used. "
+msgstr "For default Skin Settings please use the Essential Grid Skin Editor.<br> Only add Rules here to change the Skin Element Styles only for this Post !<br>Every rule defined here will overwrite the Global Skin settings explicit for this Post in the Grid where the Skin is used. "
+
+#: admin/views/elements/grid-settings.php:37
+#@ essential-grid
+msgid "Choose layout type of the grid"
+msgstr "Choose layout type of the grid"
+
+#: admin/views/elements/grid-settings.php:38
+#@ essential-grid
+msgid "Grid always stays within the wrapping container"
+msgstr "Grid always stays within the wrapping container"
+
+#: admin/views/elements/grid-settings.php:38
+#@ essential-grid
+msgid "Boxed"
+msgstr "Boxed"
+
+#: admin/views/elements/grid-settings.php:39
+#@ essential-grid
+msgid "Force Fullwidth. Grid will fill complete width of the window"
+msgstr "Force Fullwidth. Grid will fill complete width of the window"
+
+#: admin/views/elements/grid-settings.php:39
+#@ essential-grid
+msgid "Fullwidth"
+msgstr "Fullwidth"
+
+#: admin/views/elements/grid-settings.php:40
+#@ essential-grid
+msgid "Fullscreen Layout. !! Hides not needed options !! Grid Width = Window Width, Grid Height = Window Height - Offset Containers."
+msgstr "Fullscreen Layout. !! Hides not needed options !! Grid Width = Window Width, Grid Height = Window Height - Offset Containers."
+
+#: admin/views/elements/grid-settings.php:40
+#@ essential-grid
+msgid "Fullscreen"
+msgstr "Fullscreen"
+
+#: admin/views/elements/grid-settings.php:43
+#@ essential-grid
+msgid "Offset Container"
+msgstr "Offset Container"
+
+#: admin/views/elements/grid-settings.php:47
+#@ essential-grid
+msgid "Select Grid Layout"
+msgstr "Select Grid Layout"
+
+#: admin/views/elements/grid-settings.php:49
+#@ default
+msgid "Even - Each item has same height. Width and height are item ratio dependent"
+msgstr "Even - Each item has same height. Width and height are item ratio dependent"
+
+#: admin/views/elements/grid-settings.php:50
+#@ default
+msgid "Individual item height depends on media height and content height"
+msgstr "Individual item height depends on media height and content height"
+
+#: admin/views/elements/grid-settings.php:51
+#@ default
+msgid "Even Grid with Width / Height Multiplications"
+msgstr "Even Grid with Width / Height Multiplications"
+
+#: admin/views/elements/grid-settings.php:51
+#@ essential-grid
+msgid "Cobbles"
+msgstr "Cobbles"
+
+#: admin/views/elements/grid-settings.php:55
+#@ essential-grid
+msgid "Item width/height ratio (if Even Gallery Layout is selected)"
+msgstr "Item width/height ratio (if Even Gallery Layout is selected)"
+
+#: admin/views/elements/grid-settings.php:55
+#@ essential-grid
+msgid "Items Ratio X:Y"
+msgstr "Items Ratio X:Y"
+
+#: admin/views/elements/grid-settings.php:56
+#@ default
+msgid "Width ratio of item"
+msgstr "Width ratio of item"
+
+#: admin/views/elements/grid-settings.php:56
+#@ essential-grid
+msgid "Height ratio of item"
+msgstr "Height ratio of item"
+
+#: admin/views/elements/grid-settings.php:65
+#@ essential-grid
+msgid "Columns"
+msgstr "Columns"
+
+#: admin/views/elements/grid-settings.php:70
+#@ essential-grid
+msgid "Display normal settings or get advanced"
+msgstr "Display normal settings or get advanced"
+
+#: admin/views/elements/grid-settings.php:70
+#@ essential-grid
+msgid "Setting Mode"
+msgstr "Setting Mode"
+
+#: admin/views/elements/grid-settings.php:72
+#@ default
+msgid "Advanced columns, custom media queries and custom columns (in rows pattern)"
+msgstr "Advanced columns, custom media queries and custom columns (in rows pattern)"
+
+#: admin/views/elements/grid-settings.php:72
+#@ essential-grid
+msgid "Advanced"
+msgstr "Advanced"
+
+#: admin/views/elements/grid-settings.php:73
+#@ default
+msgid "Simple columns. Each row with same column, default media query levels."
+msgstr "Simple columns. Each row with same column, default media query levels."
+
+#: admin/views/elements/grid-settings.php:73
+#@ essential-grid
+msgid "Simple"
+msgstr "Simple"
+
+#: admin/views/elements/grid-settings.php:83
+#: admin/views/elements/grid-settings.php:103
+#@ essential-grid
+msgid "Rows:"
+msgstr "Rows:"
+
+#: admin/views/elements/grid-settings.php:124
+#@ essential-grid
+msgid "Items per Row (+ Min. Window Width (advanced)) for large desktop screens"
+msgstr "Items per Row (+ Min. Window Width (advanced)) for large desktop screens"
+
+#: admin/views/elements/grid-settings.php:124
+#@ essential-grid
+msgid "Desktop Large"
+msgstr "Desktop Large"
+
+#: admin/views/elements/grid-settings.php:126
+#@ essential-grid
+msgid "Min. browser width for large desktop screens"
+msgstr "Min. browser width for large desktop screens"
+
+#: admin/views/elements/grid-settings.php:129
+#: admin/views/elements/grid-settings.php:135
+#@ essential-grid
+msgid "Number of items in rows on large desktop screens"
+msgstr "Number of items in rows on large desktop screens"
+
+#: admin/views/elements/grid-settings.php:142
+#@ essential-grid
+msgid "Items per Row (+ Min. Window Width (advanced)) for medium sized desktop screens"
+msgstr "Items per Row (+ Min. Window Width (advanced)) for medium sized desktop screens"
+
+#: admin/views/elements/grid-settings.php:142
+#@ essential-grid
+msgid "Desktop Medium"
+msgstr "Desktop Medium"
+
+#: admin/views/elements/grid-settings.php:144
+#@ essential-grid
+msgid "Min. browser width for medium sized desktop screens"
+msgstr "Min. browser width for medium sized desktop screens"
+
+#: admin/views/elements/grid-settings.php:147
+#: admin/views/elements/grid-settings.php:153
+#@ essential-grid
+msgid "Number of items in rows on medium sized desktops"
+msgstr "Number of items in rows on medium sized desktops"
+
+#: admin/views/elements/grid-settings.php:160
+#@ essential-grid
+msgid "Items per Row (+ Min. Window Width (advanced)) for small sized desktops"
+msgstr "Items per Row (+ Min. Window Width (advanced)) for small sized desktops"
+
+#: admin/views/elements/grid-settings.php:160
+#@ essential-grid
+msgid "Desktop Small"
+msgstr "Desktop Small"
+
+#: admin/views/elements/grid-settings.php:162
+#@ essential-grid
+msgid "Min. browser width for small sized desktop screens"
+msgstr "Min. browser width for small sized desktop screens"
+
+#: admin/views/elements/grid-settings.php:165
+#@ essential-grid
+msgid "Number of items in rows on small sized desktop screens"
+msgstr "Number of items in rows on small sized desktop screens"
+
+#: admin/views/elements/grid-settings.php:171
+#@ essential-grid
+msgid "Amount of items in the rows shown above on small sized desktop screens"
+msgstr "Amount of items in the rows shown above on small sized desktop screens"
+
+#: admin/views/elements/grid-settings.php:178
+#@ essential-grid
+msgid "Items per Row (+ Min. Window Width (advanced)) for tablets in landscape view"
+msgstr "Items per Row (+ Min. Window Width (advanced)) for tablets in landscape view"
+
+#: admin/views/elements/grid-settings.php:178
+#@ essential-grid
+msgid "Tablet Landscape"
+msgstr "Tablet Landscape"
+
+#: admin/views/elements/grid-settings.php:180
+#@ essential-grid
+msgid "Min. browser width for tablets in landscape view"
+msgstr "Min. browser width for tablets in landscape view"
+
+#: admin/views/elements/grid-settings.php:183
+#@ essential-grid
+msgid "Number of items in rows on tablets in landscape view"
+msgstr "Number of items in rows on tablets in landscape view"
+
+#: admin/views/elements/grid-settings.php:189
+#@ essential-grid
+msgid "Amount of items in the rows shown above on tablet in landscape view"
+msgstr "Amount of items in the rows shown above on tablet in landscape view"
+
+#: admin/views/elements/grid-settings.php:196
+#@ essential-grid
+msgid "Items per Row (+ Min. Window Width (advanced)) for tablets in portrait view"
+msgstr "Items per Row (+ Min. Window Width (advanced)) for tablets in portrait view"
+
+#: admin/views/elements/grid-settings.php:196
+#@ essential-grid
+msgid "Tablet"
+msgstr "Tablet"
+
+#: admin/views/elements/grid-settings.php:198
+#@ essential-grid
+msgid "Min. browser width for tablets in portrait view"
+msgstr "Min. browser width for tablets in portrait view"
+
+#: admin/views/elements/grid-settings.php:201
+#@ essential-grid
+msgid "Number of items in rows on tablets"
+msgstr "Number of items in rows on tablets"
+
+#: admin/views/elements/grid-settings.php:207
+#@ essential-grid
+msgid "Number of items in the rows shown above on tablets"
+msgstr "Number of items in the rows shown above on tablets"
+
+#: admin/views/elements/grid-settings.php:214
+#@ essential-grid
+msgid "Items per Row (+ Min. Window Width (advanced)) for mobiles in landscape view"
+msgstr "Items per Row (+ Min. Window Width (advanced)) for mobiles in landscape view"
+
+#: admin/views/elements/grid-settings.php:214
+#@ essential-grid
+msgid "Mobile Landscape"
+msgstr "Mobile Landscape"
+
+#: admin/views/elements/grid-settings.php:216
+#@ essential-grid
+msgid "Min. browser width for mobiles in landscape view"
+msgstr "Min. browser width for mobiles in landscape view"
+
+#: admin/views/elements/grid-settings.php:219
+#@ essential-grid
+msgid "Number of items in the rows for mobiles in landscape view"
+msgstr "Number of items in the rows for mobiles in landscape view"
+
+#: admin/views/elements/grid-settings.php:225
+#@ essential-grid
+msgid "Number of items in the rows shown above for mobiles in landscape view"
+msgstr "Number of items in the rows shown above for mobiles in landscape view"
+
+#: admin/views/elements/grid-settings.php:232
+#@ essential-grid
+msgid "Items per Row (+ Min. Window Width (advanced)) for mobiles in portrait view"
+msgstr "Items per Row (+ Min. Window Width (advanced)) for mobiles in portrait view"
+
+#: admin/views/elements/grid-settings.php:232
+#@ essential-grid
+msgid "Mobile"
+msgstr "Mobile"
+
+#: admin/views/elements/grid-settings.php:234
+#@ essential-grid
+msgid "Min. browser width for mobiles in portrait view"
+msgstr "Min. browser width for mobiles in portrait view"
+
+#: admin/views/elements/grid-settings.php:237
+#@ essential-grid
+msgid "Number of items in rows on mobiles"
+msgstr "Number of items in rows on mobiles"
+
+#: admin/views/elements/grid-settings.php:243
+#@ essential-grid
+msgid "Number of items in the rows shown above on mobiles"
+msgstr "Number of items in the rows shown above on mobiles"
+
+#: admin/views/elements/grid-settings.php:257
+#: admin/views/elements/grid-settings.php:262
+#: admin/views/elements/grid-settings.php:596
+#@ essential-grid
+msgid "Pagination"
+msgstr "Pagination"
+
+#: admin/views/elements/grid-settings.php:263
+#@ default
+msgid "Pagination deactivated. Load More Option is available."
+msgstr "Pagination deactivated. Load More Option is available."
+
+#: admin/views/elements/grid-settings.php:263
+#@ essential-grid
+msgid "Disable (Load More Available)"
+msgstr "Disable (Load More Available)"
+
+#: admin/views/elements/grid-settings.php:264
+#@ default
+msgid "Pagination Activated. Load More Option is disabled. Dont Forget to add The Navigation Module \"Pagination\" to your Grid ! "
+msgstr "Pagination Activated. Load More Option is disabled. Dont Forget to add The Navigation Module \"Pagination\" to your Grid ! "
+
+#: admin/views/elements/grid-settings.php:264
+#@ essential-grid
+msgid "Enable"
+msgstr "Enable"
+
+#: admin/views/elements/grid-settings.php:267
+#@ essential-grid
+msgid "Max Visible Rows"
+msgstr "Max Visible Rows"
+
+#: admin/views/elements/grid-settings.php:269
+#@ essential-grid
+msgid "Amount of Rows shown (max) when Pagination Activated."
+msgstr "Amount of Rows shown (max) when Pagination Activated."
+
+#: admin/views/elements/grid-settings.php:277
+#@ essential-grid
+msgid "Smart Loading"
+msgstr "Smart Loading"
+
+#: admin/views/elements/grid-settings.php:281
+#: public/essential-grid.class.php:1274
+#@ essential-grid
+msgid "Load More"
+msgstr "Load More"
+
+#: admin/views/elements/grid-settings.php:282
+#@ essential-grid
+msgid "Choose the Load More type"
+msgstr "Choose the Load More type"
+
+#: admin/views/elements/grid-settings.php:284
+#@ essential-grid
+msgid "More Button"
+msgstr "More Button"
+
+#: admin/views/elements/grid-settings.php:285
+#@ essential-grid
+msgid "Infinitive Scroll"
+msgstr "Infinitive Scroll"
+
+#: admin/views/elements/grid-settings.php:289
+#: admin/views/elements/grid-settings.php:291
+#@ essential-grid
+msgid "Display how many items at start?"
+msgstr "Display how many items at start?"
+
+#: admin/views/elements/grid-settings.php:289
+#@ essential-grid
+msgid "Nr. of Items Start"
+msgstr "Nr. of Items Start"
+
+#: admin/views/elements/grid-settings.php:294
+#: admin/views/elements/grid-settings.php:296
+#@ essential-grid
+msgid "Display how many items after loading?"
+msgstr "Display how many items after loading?"
+
+#: admin/views/elements/grid-settings.php:294
+#@ essential-grid
+msgid "Nr. of Items More"
+msgstr "Nr. of Items More"
+
+#: admin/views/elements/grid-settings.php:300
+#@ essential-grid
+msgid "Lazy Load"
+msgstr "Lazy Load"
+
+#: admin/views/elements/grid-settings.php:301
+#@ default
+msgid "Enable Lazy Load of Items"
+msgstr "Enable Lazy Load of Items"
+
+#: admin/views/elements/grid-settings.php:302
+#@ default
+msgid "Disable Lazy Loading (All Item except the - Load more items -  on first page will be preloaded once)"
+msgstr "Disable Lazy Loading (All Item except the - Load more items -  on first page will be preloaded once)"
+
+#: admin/views/elements/grid-settings.php:305
+#@ essential-grid
+msgid "Background color of media during the lazy loading progress"
+msgstr "Background color of media during the lazy loading progress"
+
+#: admin/views/elements/grid-settings.php:305
+#@ essential-grid
+msgid "Lazy Load Color"
+msgstr "Lazy Load Color"
+
+#: admin/views/elements/grid-settings.php:306
+#@ essential-grid
+msgid "Background color of Media during the Lazy Load progress"
+msgstr "Background color of Media during the Lazy Load progress"
+
+#: admin/views/elements/grid-settings.php:315
+#@ essential-grid
+msgid "Spacings"
+msgstr "Spacings"
+
+#: admin/views/elements/grid-settings.php:319
+#@ essential-grid
+msgid "Item Spacing"
+msgstr "Item Spacing"
+
+#: admin/views/elements/grid-settings.php:320
+#@ essential-grid
+msgid "Spaces between items vertical and horizontal"
+msgstr "Spaces between items vertical and horizontal"
+
+#: admin/views/elements/grid-settings.php:335
+#@ essential-grid
+msgid "Whole Grid Padding"
+msgstr "Whole Grid Padding"
+
+#: admin/views/elements/grid-settings.php:336
+#@ essential-grid
+msgid "Top:"
+msgstr "Top:"
+
+#: admin/views/elements/grid-settings.php:336
+#@ essential-grid
+msgid "Padding Top of the Grid"
+msgstr "Padding Top of the Grid"
+
+#: admin/views/elements/grid-settings.php:337
+#@ essential-grid
+msgid "Right:"
+msgstr "Right:"
+
+#: admin/views/elements/grid-settings.php:337
+#@ essential-grid
+msgid "Padding Right of the Grid"
+msgstr "Padding Right of the Grid"
+
+#: admin/views/elements/grid-settings.php:338
+#@ essential-grid
+msgid "Bottom:"
+msgstr "Bottom:"
+
+#: admin/views/elements/grid-settings.php:338
+#@ essential-grid
+msgid "Padding Bottom of the Grid"
+msgstr "Padding Bottom of the Grid"
+
+#: admin/views/elements/grid-settings.php:339
+#@ essential-grid
+msgid "Left:"
+msgstr "Left:"
+
+#: admin/views/elements/grid-settings.php:339
+#@ essential-grid
+msgid "Padding Left of the Grid"
+msgstr "Padding Left of the Grid"
+
+#: admin/views/elements/grid-settings.php:354
+#@ essential-grid
+msgid "Background"
+msgstr "Background"
+
+#: admin/views/elements/grid-settings.php:358
+#@ essential-grid
+msgid "Main Background Color"
+msgstr "Main Background Color"
+
+#: admin/views/elements/grid-settings.php:359
+#@ essential-grid
+msgid "Background Color of the Grid. Type: transparent in case no Background Color Needed"
+msgstr "Background Color of the Grid. Type: transparent in case no Background Color Needed"
+
+#: admin/views/elements/grid-settings.php:368
+#: admin/views/elements/grid-settings.php:1048
+#@ essential-grid
+msgid "Navigation"
+msgstr "Navigation"
+
+#: admin/views/elements/grid-settings.php:372
+#: includes/item-skin.class.php:736
+#@ essential-grid
+msgid "Choose Skin"
+msgstr "Choose Skin"
+
+#: admin/views/elements/grid-settings.php:373
+#@ essential-grid
+msgid "Select the skin/color of the Navigation"
+msgstr "Select the skin/color of the Navigation"
+
+#: admin/views/elements/grid-settings.php:382
+#@ essential-grid
+msgid "Edit the selected Navigation Skin Style"
+msgstr "Edit the selected Navigation Skin Style"
+
+#: admin/views/elements/grid-settings.php:382
+#: includes/item-skin.class.php:731
+#@ essential-grid
+msgid "Edit Skin"
+msgstr "Edit Skin"
+
+#: admin/views/elements/grid-settings.php:383
+#@ essential-grid
+msgid "Create a new Navigation Skin Style"
+msgstr "Create a new Navigation Skin Style"
+
+#: admin/views/elements/grid-settings.php:383
+#@ essential-grid
+msgid "Create Skin"
+msgstr "Create Skin"
+
+#: admin/views/elements/grid-settings.php:384
+#@ essential-grid
+msgid "Delete the selected Navigation Skin"
+msgstr "Delete the selected Navigation Skin"
+
+#: admin/views/elements/grid-settings.php:384
+#: includes/item-skin.class.php:733
+#@ essential-grid
+msgid "Delete Skin"
+msgstr "Delete Skin"
+
+#: admin/views/elements/grid-settings.php:393
+#@ essential-grid
+msgid "Item Skins"
+msgstr "Item Skins"
+
+#: admin/views/elements/grid-settings.php:404
+#@ essential-grid
+msgid "Skin Selector"
+msgstr "Skin Selector"
+
+#: admin/views/elements/grid-settings.php:532
+#@ essential-grid
+msgid "Grid Animations"
+msgstr "Grid Animations"
+
+#: admin/views/elements/grid-settings.php:536
+#@ essential-grid
+msgid "Start and Filter Animations"
+msgstr "Start and Filter Animations"
+
+#: admin/views/elements/grid-settings.php:537
+#@ essential-grid
+msgid "Select the Animations for the  Filter, Page Change and Start Effects"
+msgstr "Select the Animations for the  Filter, Page Change and Start Effects"
+
+#: admin/views/elements/grid-settings.php:548
+#: admin/views/elements/grid-settings.php:1019
+#: admin/views/elements/grid-settings.php:1034
+#@ essential-grid
+msgid "Animation Speed"
+msgstr "Animation Speed"
+
+#: admin/views/elements/grid-settings.php:549
+#: admin/views/elements/grid-settings.php:550
+#@ essential-grid
+msgid "Animation Speed (per item)"
+msgstr "Animation Speed (per item)"
+
+#: admin/views/elements/grid-settings.php:553
+#@ essential-grid
+msgid "Animation Delay"
+msgstr "Animation Delay"
+
+#: admin/views/elements/grid-settings.php:554
+#: admin/views/elements/grid-settings.php:555
+#@ essential-grid
+msgid "Delay between the item animations. If many items visible on the same page, decrease this value."
+msgstr "Delay between the item animations. If many items visible on the same page, decrease this value."
+
+#: admin/views/elements/grid-settings.php:564
+#@ essential-grid
+msgid "Hover Animations"
+msgstr "Hover Animations"
+
+#: admin/views/elements/grid-settings.php:568
+#@ essential-grid
+msgid "Hover Animation Delay"
+msgstr "Hover Animation Delay"
+
+#: admin/views/elements/grid-settings.php:569
+#: admin/views/elements/grid-settings.php:570
+#@ essential-grid
+msgid "Delay before the Hover effect starts on an item"
+msgstr "Delay before the Hover effect starts on an item"
+
+#: admin/views/elements/grid-settings.php:584
+#@ essential-grid
+msgid "Navigation Layout"
+msgstr "Navigation Layout"
+
+#: admin/views/elements/grid-settings.php:592
+#@ essential-grid
+msgid "Available Modules:"
+msgstr "Available Modules:"
+
+#: admin/views/elements/grid-settings.php:593
+#@ essential-grid
+msgid "Drag and Drop Navigation Modules into the Available Drop Zones"
+msgstr "Drag and Drop Navigation Modules into the Available Drop Zones"
+
+#: admin/views/elements/grid-settings.php:597
+#@ essential-grid
+msgid "Filter"
+msgstr "Filter"
+
+#: admin/views/elements/grid-settings.php:601
+#@ essential-grid
+msgid "Cart"
+msgstr "Cart"
+
+#: admin/views/elements/grid-settings.php:605
+#@ essential-grid
+msgid "Sort"
+msgstr "Sort"
+
+#: admin/views/elements/grid-settings.php:610
+#@ essential-grid
+msgid "Available DropZones:"
+msgstr "Available DropZones:"
+
+#: admin/views/elements/grid-settings.php:611
+#: admin/views/elements/grid-settings.php:612
+#: admin/views/elements/grid-settings.php:623
+#: admin/views/elements/grid-settings.php:624
+#@ essential-grid
+msgid "Move the Navigation Modules to define the Order of Buttons"
+msgstr "Move the Navigation Modules to define the Order of Buttons"
+
+#: admin/views/elements/grid-settings.php:611
+#@ essential-grid
+msgid "DROPZONE - TOP - 1"
+msgstr "DROPZONE - TOP - 1"
+
+#: admin/views/elements/grid-settings.php:612
+#@ essential-grid
+msgid "DROPZONE - TOP - 2"
+msgstr "DROPZONE - TOP - 2"
+
+#: admin/views/elements/grid-settings.php:620
+#@ essential-grid
+msgid "DROPZONE <br> LEFT"
+msgstr "DROPZONE <br> LEFT"
+
+#: admin/views/elements/grid-settings.php:621
+#@ essential-grid
+msgid "DROPZONE <br> RIGHT"
+msgstr "DROPZONE <br> RIGHT"
+
+#: admin/views/elements/grid-settings.php:623
+#@ essential-grid
+msgid "DROPZONE - BOTTOM - 1"
+msgstr "DROPZONE - BOTTOM - 1"
+
+#: admin/views/elements/grid-settings.php:624
+#@ essential-grid
+msgid "DROPZONE - BOTTOM - 2"
+msgstr "DROPZONE - BOTTOM - 2"
+
+#: admin/views/elements/grid-settings.php:639
+#@ essential-grid
+msgid "Drop Zones Layout"
+msgstr "Drop Zones Layout"
+
+#: admin/views/elements/grid-settings.php:645
+#@ essential-grid
+msgid "Dropzone Top 1"
+msgstr "Dropzone Top 1"
+
+#: admin/views/elements/grid-settings.php:646
+#: admin/views/elements/grid-settings.php:656
+#: admin/views/elements/grid-settings.php:665
+#: admin/views/elements/grid-settings.php:675
+#@ essential-grid
+msgid "All Buttons in this Zone Align to the left"
+msgstr "All Buttons in this Zone Align to the left"
+
+#: admin/views/elements/grid-settings.php:647
+#: admin/views/elements/grid-settings.php:657
+#: admin/views/elements/grid-settings.php:666
+#: admin/views/elements/grid-settings.php:676
+#@ essential-grid
+msgid "All Buttons in this Zone Align to Center"
+msgstr "All Buttons in this Zone Align to Center"
+
+#: admin/views/elements/grid-settings.php:648
+#: admin/views/elements/grid-settings.php:658
+#: admin/views/elements/grid-settings.php:667
+#: admin/views/elements/grid-settings.php:677
+#@ essential-grid
+msgid "All Buttons in this Zone Align to the Right"
+msgstr "All Buttons in this Zone Align to the Right"
+
+#: admin/views/elements/grid-settings.php:649
+#: admin/views/elements/grid-settings.php:659
+#@ essential-grid
+msgid "Margin Bottom"
+msgstr "Margin Bottom"
+
+#: admin/views/elements/grid-settings.php:650
+#: admin/views/elements/grid-settings.php:660
+#@ essential-grid
+msgid "Space under the Zone"
+msgstr "Space under the Zone"
+
+#: admin/views/elements/grid-settings.php:655
+#@ essential-grid
+msgid "Dropzone Top 2"
+msgstr "Dropzone Top 2"
+
+#: admin/views/elements/grid-settings.php:664
+#@ essential-grid
+msgid "Dropzone Bottom 1"
+msgstr "Dropzone Bottom 1"
+
+#: admin/views/elements/grid-settings.php:668
+#: admin/views/elements/grid-settings.php:678
+#@ essential-grid
+msgid "Margin Top"
+msgstr "Margin Top"
+
+#: admin/views/elements/grid-settings.php:669
+#: admin/views/elements/grid-settings.php:679
+#@ essential-grid
+msgid "Space above the Zone"
+msgstr "Space above the Zone"
+
+#: admin/views/elements/grid-settings.php:674
+#@ essential-grid
+msgid "Dropzone Bottom 2"
+msgstr "Dropzone Bottom 2"
+
+#: admin/views/elements/grid-settings.php:684
+#@ essential-grid
+msgid "Dropzone Left"
+msgstr "Dropzone Left"
+
+#: admin/views/elements/grid-settings.php:685
+#@ essential-grid
+msgid "Margin Left"
+msgstr "Margin Left"
+
+#: admin/views/elements/grid-settings.php:686
+#: admin/views/elements/grid-settings.php:693
+#@ essential-grid
+msgid "Space Horizontal the Zone (negative / positive values)"
+msgstr "Space Horizontal the Zone (negative / positive values)"
+
+#: admin/views/elements/grid-settings.php:691
+#@ essential-grid
+msgid "Dropzone Right"
+msgstr "Dropzone Right"
+
+#: admin/views/elements/grid-settings.php:692
+#@ essential-grid
+msgid "Margin Right"
+msgstr "Margin Right"
+
+#: admin/views/elements/grid-settings.php:702
+#@ essential-grid
+msgid "Module Spaces"
+msgstr "Module Spaces"
+
+#: admin/views/elements/grid-settings.php:707
+#@ essential-grid
+msgid "Module Spacing"
+msgstr "Module Spacing"
+
+#: admin/views/elements/grid-settings.php:708
+#@ essential-grid
+msgid "Spaces horizontal between the Navigation Modules"
+msgstr "Spaces horizontal between the Navigation Modules"
+
+#: admin/views/elements/grid-settings.php:717
+#@ essential-grid
+msgid "Filtering"
+msgstr "Filtering"
+
+#: admin/views/elements/grid-settings.php:721
+#@ essential-grid
+msgid "Filter Type"
+msgstr "Filter Type"
+
+#: admin/views/elements/grid-settings.php:722
+#@ default
+msgid "Filter is based on 1 Selected Filter in same time."
+msgstr "Filter is based on 1 Selected Filter in same time."
+
+#: admin/views/elements/grid-settings.php:722
+#@ essential-grid
+msgid "Single"
+msgstr "Single"
+
+#: admin/views/elements/grid-settings.php:723
+#@ default
+msgid "Filter is based on 1 or more Filters in same time."
+msgstr "Filter is based on 1 or more Filters in same time."
+
+#: admin/views/elements/grid-settings.php:723
+#@ essential-grid
+msgid "Multiple"
+msgstr "Multiple"
+
+#: admin/views/elements/grid-settings.php:726
+#@ essential-grid
+msgid "Filter All Text"
+msgstr "Filter All Text"
+
+#: admin/views/elements/grid-settings.php:727
+#@ essential-grid
+msgid "Visible Title on All Filter Button."
+msgstr "Visible Title on All Filter Button."
+
+#: admin/views/elements/grid-settings.php:736
+#@ essential-grid
+msgid "Sorting"
+msgstr "Sorting"
+
+#: admin/views/elements/grid-settings.php:740
+#@ essential-grid
+msgid "Available Sortings"
+msgstr "Available Sortings"
+
+#: admin/views/elements/grid-settings.php:742
+#@ essential-grid
+msgid "Select Sorting Definitions (multiple available)"
+msgstr "Select Sorting Definitions (multiple available)"
+
+#: admin/views/elements/grid-settings.php:755
+#: admin/views/elements/grid-settings.php:782
+#: includes/navigation.class.php:463
+#@ essential-grid
+msgid "Date"
+msgstr "Date"
+
+#: admin/views/elements/grid-settings.php:756
+#: admin/views/elements/grid-settings.php:783
+#: admin/views/grid-create.php:130
+#: includes/grids-widget.class.php:56
+#: includes/navigation.class.php:466
+#@ essential-grid
+msgid "Title"
+msgstr "Title"
+
+#: admin/views/elements/grid-settings.php:757
+#: includes/navigation.class.php:469
+#@ essential-grid
+msgid "Excerpt"
+msgstr "Excerpt"
+
+#: admin/views/elements/grid-settings.php:758
+#: admin/views/elements/grid-settings.php:784
+#: admin/views/grid-overview.php:30
+#: includes/navigation.class.php:472
+#@ essential-grid
+msgid "ID"
+msgstr "ID"
+
+#: admin/views/elements/grid-settings.php:759
+#: admin/views/elements/grid-settings.php:785
+#: includes/navigation.class.php:475
+#@ essential-grid
+msgid "Slug"
+msgstr "Slug"
+
+#: admin/views/elements/grid-settings.php:760
+#: admin/views/elements/grid-settings.php:786
+#: includes/navigation.class.php:478
+#@ essential-grid
+msgid "Author"
+msgstr "Author"
+
+#: admin/views/elements/grid-settings.php:761
+#: admin/views/elements/grid-settings.php:787
+#@ essential-grid
+msgid "Last modified"
+msgstr "Last modified"
+
+#: admin/views/elements/grid-settings.php:762
+#: admin/views/elements/grid-settings.php:788
+#@ essential-grid
+msgid "Number of comments"
+msgstr "Number of comments"
+
+#: admin/views/elements/grid-settings.php:766
+#@ essential-grid
+msgid "Start Sorting By"
+msgstr "Start Sorting By"
+
+#: admin/views/elements/grid-settings.php:768
+#: admin/views/elements/grid-settings.php:1103
+#@ essential-grid
+msgid "Sorting at Loading"
+msgstr "Sorting at Loading"
+
+#: admin/views/elements/grid-settings.php:789
+#@ essential-grid
+msgid "Random"
+msgstr "Random"
+
+#: admin/views/elements/grid-settings.php:793
+#@ essential-grid
+msgid "Sorting Order"
+msgstr "Sorting Order"
+
+#: admin/views/elements/grid-settings.php:795
+#@ essential-grid
+msgid "Sorting Order at Loading"
+msgstr "Sorting Order at Loading"
+
+#: admin/views/elements/grid-settings.php:796
+#@ essential-grid
+msgid "Descending"
+msgstr "Descending"
+
+#: admin/views/elements/grid-settings.php:797
+#@ essential-grid
+msgid "Ascending"
+msgstr "Ascending"
+
+#: admin/views/elements/grid-settings.php:813
+#@ essential-grid
+msgid "Poster Orders"
+msgstr "Poster Orders"
+
+#: admin/views/elements/grid-settings.php:817
+#@ essential-grid
+msgid "Set the default order of Poster Image Source"
+msgstr "Set the default order of Poster Image Source"
+
+#: admin/views/elements/grid-settings.php:817
+#: admin/views/elements/grid-settings.php:872
+#: admin/views/grid-create.php:259
+#@ essential-grid
+msgid "Set Source Order"
+msgstr "Set Source Order"
+
+#: admin/views/elements/grid-settings.php:852
+#: admin/views/elements/grid-settings.php:907
+#@ essential-grid
+msgid "First Ordered Poster Source will be loaded as default. If source not exist, next available Poster source in order will be taken"
+msgstr "First Ordered Poster Source will be loaded as default. If source not exist, next available Poster source in order will be taken"
+
+#: admin/views/elements/grid-settings.php:868
+#@ essential-grid
+msgid "Shown Media Orders"
+msgstr "Shown Media Orders"
+
+#: admin/views/elements/grid-settings.php:872
+#@ essential-grid
+msgid "Set the default order of Shown Content Source"
+msgstr "Set the default order of Shown Content Source"
+
+#: admin/views/elements/grid-settings.php:919
+#@ essential-grid
+msgid "Lightbox Gallery"
+msgstr "Lightbox Gallery"
+
+#: admin/views/elements/grid-settings.php:923
+#@ essential-grid
+msgid "Gallery Mode"
+msgstr "Gallery Mode"
+
+#: admin/views/elements/grid-settings.php:924
+#@ essential-grid
+msgid "Choose the Lightbox Mode"
+msgstr "Choose the Lightbox Mode"
+
+#: admin/views/elements/grid-settings.php:925
+#@ essential-grid
+msgid "Single Mode"
+msgstr "Single Mode"
+
+#: admin/views/elements/grid-settings.php:926
+#@ essential-grid
+msgid "All Items"
+msgstr "All Items"
+
+#: admin/views/elements/grid-settings.php:927
+#@ essential-grid
+msgid "Filter based all Pages"
+msgstr "Filter based all Pages"
+
+#: admin/views/elements/grid-settings.php:928
+#@ essential-grid
+msgid "Filter based current Page"
+msgstr "Filter based current Page"
+
+#: admin/views/elements/grid-settings.php:937
+#@ essential-grid
+msgid "Lightbox Layout"
+msgstr "Lightbox Layout"
+
+#: admin/views/elements/grid-settings.php:942
+#: admin/views/elements/grid-settings.php:943
+#@ essential-grid
+msgid "Title Type"
+msgstr "Title Type"
+
+#: admin/views/elements/grid-settings.php:944
+#@ essential-grid
+msgid "No Title"
+msgstr "No Title"
+
+#: admin/views/elements/grid-settings.php:945
+#@ essential-grid
+msgid "Inside"
+msgstr "Inside"
+
+#: admin/views/elements/grid-settings.php:946
+#@ essential-grid
+msgid "Outside"
+msgstr "Outside"
+
+#: admin/views/elements/grid-settings.php:947
+#@ essential-grid
+msgid "Over"
+msgstr "Over"
+
+#: admin/views/elements/grid-settings.php:951
+#: admin/views/elements/grid-settings.php:952
+#@ essential-grid
+msgid "Title Position"
+msgstr "Title Position"
+
+#: admin/views/elements/grid-settings.php:959
+#@ essential-grid
+msgid "Twitter"
+msgstr "Twitter"
+
+#: admin/views/elements/grid-settings.php:960
+#@ default
+msgid "Show Twitter on Lightbox."
+msgstr "Show Twitter on Lightbox."
+
+#: admin/views/elements/grid-settings.php:961
+#@ default
+msgid "Hide Twitter on Lightbox."
+msgstr "Hide Twitter on Lightbox."
+
+#: admin/views/elements/grid-settings.php:964
+#@ essential-grid
+msgid "Facebook"
+msgstr "Facebook"
+
+#: admin/views/elements/grid-settings.php:965
+#@ default
+msgid "Show Facebook Likes on Lightbox."
+msgstr "Show Facebook Likes on Lightbox."
+
+#: admin/views/elements/grid-settings.php:966
+#@ default
+msgid "Hide Facebook Likes on Lightbox."
+msgstr "Hide Facebook Likes on Lightbox."
+
+#: admin/views/elements/grid-settings.php:974
+#@ essential-grid
+msgid "Lightbox Spacing"
+msgstr "Lightbox Spacing"
+
+#: admin/views/elements/grid-settings.php:983
+#@ essential-grid
+msgid "Title Wrap Padding"
+msgstr "Title Wrap Padding"
+
+#: admin/views/elements/grid-settings.php:984
+#@ essential-grid
+msgid "Padding Top of the Title Wrap"
+msgstr "Padding Top of the Title Wrap"
+
+#: admin/views/elements/grid-settings.php:985
+#@ essential-grid
+msgid "Padding Right of the Title Wrap"
+msgstr "Padding Right of the Title Wrap"
+
+#: admin/views/elements/grid-settings.php:986
+#@ essential-grid
+msgid "Padding Bottom of the Title Wrap"
+msgstr "Padding Bottom of the Title Wrap"
+
+#: admin/views/elements/grid-settings.php:987
+#@ essential-grid
+msgid "Padding Left of the Title Wrap"
+msgstr "Padding Left of the Title Wrap"
+
+#: admin/views/elements/grid-settings.php:995
+#@ essential-grid
+msgid "Media Padding"
+msgstr "Media Padding"
+
+#: admin/views/elements/grid-settings.php:996
+#@ essential-grid
+msgid "Padding Top of the LightBox"
+msgstr "Padding Top of the LightBox"
+
+#: admin/views/elements/grid-settings.php:997
+#@ essential-grid
+msgid "Padding Right of the LightBox"
+msgstr "Padding Right of the LightBox"
+
+#: admin/views/elements/grid-settings.php:998
+#@ essential-grid
+msgid "Padding Bottom of the LightBox"
+msgstr "Padding Bottom of the LightBox"
+
+#: admin/views/elements/grid-settings.php:999
+#@ essential-grid
+msgid "Padding Left of the LightBox"
+msgstr "Padding Left of the LightBox"
+
+#: admin/views/elements/grid-settings.php:1008
+#@ essential-grid
+msgid "Effects"
+msgstr "Effects"
+
+#: admin/views/elements/grid-settings.php:1013
+#@ essential-grid
+msgid "Open / Close Animation"
+msgstr "Open / Close Animation"
+
+#: admin/views/elements/grid-settings.php:1014
+#: admin/views/elements/grid-settings.php:1029
+#@ essential-grid
+msgid "Animation Type"
+msgstr "Animation Type"
+
+#: admin/views/elements/grid-settings.php:1015
+#: admin/views/elements/grid-settings.php:1030
+#@ essential-grid
+msgid "No Animation"
+msgstr "No Animation"
+
+#: admin/views/elements/grid-settings.php:1016
+#: admin/views/elements/grid-settings.php:1031
+#: includes/base.class.php:258
+#: includes/base.class.php:283
+#@ essential-grid
+msgid "Fade"
+msgstr "Fade"
+
+#: admin/views/elements/grid-settings.php:1017
+#: admin/views/elements/grid-settings.php:1032
+#: includes/base.class.php:291
+#@ essential-grid
+msgid "Slide"
+msgstr "Slide"
+
+#: admin/views/elements/grid-settings.php:1020
+#: admin/views/elements/grid-settings.php:1035
+#@ essential-grid
+msgid "Slow"
+msgstr "Slow"
+
+#: admin/views/elements/grid-settings.php:1022
+#: admin/views/elements/grid-settings.php:1037
+#@ essential-grid
+msgid "Fast"
+msgstr "Fast"
+
+#: admin/views/elements/grid-settings.php:1028
+#@ essential-grid
+msgid "Next / Prev Animation"
+msgstr "Next / Prev Animation"
+
+#: admin/views/elements/grid-settings.php:1053
+#@ essential-grid
+msgid "Navigation Arrows"
+msgstr "Navigation Arrows"
+
+#: admin/views/elements/grid-settings.php:1054
+#: admin/views/elements/grid-settings.php:1055
+#@ default
+msgid "Show Navigation Arrows."
+msgstr "Show Navigation Arrows."
+
+#: admin/views/elements/grid-settings.php:1058
+#@ essential-grid
+msgid "Mini Thumbnails"
+msgstr "Mini Thumbnails"
+
+#: admin/views/elements/grid-settings.php:1059
+#: admin/views/elements/grid-settings.php:1060
+#@ default
+msgid "Show Thumbnails."
+msgstr "Show Thumbnails."
+
+#: admin/views/elements/grid-settings.php:1061
+#@ essential-grid
+msgid "Width:"
+msgstr "Width:"
+
+#: admin/views/elements/grid-settings.php:1063
+#@ essential-grid
+msgid "Height:"
+msgstr "Height:"
+
+#: admin/views/elements/grid-settings.php:1067
+#@ essential-grid
+msgid "Bullets"
+msgstr "Bullets"
+
+#: admin/views/elements/grid-settings.php:1068
+#@ default
+msgid "Show Bullets."
+msgstr "Show Bullets."
+
+#: admin/views/elements/grid-settings.php:1069
+#@ default
+msgid "Show Bullets"
+msgstr "Show Bullets"
+
+#: admin/views/elements/grid-settings.php:1083
+#@ essential-grid
+msgid "Spinner Settings"
+msgstr "Spinner Settings"
+
+#: admin/views/elements/grid-settings.php:1089
+#@ essential-grid
+msgid "Choose Spinner"
+msgstr "Choose Spinner"
+
+#: admin/views/elements/grid-settings.php:1090
+#@ essential-grid
+msgid "Choose Loading Spinner"
+msgstr "Choose Loading Spinner"
+
+#: admin/views/elements/grid-settings.php:1102
+#@ essential-grid
+msgid "Choose Spinner Color"
+msgstr "Choose Spinner Color"
+
+#: admin/views/elements/grid-settings.php:1107
+#@ essential-grid
+msgid "Hide Markups before Load"
+msgstr "Hide Markups before Load"
+
+#: admin/views/elements/grid-settings.php:1108
+#@ essential-grid
+msgid "Hide all Content before items loaded."
+msgstr "Hide all Content before items loaded."
+
+#: admin/views/elements/grid-settings.php:1109
+#@ essential-grid
+msgid "Show Navigation before items loaded."
+msgstr "Show Navigation before items loaded."
+
+#: admin/views/grid-create.php:20
+#: admin/views/grid-overview.php:81
+#@ essential-grid
+msgid "Create New Ess. Grid"
+msgstr "Create New Ess. Grid"
+
+#: admin/views/grid-create.php:21
+#@ essential-grid
+msgid "Save Grid"
+msgstr "Save Grid"
+
+#: admin/views/grid-create.php:28
+#: admin/views/grid-overview.php:34
+#: admin/views/grid-overview.php:50
+#@ essential-grid
+msgid "Settings"
+msgstr "Settings"
+
+#: admin/views/grid-create.php:104
+#: admin/views/grid-create.php:123
+#@ essential-grid
+msgid "Naming"
+msgstr "Naming"
+
+#: admin/views/grid-create.php:106
+#@ essential-grid
+msgid "Grid Settings"
+msgstr "Grid Settings"
+
+#: admin/views/grid-create.php:107
+#@ essential-grid
+msgid "Navigations"
+msgstr "Navigations"
+
+#: admin/views/grid-create.php:108
+#: admin/views/grid-import-export.php:71
+#: admin/views/grid-import-export.php:272
+#@ essential-grid
+msgid "Skins"
+msgstr "Skins"
+
+#: admin/views/grid-create.php:109
+#@ essential-grid
+msgid "Animations"
+msgstr "Animations"
+
+#: admin/views/grid-create.php:110
+#@ essential-grid
+msgid "Video"
+msgstr "Video"
+
+#: admin/views/grid-create.php:112
+#@ essential-grid
+msgid "Spinner"
+msgstr "Spinner"
+
+#: admin/views/grid-create.php:130
+#@ essential-grid
+msgid "Name of the grid"
+msgstr "Name of the grid"
+
+#: admin/views/grid-create.php:131
+#@ essential-grid
+msgid "Alias"
+msgstr "Alias"
+
+#: admin/views/grid-create.php:131
+#@ essential-grid
+msgid "Technical alias without special chars and white spaces"
+msgstr "Technical alias without special chars and white spaces"
+
+#: admin/views/grid-create.php:132
+#: admin/views/grid-overview.php:32
+#@ essential-grid
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: admin/views/grid-create.php:132
+#@ essential-grid
+msgid "Copy this shortcode to paste it to your pages or posts content"
+msgstr "Copy this shortcode to paste it to your pages or posts content"
+
+#: admin/views/grid-create.php:150
+#@ essential-grid
+msgid "Choose source of grid items"
+msgstr "Choose source of grid items"
+
+#: admin/views/grid-create.php:150
+#@ essential-grid
+msgid "Based on"
+msgstr "Based on"
+
+#: admin/views/grid-create.php:153
+#@ essential-grid
+msgid "Items from Posts, Custom Posts"
+msgstr "Items from Posts, Custom Posts"
+
+#: admin/views/grid-create.php:153
+#@ essential-grid
+msgid "Post, Pages, Custom Posts"
+msgstr "Post, Pages, Custom Posts"
+
+#: admin/views/grid-create.php:154
+#@ essential-grid
+msgid "Items from the Media Gallery (Bulk Selection, Upload Possible), "
+msgstr "Items from the Media Gallery (Bulk Selection, Upload Possible), "
+
+#: admin/views/grid-create.php:154
+#@ essential-grid
+msgid "Custom Grid"
+msgstr "Custom Grid"
+
+#: admin/views/grid-create.php:167
+#@ essential-grid
+msgid "Type and Category"
+msgstr "Type and Category"
+
+#: admin/views/grid-create.php:171
+#@ essential-grid
+msgid "Post Types"
+msgstr "Post Types"
+
+#: admin/views/grid-create.php:172
+#@ essential-grid
+msgid "Select Post Types (multiple selection possible)"
+msgstr "Select Post Types (multiple selection possible)"
+
+#: admin/views/grid-create.php:192
+#@ essential-grid
+msgid "Post Categories"
+msgstr "Post Categories"
+
+#: admin/views/grid-create.php:193
+#@ essential-grid
+msgid "Select Categories and Tags (multiple selection possible)"
+msgstr "Select Categories and Tags (multiple selection possible)"
+
+#: admin/views/grid-create.php:217
+#@ essential-grid
+msgid "Pages"
+msgstr "Pages"
+
+#: admin/views/grid-create.php:221
+#@ essential-grid
+msgid "Additional filtering on pages"
+msgstr "Additional filtering on pages"
+
+#: admin/views/grid-create.php:221
+#@ essential-grid
+msgid "Select Pages"
+msgstr "Select Pages"
+
+#: admin/views/grid-create.php:222
+#@ essential-grid
+msgid "Start to type a page title for pre selection"
+msgstr "Start to type a page title for pre selection"
+
+#: admin/views/grid-create.php:255
+#@ essential-grid
+msgid "Media Source"
+msgstr "Media Source"
+
+#: admin/views/grid-create.php:259
+#@ essential-grid
+msgid "Set default order of used media"
+msgstr "Set default order of used media"
+
+#: admin/views/grid-create.php:293
+#@ essential-grid
+msgid "First Media Source will be loaded as default. In case one source does not exist, next available media source in this order will be used"
+msgstr "First Media Source will be loaded as default. In case one source does not exist, next available media source in this order will be used"
+
+#: admin/views/grid-create.php:299
+#@ essential-grid
+msgid "Set image source type"
+msgstr "Set image source type"
+
+#: admin/views/grid-create.php:299
+#@ essential-grid
+msgid "Set Image Source Type"
+msgstr "Set Image Source Type"
+
+#: admin/views/grid-create.php:306
+#@ essential-grid
+msgid "Original Size"
+msgstr "Original Size"
+
+#: admin/views/grid-create.php:307
+#@ essential-grid
+msgid "Thumbnail Size"
+msgstr "Thumbnail Size"
+
+#: admin/views/grid-create.php:308
+#@ essential-grid
+msgid "Medium Size"
+msgstr "Medium Size"
+
+#: admin/views/grid-create.php:309
+#@ essential-grid
+msgid "Large Size"
+msgstr "Large Size"
+
+#: admin/views/grid-create.php:330
+#@ essential-grid
+msgid "Refresh Preview"
+msgstr "Refresh Preview"
+
+#: admin/views/grid-create.php:331
+#: includes/base.class.php:220
+#@ essential-grid
+msgid "Close"
+msgstr "Close"
+
+#: admin/views/grid-create.php:333
+#@ essential-grid
+msgid "Delete Grid"
+msgstr "Delete Grid"
+
+#: admin/views/grid-create.php:348
+#@ essential-grid
+msgid "Preview"
+msgstr "Preview"
+
+#: admin/views/grid-custom-meta.php:36
+#@ essential-grid
+msgid "List:"
+msgstr "List:"
+
+#: admin/views/grid-custom-meta.php:41
+#: admin/views/themepunch-google-fonts.php:38
+#@ essential-grid
+msgid "Edit"
+msgstr "Edit"
+
+#: admin/views/grid-custom-meta.php:52
+#@ essential-grid
+msgid "Add New Meta"
+msgstr "Add New Meta"
+
+#: admin/views/grid-import-export.php:28
+#: admin/views/grid-import-export.php:38
+#@ essential-grid
+msgid "Invalid file or file size too big."
+msgstr "Invalid file or file size too big."
+
+#: admin/views/grid-import-export.php:49
+#@ essential-grid
+msgid "Export:"
+msgstr "Export:"
+
+#: admin/views/grid-import-export.php:55
+#: admin/views/grid-import-export.php:234
+#@ essential-grid
+msgid "Grids"
+msgstr "Grids"
+
+#: admin/views/grid-import-export.php:87
+#: admin/views/grid-import-export.php:310
+#@ essential-grid
+msgid "Elements"
+msgstr "Elements"
+
+#: admin/views/grid-import-export.php:103
+#: admin/views/grid-import-export.php:348
+#@ essential-grid
+msgid "Navigation Skins"
+msgstr "Navigation Skins"
+
+#: admin/views/grid-import-export.php:149
+#: admin/views/grid-import-export.php:465
+#@ essential-grid
+msgid "Global Styles"
+msgstr "Global Styles"
+
+#: admin/views/grid-import-export.php:153
+#@ essential-grid
+msgid "Export Selected"
+msgstr "Export Selected"
+
+#: admin/views/grid-import-export.php:224
+#@ essential-grid
+msgid "Import:"
+msgstr "Import:"
+
+#: admin/views/grid-import-export.php:229
+#@ essential-grid
+msgid "The following could be found in the selected file:"
+msgstr "The following could be found in the selected file:"
+
+#: admin/views/grid-import-export.php:250
+#: admin/views/grid-import-export.php:288
+#: admin/views/grid-import-export.php:326
+#: admin/views/grid-import-export.php:364
+#: admin/views/grid-import-export.php:402
+#: admin/views/grid-import-export.php:440
+#: admin/views/grid-import-export.php:467
+#@ essential-grid
+msgid "Append as New"
+msgstr "Append as New"
+
+#: admin/views/grid-import-export.php:251
+#: admin/views/grid-import-export.php:289
+#: admin/views/grid-import-export.php:327
+#: admin/views/grid-import-export.php:365
+#: admin/views/grid-import-export.php:403
+#: admin/views/grid-import-export.php:441
+#: admin/views/grid-import-export.php:468
+#@ essential-grid
+msgid "Overwrite Existing"
+msgstr "Overwrite Existing"
+
+#: admin/views/grid-import-export.php:479
+#@ essential-grid
+msgid "Import Selected Data"
+msgstr "Import Selected Data"
+
+#: admin/views/grid-import-export.php:485
+#@ essential-grid
+msgid "Read File"
+msgstr "Read File"
+
+#: admin/views/grid-import-export.php:493
+#@ default
+msgid "Import Full Demo Data"
+msgstr "Import Full Demo Data"
+
+#: admin/views/grid-item-skin.php:17
+#: admin/views/grid-item-skin.php:27
+#: admin/views/grid-overview.php:14
+#@ essential-grid
+msgid "Overview"
+msgstr "Overview"
+
+#: admin/views/grid-item-skin.php:98
+#@ essential-grid
+msgid "Skin Templates"
+msgstr "Skin Templates"
+
+#: admin/views/grid-item-skin.php:134
+#@ essential-grid
+msgid "No Item Skins found!"
+msgstr "No Item Skins found!"
+
+#: admin/views/grid-overview.php:16
+#@ essential-grid
+msgid "Help"
+msgstr "Help"
+
+#: admin/views/grid-overview.php:31
+#@ essential-grid
+msgid "Name"
+msgstr "Name"
+
+#: admin/views/grid-overview.php:33
+#@ essential-grid
+msgid "Actions"
+msgstr "Actions"
+
+#: admin/views/grid-overview.php:76
+#@ essential-grid
+msgid "No Essential Grids found!"
+msgstr "No Essential Grids found!"
+
+#: admin/views/themepunch-google-fonts.php:31
+#@ essential-grid
+msgid "Font Family:"
+msgstr "Font Family:"
+
+#: admin/views/themepunch-google-fonts.php:48
+#@ essential-grid
+msgid "Copy the Google Font Family from <a href=\"http://www.google.com/fonts\" target=\"_blank\">http://www.google.com/fonts</a> like: <strong>Open+Sans:400,700,600</strong>"
+msgstr "Copy the Google Font Family from <a href=\"http://www.google.com/fonts\" target=\"_blank\">http://www.google.com/fonts</a> like: <strong>Open+Sans:400,700,600</strong>"
+
+#: admin/views/themepunch-google-fonts.php:52
+#@ essential-grid
+msgid "Add New Font"
+msgstr "Add New Font"
+
+#. translators: plugin header field 'PluginURI'
+#: essential-grid.php:0
+#@ essential-grid
+msgid "http://www.themepunch.com/essential/"
+msgstr ""
+
+#. translators: plugin header field 'Description'
+#: essential-grid.php:0
+#@ essential-grid
+msgid "Essential Grid - Premium grid plugin"
+msgstr ""
+
+#. translators: plugin header field 'Author'
+#: essential-grid.php:0
+#@ essential-grid
+msgid "ThemePunch"
+msgstr ""
+
+#. translators: plugin header field 'AuthorURI'
+#: essential-grid.php:0
+#@ essential-grid
+msgid "http://themepunch.com"
+msgstr ""
+
+#. translators: plugin header field 'Version'
+#: essential-grid.php:0
+#@ essential-grid
+msgid "0.9.9"
+msgstr "0.9.9"
+
+#: includes/base.class.php:180
+#@ essential-grid
+msgid "Please wait..."
+msgstr "Please wait..."
+
+#: includes/base.class.php:181
+#@ essential-grid
+msgid "Ajax Error!!!"
+msgstr "Ajax Error!!!"
+
+#: includes/base.class.php:182
+#@ essential-grid
+msgid "The 'success' param is a must!"
+msgstr "The 'success' param is a must!"
+
+#: includes/base.class.php:183
+#@ essential-grid
+msgid "ajax error! action not found"
+msgstr "ajax error! action not found"
+
+#: includes/base.class.php:184
+#@ essential-grid
+msgid "Empty ajax response!"
+msgstr "Empty ajax response!"
+
+#: includes/base.class.php:185
+#@ essential-grid
+msgid "wrong alias"
+msgstr "wrong alias"
+
+#: includes/base.class.php:186
+#@ essential-grid
+msgid "Really delete choosen Item Skin?"
+msgstr "Really delete choosen Item Skin?"
+
+#: includes/base.class.php:187
+#@ essential-grid
+msgid "Really delete the Grid?"
+msgstr "Really delete the Grid?"
+
+#: includes/base.class.php:189
+#@ essential-grid
+msgid "--- choose ---"
+msgstr "--- choose ---"
+
+#: includes/base.class.php:190
+#: includes/base.class.php:192
+#@ essential-grid
+msgid "New Element"
+msgstr "New Element"
+
+#: includes/base.class.php:193
+#@ essential-grid
+msgid "Bottom on Hover"
+msgstr "Bottom on Hover"
+
+#: includes/base.class.php:194
+#@ essential-grid
+msgid "Top on Hover"
+msgstr "Top on Hover"
+
+#: includes/base.class.php:195
+#@ essential-grid
+msgid "Hidden"
+msgstr "Hidden"
+
+#: includes/base.class.php:196
+#@ essential-grid
+msgid "$99 $999"
+msgstr "$99 $999"
+
+#: includes/base.class.php:197
+#@ essential-grid
+msgid "$99"
+msgstr "$99"
+
+#: includes/base.class.php:198
+#@ essential-grid
+msgid "99"
+msgstr "99"
+
+#: includes/base.class.php:204
+#@ essential-grid
+msgid "The following demo data will be imported: Grids, Custom Meta, PunchFonts. This can take a while, please do not leave the site until the import is finished"
+msgstr "The following demo data will be imported: Grids, Custom Meta, PunchFonts. This can take a while, please do not leave the site until the import is finished"
+
+#: includes/base.class.php:205
+#@ essential-grid
+msgid "Save Settings"
+msgstr "Save Settings"
+
+#: includes/base.class.php:206
+#@ essential-grid
+msgid "Add Element"
+msgstr "Add Element"
+
+#: includes/base.class.php:207
+#: includes/item-skin.class.php:800
+#@ essential-grid
+msgid "Edit Element"
+msgstr "Edit Element"
+
+#: includes/base.class.php:208
+#@ essential-grid
+msgid "Really remove this element?"
+msgstr "Really remove this element?"
+
+#: includes/base.class.php:209
+#@ essential-grid
+msgid "Choose Skins"
+msgstr "Choose Skins"
+
+#: includes/base.class.php:210
+#@ essential-grid
+msgid "Add Selected"
+msgstr "Add Selected"
+
+#: includes/base.class.php:211
+#@ essential-grid
+msgid "Deleting a Navigation Skin may result in missing Skins in other Grids. Proceed?"
+msgstr "Deleting a Navigation Skin may result in missing Skins in other Grids. Proceed?"
+
+#: includes/base.class.php:212
+#@ essential-grid
+msgid "Add Meta"
+msgstr "Add Meta"
+
+#: includes/base.class.php:213
+#@ essential-grid
+msgid "Add Google Font"
+msgstr "Add Google Font"
+
+#: includes/base.class.php:214
+#@ essential-grid
+msgid "Save Post Meta"
+msgstr "Save Post Meta"
+
+#: includes/base.class.php:215
+#@ essential-grid
+msgid "Really delete this meta? This can't be undone."
+msgstr "Really delete this meta? This can't be undone."
+
+#: includes/base.class.php:216
+#@ essential-grid
+msgid "If you change this settings, it may affect current Posts that use this meta, proceed?"
+msgstr "If you change this settings, it may affect current Posts that use this meta, proceed?"
+
+#: includes/base.class.php:217
+#@ essential-grid
+msgid "If you change this settings, it may affect current Posts that use this Font, proceed?"
+msgstr "If you change this settings, it may affect current Posts that use this Font, proceed?"
+
+#: includes/base.class.php:218
+#@ essential-grid
+msgid "The handle and name has to be at least three characters long!"
+msgstr "The handle and name has to be at least three characters long!"
+
+#: includes/base.class.php:219
+#@ essential-grid
+msgid "Layout Settings"
+msgstr "Layout Settings"
+
+#: includes/base.class.php:221
+#@ essential-grid
+msgid "Save Navigation Skin"
+msgstr "Save Navigation Skin"
+
+#: includes/base.class.php:222
+#: includes/base.class.php:229
+#@ essential-grid
+msgid "Save Changes"
+msgstr "Save Changes"
+
+#: includes/base.class.php:223
+#@ essential-grid
+msgid "new-element"
+msgstr "new-element"
+
+#: includes/base.class.php:224
+#@ essential-grid
+msgid "This will delete this element permanently, really proceed?"
+msgstr "This will delete this element permanently, really proceed?"
+
+#: includes/base.class.php:225
+#@ essential-grid
+msgid "Element with chosen name already exists. Really overwrite the Element?"
+msgstr "Element with chosen name already exists. Really overwrite the Element?"
+
+#: includes/base.class.php:226
+#@ essential-grid
+msgid "Element was not created/changed"
+msgstr "Element was not created/changed"
+
+#: includes/base.class.php:227
+#@ essential-grid
+msgid "Not Selected"
+msgstr "Not Selected"
+
+#: includes/base.class.php:228
+#@ essential-grid
+msgid "Class:"
+msgstr "Class:"
+
+#: includes/base.class.php:230
+#@ essential-grid
+msgid "Enter a Position"
+msgstr "Enter a Position"
+
+#: includes/base.class.php:231
+#@ essential-grid
+msgid "By leaving now, all changes since the last saving will be lost. Really leave now?"
+msgstr "By leaving now, all changes since the last saving will be lost. Really leave now?"
+
+#: includes/base.class.php:232
+#@ essential-grid
+msgid "Please enter a unique item name"
+msgstr "Please enter a unique item name"
+
+#: includes/base.class.php:233
+#@ essential-grid
+msgid "Choose Icon"
+msgstr "Choose Icon"
+
+#: includes/base.class.php:234
+#@ essential-grid
+msgid "Please enter a unique element name"
+msgstr "Please enter a unique element name"
+
+#: includes/base.class.php:235
+#@ essential-grid
+msgid "Please enter a unique Navigation Skin name"
+msgstr "Please enter a unique Navigation Skin name"
+
+#: includes/base.class.php:236
+#@ essential-grid
+msgid "Item name too short"
+msgstr "Item name too short"
+
+#: includes/base.class.php:237
+#@ essential-grid
+msgid "Navigation Skin name too short"
+msgstr "Navigation Skin name too short"
+
+#: includes/base.class.php:238
+#@ essential-grid
+msgid "Navigation Skin with choosen name already exists, please choose a different name"
+msgstr "Navigation Skin with choosen name already exists, please choose a different name"
+
+#: includes/base.class.php:239
+#@ essential-grid
+msgid "With Vimeo"
+msgstr "With Vimeo"
+
+#: includes/base.class.php:240
+#@ essential-grid
+msgid "With YouTube"
+msgstr "With YouTube"
+
+#: includes/base.class.php:241
+#@ essential-grid
+msgid "With Image"
+msgstr "With Image"
+
+#: includes/base.class.php:242
+#@ essential-grid
+msgid "With HTML5 Video"
+msgstr "With HTML5 Video"
+
+#: includes/base.class.php:243
+#@ essential-grid
+msgid "With SoundCloud"
+msgstr "With SoundCloud"
+
+#: includes/base.class.php:244
+#@ essential-grid
+msgid "Without Media"
+msgstr "Without Media"
+
+#: includes/base.class.php:245
+#@ essential-grid
+msgid "Select Your Item"
+msgstr "Select Your Item"
+
+#: includes/base.class.php:259
+#@ essential-grid
+msgid "Scale"
+msgstr "Scale"
+
+#: includes/base.class.php:260
+#: includes/base.class.php:301
+#@ essential-grid
+msgid "Rotate Scale"
+msgstr "Rotate Scale"
+
+#: includes/base.class.php:261
+#@ essential-grid
+msgid "Fall"
+msgstr "Fall"
+
+#: includes/base.class.php:262
+#@ essential-grid
+msgid "Rotate Fall"
+msgstr "Rotate Fall"
+
+#: includes/base.class.php:263
+#@ essential-grid
+msgid "Horizontal Slide"
+msgstr "Horizontal Slide"
+
+#: includes/base.class.php:264
+#@ essential-grid
+msgid "Vertical Slide"
+msgstr "Vertical Slide"
+
+#: includes/base.class.php:265
+#@ essential-grid
+msgid "Horizontal Flip"
+msgstr "Horizontal Flip"
+
+#: includes/base.class.php:266
+#@ essential-grid
+msgid "Vertical Flip"
+msgstr "Vertical Flip"
+
+#: includes/base.class.php:267
+#@ essential-grid
+msgid "Horizontal Flipbook"
+msgstr "Horizontal Flipbook"
+
+#: includes/base.class.php:268
+#@ essential-grid
+msgid "Vertical Flipbook"
+msgstr "Vertical Flipbook"
+
+#: includes/base.class.php:282
+#: includes/base.class.php:310
+#: includes/base.class.php:371
+#@ essential-grid
+msgid " None"
+msgstr " None"
+
+#: includes/base.class.php:284
+#: includes/base.class.php:372
+#@ essential-grid
+msgid "Flip Vertical"
+msgstr "Flip Vertical"
+
+#: includes/base.class.php:285
+#: includes/base.class.php:373
+#@ essential-grid
+msgid "Flip Horizontal"
+msgstr "Flip Horizontal"
+
+#: includes/base.class.php:286
+#: includes/base.class.php:376
+#@ essential-grid
+msgid "Flip Up"
+msgstr "Flip Up"
+
+#: includes/base.class.php:287
+#: includes/base.class.php:377
+#@ essential-grid
+msgid "Flip Down"
+msgstr "Flip Down"
+
+#: includes/base.class.php:288
+#: includes/base.class.php:374
+#@ essential-grid
+msgid "Flip Right"
+msgstr "Flip Right"
+
+#: includes/base.class.php:289
+#: includes/base.class.php:375
+#@ essential-grid
+msgid "Flip Left"
+msgstr "Flip Left"
+
+#: includes/base.class.php:290
+#: includes/base.class.php:379
+#@ essential-grid
+msgid "Turn"
+msgstr "Turn"
+
+#: includes/base.class.php:292
+#@ essential-grid
+msgid "Slide Left"
+msgstr "Slide Left"
+
+#: includes/base.class.php:293
+#@ essential-grid
+msgid "Slide Right"
+msgstr "Slide Right"
+
+#: includes/base.class.php:294
+#@ essential-grid
+msgid "Slide Up"
+msgstr "Slide Up"
+
+#: includes/base.class.php:295
+#@ essential-grid
+msgid "Slide Down"
+msgstr "Slide Down"
+
+#: includes/base.class.php:296
+#@ essential-grid
+msgid "Skew Left"
+msgstr "Skew Left"
+
+#: includes/base.class.php:297
+#@ essential-grid
+msgid "Skew Right"
+msgstr "Skew Right"
+
+#: includes/base.class.php:298
+#@ essential-grid
+msgid "Roll Left"
+msgstr "Roll Left"
+
+#: includes/base.class.php:299
+#@ essential-grid
+msgid "Roll Right"
+msgstr "Roll Right"
+
+#: includes/base.class.php:300
+#@ essential-grid
+msgid "Fall Down"
+msgstr "Fall Down"
+
+#: includes/base.class.php:302
+#@ essential-grid
+msgid "Zoom from Back"
+msgstr "Zoom from Back"
+
+#: includes/base.class.php:303
+#@ essential-grid
+msgid "Zoom from Front"
+msgstr "Zoom from Front"
+
+#: includes/base.class.php:304
+#@ essential-grid
+msgid "Fly Left"
+msgstr "Fly Left"
+
+#: includes/base.class.php:305
+#@ essential-grid
+msgid "Fly Right"
+msgstr "Fly Right"
+
+#: includes/base.class.php:306
+#@ essential-grid
+msgid "Cover Grow"
+msgstr "Cover Grow"
+
+#: includes/base.class.php:311
+#@ essential-grid
+msgid "Fade In"
+msgstr "Fade In"
+
+#: includes/base.class.php:312
+#@ essential-grid
+msgid "Fade Out"
+msgstr "Fade Out"
+
+#: includes/base.class.php:313
+#@ essential-grid
+msgid "Flip Vertical In"
+msgstr "Flip Vertical In"
+
+#: includes/base.class.php:314
+#@ essential-grid
+msgid "Flip Vertical Out"
+msgstr "Flip Vertical Out"
+
+#: includes/base.class.php:315
+#@ essential-grid
+msgid "Flip Horizontal In"
+msgstr "Flip Horizontal In"
+
+#: includes/base.class.php:316
+#@ essential-grid
+msgid "Flip Horizontal Out"
+msgstr "Flip Horizontal Out"
+
+#: includes/base.class.php:317
+#@ essential-grid
+msgid "Flip Up In Out"
+msgstr "Flip Up In Out"
+
+#: includes/base.class.php:318
+#@ essential-grid
+msgid "Flip Up Out"
+msgstr "Flip Up Out"
+
+#: includes/base.class.php:319
+#@ essential-grid
+msgid "Flip Down In"
+msgstr "Flip Down In"
+
+#: includes/base.class.php:320
+#@ essential-grid
+msgid "Flip Down Out"
+msgstr "Flip Down Out"
+
+#: includes/base.class.php:321
+#@ essential-grid
+msgid "Flip Right In"
+msgstr "Flip Right In"
+
+#: includes/base.class.php:322
+#@ essential-grid
+msgid "Flip Right Out"
+msgstr "Flip Right Out"
+
+#: includes/base.class.php:323
+#@ essential-grid
+msgid "Flip Left In"
+msgstr "Flip Left In"
+
+#: includes/base.class.php:324
+#@ essential-grid
+msgid "Flip Left Out"
+msgstr "Flip Left Out"
+
+#: includes/base.class.php:325
+#@ essential-grid
+msgid "Turn In"
+msgstr "Turn In"
+
+#: includes/base.class.php:326
+#@ essential-grid
+msgid "Turn Out"
+msgstr "Turn Out"
+
+#: includes/base.class.php:327
+#@ essential-grid
+msgid "Slide Left In"
+msgstr "Slide Left In"
+
+#: includes/base.class.php:328
+#@ essential-grid
+msgid "Slide Left Out"
+msgstr "Slide Left Out"
+
+#: includes/base.class.php:329
+#@ essential-grid
+msgid "Slide Right In"
+msgstr "Slide Right In"
+
+#: includes/base.class.php:330
+#@ essential-grid
+msgid "Slide Right Out"
+msgstr "Slide Right Out"
+
+#: includes/base.class.php:331
+#@ essential-grid
+msgid "Slide Up In"
+msgstr "Slide Up In"
+
+#: includes/base.class.php:332
+#@ essential-grid
+msgid "Slide Up Out"
+msgstr "Slide Up Out"
+
+#: includes/base.class.php:333
+#@ essential-grid
+msgid "Slide Down In"
+msgstr "Slide Down In"
+
+#: includes/base.class.php:334
+#@ essential-grid
+msgid "Slide Down Out"
+msgstr "Slide Down Out"
+
+#: includes/base.class.php:335
+#@ essential-grid
+msgid "Skew Left In"
+msgstr "Skew Left In"
+
+#: includes/base.class.php:336
+#@ essential-grid
+msgid "Skew Left Out"
+msgstr "Skew Left Out"
+
+#: includes/base.class.php:337
+#@ essential-grid
+msgid "Skew Right In"
+msgstr "Skew Right In"
+
+#: includes/base.class.php:338
+#@ essential-grid
+msgid "Skew Right Out"
+msgstr "Skew Right Out"
+
+#: includes/base.class.php:339
+#@ essential-grid
+msgid "Roll Left In"
+msgstr "Roll Left In"
+
+#: includes/base.class.php:340
+#@ essential-grid
+msgid "Roll Left Out"
+msgstr "Roll Left Out"
+
+#: includes/base.class.php:341
+#@ essential-grid
+msgid "Roll Right In"
+msgstr "Roll Right In"
+
+#: includes/base.class.php:342
+#@ essential-grid
+msgid "Roll Right Out"
+msgstr "Roll Right Out"
+
+#: includes/base.class.php:343
+#@ essential-grid
+msgid "Fall Down In"
+msgstr "Fall Down In"
+
+#: includes/base.class.php:344
+#@ essential-grid
+msgid "Fall Down Out"
+msgstr "Fall Down Out"
+
+#: includes/base.class.php:345
+#@ essential-grid
+msgid "Rotate Scale In"
+msgstr "Rotate Scale In"
+
+#: includes/base.class.php:346
+#@ essential-grid
+msgid "Rotate Scale Out"
+msgstr "Rotate Scale Out"
+
+#: includes/base.class.php:347
+#@ essential-grid
+msgid "Zoom from Back In"
+msgstr "Zoom from Back In"
+
+#: includes/base.class.php:348
+#@ essential-grid
+msgid "Zoom from Back Out"
+msgstr "Zoom from Back Out"
+
+#: includes/base.class.php:349
+#@ essential-grid
+msgid "Zoom from Front In"
+msgstr "Zoom from Front In"
+
+#: includes/base.class.php:350
+#@ essential-grid
+msgid "Zoom from Front Out"
+msgstr "Zoom from Front Out"
+
+#: includes/base.class.php:351
+#@ essential-grid
+msgid "Fly Left In"
+msgstr "Fly Left In"
+
+#: includes/base.class.php:352
+#@ essential-grid
+msgid "Fly Left Out"
+msgstr "Fly Left Out"
+
+#: includes/base.class.php:353
+#@ essential-grid
+msgid "Fly Right In"
+msgstr "Fly Right In"
+
+#: includes/base.class.php:354
+#@ essential-grid
+msgid "Fly Right Out"
+msgstr "Fly Right Out"
+
+#: includes/base.class.php:355
+#@ essential-grid
+msgid "Cover Grow In"
+msgstr "Cover Grow In"
+
+#: includes/base.class.php:356
+#@ essential-grid
+msgid "Cover Grow Out"
+msgstr "Cover Grow Out"
+
+#: includes/base.class.php:378
+#@ essential-grid
+msgid "Shift To Top"
+msgstr "Shift To Top"
+
+#: includes/base.class.php:380
+#@ essential-grid
+msgid "3D Turn Right"
+msgstr "3D Turn Right"
+
+#: includes/base.class.php:381
+#@ essential-grid
+msgid "Press Back"
+msgstr "Press Back"
+
+#: includes/base.class.php:382
+#@ essential-grid
+msgid "Zoom"
+msgstr "Zoom"
+
+#: includes/base.class.php:383
+#@ essential-grid
+msgid "Zoom to Back"
+msgstr "Zoom to Back"
+
+#: includes/base.class.php:384
+#@ essential-grid
+msgid "Zoom to Front"
+msgstr "Zoom to Front"
+
+#: includes/base.class.php:385
+#@ essential-grid
+msgid "Zoom And Rotate"
+msgstr "Zoom And Rotate"
+
+#: includes/base.class.php:991
+#, php-format
+#@ essential-grid
+msgid "View all posts in %s"
+msgstr "View all posts in %s"
+
+#: includes/base.class.php:1213
+#: includes/base.class.php:1229
+#: includes/base.class.php:1244
+#@ essential-grid
+msgid "Featured Image"
+msgstr "Featured Image"
+
+#: includes/base.class.php:1214
+#: includes/base.class.php:1230
+#@ essential-grid
+msgid "YouTube Video"
+msgstr "YouTube Video"
+
+#: includes/base.class.php:1215
+#: includes/base.class.php:1231
+#@ essential-grid
+msgid "Vimeo Video"
+msgstr "Vimeo Video"
+
+#: includes/base.class.php:1216
+#: includes/base.class.php:1232
+#@ essential-grid
+msgid "HTML5 Video"
+msgstr "HTML5 Video"
+
+#: includes/base.class.php:1217
+#@ essential-grid
+msgid "SoundCloud"
+msgstr "SoundCloud"
+
+#: includes/base.class.php:1218
+#: includes/base.class.php:1233
+#: includes/base.class.php:1245
+#@ essential-grid
+msgid "Alternate Image"
+msgstr "Alternate Image"
+
+#: includes/base.class.php:1219
+#: includes/base.class.php:1234
+#: includes/base.class.php:1246
+#@ essential-grid
+msgid "First Content Image"
+msgstr "First Content Image"
+
+#: includes/base.class.php:1220
+#@ essential-grid
+msgid "iFrame Markup"
+msgstr "iFrame Markup"
+
+#: includes/base.class.php:1247
+#@ essential-grid
+msgid "No Image"
+msgstr "No Image"
+
+#: includes/fonts.class.php:18
+#@ essential-grid
+msgid "Wrong parameter received"
+msgstr "Wrong parameter received"
+
+#: includes/fonts.class.php:19
+#@ essential-grid
+msgid "Wrong handle received"
+msgstr "Wrong handle received"
+
+#: includes/fonts.class.php:25
+#@ essential-grid
+msgid "Font with handle already exist, choose a different handle"
+msgstr "Font with handle already exist, choose a different handle"
+
+#: includes/fonts.class.php:44
+#: includes/meta.class.php:17
+#: includes/meta.class.php:48
+#@ essential-grid
+msgid "Wrong Handle received"
+msgstr "Wrong Handle received"
+
+#: includes/fonts.class.php:45
+#@ essential-grid
+msgid "Wrong Params received"
+msgstr "Wrong Params received"
+
+#: includes/fonts.class.php:82
+#@ essential-grid
+msgid "Font not found! Wrong handle given."
+msgstr "Font not found! Wrong handle given."
+
+#: includes/grids-widget.class.php:14
+#@ default
+msgid "Displays certain Essential Grid on the page"
+msgstr "Displays certain Essential Grid on the page"
+
+#: includes/grids-widget.class.php:27
+#@ essential-grid
+msgid "No Essential Grids found, Please create at least one!"
+msgstr "No Essential Grids found, Please create at least one!"
+
+#: includes/grids-widget.class.php:61
+#@ essential-grid
+msgid "Choose Essential Grid"
+msgstr "Choose Essential Grid"
+
+#: includes/grids-widget.class.php:74
+#@ essential-grid
+msgid "Home Page Only"
+msgstr "Home Page Only"
+
+#: includes/grids-widget.class.php:77
+#@ essential-grid
+msgid "Pages: (example: 3,8,15)"
+msgstr "Pages: (example: 3,8,15)"
+
+#: includes/item-element.class.php:53
+#@ essential-grid
+msgid "Chosen name is too short"
+msgstr "Chosen name is too short"
+
+#: includes/item-element.class.php:75
+#@ essential-grid
+msgid "Name not received"
+msgstr "Name not received"
+
+#: includes/item-element.class.php:97
+#: includes/item-element.class.php:134
+#@ essential-grid
+msgid "Element Item has no attributes"
+msgstr "Element Item has no attributes"
+
+#: includes/item-element.class.php:112
+#: includes/item-element.class.php:147
+#@ essential-grid
+msgid "Choosen name is reserved for default Item Elements. Please choose a different name"
+msgstr "Choosen name is reserved for default Item Elements. Please choose a different name"
+
+#: includes/item-element.class.php:120
+#@ essential-grid
+msgid "Element Item could not be changed"
+msgstr "Element Item could not be changed"
+
+#: includes/item-element.class.php:167
+#@ essential-grid
+msgid "Element Item does not exist"
+msgstr "Element Item does not exist"
+
+#: includes/item-element.class.php:180
+#@ essential-grid
+msgid "Default Item Elements can't be deleted"
+msgstr "Default Item Elements can't be deleted"
+
+#: includes/item-element.class.php:183
+#@ essential-grid
+msgid "Element Item could not be deleted"
+msgstr "Element Item could not be deleted"
+
+#: includes/item-element.class.php:236
+#@ essential-grid
+msgid "LINEBREAK ELEMENT"
+msgstr "LINEBREAK ELEMENT"
+
+#: includes/item-element.class.php:254
+#@ essential-grid
+msgid "LINE-BREAK"
+msgstr "LINE-BREAK"
+
+#: includes/item-element.class.php:270
+#@ essential-grid
+msgid "Post Title"
+msgstr "Post Title"
+
+#: includes/item-element.class.php:271
+#@ essential-grid
+msgid "Post Excerpt"
+msgstr "Post Excerpt"
+
+#: includes/item-element.class.php:272
+#@ default
+msgid "Post Meta"
+msgstr "Post Meta"
+
+#: includes/item-element.class.php:273
+#@ essential-grid
+msgid "Post Alias"
+msgstr "Post Alias"
+
+#: includes/item-element.class.php:274
+#@ essential-grid
+msgid "Post Content"
+msgstr "Post Content"
+
+#: includes/item-element.class.php:275
+#@ essential-grid
+msgid "Post Date"
+msgstr "Post Date"
+
+#: includes/item-element.class.php:276
+#@ essential-grid
+msgid "Post Date Modified"
+msgstr "Post Date Modified"
+
+#: includes/item-element.class.php:277
+#@ essential-grid
+msgid "Post Author Name"
+msgstr "Post Author Name"
+
+#: includes/item-element.class.php:278
+#@ essential-grid
+msgid "Post Num. Comments"
+msgstr "Post Num. Comments"
+
+#: includes/item-element.class.php:279
+#@ essential-grid
+msgid "Post Cat. List"
+msgstr "Post Cat. List"
+
+#: includes/item-element.class.php:280
+#@ essential-grid
+msgid "Post Tag List"
+msgstr "Post Tag List"
+
+#: includes/item-element.class.php:293
+#@ essential-grid
+msgid "Event Start Date"
+msgstr "Event Start Date"
+
+#: includes/item-element.class.php:294
+#@ essential-grid
+msgid "Event End Date"
+msgstr "Event End Date"
+
+#: includes/item-element.class.php:295
+#@ essential-grid
+msgid "Event Start Time"
+msgstr "Event Start Time"
+
+#: includes/item-element.class.php:296
+#@ essential-grid
+msgid "Event End Time"
+msgstr "Event End Time"
+
+#: includes/item-element.class.php:297
+#@ essential-grid
+msgid "Event Event ID"
+msgstr "Event Event ID"
+
+#: includes/item-element.class.php:298
+#@ essential-grid
+msgid "Event Location Name"
+msgstr "Event Location Name"
+
+#: includes/item-element.class.php:299
+#@ essential-grid
+msgid "Event Location Slug"
+msgstr "Event Location Slug"
+
+#: includes/item-element.class.php:300
+#@ essential-grid
+msgid "Event Location Address"
+msgstr "Event Location Address"
+
+#: includes/item-element.class.php:301
+#@ essential-grid
+msgid "Event Location Town"
+msgstr "Event Location Town"
+
+#: includes/item-element.class.php:302
+#@ essential-grid
+msgid "Event Location State"
+msgstr "Event Location State"
+
+#: includes/item-element.class.php:303
+#@ essential-grid
+msgid "Event Location Postcode"
+msgstr "Event Location Postcode"
+
+#: includes/item-element.class.php:304
+#@ essential-grid
+msgid "Event Location Region"
+msgstr "Event Location Region"
+
+#: includes/item-element.class.php:305
+#@ essential-grid
+msgid "Event Location Country"
+msgstr "Event Location Country"
+
+#: includes/item-element.class.php:1082
+#@ essential-grid
+msgid "Box Shadow"
+msgstr "Box Shadow"
+
+#: includes/item-element.class.php:1096
+#@ essential-grid
+msgid "Transition Delay"
+msgstr "Transition Delay"
+
+#: includes/item-element.class.php:1103
+#@ essential-grid
+msgid "Cover BG Color"
+msgstr "Cover BG Color"
+
+#: includes/item-element.class.php:1109
+#@ essential-grid
+msgid "Cover BG Opacity"
+msgstr "Cover BG Opacity"
+
+#: includes/item-skin.class.php:185
+#: includes/item-skin.class.php:186
+#: includes/item-skin.class.php:189
+#: includes/navigation.class.php:153
+#: includes/navigation.class.php:154
+#@ essential-grid
+msgid "Invalid name. Name has to be at least 2 characters long."
+msgstr "Invalid name. Name has to be at least 2 characters long."
+
+#: includes/item-skin.class.php:193
+#@ essential-grid
+msgid "Invalid Item Skin. Wrong ID given."
+msgstr "Invalid Item Skin. Wrong ID given."
+
+#: includes/item-skin.class.php:200
+#@ essential-grid
+msgid "No parameters found."
+msgstr "No parameters found."
+
+#: includes/item-skin.class.php:212
+#: includes/item-skin.class.php:236
+#@ essential-grid
+msgid "Item skin with chosen name already exist. Please use a different name."
+msgstr "Item skin with chosen name already exist. Please use a different name."
+
+#: includes/item-skin.class.php:225
+#@ essential-grid
+msgid "Item skin could not be changed."
+msgstr "Item skin could not be changed."
+
+#: includes/item-skin.class.php:261
+#@ essential-grid
+msgid "Item Skin could not be deleted"
+msgstr "Item Skin could not be deleted"
+
+#: includes/item-skin.class.php:392
+#@ essential-grid
+msgid "Invalid Skin"
+msgstr "Invalid Skin"
+
+#: includes/item-skin.class.php:406
+#@ essential-grid
+msgid "Could not change Favorite"
+msgstr "Could not change Favorite"
+
+#: includes/item-skin.class.php:427
+#: includes/item-skin.class.php:433
+#: includes/item-skin.class.php:451
+#@ essential-grid
+msgid "Item Skin could not be duplicated"
+msgstr "Item Skin could not be duplicated"
+
+#: includes/item-skin.class.php:721
+#: includes/item-skin.class.php:735
+#@ essential-grid
+msgid "Select Skin"
+msgstr "Select Skin"
+
+#: includes/item-skin.class.php:730
+#@ essential-grid
+msgid "Mark as Favorit"
+msgstr "Mark as Favorit"
+
+#: includes/item-skin.class.php:732
+#@ essential-grid
+msgid "Duplicate Skin"
+msgstr "Duplicate Skin"
+
+#: includes/item-skin.class.php:756
+#@ essential-grid
+msgid "Show/Hide from Grid"
+msgstr "Show/Hide from Grid"
+
+#: includes/item-skin.class.php:757
+#@ essential-grid
+msgid "Edit Post Meta"
+msgstr "Edit Post Meta"
+
+#: includes/item-skin.class.php:793
+#@ essential-grid
+msgid "Move"
+msgstr "Move"
+
+#: includes/item-skin.class.php:794
+#@ essential-grid
+msgid "Move one before"
+msgstr "Move one before"
+
+#: includes/item-skin.class.php:795
+#@ essential-grid
+msgid "Move one after"
+msgstr "Move one after"
+
+#: includes/item-skin.class.php:796
+#@ essential-grid
+msgid "Move after #x"
+msgstr "Move after #x"
+
+#: includes/item-skin.class.php:798
+#@ essential-grid
+msgid "Delete Element"
+msgstr "Delete Element"
+
+#: includes/item-skin.class.php:799
+#@ essential-grid
+msgid "Duplicate Element"
+msgstr "Duplicate Element"
+
+#: includes/item-skin.class.php:1047
+#@ default
+msgid "CHOOSE YOUR ITEM"
+msgstr "CHOOSE YOUR ITEM"
+
+#: includes/item-skin.class.php:2314
+#@ essential-grid
+msgid "demo mode"
+msgstr "demo mode"
+
+#: includes/meta.class.php:18
+#: includes/meta.class.php:49
+#@ essential-grid
+msgid "Wrong Name received"
+msgstr "Wrong Name received"
+
+#: includes/meta.class.php:23
+#@ essential-grid
+msgid "Meta with handle already exist, choose a different handle"
+msgstr "Meta with handle already exist, choose a different handle"
+
+#: includes/meta.class.php:29
+#@ essential-grid
+msgid "Wrong Select received"
+msgstr "Wrong Select received"
+
+#: includes/meta.class.php:82
+#@ essential-grid
+msgid "Meta not found! Wrong handle given."
+msgstr "Meta not found! Wrong handle given."
+
+#: includes/navigation.class.php:158
+#: includes/navigation.class.php:160
+#: includes/navigation.class.php:212
+#@ essential-grid
+msgid "Invalid Navigation Skin. Wrong ID given."
+msgstr "Invalid Navigation Skin. Wrong ID given."
+
+#: includes/navigation.class.php:166
+#@ essential-grid
+msgid "No CSS found."
+msgstr "No CSS found."
+
+#: includes/navigation.class.php:179
+#@ essential-grid
+msgid "Navigation skin could not be changed."
+msgstr "Navigation skin could not be changed."
+
+#: includes/navigation.class.php:190
+#@ essential-grid
+msgid "Navigation skin with chosen name already exist. Please use a different name."
+msgstr "Navigation skin with chosen name already exist. Please use a different name."
+
+#: includes/navigation.class.php:218
+#@ essential-grid
+msgid "Navigation Skin not be deleted"
+msgstr "Navigation Skin not be deleted"
+
+#: includes/navigation.class.php:391
+#@ essential-grid
+msgid "Selected Skin"
+msgstr "Selected Skin"
+
+#: includes/navigation.class.php:394
+#: includes/navigation.class.php:425
+#@ essential-grid
+msgid "Favorites"
+msgstr "Favorites"
+
+#: includes/navigation.class.php:447
+#@ essential-grid
+msgid "Sort By "
+msgstr "Sort By "
+
+#: includes/navigation.class.php:481
+#@ essential-grid
+msgid "Last Modified"
+msgstr "Last Modified"
+
+#: includes/navigation.class.php:484
+#@ essential-grid
+msgid "Comments"
+msgstr "Comments"
+
+#: includes/navigation.class.php:487
+#@ essential-grid
+msgid "Total Sales"
+msgstr "Total Sales"
+
+#: includes/navigation.class.php:490
+#@ essential-grid
+msgid "Regular Price"
+msgstr "Regular Price"
+
+#: includes/navigation.class.php:493
+#@ essential-grid
+msgid "Sale Price"
+msgstr "Sale Price"
+
+#: includes/navigation.class.php:496
+#@ essential-grid
+msgid "Featured"
+msgstr "Featured"
+
+#: includes/navigation.class.php:499
+#: includes/woocommerce.class.php:138
+#@ essential-grid
+msgid "SKU"
+msgstr "SKU"
+
+#: includes/navigation.class.php:502
+#: includes/woocommerce.class.php:259
+#@ essential-grid
+msgid "In Stock"
+msgstr "In Stock"
+
+#: includes/navigation.class.php:550
+#@ essential-grid
+msgid " items - "
+msgstr " items - "
+
+#: includes/woocommerce.class.php:43
+#@ essential-grid
+msgid "The Woocommerce plugin does not exist"
+msgstr "The Woocommerce plugin does not exist"
+
+#: includes/woocommerce.class.php:53
+#@ essential-grid
+msgid "Product"
+msgstr "Product"
+
+#: includes/woocommerce.class.php:54
+#@ essential-grid
+msgid "Product Variation"
+msgstr "Product Variation"
+
+#: includes/woocommerce.class.php:134
+#@ essential-grid
+msgid "Price"
+msgstr "Price"
+
+#: includes/woocommerce.class.php:136
+#@ essential-grid
+msgid "Number Of Sales"
+msgstr "Number Of Sales"
+
+#: includes/woocommerce.class.php:137
+#@ essential-grid
+msgid "Featured Products"
+msgstr "Featured Products"
+
+#: includes/woocommerce.class.php:139
+#@ essential-grid
+msgid "Stock Quantity"
+msgstr "Stock Quantity"
+
+#: includes/woocommerce.class.php:142
+#@ essential-grid
+msgid "---- WooCommerce Filters ----"
+msgstr "---- WooCommerce Filters ----"
+
+#: includes/woocommerce.class.php:144
+#@ essential-grid
+msgid "---- Regular Filters ----"
+msgstr "---- Regular Filters ----"
+
+#: includes/woocommerce.class.php:225
+#@ woocommerce
+msgid "View Cart"
+msgstr "View Cart"
+
+#: includes/woocommerce.class.php:256
+#@ essential-grid
+msgid "Full Price"
+msgstr "Full Price"
+
+#: includes/woocommerce.class.php:257
+#@ essential-grid
+msgid "Single Price"
+msgstr "Single Price"
+
+#: includes/woocommerce.class.php:258
+#@ essential-grid
+msgid "Single Price without currency"
+msgstr "Single Price without currency"
+
+#: includes/woocommerce.class.php:260
+#@ essential-grid
+msgid "Text Rating"
+msgstr "Text Rating"
+
+#: includes/woocommerce.class.php:261
+#@ essential-grid
+msgid "Star Rating"
+msgstr "Star Rating"
+
+#: includes/woocommerce.class.php:262
+#@ essential-grid
+msgid "Categories"
+msgstr "Categories"
+
+#: includes/woocommerce.class.php:263
+#@ essential-grid
+msgid "Add to Cart URL"
+msgstr "Add to Cart URL"
+
+#: includes/woocommerce.class.php:264
+#@ essential-grid
+msgid "Add to Cart Button"
+msgstr "Add to Cart Button"
+
+#: includes/wpml.class.php:21
+#@ default
+msgid "The wpml plugin don't exists"
+msgstr "The wpml plugin don't exists"
+
+#: public/essential-grid.class.php:193
+#@ essential-grid
+msgid "Custom Categories"
+msgstr "Custom Categories"
+
+#: public/essential-grid.class.php:194
+#@ essential-grid
+msgid "Custom Categorie"
+msgstr "Custom Categorie"
+
+#: public/essential-grid.class.php:202
+#@ essential-grid
+msgid "Ess. Grids"
+msgstr "Ess. Grids"
+
+#: public/essential-grid.class.php:1244
+#@ essential-grid
+msgid "Tweet"
+msgstr "Tweet"
+
+#: public/essential-grid.class.php:1275
+#@ essential-grid
+msgid "No More Item for Selected Filter"
+msgstr "No More Item for Selected Filter"
+
+#: public/essential-grid.class.php:1558
+#@ essential-grid
+msgid "Grid not found"
+msgstr "Grid not found"
+
+#: public/essential-grid.class.php:1566
+#@ essential-grid
+msgid "Items Not Found"
+msgstr "Items Not Found"
+
+#: public/essential-grid.class.php:1570
+#@ essential-grid
+msgid "No Data Received"
+msgstr "No Data Received"
+
+#: public/essential-grid.class.php:1580
+#@ essential-grid
+msgid "Loading Error"
+msgstr "Loading Error"
+
+#: public/essential-grid.class.php:1582
+#@ essential-grid
+msgid "Loading Error: "
+msgstr "Loading Error: "
+
