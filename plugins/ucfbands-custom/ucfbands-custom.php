@@ -10,6 +10,29 @@
    */
 
 
+
+//---------------------------//
+// REGISTER CUSTOM NAV MENUS //
+//---------------------------//
+function ucfbands_section_menus() {
+
+	$locations = array(
+		//'Section Menu' => __( 'Section Menu', 'text_domain' )
+		'Wind Ensemble' => __( 'Wind Ensemble', 'text_domain' ),
+		'Symphonic Band' => __( 'Symphonic Band', 'text_domain' ),
+		'Concert Band' => __( 'Concert Band', 'text_domain' ),
+		'Marching Knights ' => __( 'Marching Knights', 'text_domain' ),
+		'Jammin\' Knights' => __( 'Jammin\' Knights', 'text_domain' ),
+	);
+	register_nav_menus( $locations );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'ucfbands_section_menus' );
+
+
+
 //--------------------//
 // REGISTER STAFF CPT //
 //--------------------//

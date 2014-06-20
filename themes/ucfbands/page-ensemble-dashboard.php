@@ -20,12 +20,45 @@ Template Name: Ensemble Dashboard
 						
 				?>
             
+                
                 <!--// PAGE TITLE //-->
                 <div class="section-title" style="background-image: url('<?php echo $single_featured_image ?>');">
                 
-                    <h1><?php the_title(); ?></h1>
+                    <h1 style="cursor: default;"><?php the_title(); ?></h1>
                 
                 </div><!-- /.section-title -->
+                
+                
+                
+                <!--// SECTION MENU //-->
+				<?php
+                	
+										
+					// Menu Options
+					$subnav_options = array(
+						//'theme_location'  => get_the_title(),
+						'menu'            => get_the_title(),
+						'container'       => 'nav',
+						'container_class' => 'sub',
+						'container_id'    => '',
+						'menu_class'      => 'sub',
+						'menu_id'         => '',
+						'echo'            => true,
+						'fallback_cb'     => 'wp_page_menu',
+						'before'          => '',
+						'after'           => '',
+						'link_before'     => '',
+						'link_after'      => '',
+						'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+						'depth'           => 2,
+						'walker'          => ''
+					);
+					
+					
+					// Output Menu
+					wp_nav_menu( $subnav_options );
+                
+                ?>                
                 
                                     
             </div><!-- /.top-fixed -->
