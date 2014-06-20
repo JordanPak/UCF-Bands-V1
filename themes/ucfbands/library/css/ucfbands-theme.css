@@ -100,6 +100,7 @@ a.navbar-brand img {
 	background-image: url(../../images/pegasus-bg.png);
 	background-repeat: no-repeat;
 	background-position: -100px 25px;
+	min-height: 550px;
 }
 
 .block {
@@ -113,6 +114,7 @@ a.navbar-brand img {
 
 .block h2 {
 	margin-top: 5px;
+	margin-bottom: 20px;
 }
 
 .block-featured {
@@ -436,6 +438,16 @@ img.no-frame {
 }
 
 
+/*=====================*/
+/*==  MASTER SLIDER  ==*/
+/*=====================*/
+
+.ms-container {
+	border-bottom: 1px solid #231f20;	
+	box-shadow: 0px 2px 0px #ffca06;
+}
+
+
 /*======================*/
 /*==  ESSENTIAL GRID  ==*/
 /*======================*/
@@ -449,10 +461,136 @@ img.no-frame {
 	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
 }
 
+#page-content .esg-entry-media img {
+	padding: 0px;
+	border: 0px;
+}
+
+.esg-content a {
+}
+
+.esg-loadmore {
+	border-radius: 0px !important;
+	-webkit-border-radius: 0px !important;
+}
+
 /*.eg-ucfbands-announcement-content {
 	-webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.175);
 	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
 }*/
+
+
+/*=====================*/
+/*== EVENTS CALENDAR ==*/
+/*=====================*/
+
+#tribe-bar-form {
+	background: none;
+}
+
+#tribe-bar-form label {
+	font-size: 14px;
+	text-transform: none;
+}
+
+#tribe-bar-search, #tribe-bar-date {
+	display: block;
+	height: 34px !important;
+	padding: 6px 12px !important;
+	font-size: 14px !important;
+	line-height: 1.42857143 !important;
+	border: 1px solid #ccc !important;
+	border-radius: 4px !important;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
+	-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s !important;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s !important;
+}
+
+h2.tribe-events-page-title {
+	font-size: 2em;
+}
+
+input.tribe-events-button, .tribe-events-sub-nav li a, .tribe-events-ical, #tribe-bar-form .tribe-bar-submit input[type=submit] {
+	font-size: 14px;
+	font-family: 'Droid Serif', Serif;
+	font-weight: 400;
+	color: #fff;
+	background-color: #231f20 !important;
+	border: 1px solid #000 !important;
+	text-shadow: 0px 0px 3px #000, 1px 1px 1px #000;
+	border-radius: 0px !important;
+	text-transform: capitalize;
+}
+
+.tribe-bar-submit input[type=submit] {
+	font-size: 18px !important;
+}
+
+#tribe-events-footer ~ a.tribe-events-ical.tribe-events-button {
+	height: auto;
+}
+
+.tribe-events-ical {
+	height: auto;
+	padding: 10px !important;
+	text-transform: capitalize;
+}
+
+.tribe-events-ical:hover {
+	color: #fff !important;
+}
+
+.tribe-bar-views-inner {
+	background-color: #fff;
+}
+
+#tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a {
+	background-color: #fff;
+}
+
+table.tribe-events-calendar thead tr th {
+	background-color: #ffca06;
+	padding: 8px 0;
+	font-size: 14px;
+	font-family: 'Droid Serif', Serif;
+	color: #fff;
+	text-shadow: 0px 0px 3px #efbc00, 1px 1px 1px #efbc00;
+}
+
+#tribe-events-content .tribe-events-calendar td {
+	border-color: #666 !important;
+}
+
+.tribe-events-calendar div[id*="tribe-events-daynum-"] {
+	font-size: 14px;
+}
+
+.tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"]>a {
+	background-color: #333; /* #ffca06 !important; */
+}
+
+.tribe-events-present {
+	background-color: #ffca06;
+	color: #fff;
+	text-shadow: 0px 0px 3px #000, 1px 1px 1px #000;
+}
+
+.tribe-events-present h3 {
+	margin-top: 4px;
+	padding-top: 5px !important;
+}
+
+.tribe-events-present h3 a {
+	color: #fff;
+	padding-left: 4px !important;
+	text-shadow: 0px 0px 3px #efbc00, 1px 1px 1px #efbc00;
+	font-size: 16px !important;
+}
+
+table.tribe-events-calendar {
+	border-color: #666 !important;
+}
 
 
 /*==============*/
@@ -733,6 +871,12 @@ h1.page-title {
 	.section-title h1 {
 		text-align: left;
 	}
+	
+	.tribe-events-sub-nav li a {
+		display: inline-block;
+		padding: 6px 10px; 
+	}
+
 }
 
 @media(min-width:1370px) {

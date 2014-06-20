@@ -65,6 +65,120 @@ function ucfbands_staff() {
 add_action( 'init', 'ucfbands_staff', 0 );
 
 
+
+//---------------------------//
+// REGISTER ANNOUNCEMENT CPT //
+//---------------------------//
+function ucfbands_announcement() {
+
+	$labels = array(
+		'name'                => _x( 'Announcements', 'Post Type General Name', 'text_domain' ),
+		'singular_name'       => _x( 'Announcement', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'           => __( 'Announcements', 'text_domain' ),
+		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
+		'all_items'           => __( 'All Announcements', 'text_domain' ),
+		'view_item'           => __( 'View Announcement', 'text_domain' ),
+		'add_new_item'        => __( 'Add New Announcement', 'text_domain' ),
+		'add_new'             => __( 'Add New', 'text_domain' ),
+		'edit_item'           => __( 'Edit Announcement', 'text_domain' ),
+		'update_item'         => __( 'Update Announcemen', 'text_domain' ),
+		'search_items'        => __( 'Search Announcements', 'text_domain' ),
+		'not_found'           => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
+	);
+	$rewrite = array(
+		'slug'                => 'announcements',
+		'with_front'          => true,
+		'pages'               => true,
+		'feeds'               => false,
+	);
+	$args = array(
+		'label'               => __( 'ucfbands_announcement', 'text_domain' ),
+		'description'         => __( 'Announcement that can be placed on the home page and optional other pages', 'text_domain' ),
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'revisions'),
+		'taxonomies'          => array( 'category' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'menu_icon'           => 'dashicons-format-quote',
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'rewrite'             => $rewrite,
+		'capability_type'     => 'page',
+	);
+	register_post_type( 'announcement', $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'ucfbands_announcement', 0 );
+
+
+
+//-------------------------//
+// REGISTER UPCOMING EVENT //
+//-------------------------//
+function ucfbands_event() {
+
+	$labels = array(
+		'name'                => _x( 'Upcoming Events', 'Post Type General Name', 'text_domain' ),
+		'singular_name'       => _x( 'Upcoming Event', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'           => __( 'Upcoming Events', 'text_domain' ),
+		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
+		'all_items'           => __( 'All Events', 'text_domain' ),
+		'view_item'           => __( 'View Event', 'text_domain' ),
+		'add_new_item'        => __( 'Add New Event', 'text_domain' ),
+		'add_new'             => __( 'Add New', 'text_domain' ),
+		'edit_item'           => __( 'Edit Event', 'text_domain' ),
+		'update_item'         => __( 'Update Event', 'text_domain' ),
+		'search_items'        => __( 'Search Events', 'text_domain' ),
+		'not_found'           => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
+	);
+	$rewrite = array(
+		'slug'                => 'event',
+		'with_front'          => true,
+		'pages'               => true,
+		'feeds'               => false,
+	);
+	$args = array(
+		'label'               => __( 'ucfbands_event', 'text_domain' ),
+		'description'         => __( 'UCF Bands Upcoming Event', 'text_domain' ),
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', ),
+		'taxonomies'          => array( 'category' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'menu_icon'           => 'dashicons-calendar',
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'rewrite'             => $rewrite,
+		'capability_type'     => 'page',
+	);
+	register_post_type( 'event', $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'ucfbands_event', 0 );
+
+
+
+
 //----------------//
 // STAFF META BOX //
 //----------------//
@@ -110,88 +224,50 @@ function be_sample_metaboxes( $meta_boxes ) {
         ),
     );
 
-    return $meta_boxes;
-}
-add_filter( 'cmb_meta_boxes', 'be_sample_metaboxes' );
-
-
-
-//---------------------------//
-// REGISTER ANNOUNCEMENT CPT //
-//---------------------------//
-function ucfbands_announcement() {
-
-	$labels = array(
-		'name'                => _x( 'Announcements', 'Post Type General Name', 'text_domain' ),
-		'singular_name'       => _x( 'Announcement', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'           => __( 'Announcements', 'text_domain' ),
-		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
-		'all_items'           => __( 'All Announcements', 'text_domain' ),
-		'view_item'           => __( 'View Announcement', 'text_domain' ),
-		'add_new_item'        => __( 'Add New Announcement', 'text_domain' ),
-		'add_new'             => __( 'Add New', 'text_domain' ),
-		'edit_item'           => __( 'Edit Announcement', 'text_domain' ),
-		'update_item'         => __( 'Update Announcemen', 'text_domain' ),
-		'search_items'        => __( 'Search Announcements', 'text_domain' ),
-		'not_found'           => __( 'Not found', 'text_domain' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
-	);
-	$rewrite = array(
-		'slug'                => 'announcements',
-		'with_front'          => true,
-		'pages'               => true,
-		'feeds'               => false,
-	);
-	$args = array(
-		'label'               => __( 'ucfbands_announcement', 'text_domain' ),
-		'description'         => __( 'Announcement that can be placed on the home page and optional other pages', 'text_domain' ),
-		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'revisions'),
-		'taxonomies'          => array( 'category', 'post_tag' ),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => true,
-		'show_in_admin_bar'   => true,
-		'menu_position'       => 5,
-		'menu_icon'           => 'dashicons-format-quote',
-		'can_export'          => true,
-		'has_archive'         => true,
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'rewrite'             => $rewrite,
-		'capability_type'     => 'page',
-	);
-	register_post_type( 'announcement', $args );
-
-}
-
-// Hook into the 'init' action
-add_action( 'init', 'ucfbands_announcement', 0 );
-
-
-
-//-----------------------//
-// ANNOUNCEMENT META BOX //
-//-----------------------//
-/*function be_sample_metaboxes( $meta_boxes ) {
-    $prefix = '_ucfbands_announcement_'; // Prefix for all fields
-    $meta_boxes['ucfbands_announcement'] = array(
-        'id' => 'ucfbands_announcement',
-        'title' => 'Announcement Details',
-        'pages' => array('ucfbands_announcement'), // post type
+    $meta_boxes['ucfbands_event'] = array(
+        'id' => 'ucfbands_event',
+        'title' => 'Event Details',
+        'pages' => array('event'), // post type
         'context' => 'normal',
         'priority' => 'high',
         'show_names' => true, // Show field names on the left
         'fields' => array(
+			array(
+				'name' => 'Date',
+				'desc' => "<b>Required:</b> The event's date, not the current date.",
+				'id' => $prefix . 'event_date',
+				'type' => 'text_date'
+			),
+			array(
+				'name' => 'Time',
+                'desc' => 'Leave empty for "TBA"',
+				'id' => $prefix . 'event_time',
+				'type' => 'text_time'
+				// 'time_format' => 'h:i:s A',
+			),
+            array(
+                'name' => 'Location/Venue',
+                'desc' => 'Leave empty for "TBA"',
+                'id' => $prefix . 'position',
+                'type' => 'text_medium'
+            ),
+			array(
+				'name'    => 'Icon',
+				'id'      => $prefix . 'event_icon',
+				'type'    => 'radio',
+				'options' => array(
+					'fa-calendar'	=> __( 'Calendar', 'cmb' ),
+					'fa-music'   	=> __( 'Music', 'cmb' ),
+					'fa-coffee'		=> __( 'Coffee', 'cmb' )
+				),
+			),			
         ),
     );
+
 
     return $meta_boxes;
 }
 add_filter( 'cmb_meta_boxes', 'be_sample_metaboxes' );
-*/
 
 
 

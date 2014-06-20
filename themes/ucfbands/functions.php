@@ -66,8 +66,8 @@ function wp_bootstrap_register_sidebars() {
     	'description' => 'Used on every page BUT the homepage page template.',
     	'before_widget' => '<div id="%1$s" class="widget %2$s">',
     	'after_widget' => '</div>',
-    	'before_title' => '<h4 class="widgettitle">',
-    	'after_title' => '</h4>',
+    	'before_title' => '<h2 class="widgettitle">',
+    	'after_title' => '</h2><br>',
     ));
     
     register_sidebar(array(
@@ -76,8 +76,8 @@ function wp_bootstrap_register_sidebars() {
     	'description' => 'Used only on the homepage page template.',
     	'before_widget' => '<div id="%1$s" class="widget %2$s">',
     	'after_widget' => '</div>',
-    	'before_title' => '<h4 class="widgettitle">',
-    	'after_title' => '</h4>',
+    	'before_title' => '<h2 class="widgettitle">',
+    	'after_title' => '</h2><br>',
     ));
     
     register_sidebar(array(
@@ -107,7 +107,58 @@ function wp_bootstrap_register_sidebars() {
       'after_title' => '</h4>',
     ));
     
-    
+	
+	
+	/*=========================*/
+	/* UCFBANDS CUSTOM SLIDERS */
+	/*=========================*/
+	
+	// Home Featured 1
+    register_sidebar(array(
+      'id' => 'home_featured_1',
+      'name' => 'Homepage Featured Block 1',
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+      'after_widget' => '</div>',
+      'before_title' => '<h2 class="widgettitle">',
+      'after_title' => '</h2>',
+    ));
+
+	
+	// Home Featured 2
+    register_sidebar(array(
+      'id' => 'home_featured_2',
+      'name' => 'Homepage Featured Block 2',
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+      'after_widget' => '</div>',
+      'before_title' => '<h2 class="widgettitle">',
+      'after_title' => '</h2>',
+    ));
+
+
+	// Home Announcements
+    register_sidebar(array(
+      'id' => 'home_announcements',
+      'name' => 'Homepage Announcements Block',
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+      'after_widget' => '</div>',
+      'before_title' => '<h2 class="widgettitle">',
+      'after_title' => ' <button type="button" class="btn btn-default btn-xs">View All</button>
+</h2>',
+    ));
+
+
+	// Home Upcoming Events
+    register_sidebar(array(
+      'id' => 'home_events',
+      'name' => 'Homepage Events',
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+      'after_widget' => '</div>',
+      'before_title' => '<h2 class="widgettitle"><i class="fa fa-calendar"></i> ',
+      'after_title' => ' <button type="button" class="btn btn-default btn-xs">View All</button>
+</h2>',
+    ));
+
+	    
     /* 
     to add more sidebars or widgetized areas, just copy
     and edit the above sidebar code. In order to call 

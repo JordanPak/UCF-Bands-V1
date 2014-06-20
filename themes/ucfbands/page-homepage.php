@@ -1,82 +1,110 @@
 <?php
 /*
-Template Name: Homepage
+Template Name: Home Page
 */
 ?>
 
 <?php get_header(); ?>
-			
-			<div id="content" class="clearfix row">
-			
-				<div id="main" class="col-sm-12 clearfix" role="main">
 
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-					
-						<header>
 
-							<?php 
-								$post_thumbnail_id = get_post_thumbnail_id();
-								$featured_src = wp_get_attachment_image_src( $post_thumbnail_id, 'wpbs-featured-home' );
-							?>
-
-							<div class="jumbotron" style="background-image: url('<?php echo $featured_src[0]; ?>'); background-repeat: no-repeat; background-position: 0 0;">
+            <!--// FIX AFFIX //-->
+            <div class="top-fixed">
+            
+				 <?php masterslider(1); ?>               
+                                    
+            </div><!-- /.top-fixed -->
+            
+			<br><br>
+            
+            <!--// PAGE CONTENT //-->
+            <div id="page-content">
+                
 				
-								<div class="page-header">
-									<h1><?php bloginfo('title'); ?><small><?php echo get_post_meta($post->ID, 'custom_tagline' , true);?></small></h1>
-								</div>				
-								
-							</div>
+                
+                <?php 
+					
+					// If either Featured Block is active, may a row for it/them
+					if ( is_active_sidebar('home_featured_1') || is_active_sidebar('home_featured_2') )
+					{
+					
+						echo '<div class="row">';
 						
-						</header>
+							// Home Page - Featured Block 1
+							if ( is_active_sidebar('home_featured_1') )
+								get_sidebar( 'home_featured_1' );
 						
-						<section class="row post_content">
-						
-							<div class="col-sm-8">
-						
-								<?php the_content(); ?>
-								
-							</div>
 							
-							<?php get_sidebar('sidebar2'); // sidebar 2 ?>
-													
-						</section> <!-- end article header -->
-						
-						<footer>
-			
-							<p class="clearfix"><?php the_tags('<span class="tags">' . __("Tags","wpbootstrap") . ': ', ', ', '</span>'); ?></p>
+							// Home Page - Featured Block 2
+							if ( is_active_sidebar('home_featured_2') )
+								get_sidebar( 'home_featured_2' );
+								
+								
+						echo '</div>';
+                
+				
+					} // End if a featured block is active
+                	
+					
+					// Start Row
+					echo '<div class="row">';
+					
+					
+						// Home Page - Opening Verbiage Block (1)
+						if (have_posts()) : while (have_posts()) : the_post(); ?>
+	
 							
-						</footer> <!-- end article footer -->
+							<!--// RIGHT COLUMN //-->
+							<div class="col-lg-4">
+							
+								<div class="block">
+									
+									<h2>UCF Bands</h2>
+									
+									<?php the_content(); ?>
+									
+								</div><!-- /.block -->
+								
+							</div><!-- /.col -->
+							
+						
+						<?php endwhile; 
+						
 					
-					</article> <!-- end article -->
+						// Home Page - Announcements
+						get_sidebar( 'home_announcements' );
+						
+						
+						// Home Page - Upcoming Events
+						get_sidebar( 'home_events' ); 
 					
-					<?php 
-						// No comments on homepage
-						//comments_template();
-					?>
 					
-					<?php endwhile; ?>	
+					// End row
+					echo '</div>';
 					
-					<?php else : ?>
-					
-					<article id="post-not-found">
-					    <header>
-					    	<h1><?php _e("Not Found", "wpbootstrap"); ?></h1>
-					    </header>
-					    <section class="post_content">
-					    	<p><?php _e("Sorry, but the requested resource was not found on this site.", "wpbootstrap"); ?></p>
-					    </section>
-					    <footer>
-					    </footer>
-					</article>
-					
-					<?php endif; ?>
-			
-				</div> <!-- end #main -->
-    
-				<?php //get_sidebar(); // sidebar 1 ?>
-    
-			</div> <!-- end #content -->
+				?>		
+                            
+                            
+				<?php else : ?>
+                
+                    <article id="post-not-found">
+                        
+                        <header>
+                            <h1><?php _e("Not Found", "wpbootstrap"); ?></h1>
+                        </header>
+                        
+                        <section class="post_content">
+                            <p><?php _e("Sorry, but the requested resource was not found on this site.", "wpbootstrap"); ?></p>
+                        </section>
+                        
+                        <footer>
+                        </footer>
+                    </article>
+                
+                <?php endif; ?>
 
-<?php get_footer(); ?>
+
+                
+            </div><!-- /#page-content -->
+			
+
+<?php get_footer();
