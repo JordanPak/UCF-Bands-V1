@@ -179,12 +179,17 @@ add_action( 'init', 'ucfbands_event', 0 );
 
 
 
-//----------------//
-// STAFF META BOX //
-//----------------//
+//-------------------//
+// CUSTOM META BOXES //
+//-------------------//
 function be_sample_metaboxes( $meta_boxes ) {
-    $prefix = '_ucfbands_staff_'; // Prefix for all fields
-    $meta_boxes['ucfbands_staff'] = array(
+    
+	// Prefix for all fields
+	$prefix = '_ucfbands_';
+    
+	
+	//-- STAFF CPT --//
+	$meta_boxes['ucfbands_staff'] = array(
         'id' => 'ucfbands_staff',
         'title' => 'Staff Attributes',
         'pages' => array('ucfbands_staff'), // post type
@@ -194,7 +199,7 @@ function be_sample_metaboxes( $meta_boxes ) {
         'fields' => array(
 			array(
 				'name'    => 'Faculty Member?',
-				'id'      => $prefix . 'is_faculty',
+				'id'      => $prefix . 'staff_is_faculty',
 				'type'    => 'radio',
 				'options' => array(
 					'not_faculty' => __( 'Is NOT Faculty', 'cmb' ),
@@ -204,26 +209,28 @@ function be_sample_metaboxes( $meta_boxes ) {
             array(
                 'name' => 'Position / Job',
                 'desc' => 'What is he/she? A band director?',
-                'id' => $prefix . 'position',
+                'id' => $prefix . 'staff_position',
                 'type' => 'text_medium'
             ),
 			array(
 				'name' => 'Email Address',
 				'desc' => '@ucf.edu Email Address',
 				'default' => '@ucf.edu',
-				'id' => $prefix . 'email',
+				'id' => $prefix . 'staff_email',
 				'type' => 'text_email'
 			),
 			array(
 				'name' => 'Phone Number',
 				'desc' => 'UCF VOIP Number',
 				'default' => '(407) 823-',
-				'id' => $prefix . 'phone',
+				'id' => $prefix . 'staff_phone',
 				'type' => 'text_small'
 			),
         ),
     );
-
+	
+	
+	//-- EVENT CPT --//
     $meta_boxes['ucfbands_event'] = array(
         'id' => 'ucfbands_event',
         'title' => 'Event Details',
