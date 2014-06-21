@@ -33,6 +33,69 @@ add_action( 'init', 'ucfbands_section_menus' );
 
 
 
+
+//-----------------------//
+// BASIC BLOCK SHORTCODE //
+//-----------------------//
+function shortcode_block( $atts , $content = null ) {
+
+	// ATTRIBUTES //
+	extract( shortcode_atts(
+		array(
+			'featured' => '',
+			'width'	   => '4',
+			'title'   => '',
+			'icon'	   => '',
+		), $atts )
+	);
+	
+	
+	// BLOCK CLASS //
+	if( $featured == 'yes' )
+		$block_class = 'block block-featured';
+		
+	else
+		$block_class = 'block';
+	
+	
+	// ICON (Favicon //
+	if( $icon != '' )
+		$icon_output = '<i class="fa ' . $icon . '"></i> ';
+	
+	else
+		$icon_output = '';
+	
+	
+	// TITLE / HEADER //
+	if( $title == '' )
+		$header_output = '';
+		
+	else
+		$header_output = '<h2>' . $icon_output . $title . '</h2>';
+	
+
+	// RETURN CODE
+	return '
+		
+		<div class="col-lg-' . $width . '">
+			<div class="' . $block_class . '">
+			
+				' . $header_output . '
+				
+				' . do_shortcode($content) . '
+				
+			</div>
+		</div>
+				
+	';
+}
+add_shortcode( 'block', 'shortcode_block' );
+
+
+
+
+
+
 //--------------------//
 // REGISTER STAFF CPT //
 //--------------------//

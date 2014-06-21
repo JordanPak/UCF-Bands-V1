@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Ensemble Dashboard
+Template Name: Ensemble Dashboard (Shortcodes)
 */
 ?>
 
@@ -65,61 +65,55 @@ Template Name: Ensemble Dashboard
                 
 				<div class="row">
 				
-                    <!--// MAIN VERBIAGE //-->
-                    <div class="col-lg-8">
-                                        
-                        <div class="block">
-                                                    
-                            
-                            <section class="post_content clearfix" itemprop="articleBody">
-                                
-                                <?php // the_post_thumbnail( 'wpbs-featured' ); ?>
-								
-								<?php the_content(); ?>
-
-								<?php wp_link_pages(); ?>
-                        
-                            </section> <!-- end article section -->
-                            
-                        
-                            <?php comments_template('',true); ?>
-                            
-                  
-				  <?php endwhile; ?>		
-                            
-                            
-							<?php else : ?>
-                            
-                            <article id="post-not-found">
-                                
-                                <header>
-                                    <h1><?php _e("Not Found", "wpbootstrap"); ?></h1>
-                                </header>
-                                
-                                <section class="post_content">
-                                    <p><?php _e("Sorry, but the requested resource was not found on this site.", "wpbootstrap"); ?></p>
-                                </section>
-                                
-                                <footer>
-                                </footer>
-                            </article>
-                            
-                            <?php endif; ?>
-
-
-                        </div><!-- /.block -->
-                                            
-                    </div><!-- / Main Verbiage -->   
                     
-                    
-                    
-					<?php get_sidebar(); // sidebar 1 ?>
-                                                        
+                    <?php 
+					
+						if( the_content() == '' )
+							echo '<div class="col-lg-3"><div class="block block-featured"><h2><i class="fa fa-calendar"></i> Coming Soon!</h2></div></div>';
+							
+						else
+							the_content(); 
+					
+					?>
+
+                    <?php wp_link_pages(); ?>
                 
                 
+                </div><!-- /.row -->
+                 
+           		
+				
+				<?php endwhile; ?>		
+                
+                
+                
+                <!--// IF NO CONTENT FOUND //-->
+          		<div class="row">
+                
+                    
+                    <?php else : ?>
+                    
+                    <article id="post-not-found">
+                        
+                        <header>
+                            <h1><?php _e("Not Found", "wpbootstrap"); ?></h1>
+                        </header>
+                        
+                        <section class="post_content">
+                            <p><?php _e("Sorry, but the requested resource was not found on this site.", "wpbootstrap"); ?></p>
+                        </section>
+                        
+                        <footer>
+                        </footer>
+                    </article>
+                    
+                    <?php endif; ?>
+
                 
             	</div><!-- /.row -->
                 
+           
+           
             </div><!-- /#page-content -->
 			
 

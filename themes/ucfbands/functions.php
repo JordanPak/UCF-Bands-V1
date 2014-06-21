@@ -142,8 +142,7 @@ function wp_bootstrap_register_sidebars() {
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget' => '</div>',
       'before_title' => '<h2 class="widgettitle">',
-      'after_title' => ' <button type="button" class="btn btn-default btn-xs">View All</button>
-</h2>',
+      'after_title' => ' <a href="announcements" class="btn btn-default btn-xs">View All</a></h2>',
     ));
 
 
@@ -154,8 +153,7 @@ function wp_bootstrap_register_sidebars() {
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget' => '</div>',
       'before_title' => '<h2 class="widgettitle"><i class="fa fa-calendar"></i> ',
-      'after_title' => ' <button type="button" class="btn btn-default btn-xs">View All</button>
-</h2>',
+      'after_title' => ' <a href="events" class="btn btn-default btn-xs">View All</a></h2>',
     ));
 
 	    
