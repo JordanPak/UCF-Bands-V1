@@ -419,6 +419,13 @@ add_filter( 'the_content', 'first_paragraph' );
 
 
 
+
+// CUSTOM NAVIGATION WALKER //
+require_once('wp_bootstrap_navwalker.php');
+
+
+
+
 // Menu output mods
 class Bootstrap_walker extends Walker_Nav_Menu{
 

@@ -40,20 +40,14 @@ Template Name: Ensemble Dashboard
 						'menu'            => get_the_title(),
 						'container'       => 'nav',
 						'container_class' => 'sub',
-						'container_id'    => '',
 						'menu_class'      => 'sub',
 						'menu_id'         => '',
 						'echo'            => true,
 						'fallback_cb'     => 'wp_page_menu',
-						'before'          => '',
-						'after'           => '',
-						'link_before'     => '',
-						'link_after'      => '',
-						'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 						'depth'           => 2,
-						'walker'          => ''
+						'walker'          => new wp_bootstrap_navwalker()
 					);
-					
+
 					
 					// Output Menu
 					wp_nav_menu( $subnav_options );
