@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Ensemble Dashboard (Sidebar)
+Template Name: Section Page (Default)
 */
 ?>
 
@@ -15,16 +15,28 @@ Template Name: Ensemble Dashboard (Sidebar)
             	
                 <?php 
 				
+					// Parent Post
+					$page_parents = get_post_ancestors( $post );
+					$parent_id = $page_parents[0];
+					
+					$parent_post = get_post( $parent_id );
+					$parent_slug = $parent_post->post_name;
+					
+										
+					// Get Parent (Dashboard) Page Data
+					$parent_title = get_the_title( $post->post_parent );
+					
+				
 					// Get Featured Image Link // 
-					$single_featured_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+					$single_featured_image = wp_get_attachment_url( get_post_thumbnail_id( $parent_id ));
 						
 				?>
             
                 
-                <!--// PAGE TITLE //-->
-                <div class="section-title" style="background-image: url('<?php echo $single_featured_image ?>');">
+                <!--// SECTION TITLE //-->
+                <div class="section-title <?php echo $parent_slug; ?>" style="background-image: url('<?php echo $single_featured_image ?>');">
                 
-                    <h1 style="cursor: default;"><?php the_title(); ?></h1>
+                    <a href="<?php echo get_permalink( $parent_id ); ?>"><h1><?php echo $parent_title //the_title(); ?></h1></a>
                 
                 </div><!-- /.section-title -->
                 
@@ -37,7 +49,7 @@ Template Name: Ensemble Dashboard (Sidebar)
 					// Menu Options
 					$subnav_options = array(
 						//'theme_location'  => get_the_title(),
-						'menu'            => get_the_title(),
+						'menu'            => get_the_title($parent_id),
 						'container'       => 'nav',
 						'container_class' => 'sub',
 						'menu_class'      => 'sub',
@@ -59,9 +71,13 @@ Template Name: Ensemble Dashboard (Sidebar)
 
             
             <!--// PAGE CONTENT //-->
-            <div id="page-content">
+            <div id="page-content" class="<?php echo $parent_slug; ?>">
                 
                 <br> 
+ 
+                <!--// PAGE TITLE //-->
+                <h1 class="section-page-title"><?php the_title(); ?></h1>    
+                
                 
 				<div class="row">
 				
@@ -75,7 +91,15 @@ Template Name: Ensemble Dashboard (Sidebar)
                                 
                                 <?php // the_post_thumbnail( 'wpbs-featured' ); ?>
 								
-								<?php the_content(); ?>
+								<?php
+                                
+									if( get_the_content() == '' )
+										echo '<h3><i class="fa fa-calendar"></i> Coming Soon!</h3>';
+										
+									else
+										the_content(); 
+											
+								?>
 
 								<?php wp_link_pages(); ?>
                         

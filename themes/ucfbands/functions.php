@@ -530,6 +530,11 @@ if( !function_exists("theme_styles") ) {
         wp_enqueue_style( 'font-awesome' );
 
 
+		// Google Fonts
+        wp_register_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic|Oswald', array(), '1.0', 'all' );
+        wp_enqueue_style( 'google-fonts' );
+
+		
         // For child themes
         wp_register_style( 'wpbs-style', get_stylesheet_directory_uri() . '/style.css', array(), '1.0', 'all' );
         wp_enqueue_style( 'wpbs-style' );

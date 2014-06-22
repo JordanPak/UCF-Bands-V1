@@ -37,7 +37,9 @@ function buttons( $atts, $content = null ) {
 	'type' => 'default', /* primary, default, info, success, danger, warning, inverse */
 	'size' => 'default', /* mini, small, default, large */
 	'url'  => '',
-	'text' => '', 
+	'text' => '',
+	'target' => '',
+	'icon' => ''
 	), $atts ) );
 	
 	if($type == "default"){
@@ -54,7 +56,12 @@ function buttons( $atts, $content = null ) {
 		$size = "btn-" . $size;
 	}
 	
-	$output = '<a href="' . $url . '" class="btn '. $type . ' ' . $size . '">';
+	if($icon != '')
+		$icon = '<i class="fa ' . $icon . '"></i> &nbsp;';
+	
+	
+	$output = '<a href="' . $url . '" class="btn '. $type . ' ' . $size . '" target="' . $target . '">';
+	$output .= $icon;
 	$output .= $text;
 	$output .= '</a>';
 	

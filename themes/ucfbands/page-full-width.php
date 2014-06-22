@@ -13,13 +13,17 @@ Template Name: Full Width Page (No Titles)
             <div id="page-content">
                 
 				
-                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <?php if (have_posts()) : while (have_posts()) : the_post();
 
                 	
-					<?php the_content(); ?>
+                    if( get_the_content() == '' )
+                        echo '<div class="col-lg-3"><div class="block block-featured"><h2><i class="fa fa-calendar"></i> Coming Soon!</h2></div></div>';
+                        
+                    else
+                        the_content(); 
                         
                   
-				<?php endwhile; ?>		
+				endwhile; ?>		
                             
                             
 				<?php else : ?>

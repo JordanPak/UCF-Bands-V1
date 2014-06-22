@@ -25,7 +25,15 @@
                             
                             <section class="post_content clearfix" itemprop="articleBody">
                                 
-                                <?php the_content(); ?>
+								<?php 
+                                            
+                                    if( get_the_content() == '' )
+                                        echo '<h3><i class="fa fa-calendar"></i> Coming Soon!</h3>';
+                                        
+                                    else
+                                        the_content(); 
+                                            
+								?>
                         
                             </section> <!-- end article section -->
                             

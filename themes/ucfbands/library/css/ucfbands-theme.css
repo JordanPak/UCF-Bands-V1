@@ -360,6 +360,10 @@ nav.sub ul.dropdown-menu li a:hover {
 	font-family: 'Droid Serif', serif;
 }
 
+.btn, .btn-md, .btn-sm {
+	font-weight: bold;
+}
+
 
 /*==============*/
 /*==  PANELS  ==*/
@@ -394,7 +398,7 @@ nav.sub ul.dropdown-menu li a:hover {
 	background-color: #EFEFEF;
 }
 
-img.pull-right {
+img.pull-right, img.alignright {
 	margin-left: 30px;
 	margin-bottom: 30px;
 }
@@ -783,6 +787,47 @@ h1.page-title {
 	padding: 0px;
 }
 
+h1.section-page-title {
+	margin: 0px;
+	margin-top: 7px;
+	/*margin-left: 15px;*/
+	margin-bottom: 45px;
+	padding: 0px;
+}
+
+.marching-knights h1,
+.marching-knights h2, 
+.marching-knights h3, 
+.marching-knights h4, 
+.marching-knights h5, 
+.marching-knights h6,
+.marching-knights .btn-lg,
+.jammin-knights h1,
+.jammin-knights h2, 
+.jammin-knights h3, 
+.jammin-knights h4, 
+.jammin-knights h5, 
+.jammin-knights h6,
+.jammin-knights .btn-lg {
+	font-family: 'Oswald', sans-serif !important;
+	font-weight: normal;
+}
+
+.marching-knights h1, .jammin-knights h1 {
+	letter-spacing: .035em;
+}
+
+.marching-knights h1.page-title,
+.marching-knights h1.section-page-title,
+.jammin-knights h1.page-title,
+.jammin-knights h1.section-page-title {
+	letter-spacing: normal;
+}
+
+.marching-knights .block h2 i,
+.jammin-knights .block h2 i {
+	margin-right: 5px;
+}
 
 
 /*=====================*/

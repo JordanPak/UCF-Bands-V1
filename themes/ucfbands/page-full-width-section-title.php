@@ -37,7 +37,15 @@ Template Name: Full Width Page (Section Title)
             <div id="page-content">
                 
                 	
-				<?php the_content(); ?>
+				<?php
+                
+						if( get_the_content() == '' )
+							echo '<div class="col-lg-3"><div class="block block-featured"><h2><i class="fa fa-calendar"></i> Coming Soon!</h2></div></div>';
+							
+						else
+							the_content(); 
+				
+				?>
                         
                   
 				<?php endwhile; ?>		

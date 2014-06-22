@@ -92,6 +92,46 @@ function shortcode_block( $atts , $content = null ) {
 add_shortcode( 'block', 'shortcode_block' );
 
 
+//---------------//
+// ROW SHORTCODE //
+//---------------//
+function shortcode_row( $atts , $content = null ) {
+
+	// Code
+	return '
+		<div class="row">
+			
+			' . do_shortcode($content) . '
+			
+		</div>
+	';
+}
+add_shortcode( 'row', 'shortcode_row' );
+
+
+//------------------//
+// COLUMN SHORTCODE //
+//------------------//
+function shortcode_col( $atts , $content = null ) {
+
+	// ATTRIBUTES //
+	extract( shortcode_atts(
+		array(
+			'width'	   => '3',
+		), $atts )
+	);
+	
+
+	// RETURN CODE
+	return '
+		<div class="col-lg-' . $width . '">
+			
+			' . do_shortcode($content) . '
+			
+		</div>
+	';
+}
+add_shortcode( 'col', 'shortcode_col' );
 
 
 

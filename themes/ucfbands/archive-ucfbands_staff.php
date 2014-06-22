@@ -70,32 +70,37 @@
 								echo '<b><i>' . $staff_position . '</i></b>';
 								
 								
-								// Spacer
-								echo '<br><br>';
+								// Do not display spacers if not needed
+								if( $staff_email != '' && $staff_phone != '')
+								{
 								
-								
-								// Email (If available)
-								if( $staff_email != '' )
-								{	
-									// Icon
-									echo '<i class="fa fa-envelope"></i> ';
+									// Spacer
+									echo '<br><br>';
 									
-									// Mailto link
-									echo '<a href="mailto:' . $staff_email . '">' . $staff_email . '</a>';
-								}
-								
-								
-								// Phone (If available) 
-								if( ($staff_phone != '') && ($staff_phone != '(407) 823-') )
-								{	
-									// Break, then Icon
-									echo '<br><i class="fa fa-phone"></i> ';
 									
-									// Number
-									echo $staff_phone;
-								}
+									// Email (If available)
+									if( $staff_email != '' )
+									{	
+										// Icon
+										echo '<i class="fa fa-envelope"></i> ';
+										
+										// Mailto link
+										echo '<a href="mailto:' . $staff_email . '">' . $staff_email . '</a>';
+									}
+									
+									
+									// Phone (If available) 
+									if( ($staff_phone != '') && ($staff_phone != '(407) 823-') )
+									{	
+										// Break, then Icon
+										echo '<br><i class="fa fa-phone"></i> ';
+										
+										// Number
+										echo $staff_phone;
+									}
 								
-								
+								} // If no email & phone
+									
 								// Spacer
 								echo '<br><br>';
 								
@@ -193,37 +198,44 @@
 								
 								// Display staff position
 								echo '<b><i>' . $staff_position . '</i></b>';
+
+
+								// Do not display spacers if not needed
+								if( $staff_email != '' && $staff_phone != '')
+								{
 								
-								
+									// Spacer
+									echo '<br><br>';
+									
+									
+									// Email (If available)
+									if( $staff_email != '' )
+									{	
+										// Icon
+										echo '<i class="fa fa-envelope"></i> ';
+										
+										// Mailto link
+										echo '<a href="mailto:' . $staff_email . '">' . $staff_email . '</a>';
+									}
+									
+									
+									// Phone (If available) 
+									if( ($staff_phone != '') && ($staff_phone != '(407) 823-') )
+									{	
+										// Break, then Icon
+										echo '<br><i class="fa fa-phone"></i> ';
+										
+										// Number
+										echo $staff_phone;
+									}
+									
+									
+								} // if no email and phone
+
+									
 								// Spacer
 								echo '<br><br>';
-								
-								
-								// Email (If available)
-								if( $staff_email != '' )
-								{	
-									// Icon
-									echo '<i class="fa fa-envelope"></i> ';
-									
-									// Mailto link
-									echo '<a href="mailto:' . $staff_email . '">' . $staff_email . '</a>';
-								}
-								
-								
-								// Phone (If available) 
-								if( ($staff_phone != '') && ($staff_phone != '(407) 823-') )
-								{	
-									// Break, then Icon
-									echo '<br><i class="fa fa-phone"></i> ';
-									
-									// Number
-									echo $staff_phone;
-								}
-								
-								
-								// Spacer
-								echo '<br><br>';
-								
+																	
 								
 								// Staff Bio
 								the_content();
