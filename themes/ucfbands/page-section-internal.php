@@ -49,7 +49,7 @@ Template Name: Section Page (Default)
 					// Menu Options
 					$subnav_options = array(
 						//'theme_location'  => get_the_title(),
-						'menu'            => get_the_title($parent_id),
+						'menu'            => $parent_slug,
 						'container'       => 'nav',
 						'container_class' => 'sub',
 						'menu_class'      => 'sub',

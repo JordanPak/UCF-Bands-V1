@@ -36,40 +36,43 @@ Template Name: Full Width Page (Section Title)
             <!--// PAGE CONTENT //-->
             <div id="page-content">
                 
-                	
-				<?php
+                <br><br>
                 
-						if( get_the_content() == '' )
-							echo '<div class="col-lg-3"><div class="block block-featured"><h2><i class="fa fa-calendar"></i> Coming Soon!</h2></div></div>';
-							
-						else
-							the_content(); 
-				
-				?>
-                        
-                  
-				<?php endwhile; ?>		
+                <div class="row">
+                
+					<?php
+                    
+                            if( get_the_content() == '' )
+                                echo '<div class="col-lg-3"><div class="block block-featured"><h2><i class="fa fa-calendar"></i> Coming Soon!</h2></div></div>';
+                                
+                            else
+                                the_content(); 
+                    
+                    ?>
                             
+                      
+                    <?php endwhile; ?>		
+                                
+                                
+                    <?php else : ?>
+                    
+                        <article id="post-not-found">
                             
-				<?php else : ?>
-                
-                    <article id="post-not-found">
-                        
-                        <header>
-                            <h1><?php _e("Not Found", "wpbootstrap"); ?></h1>
-                        </header>
-                        
-                        <section class="post_content">
-                            <p><?php _e("Sorry, but the requested resource was not found on this site.", "wpbootstrap"); ?></p>
-                        </section>
-                        
-                        <footer>
-                        </footer>
-                    </article>
-                
-                <?php endif; ?>
+                            <header>
+                                <h1><?php _e("Not Found", "wpbootstrap"); ?></h1>
+                            </header>
+                            
+                            <section class="post_content">
+                                <p><?php _e("Sorry, but the requested resource was not found on this site.", "wpbootstrap"); ?></p>
+                            </section>
+                            
+                            <footer>
+                            </footer>
+                        </article>
+                    
+                    <?php endif; ?>
 
-
+				</div><!-- /.row -->
                 
             </div><!-- /#page-content -->
 			

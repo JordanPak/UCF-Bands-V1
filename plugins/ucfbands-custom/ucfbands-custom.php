@@ -17,12 +17,11 @@
 function ucfbands_section_menus() {
 
 	$locations = array(
-		//'Section Menu' => __( 'Section Menu', 'text_domain' )
-		'Wind Ensemble' => __( 'Wind Ensemble', 'text_domain' ),
-		'Symphonic Band' => __( 'Symphonic Band', 'text_domain' ),
-		'Concert Band' => __( 'Concert Band', 'text_domain' ),
-		'Marching Knights ' => __( 'Marching Knights', 'text_domain' ),
-		'Jammin\' Knights' => __( 'Jammin\' Knights', 'text_domain' ),
+		'wind-ensemble' => __( 'Wind Ensemble', 'text_domain' ),
+		'symphonic-band' => __( 'Symphonic Band', 'text_domain' ),
+		'concert-band' => __( 'Concert Band', 'text_domain' ),
+		'marching-knights' => __( 'Marching Knights', 'text_domain' ),
+		'jammin-knights' => __( 'Jammin Knights', 'text_domain' ),
 	);
 	register_nav_menus( $locations );
 
@@ -269,7 +268,7 @@ function ucfbands_event() {
 		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
 	);
 	$rewrite = array(
-		'slug'                => 'event',
+		'slug'                => 'events',
 		'with_front'          => true,
 		'pages'               => true,
 		'feeds'               => false,
@@ -295,7 +294,7 @@ function ucfbands_event() {
 		'rewrite'             => $rewrite,
 		'capability_type'     => 'page',
 	);
-	register_post_type( 'event', $args );
+	register_post_type( 'events', $args );
 
 }
 

@@ -268,6 +268,7 @@ a.navbar-brand img {
 
 .nav-social {
 	margin-bottom: 30px;
+	padding-left: 30px;
 }
 
 
@@ -905,7 +906,6 @@ h1.section-page-title {
 		position: fixed;
 		bottom: 30px;
 		left: 0px;
-		padding-left: 30px;
 		margin-bottom: 0px;
 	}
 

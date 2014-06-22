@@ -25,7 +25,7 @@ Template Name: Section Dashboard (Shortcodes)
                 <div class="section-title <?php echo $post->post_name; ?>" style="background-image: url('<?php echo $single_featured_image ?>');">
                 
                     <h1 style="cursor: default;"><?php the_title(); ?></h1>
-                
+
                 </div><!-- /.section-title -->
                 
                 
@@ -36,8 +36,7 @@ Template Name: Section Dashboard (Shortcodes)
 										
 					// Menu Options
 					$subnav_options = array(
-						//'theme_location'  => get_the_title(),
-						'menu'            => get_the_title(),
+						'menu'            => $post->post_name,
 						'container'       => 'nav',
 						'container_class' => 'sub',
 						'menu_class'      => 'sub',
