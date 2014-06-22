@@ -21,12 +21,13 @@ class MSP_Settings {
         add_action( 'admin_init', array( $this, 'admin_init' ) );
         add_action( 'admin_menu', array( $this, 'admin_menu' ), 11 );
         add_action( 'admin_action_msp_envato_license', array( $this, 'envato_license_updated' ) );
+        
+        add_action( 'admin_footer-master-slider_page_masterslider-setting', array( $this, 'print_setting_script' ) );
+        add_filter( 'axiom_wedev_setting_section_submit_button', array( $this, 'section_submit_button' ), 10, 2 );
     }
 
 
     function admin_init() {
-        
-        $this->page_init();
 
         //set the settings
         $this->settings_api->set_sections( $this->get_settings_sections() );
@@ -37,32 +38,14 @@ class MSP_Settings {
     }
 
 
-    function page_init() {
-
-        $page    = isset( $_REQUEST['page'] ) ? $_REQUEST['page'] : '';
-        $updated = isset( $_REQUEST['settings-updated'] ) ? $_REQUEST['settings-updated'] : '';
-
-        if( MSWP_SLUG.'-setting' == $page && 'true' == $updated ) {
-            
-            $envato_username        = $this->settings_api->get_option( 'username', 'msp_envato_license' );
-            $envato_api_key         = $this->settings_api->get_option( 'api_key' , 'msp_envato_license' );
-            $envato_purchase_code   = $this->settings_api->get_option( 'purchase_code' , 'msp_envato_license' );
-            // activate the license
-            if( $is_actived = msp_maybe_activate_license( $envato_username, $envato_api_key, $envato_purchase_code ) )
-                add_action( 'admin_notices', array( $this, 'activation_notice' ) );
-            else
-                add_action( 'admin_notices', array( $this, 'deactivation_notice' ) );
+    function section_submit_button( $button_markup, $section ){
+        if( isset( $section['id'] ) && 'msp_envato_license' == $section['id'] ){
+            $is_license_actived = get_option( MSWP_SLUG . '_is_license_actived', 0 );
+            return sprintf( '<a id="validate_envato_license" class="button button-primary button-large" data-activate="%1$s" data-isactive="%3$d" data-deactivate="%2$s" data-validation="%4$s" >%1$s</a>%5$s', 
+                            __( 'Activate License', MSWP_TEXT_DOMAIN ), __( 'Deactivate License', MSWP_TEXT_DOMAIN ), (int)$is_license_actived,
+                            __( 'Validating ..', MSWP_TEXT_DOMAIN ), '<div class="msp-msg-nag">is not actived</div>' );
         }
-    }
-
-
-    public function activation_notice () {
-        printf( '<div class="update-nag" style="border-left-color:#7ad03a;" >%s</div>', __( 'Your license activated successfully. Thank you!', MSWP_TEXT_DOMAIN ) );
-    }
-
-
-    public function deactivation_notice() {
-        printf( '<div class="update-nag">%s</div>', __( 'The license activation failed, the purchase code is not valid.', MSWP_TEXT_DOMAIN ) );
+        return $button_markup;
     }
 
 
@@ -91,7 +74,7 @@ class MSP_Settings {
             $sections[] = array(
                 'id' => 'msp_envato_license',
                 'title' => __( 'License Activation', MSWP_TEXT_DOMAIN ),
-                'desc'  => __('To activate automatic update for master slider a valid purchase code is required.', MSWP_TEXT_DOMAIN )
+                'desc'  => __( 'To activate automatic update for master slider a valid purchase code is required.', MSWP_TEXT_DOMAIN )
             );
         }
 
@@ -122,6 +105,20 @@ class MSP_Settings {
                 'label' => __( 'Hide info table', MSWP_TEXT_DOMAIN ),
                 'desc'  => __( 'If you want to hide "Latest video tutorials" table on master slider admin panel check this field.', MSWP_TEXT_DOMAIN ),
                 'type'  => 'checkbox'
+            ),
+            array(
+                'name'  => '_enable_cache',
+                'label' => __( 'Enable cache?', MSWP_TEXT_DOMAIN ),
+                'desc'  => __( 'Enable cache to make Masterslider even more faster!', MSWP_TEXT_DOMAIN ),
+                'type'  => 'checkbox'
+            ),
+            array(
+                'name'  => '_cache_period',
+                'label' => __( 'Cache period time', MSWP_TEXT_DOMAIN ),
+                'desc'  => __( 'The cache refresh time in hours. Cache is also cleared when you click on "Save Changes" in slider panel.', MSWP_TEXT_DOMAIN ),
+                'type'  => 'text',
+                'default' => '12',
+                'sanitize_callback' => 'floatval'
             )
         );
             /*
@@ -261,6 +258,96 @@ class MSP_Settings {
         }
 
         return $pages_options;
+    }
+
+
+    /**
+     * This code uses localstorage for displaying active tabs
+     * 
+     */
+    function print_setting_script() {
+        ?>
+        <script>
+        (function($) {
+        $(function() {
+
+            var $username       = $("#msp_envato_license\\[username\\]"),
+                $api_key        = $("#msp_envato_license\\[api_key\\]"),
+                $purchase_code  = $("#msp_envato_license\\[purchase_code\\]"),
+                $activate_btn   = $('#validate_envato_license');
+
+            var _is_license_active = $activate_btn.data('isactive');
+
+            function msp_enable_activation_form( activate ){
+                if( activate ){
+                    $activate_btn.text( $activate_btn.data('deactivate') );
+                    $username.prop( 'disabled', true );
+                    $api_key.prop( 'disabled', true );
+                    $purchase_code.prop( 'disabled', true );
+                    $activate_btn.siblings('.msp-msg-nag').html('Your license is active');
+
+                } else {
+                    $activate_btn.text( $activate_btn.data('activate') );
+                    $username.prop( 'disabled', false );
+                    $api_key.prop( 'disabled', false );
+                    $purchase_code.prop( 'disabled', false );
+                    $activate_btn.siblings('.msp-msg-nag').html('Your license is NOT active');
+                }
+            }
+
+            msp_enable_activation_form( _is_license_active );
+
+
+            $activate_btn.on('click', function(event){
+                event.preventDefault();
+                $this= $(this);
+
+                $this.text( $this.data('validation') );
+                var do_activation = _is_license_active ? 0 : 1;
+
+                jQuery.post(
+                    ajaxurl,
+                    {
+                        nonce:   $this.data( 'nonce' ),
+                        action:  'msp_license_activation',
+                        doActivation: do_activation,
+                        username: $username.val(),
+                        api_key : $api_key.val(),
+                        purchase_code : $purchase_code.val()
+                    },
+                    function( res ){
+                        res = JSON.parse(res);
+
+                        msp_enable_activation_form( res.success );
+                        $this.siblings('.msp-msg-nag').html( res.message );
+                        $this.data('isactive', String(res.success) );
+                        _is_license_active = res.success;
+                    }
+                );
+                    
+            });
+
+            
+
+        });
+        })(jQuery);
+        </script>
+        <style>
+            .master-slider_page_masterslider-setting .wrap input[disabled] { background-color:#e0e0e0; }
+            .msp-msg-nag {
+                display: inline-block;
+                line-height: 14px;
+                padding: 8px 15px;
+                font-size: 14px;
+                text-align: left;
+                margin: 0 20px;
+                background-color: #fff;
+                border-left: 4px solid #ffba00;
+                -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+                box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+            }
+        </style>
+        <?php
     }
 
 }

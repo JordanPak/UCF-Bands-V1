@@ -1,11 +1,11 @@
 <?php
 /**
  *
- * @package    Axiom
- * @author     averta
- * @copyright  Copyright (c) averta co
- * @version    Release: 1.0
- * @link       http://www.averta.net
+ * @package   MasterSlider
+ * @author    averta [averta.net]
+ * @license   LICENSE.txt
+ * @link      http://masterslider.com
+ * @copyright Copyright © 2014 averta
  */
 
 /*----------------------------------------------

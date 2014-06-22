@@ -10,7 +10,7 @@ Template Name: UCFBands Home
             <!--// FIX AFFIX //-->
             <div class="top-fixed">
             
-				 <?php masterslider(1); ?>               
+				 <?php masterslider(2); ?>               
                                     
             </div><!-- /.top-fixed -->
             

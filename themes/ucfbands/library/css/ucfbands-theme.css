@@ -266,9 +266,11 @@ a.navbar-brand img {
 	background-color: #231f20;
 }
 
-.nav-social {
+#nav-footer {
 	margin-bottom: 30px;
 	padding-left: 30px;
+	font-family: 'Droid Serif', sans-serif;
+	font-size: 14px;
 }
 
 
@@ -599,6 +601,28 @@ table.tribe-events-calendar {
 }
 
 
+/*==========================*/
+/*==  POPOVERS & TOOLTIPS ==*/
+/*==========================*/
+
+.popover {
+	max-width: none;
+}
+
+.footer-address a {
+	color: #888;
+	cursor: pointer;
+    -webkit-transition: 300ms ease-in-out;
+    -moz-transition: 300ms ease-in-out;
+    -o-transition: 300ms ease-in-out;
+	transition: 300ms ease-in-out;
+}
+
+.footer-address a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
 /*==============*/
 /*==  ALERTS  ==*/
 /*==============*/
@@ -616,7 +640,7 @@ table.tribe-events-calendar {
 /*==  SLIDER  ==*/
 /*==============*/
 
-.carousel img {
+/*.carousel img {
 	min-width: 100%;
 	min-width: 100%;
 	height: 500px;
@@ -629,7 +653,7 @@ table.tribe-events-calendar {
 	max-height: 500px;
 	border-bottom: 1px solid #231f20;	
 	box-shadow: 0px 2px 0px #ffca06;
-}
+}*/
 
 
 /*==============================*/
@@ -902,11 +926,12 @@ h1.section-page-title {
 		font-size: .8em;
 	}
 	
-	.nav-social {
+	#nav-footer {
 		position: fixed;
 		bottom: 30px;
 		left: 0px;
 		margin-bottom: 0px;
+		max-width: 230px;
 	}
 
 	#page-wrapper {
@@ -959,6 +984,10 @@ h1.section-page-title {
 		font-size: 1em;
 		padding-top: 8px;
 		padding-bottom: 8px;
+	}
+	
+	#nav-footer {
+		max-width: 310px;
 	}
 
 }

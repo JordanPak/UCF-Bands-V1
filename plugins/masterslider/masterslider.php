@@ -11,7 +11,7 @@
  * Plugin Name:       Master Slider WP
  * Plugin URI:        http://codecanyon.net/item/master-slider-wordpress-responsive-touch-slider/7467925?ref=averta
  * Description:       Master Slider is the most advanced responsive HTML5 WordPress slider plugin with layer and Touch Swipe Navigation that works smoothly on devices too.
- * Version:           1.8.6
+ * Version:           1.8.8
  * Author:            averta
  * Author URI:        http://averta.net
  * Text Domain:       masterslider
@@ -26,7 +26,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 // Abort loading if WordPress is upgrading
-if ( defined('WP_INSTALLING') && WP_INSTALLING ) {
+if ( defined( 'WP_INSTALLING' ) && WP_INSTALLING ) {
     return;
 }
 

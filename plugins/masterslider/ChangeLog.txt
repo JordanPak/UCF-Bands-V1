@@ -1,3 +1,15 @@
+
+Version 1.8.8 / (21.06.2014)
+============================
+- [New Feature]: introducing cache boosting to make Masterslider even more faster! (enable from Masterslider setting)
+- [New]: Categories and tags added to dynamic tags in post slider and woo slider
+- [Improvement]: Usability improvement in license activation form
+- [New Feature]: Uninstall feature added to Masterslider
+- [Fix]: An issue with adopting proper style after importing slider fixed
+- [Fix]: return empty value if meta tag value is empty or not found in post slider and woo slider
+- [Update]: Translate files updated
+
+
 Version 1.8.6 / (13.06.2014) 
 ============================
 - [Fix]: A minor issue with arrow style fixed

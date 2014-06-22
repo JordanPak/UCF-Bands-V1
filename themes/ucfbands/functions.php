@@ -80,7 +80,7 @@ function wp_bootstrap_register_sidebars() {
     	'after_title' => '</h2><br>',
     ));
     
-    register_sidebar(array(
+/*    register_sidebar(array(
       'id' => 'footer1',
       'name' => 'Footer 1',
       'before_widget' => '<div id="%1$s" class="widget col-sm-4 %2$s">',
@@ -106,7 +106,7 @@ function wp_bootstrap_register_sidebars() {
       'before_title' => '<h4 class="widgettitle">',
       'after_title' => '</h4>',
     ));
-    
+*/ 
 	
 	
 	/*=========================*/
@@ -154,6 +154,17 @@ function wp_bootstrap_register_sidebars() {
       'after_widget' => '</div>',
       'before_title' => '<h2 class="widgettitle"><i class="fa fa-calendar"></i> ',
       'after_title' => ' <a href="events" class="btn btn-default btn-xs">View All</a></h2>',
+    ));
+
+	
+	// Nav Footer
+    register_sidebar(array(
+      'id' => 'nav_footer',
+      'name' => 'Navigation Footer',
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+      'after_widget' => '</div>',
+      'before_title' => '<h4 class="widgettitle">',
+      'after_title' => '</h4>',
     ));
 
 	    
@@ -525,7 +536,7 @@ if( !function_exists("theme_styles") ) {
         wp_enqueue_style( 'ucfbands-custom' );
 		
 
-		// Font Awesome CSS
+		// Font Awesome CSS // NOW HAVE PLUGIN, but this apparently adds new icons //
         wp_register_style( 'font-awesome', get_template_directory_uri() . '/library/font-awesome/css/font-awesome.min.css', array(), '1.0', 'all' );
         wp_enqueue_style( 'font-awesome' );
 

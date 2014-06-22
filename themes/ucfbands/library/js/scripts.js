@@ -100,4 +100,12 @@ jQuery(document).ready(function($) {
 	
 	$('.dropdown-toggle').dropdown();
  
+ 
+ 
+ 	// UCFBANDS BOOTSTRAP STUFF //
+ 	$('.social-icon').tooltip();
+	$('.ucfbands-tooltip').tooltip();
+	$('.ucfbands_popover').popover();
+	
+ 
 });

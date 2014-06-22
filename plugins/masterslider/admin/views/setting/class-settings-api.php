@@ -446,8 +446,12 @@ class WeDevs_Settings_API {
                     <?php do_settings_sections( $form['id'] ); ?>
                     <?php do_action( 'wsa_form_bottom_' . $form['id'], $form ); ?>
 
-                    <div style="padding-left: 10px">
-                        <?php submit_button(); ?>
+                    <div style="padding-left: 10px; padding-top:15px;">
+                        <?php // get_submit_button returns a submit button, with provided text and appropriate class
+                            $button_markup = get_submit_button(); 
+                            $button_markup = apply_filters( 'axiom_wedev_setting_section_submit_button', $button_markup, $form );
+                            echo $button_markup;
+                        ?>
                     </div>
                 </form>
             </div>

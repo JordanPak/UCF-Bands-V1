@@ -1,28 +1,34 @@
         </div><!-- /#page-wrapper -->    
-
-
-
-        <!--// GLOBAL SOCIAL MEDIA ICONS //-->
-        <div class="nav-social">
+		
         
-            <a href="#"><img class="social-icon no-frame" data-toggle="tooltip" data-placement="top" title="UCFBands on Facebook" src="<?php echo home_url(); ?>/wp-content/themes/ucfbands/images/flat-social-media/color-square/facebook.png"></a> 
+        <!--// NAV FOOTER //-->
+        <div id="nav-footer">
+        	
+        	<?php
+			
+				// Home Page - Featured Block 1
+				if ( is_active_sidebar('nav_footer') )
+					get_sidebar( 'nav_footer' );
+		
+    		?>
             
-            <a href="#"><img class="social-icon no-frame" data-toggle="tooltip" data-placement="top" title="UCFBands on Twitter" src="<?php echo home_url(); ?>/wp-content/themes/ucfbands/images/flat-social-media/color-square/twitter.png"></a> 
+    
+            <!--// GLOBAL SOCIAL MEDIA ICONS //-->
+            <div class="nav-social">
             
-            <a href="#"><img class="social-icon no-frame" data-toggle="tooltip" data-placement="top" title="UCFBands on YouTube" src="<?php echo home_url(); ?>/wp-content/themes/ucfbands/images/flat-social-media/color-square/youtube.png"></a> 
+                <a href="#"><img class="social-icon no-frame" data-toggle="tooltip" data-placement="top" title="UCFBands on Facebook" src="<?php echo home_url(); ?>/wp-content/themes/ucfbands/images/flat-social-media/color-square/facebook.png"></a> 
+                
+                <a href="#"><img class="social-icon no-frame" data-toggle="tooltip" data-placement="top" title="UCFBands on Twitter" src="<?php echo home_url(); ?>/wp-content/themes/ucfbands/images/flat-social-media/color-square/twitter.png"></a> 
+                
+                <a href="#"><img class="social-icon no-frame" data-toggle="tooltip" data-placement="top" title="UCFBands on YouTube" src="<?php echo home_url(); ?>/wp-content/themes/ucfbands/images/flat-social-media/color-square/youtube.png"></a> 
+            
+            </div><!-- /.nav-social -->
+
+		
+        </div><!-- /#nav-footer -->
         
-        </div><!-- /.nav-social -->
-
-
 
     </div><!-- /#wrapper -->
-
-	<script>
-	
-		<!-- ToolTips -->
-		$('.social-icon').tooltip();
-				
-	</script>
 
     
     <!--[if lt IE 7 ]>

@@ -14,7 +14,8 @@ class MSP_Admin_Ajax {
 		add_action( 'wp_ajax_msp_create_new_handler', array( $this, 'create_new_slider'   ) );
 		add_action( 'wp_ajax_post_slider_preview'	, array( $this, 'post_slider_preview' ) );
 		add_action( 'wp_ajax_wc_slider_preview'		, array( $this, 'wc_slider_preview' ) );
-		
+
+		add_action( 'wp_ajax_msp_license_activation', array( $this, 'check_license_activation' ) );
 	}
 
 
@@ -126,7 +127,7 @@ class MSP_Admin_Ajax {
 
 		// load and get parser and start parsing data
 		$parser = msp_get_parser();
-		$parser->set_data( $msp_data );
+		$parser->set_data( $msp_data, $slider_id );
 		
 		// get required parsed data
 		$slider_setting       = $parser->get_slider_setting();
@@ -152,6 +153,10 @@ class MSP_Admin_Ajax {
 
 	    msp_update_preset_css();
 	    msp_save_custom_styles();
+
+
+	    // flush slider cache if slider cache is enabled
+	    msp_flush_slider_cache( $slider_id );
 	    
 	    
 		// create and output the response
@@ -213,6 +218,55 @@ class MSP_Admin_Ajax {
 		
 	    exit;// IMPORTANT
 	}
+
+
+
+	function check_license_activation() {
+
+        $envato_username    	= isset( $_POST['username'] ) ? $_POST['username'] : '';
+        $envato_api_key    	    = isset( $_POST['api_key'] ) ? $_POST['api_key'] : '';
+        $envato_purchase_code   = isset( $_POST['purchase_code'] ) ? $_POST['purchase_code'] : '';
+
+        $envato_activate_license= isset( $_POST['doActivation'] ) ? (int)$_POST['doActivation'] : 1;
+
+        $license_info = get_option( 'msp_envato_license', array() );
+
+
+        if( $envato_activate_license ){
+
+        	// activate the license
+	        $is_actived = msp_maybe_activate_license( $envato_username, $envato_api_key, $envato_purchase_code );
+	        
+        	if( $is_actived ){
+	        	$message = __( 'Your license activated successfully. Thank you!', MSWP_TEXT_DOMAIN );
+
+	        	$license_info['username'] = $envato_username;
+	        	$license_info['api_key']  = $envato_api_key;
+	        	$license_info['purchase_code'] = $envato_purchase_code;
+
+	        	update_option( 'msp_envato_license', $license_info );
+	        	update_option( MSWP_SLUG . '_is_license_actived', $is_actived );
+
+        	} else {
+	        	$message = __( 'The license activation failed. Please try again later.', MSWP_TEXT_DOMAIN );
+        	}
+
+        } else {
+        	$is_actived = false;
+        	$message = __( 'Your license deactivated successfully', MSWP_TEXT_DOMAIN );
+
+        	$license_info['username'] 		= '';
+        	$license_info['api_key']  		= '';
+        	$license_info['purchase_code'] 	= '';
+
+        	update_option( 'msp_envato_license', $license_info );
+	        update_option( MSWP_SLUG . '_is_license_actived', 0 );
+        }
+        
+
+        echo json_encode( array( 'success' => (int)$is_actived, 'message' => $message ) );
+        exit;// IMPORTANT
+    }
 
 
 }

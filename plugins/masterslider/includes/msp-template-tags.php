@@ -21,7 +21,7 @@ function msp_get_general_post_template_tags() {
 		       'type'		=> '_general',
 		       'callback' 	=> ''
 		),
-	    /*
+	    
 	    array( 'name'		=> 'categories',
 		       'label' 		=> __( 'The post categories', MSWP_TEXT_DOMAIN ),
 		       'type'		=> '_general',
@@ -32,7 +32,7 @@ function msp_get_general_post_template_tags() {
 		       'label' 		=> __( 'The post tags', MSWP_TEXT_DOMAIN ),
 		       'type'		=> '_general',
 		       'callback' 	=> ''
-		),*/
+		),
 
 		array( 'name'		=> 'permalink',
 		       'label' 		=> __( 'The post link', MSWP_TEXT_DOMAIN ),

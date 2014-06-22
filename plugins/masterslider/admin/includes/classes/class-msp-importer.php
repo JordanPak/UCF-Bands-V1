@@ -145,6 +145,43 @@ class MSP_Importer {
 	 */
 	public function process_import_request(){
 
+		$step = isset( $_REQUEST['step'] ) && ! empty( $_REQUEST['step'] ) ? (int)$_REQUEST['step'] : 0;
+
+		if( 2 > $step ) {
+
+			$bytes = apply_filters( 'masterslider_import_upload_size_limit', wp_max_upload_size() );
+			$size  = size_format( $bytes );
+		?>
+
+		<div class="msp-import-wrapper">
+
+			<form action="<?php echo admin_url( 'admin.php?import=masterslider-importer&step=2' ); ?>" method="post" enctype="multipart/form-data" class="msp-import-form msp-dialog-inner-section">
+
+				<span class="msp-dialog-section-desc"><?php  _e( 'To import sliders select Masterslider Export file that you downloaded before then click import button.', MSWP_TEXT_DOMAIN ) ?></span>
+				<br />
+				<hr />
+				<br />
+				<fieldset>
+					<?php wp_nonce_field('import-msp-sliders'); ?>
+
+					<input type="hidden" name="msp-import" value="1">
+
+					<input type="hidden" name="max_file_size" value="<?php echo $bytes; ?>" />
+
+					<input type="file" name="msp-import-file" class="msp-select-file">
+
+					<small><?php printf( __( 'Maximum size: %s', MSWP_TEXT_DOMAIN ), $size ); ?></small><br /><br /><br />
+					
+					<input type="submit" class="button" value="<?php esc_attr_e( 'Upload file and import', MSWP_TEXT_DOMAIN ); ?>" />
+				</fieldset>
+
+				
+			
+			</form>
+
+	    </div>
+
+	    <?php }
 
 		// Import sliders from export file
 		if( isset( $_POST['msp-import'] ) ) {
@@ -162,11 +199,7 @@ class MSP_Importer {
 							$import_data = file_get_contents( $_FILES['msp-import-file']['tmp_name'] ); 
 							$this->import_data( $import_data );
 						}
-
-					} elseif( 1 == $step ){
-
-					} else {
-
+						
 					}
 				}
 

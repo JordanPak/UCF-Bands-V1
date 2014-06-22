@@ -10,7 +10,7 @@
  */
 
 // no direct access allowed
-if (!defined('ABSPATH')) {
+if ( ! defined('ABSPATH') ) {
     die();
 }
 
@@ -67,6 +67,16 @@ class MSP_DB {
 
 
 	/**
+	* Master table tabes
+	*
+	* @since 1.0
+	* @access private
+	* @var string
+	*/
+	var $tabel_names = array( 'sliders', 'options' );
+
+
+	/**
 	 * The database character collate.
 	 *
 	 * @since 1.0
@@ -76,7 +86,6 @@ class MSP_DB {
 	var $charset_collate = '';
 
 
-	public $cache_period;
 
 	/**
 	 * 
@@ -92,35 +101,30 @@ class MSP_DB {
 	}
 
 	/**
-	 * Get list of Masterslider table names
+	 * Get known properties
 	 * 
-	 * @since 1.8
-	 * @return null
+	 * @param  string   property name
+	 * @return string   property value
 	 */
-	public function tables(){
-		return array( $this->get_slider_table_name(), $this->get_options_table_name() );
-	}
+	public function __get( $name ){
 
-	/**
-	 * Get slider table name
-	 * 
-	 * @since 1.8
-	 * @return null
-	 */
-	public function get_slider_table_name() {
-		global $wpdb;
-		return $wpdb->prefix . 'masterslider_sliders';
-	}
+		if( in_array( $name, $this->tabel_names ) ){
+			global $wpdb;
+			return $wpdb->prefix . 'masterslider_' . $name;
 
-	/**
-	 * Get options table name
-	 * 
-	 * @since 1.8
-	 * @return null
-	 */
-	public function get_options_table_name() {
-		global $wpdb;
-		return $wpdb->prefix . 'masterslider_options';
+		// Get list of Masterslider table names
+		} elseif( 'tables' == $name ){
+			global $wpdb;
+			$tables = array();
+
+			foreach ( $tabel_names as $table_name )
+				$tables[ $table_name ] = $wpdb->prefix . 'masterslider_' . $table_name;
+			
+			return $tables;
+
+		} else {
+			return NULL;
+		}
 	}
 
 	/**
@@ -131,7 +135,7 @@ class MSP_DB {
 	 */
 	private function create_table_sliders() {
 
-		$sql_create_table = "CREATE TABLE IF NOT EXISTS {$this->get_slider_table_name()}  (
+		$sql_create_table = "CREATE TABLE IF NOT EXISTS {$this->sliders}  (
           ID mediumint unsigned NOT NULL AUTO_INCREMENT,
           title varchar(100) NOT NULL,
 		  type varchar(64) NOT NULL,
@@ -159,7 +163,7 @@ class MSP_DB {
 	 */
 	private function create_table_options() {
 
-		$sql_create_table = "CREATE TABLE IF NOT EXISTS {$this->get_options_table_name()}  (
+		$sql_create_table = "CREATE TABLE IF NOT EXISTS {$this->options}  (
           ID smallint unsigned NOT NULL AUTO_INCREMENT,
           option_name varchar(120) NOT NULL,
 		  option_value text NOT NULL DEFAULT '',
@@ -189,16 +193,16 @@ class MSP_DB {
 	    if (!empty ($wpdb->collate))
 	        $this->charset_collate .= " COLLATE {$wpdb->collate}";
 
-	    if ( $wpdb->get_var( "SHOW TABLES LIKE '{$this->get_slider_table_name()}'" )  != $this->get_slider_table_name()  )
+	    if ( $wpdb->get_var( "SHOW TABLES LIKE '{$this->sliders}'" )  != $this->sliders  )
 			$this->create_table_sliders();
 
-	    if ( $wpdb->get_var( "SHOW TABLES LIKE '{$this->get_options_table_name()}'" ) != $this->get_options_table_name() )
+	    if ( $wpdb->get_var( "SHOW TABLES LIKE '{$this->options}'" ) != $this->options )
 			$this->create_table_options();
 
 		// update tables version to current version
 		update_option( "masterslider_db_version", self::DB_VERSION );
 
-		do_action( 'masterslider_tables_created', $this->tables()  );
+		do_action( 'masterslider_tables_created', $this->tables  );
 	}
 
 
@@ -216,7 +220,7 @@ class MSP_DB {
 		
 		$this->create_tables();
 
-		do_action( 'masterslider_tables_updated', $this->tables() );
+		do_action( 'masterslider_tables_updated', $this->tables );
 		return true;
 	}
 
@@ -230,7 +234,7 @@ class MSP_DB {
 	public function delete_tables() {
 		global $wpdb;
 
-		foreach ( $this->tables() as $table_id => $table_name) {
+		foreach ( $this->tables as $table_id => $table_name) {
 			$wpdb->query("DROP TABLE IF EXISTS $table_name");
 		}
 	}
@@ -300,7 +304,7 @@ class MSP_DB {
 		$format = array('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');
 
 		// Insert a row into the table. returns false if the row could not be inserted.
-		$status = $wpdb->insert( $this->get_slider_table_name(), $data, $format );
+		$status = $wpdb->insert( $this->sliders, $data, $format );
 
 		return (false === $status)? $status: $wpdb->insert_id;
 	}
@@ -350,7 +354,7 @@ class MSP_DB {
 		$where_format = array( '%d' );
 
 		// Insert a row into the table
-		return $wpdb->update( $this->get_slider_table_name(), $data, $where, $format, $where_format);
+		return $wpdb->update( $this->sliders, $data, $where, $format, $where_format);
 	}
 
 
@@ -368,7 +372,7 @@ class MSP_DB {
 		}
 
 		return $wpdb->delete( 
-			$this->get_slider_table_name(), 
+			$this->sliders, 
 			array( 'ID' => (int)$slider_id ),
 			array( '%d' )
 		);
@@ -388,7 +392,7 @@ class MSP_DB {
 			return null;
 		}
 
-		$sql = $wpdb->prepare( "SELECT * FROM {$this->get_slider_table_name()} WHERE ID = %d", (int)$slider_id );
+		$sql = $wpdb->prepare( "SELECT * FROM {$this->sliders} WHERE ID = %d", (int)$slider_id );
 		$result = $wpdb->get_row( $sql, ARRAY_A );
 
 		return $this->maybe_unserialize_fields($result);
@@ -481,7 +485,7 @@ class MSP_DB {
 
 		$sql = "
 			SELECT *
-			FROM {$this->get_slider_table_name()}
+			FROM {$this->sliders}
 			WHERE $where
 			ORDER BY $orderby $sort
 			$limit 
@@ -527,7 +531,7 @@ class MSP_DB {
 	public function get_total_sliders_count( $where = "status='published'" ) {
 		global $wpdb;
 		
-		$result = $wpdb->get_results( "SELECT count(ID) AS total FROM {$this->get_slider_table_name()} WHERE {$where} ", ARRAY_A );
+		$result = $wpdb->get_results( "SELECT count(ID) AS total FROM {$this->sliders} WHERE {$where} ", ARRAY_A );
 		return $result ? (int)$result[0]['total'] : null;
 	}
 
@@ -566,7 +570,7 @@ class MSP_DB {
 		);
 
 		// check if key already exist in master slider options table
-		$sql = $wpdb->prepare( "SELECT * FROM {$this->get_options_table_name()} WHERE option_name = %s", $option_name );
+		$sql = $wpdb->prepare( "SELECT * FROM {$this->options} WHERE option_name = %s", $option_name );
 		// skip adding option if option added to options table before
 		if( $result = $wpdb->get_row( $sql, ARRAY_A ) )
 			return false;
@@ -575,7 +579,7 @@ class MSP_DB {
 		$format = array('%s', '%s');
 
 		// Insert a row into the table. returns false if the row could not be inserted.
-		$result = $wpdb->insert( $this->get_options_table_name(), $fields, $format );
+		$result = $wpdb->insert( $this->options, $fields, $format );
 
 		if(false === $result)
 			return false;
@@ -607,7 +611,7 @@ class MSP_DB {
 		// query the value if value is not available in cache
 		if( false === $value ) {
 
-			$sql = $wpdb->prepare( "SELECT * FROM {$this->get_options_table_name()} WHERE option_name = %s", $option_name );
+			$sql = $wpdb->prepare( "SELECT * FROM {$this->options} WHERE option_name = %s", $option_name );
 			$result = $wpdb->get_row( $sql, ARRAY_A );
 
 			$value = $result && isset( $result['option_value'] ) ? $result['option_value'] : $default_value;
@@ -653,7 +657,7 @@ class MSP_DB {
 		$option_value = maybe_serialize( $option_value );
 		
 
-		$result = $wpdb->update( $this->get_options_table_name(), array( 'option_value' => $option_value ), array( 'option_name' => $option_name ) );
+		$result = $wpdb->update( $this->options, array( 'option_value' => $option_value ), array( 'option_name' => $option_name ) );
 		if ( ! $result ) {
 			return $this->add_option( $option_name, $option_value);
 		} else {
@@ -679,7 +683,7 @@ class MSP_DB {
 		}
 
 		$result = $wpdb->delete( 
-			$this->get_options_table_name(), 
+			$this->options, 
 			array( 'option_name' => $option_name ),
 			array( '%s' )
 		);

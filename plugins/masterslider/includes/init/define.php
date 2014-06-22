@@ -1,17 +1,14 @@
 <?php
 
 // no direct access allowed
-if (!defined('ABSPATH')) {
+if ( ! defined('ABSPATH') ) {
     die();
 }
 
-define( 'MSWP_AVERTA_VERSION'		, '1.8.6' );
+define( 'MSWP_AVERTA_VERSION'		, '1.8.8' );
 
 define( 'MSWP_SLUG'					, 'masterslider' );
 define( 'MSWP_TEXT_DOMAIN'			, 'masterslider' );
-
-define( 'MSWP_ENABLE_CACHE'			, false );
-define( 'MSWP_CACHE_PERIOD'			, 12 ); // cache expiration time in hours
 
 define( 'MSWP_AVERTA_DIR'			, dirname( dirname( plugin_dir_path( __FILE__ ) ) ) );
 define( 'MSWP_AVERTA_URL'			, plugins_url( '', dirname( plugin_dir_path( __FILE__ ) ) ) );

@@ -321,8 +321,9 @@ function msp_masterslider_wrapper_shortcode( $atts, $content = null ) {
 		$slideinfo_size = sprintf( ', size:%s', $slideinfo_width );
 	}
 	
+	$instance_suffix = substr($uid, -4);
 	// slider javascript instance name
-	$instance_name = "masterslider_".substr($uid, -4);
+	$instance_name = "masterslider_".$instance_suffix;
 
 	// stores inner markup for some spesific templates
 	$inner_template_container_open_tags  = '';
@@ -585,7 +586,8 @@ function msp_masterslider_wrapper_shortcode( $atts, $content = null ) {
 					echo "\n\t\t\t\t" . sprintf( '$("head").append( "%s" );', $link_tag ) . "\n";
 				}
 				// add slider instance to global scope
-				echo "\n\t\t\t\twindow.masterslider_$id = $instance_name;\n" ;
+				echo "\n\t\t\t\twindow.masterslider_instances = window.masterslider_instances || {};";
+				echo "\n\t\t\t\twindow.masterslider_instances[\"{$id}_{$instance_suffix}\"] = $instance_name;\n" ;
 				?>
 			 });
 			

@@ -32,6 +32,8 @@ class MSP_Parser {
 	public $recent_styles ;
 
 
+	public $current_slider_id;
+
 	public $join_char = "\n";
 	public $tab_char  = "\t";
 
@@ -72,7 +74,7 @@ class MSP_Parser {
 		// slider options
 		return array(
 
-	        'id'            => isset( $setting['sliderId'] ) ? (string) $setting['sliderId'] : '',
+	        'id'            => is_numeric( $this->current_slider_id ) ? $this->current_slider_id : ( isset( $setting['sliderId'] ) ? (string) $setting['sliderId'] : '' ),
 	        'uid'           => '',         // an unique and temporary id 
 	        'class'         => isset( $setting['className'] ) ? (string) $setting['className'] : '',      // a class that adds to slider wrapper
 	        'margin'        => 0,
@@ -511,10 +513,11 @@ class MSP_Parser {
 
 
 	// set/store panel raw and parsed data for further use
-	public function set_data( $data ) {
+	public function set_data( $data, $slider_id = null ) {
 		$this->reset();
 
 		$this->maybe_encoded_data = $data;
+		$this->current_slider_id  = $slider_id;
 
 		$decoded = msp_maybe_base64_decode( $data );
 		$this->parsable_data = json_decode($decoded);

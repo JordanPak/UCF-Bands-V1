@@ -10,13 +10,32 @@ if( ! class_exists('Axiom_Plugin_Updater') ) {
 
     class Axiom_Plugin_Updater extends Plugin_Upgrader {
 
+        /**
+         * Plugin directory and main file name (e.g myplugin/myplugin.php)
+         * @var string
+         */
         public $plugin_slug;
 
+        /**
+         * Plugin slug
+         * @var string
+         */
         public $slug;
 
-        public $installable_plugin_zip_file;
+        /**
+         * Installable update file name
+         * @var string
+         */
+        public $installable_plugin_zip_file = '';
 
 
+        /**
+         * Set plugin info and add essential hooks
+         * 
+         * @param string $plugin_slug                 The name of directory and main file name of plugin
+         * @param string $slug                        Then slug name of plugin (optional)
+         * @param string $installable_plugin_zip_file Installable update file name. Default is {plugin_slug}-installable.zip
+         */
         public function __construct( $plugin_slug, $slug = '', $installable_plugin_zip_file = '' ){
             
             parent::__construct();
@@ -39,7 +58,7 @@ if( ! class_exists('Axiom_Plugin_Updater') ) {
 
 
         function on_update_plugin() {
-
+            
             if( apply_filters( $this->slug.'_disable_auto_update', 0 ) )
                 return;
             
