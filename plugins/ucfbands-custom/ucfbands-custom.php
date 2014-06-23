@@ -91,6 +91,7 @@ function shortcode_block( $atts , $content = null ) {
 add_shortcode( 'block', 'shortcode_block' );
 
 
+
 //---------------//
 // ROW SHORTCODE //
 //---------------//
@@ -106,6 +107,7 @@ function shortcode_row( $atts , $content = null ) {
 	';
 }
 add_shortcode( 'row', 'shortcode_row' );
+
 
 
 //------------------//
@@ -132,6 +134,182 @@ function shortcode_col( $atts , $content = null ) {
 }
 add_shortcode( 'col', 'shortcode_col' );
 
+
+
+//---------------------------//
+// UPCOMING EVENTS SHORTCODE //
+//---------------------------//
+function shortcode_events( $atts ) {
+
+	// ATTRIBUTES //
+	extract( shortcode_atts(
+		array(
+			'ensemble'	   => 'all-ensembles',
+		), $atts )
+	);
+	
+	
+	// Opening UL
+	$return_string = '<ul class="timeline">';
+	
+
+	// Testing
+	//echo 'MySQL Time: ' . current_time( 'mysql' );	
+	//date_default_timezone_set('America/New_York');
+	//echo '<br>' . date_default_timezone_get();
+	//echo ': ' . date('Y-m-d H:i:s');
+
+
+	// Preparing the query for events
+	// Only get events that haven't passed!
+	$meta_quer_args = array(
+		'relation'	=>	'AND',
+		array(
+			'key'		=>	'_ucfbands_event_datetime_timestamp',
+			'value'		=>	time(),
+			'compare'	=>	'>'
+		)
+	);
+
+	
+	// Query Options
+	$events_selection = array(
+		'post_type'		=> 'events',
+		'category_name'	=> $ensemble,
+		'fields' 		=> 'ids', // This is so only the ID is returned instead of the WHOLE post object (Performance)
+		'meta_key'		=> '_ucfbands_event_datetime_timestamp',
+		'orderby' 		=> 'meta_value_num',
+		'order' 		=> 'ASC',
+		//'post_count'	=> 5,
+		//'posts_per_page'=> 5,
+		'meta_query'	=> $meta_quer_args
+	);
+	
+	
+	// GET POSTS //
+	$events = new WP_Query( $events_selection );
+	
+		
+	
+	// If there are no results
+	if(($events->have_posts()) == false)
+	{
+		$return_string .= '<li><div class="timeline-badge primary"><i class="fa fa-calendar"></i></div><div class="timeline-panel"><div class="timeline-heading">There are no upcoming events found for this ensemble.</div></div></li>';
+	}
+
+
+	// Get Posts associated with events        
+	$events = $events->get_posts();
+
+	
+                                                                
+	// LOOP THROUGH THE IDS OF EACH EVENT
+	foreach($events as $event)
+	{
+		
+		// Post Content
+		$content_post = get_post($event);
+		$content = $content_post->post_content;
+		
+		
+		// Get Post Meta!
+		$event_icon_bgcolor = get_post_meta( $event, '_ucfbands_event_icon_bgcolor', true );
+		$event_icon	= get_post_meta( $event, '_ucfbands_event_icon', true );
+		$event_venue = get_post_meta( $event, '_ucfbands_event_venue', true);
+		$event_timestamp = get_post_meta ( $event, '_ucfbands_event_datetime_timestamp', true);
+				
+		
+		// Start List Item
+		$return_string .= '<li>';
+			
+		
+			// Display Badge & Icon
+			$return_string .= '<div class="timeline-badge ' . $event_icon_bgcolor . '"><i class="fa ' . $event_icon . '"></i></div>';
+			
+			
+			
+			// TIMELINE PANEL //
+			$return_string .= '<div class="timeline-panel">';
+			
+				
+				
+				// TIMELINE HEADING //
+				$return_string .= '<div class="timeline-heading">';
+				
+				
+				
+					// EVENT TITLE //
+					$return_string .= '<h4 class="timeline-title">' . get_the_title($event) . '</h4>';
+					
+					
+					
+					// EVENT DATE/TIME/VENUE //
+					$return_string .= '<p><small><b>'; 
+					
+					
+						// Date
+						$return_string .=  date('M d, Y', $event_timestamp) . ' &nbsp|&nbsp; ';
+						
+						
+						
+						// Time
+						if( date('g:i A', $event_timestamp) != '12:01 AM')
+							$return_string .= '<i class="fa fa-clock-o"></i> ' . date('g:i A', $event_timestamp);
+						
+						else // Empty, so TBA
+							$return_string .= '<i class="fa fa-clock-o"></i> TBA';
+							
+						
+						
+						// Spacer & Venue Icon
+						$return_string .= ' &nbsp;|&nbsp; <i class="fa fa-map-marker"></i> ';
+						
+						
+						
+						// Place/Venue
+						if( $event_venue != '')
+							$return_string .= $event_venue;
+							
+						else // Empty, so TBA
+							$return_string .= 'Venue TBA';
+					
+					
+					
+					// End Date/Time/Place Syling
+					$return_string .= '</b></small></p>';
+					
+					
+					
+				// End Timeline Heading
+				$return_string .= '</div>';
+				
+				
+				
+				// TIMELINE BODY //
+				$return_string .= '<div class="timeline-body">' . $content . '</div>';
+			
+			
+			
+			// End Timeline Panel
+			$return_string .= '</div>';
+			
+			
+		
+		// Close List Item
+		$return_string .= '</li>';
+		
+				
+	} // Loop
+	
+	
+	// Close UL
+	$return_string .= '</ul>';
+	
+
+	// RETURN CODE
+	return $return_string;
+}
+add_shortcode( 'events', 'shortcode_events' );
 
 
 
@@ -359,28 +537,21 @@ function be_sample_metaboxes( $meta_boxes ) {
     $meta_boxes['ucfbands_event'] = array(
         'id' => 'ucfbands_event',
         'title' => 'Event Details',
-        'pages' => array('event'), // post type
+        'pages' => array('events'), // post type
         'context' => 'normal',
         'priority' => 'high',
         'show_names' => true, // Show field names on the left
         'fields' => array(
 			array(
-				'name' => 'Date',
-				'desc' => "<b>Required:</b> The event's date, not the current date.",
-				'id' => $prefix . 'event_date',
-				'type' => 'text_date'
-			),
-			array(
-				'name' => 'Time',
-                'desc' => 'Leave empty for "TBA"',
-				'id' => $prefix . 'event_time',
-				'type' => 'text_time'
-				// 'time_format' => 'h:i:s A',
+				'name' => 'Date & Time',
+				'desc' => '<b>Date is required</b>. Set time to 12:01 AM for "TBA"!',
+				'id'   => $prefix . 'event_datetime_timestamp',
+				'type' => 'text_datetime_timestamp',
 			),
             array(
                 'name' => 'Location/Venue',
                 'desc' => 'Leave empty for "TBA"',
-                'id' => $prefix . 'position',
+                'id' => $prefix . 'event_venue',
                 'type' => 'text_medium'
             ),
 			array(
@@ -391,6 +562,20 @@ function be_sample_metaboxes( $meta_boxes ) {
 					'fa-calendar'	=> __( 'Calendar', 'cmb' ),
 					'fa-music'   	=> __( 'Music', 'cmb' ),
 					'fa-coffee'		=> __( 'Coffee', 'cmb' )
+				),
+			),			
+			array(
+				'name'    => 'Icon Background Color',
+				'id'      => $prefix . 'event_icon_bgcolor',
+				'type'    => 'radio',
+				'options' => array(
+					'ucf-gray'	=> __( 'UCF Gray', 'cmb' ),
+					'gold'   	=> __( 'Gold', 'cmb' ),
+					'primary'	=> __( 'Blue', 'cmb' ),
+					'success'	=> __( 'Green', 'cmb' ),
+					'warning'	=> __( 'Orange', 'cmb' ),
+					'default'	=> __( 'Gray', 'cmb' ),
+					'danger'	=> __( 'Red', 'cmb' )
 				),
 			),			
         ),
