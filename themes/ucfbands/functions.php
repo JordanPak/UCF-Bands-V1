@@ -238,7 +238,7 @@ function custom_password_form() {
 	$label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
 	$o = '<div class="col-lg-4"><div class="block"><form class="protected-post-form" action="' . get_option('siteurl') . '/wp-login.php?action=postpass" method="post">
 	' . '<h2><i class="fa fa-shield"></i> ' . __( "State the Password" ,'wpbootstrap') . '</h2>' . '
-	<label style="display: none;" for="' . $label . '">' . __( "Password:" ,'wpbootstrap') . ' </label><div class="input-append"><input class="bootstrap_input" name="post_password" id="' . $label . '" type="password" size="20" /><input style="margin-left:10px;" type="submit" name="Submit" class="btn btn-gold" value="' . esc_attr__( "Submit",'wpbootstrap' ) . '" /></div>
+	<label style="display: none;" for="' . $label . '">' . __( "Password:" ,'wpbootstrap') . ' </label><div class="input-append"><input class="bootstrap_input" name="post_password" id="' . $label . '" type="password" size="20" /><input style="margin-left:10px;" type="submit" name="Submit" class="btn btn-gold" value="' . esc_attr__( "Enter",'wpbootstrap' ) . '" /></div>
 	</form></div></div>
 	';
 	return $o;

@@ -259,12 +259,7 @@ function shortcode_events( $atts ) {
 		
 		
 		// Start List Item. Enter bottom margin if archive
-		$return_string .= '<li class="' . $li_class . '" ' . $li_margin . '>';
-			
-		
-			// Display Badge & Icon
-			$return_string .= '<div class="timeline-badge ' . $event_icon_bgcolor . '"><i class="fa ' . $event_icon . '"></i></div>';
-			
+		$return_string .= '<li class="' . $li_class . '" ' . $li_margin . '>';			
 			
 			
 			// TIMELINE PANEL //
