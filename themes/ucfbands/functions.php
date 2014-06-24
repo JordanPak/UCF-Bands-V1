@@ -142,7 +142,7 @@ function wp_bootstrap_register_sidebars() {
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget' => '</div>',
       'before_title' => '<h2 class="widgettitle">',
-      'after_title' => ' <a href="announcements" class="btn btn-default btn-xs">View All</a></h2>',
+      'after_title' => ' <a href="' . get_site_url() . '/announcements" class="btn btn-default btn-xs">View All</a></h2>',
     ));
 
 
@@ -152,8 +152,8 @@ function wp_bootstrap_register_sidebars() {
       'name' => 'Homepage Events',
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget' => '</div>',
-      'before_title' => '<h2 class="widgettitle"><i class="fa fa-calendar"></i> ',
-      'after_title' => ' <a href="events" class="btn btn-default btn-xs">View All</a></h2>',
+      //'before_title' => '<h2 class="widgettitle"><i class="fa fa-calendar"></i> ',
+      //'after_title' => ' <a href="events" class="btn btn-default btn-xs">View All</a></h2>',
     ));
 
 	
@@ -232,16 +232,18 @@ function list_pings($comment, $args, $depth) {
 
 add_filter( 'the_password_form', 'custom_password_form' );
 
+
 function custom_password_form() {
 	global $post;
 	$label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
-	$o = '<div class="clearfix"><form class="protected-post-form" action="' . get_option('siteurl') . '/wp-login.php?action=postpass" method="post">
-	' . '<p>' . __( "This post is password protected. To view it please enter your password below:" ,'wpbootstrap') . '</p>' . '
-	<label for="' . $label . '">' . __( "Password:" ,'wpbootstrap') . ' </label><div class="input-append"><input name="post_password" id="' . $label . '" type="password" size="20" /><input type="submit" name="Submit" class="btn btn-primary" value="' . esc_attr__( "Submit",'wpbootstrap' ) . '" /></div>
-	</form></div>
+	$o = '<div class="col-lg-4"><div class="block"><form class="protected-post-form" action="' . get_option('siteurl') . '/wp-login.php?action=postpass" method="post">
+	' . '<h2><i class="fa fa-shield"></i> ' . __( "State the Password" ,'wpbootstrap') . '</h2>' . '
+	<label style="display: none;" for="' . $label . '">' . __( "Password:" ,'wpbootstrap') . ' </label><div class="input-append"><input class="bootstrap_input" name="post_password" id="' . $label . '" type="password" size="20" /><input style="margin-left:10px;" type="submit" name="Submit" class="btn btn-gold" value="' . esc_attr__( "Submit",'wpbootstrap' ) . '" /></div>
+	</form></div></div>
 	';
 	return $o;
 }
+
 
 /*********** update standard wp tag cloud widget so it looks better ************/
 
@@ -620,5 +622,12 @@ function wp_bootstrap_wp_title( $title, $sep ) {
 }
 add_filter( 'wp_title', 'wp_bootstrap_wp_title', 10, 2 );
 
+
+
+function title_format($content) {
+return '%s';
+}
+add_filter('private_title_format', 'title_format');
+add_filter('protected_title_format', 'title_format');
 
 ?>

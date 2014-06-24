@@ -10,7 +10,7 @@ Template Name: UCFBands Home
             <!--// FIX AFFIX //-->
             <div class="top-fixed">
             
-				 <?php masterslider(2); ?>               
+				 <?php masterslider(3); ?>               
                                     
             </div><!-- /.top-fixed -->
             
@@ -75,8 +75,9 @@ Template Name: UCFBands Home
 						
 						
 						// Home Page - Upcoming Events
-						get_sidebar( 'home_events' ); 
-					
+						//get_sidebar( 'home_events' ); 
+						echo do_shortcode( '[events]' );
+						
 					
 					// End row
 					echo '</div>';

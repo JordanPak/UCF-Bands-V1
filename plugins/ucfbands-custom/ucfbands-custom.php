@@ -17,11 +17,12 @@
 function ucfbands_section_menus() {
 
 	$locations = array(
-		'wind-ensemble' => __( 'Wind Ensemble', 'text_domain' ),
-		'symphonic-band' => __( 'Symphonic Band', 'text_domain' ),
-		'concert-band' => __( 'Concert Band', 'text_domain' ),
-		'marching-knights' => __( 'Marching Knights', 'text_domain' ),
-		'jammin-knights' => __( 'Jammin Knights', 'text_domain' ),
+		'wind-ensemble' 	=> __( 'Wind Ensemble', 'text_domain' ),
+		'symphonic-band' 	=> __( 'Symphonic Band', 'text_domain' ),
+		'concert-band'	 	=> __( 'Concert Band', 'text_domain' ),
+		'marching-knights' 	=> __( 'Marching Knights', 'text_domain' ),
+		'jammin-knights' 	=> __( 'Jammin Knights', 'text_domain' ),
+		'mk-armory' 		=> __( 'MK Armory', 'text_domain' )
 	);
 	register_nav_menus( $locations );
 
@@ -144,20 +145,40 @@ function shortcode_events( $atts ) {
 	// ATTRIBUTES //
 	extract( shortcode_atts(
 		array(
-			'ensemble'	   => 'all-ensembles',
+			'ensemble'	  => 'all-ensembles',
+			'archive'	  => 'no',
+			'num'		  => 3,
+			'width'		  => 4,
+			'title'		  => 'Upcoming Events'
 		), $atts )
 	);
 	
 	
-	// Opening UL
-	$return_string = '<ul class="timeline">';
+	// ARCHIVE: Set num to -1 for unlimited results
+	if( $archive == 'yes' )
+		$num = -1;
+	
+	
+	// ARCHIVE: Put UL in Row
+	if( $archive == 'yes' )
+		$return_string = '<div class="row" style="margin-top: 15px;"><ul class="timeline">';
+	
+	
+	// NOT Archive: Put UL in column & add title + button
+	else
+		$return_string = '
+			<div class="col-lg-' . $width . '">
+				<h2><i class="fa fa-calendar"></i> ' . $title . ' <a class="btn btn-default btn-xs" href="' . get_site_url() . '/events">View All</a></h2>
+				<ul class="timeline">';
 	
 
-	// Testing
+
+	// Time Testing
 	//echo 'MySQL Time: ' . current_time( 'mysql' );	
 	//date_default_timezone_set('America/New_York');
 	//echo '<br>' . date_default_timezone_get();
 	//echo ': ' . date('Y-m-d H:i:s');
+
 
 
 	// Preparing the query for events
@@ -180,8 +201,8 @@ function shortcode_events( $atts ) {
 		'meta_key'		=> '_ucfbands_event_datetime_timestamp',
 		'orderby' 		=> 'meta_value_num',
 		'order' 		=> 'ASC',
-		//'post_count'	=> 5,
-		//'posts_per_page'=> 5,
+		'post_count'	=> $num,
+		'posts_per_page'=> $num,
 		'meta_query'	=> $meta_quer_args
 	);
 	
@@ -198,6 +219,7 @@ function shortcode_events( $atts ) {
 	}
 
 
+
 	// Get Posts associated with events        
 	$events = $events->get_posts();
 
@@ -207,20 +229,37 @@ function shortcode_events( $atts ) {
 	foreach($events as $event)
 	{
 		
-		// Post Content
+		// GET POST CONTENT //
 		$content_post = get_post($event);
 		$content = $content_post->post_content;
 		
 		
-		// Get Post Meta!
+		// GET POST META //
 		$event_icon_bgcolor = get_post_meta( $event, '_ucfbands_event_icon_bgcolor', true );
-		$event_icon	= get_post_meta( $event, '_ucfbands_event_icon', true );
 		$event_venue = get_post_meta( $event, '_ucfbands_event_venue', true);
 		$event_timestamp = get_post_meta ( $event, '_ucfbands_event_datetime_timestamp', true);
 				
 		
-		// Start List Item
-		$return_string .= '<li>';
+		
+		// Determine if columns are needed
+		if( $archive == 'yes' )
+			$li_class = 'col-lg-4';
+		
+		else
+			$li_class = '';
+		
+		
+		
+		// Add extra bottom margin if archive
+		if( $archive == 'yes')
+			$li_margin = 'style="margin-bottom: 35px" ';
+		
+		else
+			$li_margin = '';
+		
+		
+		// Start List Item. Enter bottom margin if archive
+		$return_string .= '<li class="' . $li_class . '" ' . $li_margin . '>';
 			
 		
 			// Display Badge & Icon
@@ -231,62 +270,87 @@ function shortcode_events( $atts ) {
 			// TIMELINE PANEL //
 			$return_string .= '<div class="timeline-panel">';
 			
-				
-				
-				// TIMELINE HEADING //
-				$return_string .= '<div class="timeline-heading">';
-				
-				
-				
-					// EVENT TITLE //
-					$return_string .= '<h4 class="timeline-title">' . get_the_title($event) . '</h4>';
+			
+				// Date "Icon"
+				$return_string .= '<div class="timeline-date ' . $event_icon_bgcolor . '">';
 					
 					
-					
-					// EVENT DATE/TIME/VENUE //
-					$return_string .= '<p><small><b>'; 
-					
-					
-						// Date
-						$return_string .=  date('M d, Y', $event_timestamp) . ' &nbsp|&nbsp; ';
-						
-						
-						
-						// Time
-						if( date('g:i A', $event_timestamp) != '12:01 AM')
-							$return_string .= '<i class="fa fa-clock-o"></i> ' . date('g:i A', $event_timestamp);
-						
-						else // Empty, so TBA
-							$return_string .= '<i class="fa fa-clock-o"></i> TBA';
-							
-						
-						
-						// Spacer & Venue Icon
-						$return_string .= ' &nbsp;|&nbsp; <i class="fa fa-map-marker"></i> ';
-						
-						
-						
-						// Place/Venue
-						if( $event_venue != '')
-							$return_string .= $event_venue;
-							
-						else // Empty, so TBA
-							$return_string .= 'Venue TBA';
+					// Month
+					$return_string .= '<h5 class="timeline-month">' . date('M', $event_timestamp) . '<br>';
 					
 					
-					
-					// End Date/Time/Place Syling
-					$return_string .= '</b></small></p>';
-					
+					// Day
+					$return_string .= '<span>' . date('d', $event_timestamp) . '</span></h5>';
 					
 					
-				// End Timeline Heading
+								
+				// End Timeline Date
 				$return_string .= '</div>';
+			
+				
+				// Timeline content (to keep stuff to the right)
+				$return_string .= '<div class="timeline-content">';
 				
 				
-				
-				// TIMELINE BODY //
-				$return_string .= '<div class="timeline-body">' . $content . '</div>';
+					// TIMELINE HEADING //
+					$return_string .= '<div class="timeline-heading">';
+					
+					
+					
+						// EVENT TITLE //
+						$return_string .= '<h4 class="timeline-title">' . get_the_title($event) . '</h4>';
+						
+						
+						
+						// EVENT DATE/TIME/VENUE //
+						$return_string .= '<p><small><b>'; 
+						
+						
+							// Date (Disabled) 
+							//$return_string .=  date('M d', $event_timestamp) . ' &nbsp|&nbsp; ';
+							
+							
+							
+							// Time
+							if( date('g:i A', $event_timestamp) != '11:59 PM')
+								$return_string .= '<i class="fa fa-clock-o"></i> ' . date('g:i A', $event_timestamp);
+							
+							else // Empty, so TBA
+								$return_string .= '<i class="fa fa-clock-o"></i> TBA';
+								
+							
+							
+							// Spacer & Venue Icon
+							$return_string .= ' &nbsp;|&nbsp; <i class="fa fa-map-marker"></i> ';
+							
+							
+							
+							// Place/Venue
+							if( $event_venue != '')
+								$return_string .= $event_venue;
+								
+							else // Empty, so TBA
+								$return_string .= 'Venue TBA';
+						
+						
+						
+						// End Date/Time/Place Syling
+						$return_string .= '</b></small></p>';
+						
+						
+						
+					// End Timeline Heading
+					$return_string .= '</div>';
+					
+					
+					
+					// TIMELINE BODY //
+					$return_string .= '<div class="timeline-body" style="">' . $content . '</div>';
+			
+			
+			
+				// End Timeline Content
+				$return_string .= '</div>';
 			
 			
 			
@@ -304,6 +368,10 @@ function shortcode_events( $atts ) {
 	
 	// Close UL
 	$return_string .= '</ul>';
+	
+	
+	// Close div (whether it's an archive or not there is one!
+	$return_string .= '</div>';
 	
 
 	// RETURN CODE
@@ -544,7 +612,7 @@ function be_sample_metaboxes( $meta_boxes ) {
         'fields' => array(
 			array(
 				'name' => 'Date & Time',
-				'desc' => '<b>Date is required</b>. Set time to 12:01 AM for "TBA"!',
+				'desc' => '<b>Date is required</b>. Set time to 11:59 PM for "TBA"!',
 				'id'   => $prefix . 'event_datetime_timestamp',
 				'type' => 'text_datetime_timestamp',
 			),
@@ -554,16 +622,6 @@ function be_sample_metaboxes( $meta_boxes ) {
                 'id' => $prefix . 'event_venue',
                 'type' => 'text_medium'
             ),
-			array(
-				'name'    => 'Icon',
-				'id'      => $prefix . 'event_icon',
-				'type'    => 'radio',
-				'options' => array(
-					'fa-calendar'	=> __( 'Calendar', 'cmb' ),
-					'fa-music'   	=> __( 'Music', 'cmb' ),
-					'fa-coffee'		=> __( 'Coffee', 'cmb' )
-				),
-			),			
 			array(
 				'name'    => 'Icon Background Color',
 				'id'      => $prefix . 'event_icon_bgcolor',

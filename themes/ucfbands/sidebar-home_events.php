@@ -1,6 +1,6 @@
 
                 <!--// THIRD WIDTH COL //-->
-                <div class="col-lg-4">
+                <!--<div class="col-lg-4">-->
                                             
                     <div id="" role="complementary">
                     
@@ -22,5 +22,5 @@
     
                     </div>
                                 
-                </div><!-- / Right Column -->         
+                <!--</div>--><!-- / Right Column -->         
 

@@ -5,6 +5,13 @@
  - Every changes here will be overwritten
 ===============================================================*/
 
+.msp-cn-6-3 { background-color:#2cb3df;padding-top:15px;padding-right:30px;padding-bottom:15px;padding-left:30px;font-family:"Lato";font-weight:normal;font-size:50px;line-height:normal;color:#ffffff; } 
+.msp-cn-6-5 { background-color:#cc1e72;padding-top:15px;padding-right:30px;padding-bottom:15px;padding-left:30px;font-family:"Lato";font-weight:normal;font-size:35px;line-height:normal;color:#ffffff; } 
+.msp-cn-6-8 { font-family:"Lato";font-weight:normal;font-size:35px;line-height:normal;color:#444444; } 
+.msp-cn-6-10 { font-family:"Lato";font-weight:normal;font-size:35px;line-height:normal;color:#ffffff; } 
+.msp-cn-6-11 { font-family:"Lato";font-weight:300;font-size:30px;line-height:normal;color:#444444; } 
+.msp-cn-6-24 { font-family:"Lato";font-weight:300;font-size:25px;line-height:normal; } 
+
 .msp-cn-50-5 { font-family:"Open Sans";font-weight:700;font-size:60px;line-height:normal;color:#ffffff; } 
 .msp-cn-50-6 { background-color:#ffffff;padding-top:15px;padding-right:30px;padding-bottom:15px;padding-left:30px;font-weight:normal;font-size:20px;line-height:normal;color:#000000; } 
 .msp-cn-50-10 { background-color:#ffffff;padding-top:15px;padding-right:30px;padding-bottom:15px;padding-left:30px;font-family:"Roboto";font-weight:100;font-size:45px;line-height:normal;color:#444444; } 
