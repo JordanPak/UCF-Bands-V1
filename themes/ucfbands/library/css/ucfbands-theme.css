@@ -737,6 +737,24 @@ input.bootstrap_input {
 	color: #030;
 }
 
+
+/*======================*/
+/*==  WP MUSICDISTRO  ==*/
+/*======================*/
+
+.music-distro-block {
+	width: auto;
+	max-width: 330px;
+	display: block;
+	background-color: #fff;
+	padding: 20px;
+	-webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+	border: 1px solid #d4d4d4;
+	margin-bottom: 35px;
+}
+
+
 /*==============*/
 /*==  SLIDER  ==*/
 /*==============*/

@@ -537,6 +537,11 @@ if( !function_exists("theme_styles") ) {
         wp_register_style( 'ucfbands-custom', get_template_directory_uri() . '/library/css/ucfbands-theme.css', array(), '1.0', 'all' );
         wp_enqueue_style( 'ucfbands-custom' );
 		
+		
+		// MusicDistro CSS
+        wp_register_style( 'music-distro', get_template_directory_uri() . '/library/css/music-distro.css', array(), '1.0', 'all' );
+        wp_enqueue_style( 'music-distro' );
+		
 
 		// Font Awesome CSS // NOW HAVE PLUGIN, but this apparently adds new icons //
         wp_register_style( 'font-awesome', get_template_directory_uri() . '/library/font-awesome/css/font-awesome.min.css', array(), '1.0', 'all' );

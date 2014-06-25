@@ -13,7 +13,7 @@ class Essential_Grid {
 	/**
 	 * Plugin version, used for cache-busting of style and script file references.
 	 */
-	const VERSION = '1.0.7';
+	const VERSION = '1.0.8';
 	const TABLE_GRID = 'eg_grids';
 	const TABLE_ITEM_SKIN = 'eg_item_skins';
 	const TABLE_ITEM_ELEMENTS = 'eg_item_elements';
