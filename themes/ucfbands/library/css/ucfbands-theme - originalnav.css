@@ -25,10 +25,6 @@ body {
 	font-size: 16px;
 }
 
-#wrapper {
-	background-color: #221e1f; /* RECOLOR */
-}
-
 .top-line {
 	display: none;
 	width: 100%;
@@ -83,7 +79,7 @@ a.navbar-brand img {
 	padding: 75px;
 	padding-left: 30px;
 	padding-right: 30px;
-	/*border-bottom: 3px solid #231f20;*/ /* RECOLOR */
+	border-bottom: 3px solid #231f20;
 }
 
 .section-title-faculty {
@@ -99,7 +95,6 @@ a.navbar-brand img {
 	margin-left: 0px;
 	background-color: #FCFCFC;
 	border-left: 0px;
-	box-shadow: inset 2px 0px 3px rgba(0,0,0,0.25); /* RECOLOR */
 }
 
 #page-content {
@@ -258,11 +253,7 @@ a.navbar-brand img {
 .navbar-toggle { 
 	margin-top: 18px;
 	border-radius: 0px;
-	background-color: #141414; /* RECOLOR */
-}
-
-.navbar-default .navbar-toggle {
-	border-color: #ffca06; /* RECOLOR */
+	background-color: #333;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
@@ -294,12 +285,8 @@ a.navbar-brand img {
 }
 
 .navbar-default {
-	background-color: #221e1f; /* RECOLOR */
+	background-color: #fff;
 	border: none;
-}
-
-.navbar-static-side ul li {
-	border-color: #141414; /* RECOLOR */
 }
 
 .navbar-static-side ul li:last-child {
@@ -311,15 +298,13 @@ a.navbar-brand img {
 	font-size: 1em;
 	text-align: center;
 	font-family: 'Droid Serif', Georgia, Sans-serif;
-	color: #fff; /* RECOLOR */
+	color: #000;
 	padding-top: 7px;
 	padding-bottom: 7px;
-    -webkit-transition: 500ms ease-in-out;
-    -moz-transition: 500ms ease-in-out;
-    -o-transition: 500ms ease-in-out;
-	transition: 500ms ease-in-out;
-	text-shadow: 0px 0px 3px #000, 1px 1px 1px rgba(0,0,0,0.4), 0px 0px 3px #000, 2px 2px 1px rgba(0,0,0,0.4); /* RECOLOR */
-
+    -webkit-transition: background 500ms ease-in-out;
+    -moz-transition: background 500ms ease-in-out;
+    -o-transition: background 500ms ease-in-out;
+	transition: background 500ms ease-in-out;
 }
 
 .nav > li > a i {
@@ -327,8 +312,7 @@ a.navbar-brand img {
 }
 
 .nav > li > a:hover {
-	background-color: #141414; /* RECOLOR */
-	/* text-shadow: 0px 0px 3px #efbc00, 1px 1px 1px #efbc00, 0px 0px 3px #efbc00, 2px 2px 1px #efbc00; /* RECOLOR, also on li.active a */
+	background-color: #ffca06;
 }
 
 .nav-second-level > li > a {
@@ -340,7 +324,6 @@ a.navbar-brand img {
 
 .navbar-static-side ul li.active a {
 	background-color: #ffca06;
-	text-shadow: 0px 0px 3px #efbc00, 1px 1px 1px #efbc00, 0px 0px 3px #efbc00, 2px 2px 1px #efbc00; /* RECOLOR */
 }
 
 .navbar-static-side ul li.active ul.nav-second-level > li > a {
@@ -384,9 +367,6 @@ nav.sub {
 	width: 100%;
 	border-radius: 0px;
 	border: none;
-	/*border-bottom: 4px solid #141414; /* RECOLOR */
-	box-shadow: inset 0px -5px #141414;
-	border-top: 5px solid #141414;
 	min-height: 0px;
 }
 
@@ -406,13 +386,12 @@ nav.sub ul li a {
 	margin: 0px;
 	display: block;
 	padding: 15px;
-	padding-top: 9px;
-	padding-bottom: 13px; /* RECOLOR */
+	padding-top: 12px;
+	padding-bottom: 9px;
 	color: #fff;
 	font-weight: bold;
 	text-decoration: none;
-	/*border-bottom: 3px solid rgba(0,0,0,0); RECOLOR */
-	box-shadow: inset 0px -5px #141414; /* RECOLOR */
+	border-bottom: 3px solid rgba(0,0,0,0);
     -webkit-transition: 250ms ease-in-out;
     -moz-transition: 250ms ease-in-out;
     -o-transition: 250ms ease-in-out;
@@ -421,8 +400,7 @@ nav.sub ul li a {
 
 nav.sub ul li a:hover {
 	text-decoration: none;
-	/*border-bottom: 5px solid #ffca06; /* RECOLOR */
-	box-shadow: inset 0px -5px #ffca06;
+	border-bottom: 3px solid #ffca06;
 	color: #ffca06;
 }
 
@@ -553,7 +531,7 @@ img.no-frame {
 
 .ms-container {
 	border-bottom: 1px solid #231f20;	
-	box-shadow: 0px 4px 0px #ffca06; /* RECOLOR */
+	box-shadow: 0px 2px 0px #ffca06;
 }
 
 
@@ -735,8 +713,6 @@ input.bootstrap_input {
 .footer-address a {
 	color: #888;
 	cursor: pointer;
-	text-shadow: 1px 1px 2px #000, 0px 0px 1px #000, 1px 1px 1px rgba(0,0,0,0.5); /* RECOLOR */
-
     -webkit-transition: 300ms ease-in-out;
     -moz-transition: 300ms ease-in-out;
     -o-transition: 300ms ease-in-out;
@@ -744,7 +720,7 @@ input.bootstrap_input {
 }
 
 .footer-address a:hover {
-	color: #F9F9F9; /* RECOLOR */
+	color: #000;
 	text-decoration: none;
 }
 
@@ -1099,7 +1075,7 @@ h1.section-page-title {
 
 	#page-wrapper {
 		margin-left: 250px;
-		border-left: 4px solid #ffca06; /* RECOLOR */
+		border-left: 3px solid #ffca06;
 	}
 
 	.section-title {
@@ -1108,7 +1084,6 @@ h1.section-page-title {
 	
 	.section-title h1 {
 		text-align: left;
-		margin-left: 40px;
 	}
 	
 	.tribe-events-sub-nav li a {

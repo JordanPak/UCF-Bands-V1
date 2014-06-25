@@ -56,7 +56,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 
-                <a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo home_url(); ?>/wp-content/themes/ucfbands/images/logo-header.png"></a>
+                <a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo home_url(); ?>/wp-content/themes/ucfbands/images/logo-header-dark.png"></a>
             
             </div><!-- /.navbar-header -->
 
@@ -66,7 +66,7 @@
             	
 
                 <!--// MAIN LOGO //-->
-                <a class="logo-header" href="<?php echo home_url(); ?>"><img src="<?php echo home_url(); ?>/wp-content/themes/ucfbands/images/logo-header.png"></a>
+                <a class="logo-header" href="<?php echo home_url(); ?>"><img src="<?php echo home_url(); ?>/wp-content/themes/ucfbands/images/logo-header-dark.png"></a>
             
                 
                 <div class="sidebar-collapse">
