@@ -27,7 +27,7 @@
     		?>
                         
             <div class="credits">
-            	<p><a href="<?php echo home_url(); ?>/credits">Website Credits</a> | &copy; UCFBands 2014</p>
+            	<p><a href="<?php echo home_url(); ?>/website-credits">Website Credits</a> | &copy; UCFBands 2014</p>
             </div>
 
 		

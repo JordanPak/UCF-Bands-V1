@@ -70,15 +70,14 @@ a.navbar-brand img {
 .section-title {
 	display: block;
 	width: 100%;
-	/*background-image: url(../images/page-title-sample-bg1.jpg);*/
-	background-position: 0px 70px;
+	/*background-position: 0px 70px;*/
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	/*background-attachment: fixed;*/
 	background-color: #231f20;
 	padding: 75px;
 	padding-left: 30px;
 	padding-right: 30px;
-	/*border-bottom: 3px solid #231f20;*/ /* RECOLOR */
+	border-bottom: 5px solid #141414; /* RECOLOR */
 }
 
 .section-title-faculty {
@@ -397,7 +396,7 @@ nav.sub {
 	border-radius: 0px;
 	border: none;
 	box-shadow: inset 0px -5px #141414;
-	border-top: 5px solid #141414;
+	/*border-top: 5px solid #141414;*/
 	min-height: 0px;
 }
 
@@ -1135,7 +1134,7 @@ h1.section-page-title {
 	}
 
 	.section-title {
-		background-position: 250px 0px;
+		/*background-position: 250px 0px;*/
 	}
 	
 	.section-title h1 {
@@ -1191,7 +1190,7 @@ h1.section-page-title {
 	}
 
 	.section-title {
-		background-position: 330px 0px;
+		/*background-position: 330px 0px;*/
 	}
 }
 

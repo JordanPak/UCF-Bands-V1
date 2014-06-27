@@ -153,6 +153,7 @@ function shortcode_events( $atts ) {
 		), $atts )
 	);
 	
+	echo $ensemble;
 	
 	// ARCHIVE: Set num to -1 for unlimited results
 	if( $archive == 'yes' )
@@ -173,12 +174,66 @@ function shortcode_events( $atts ) {
 	
 
 
-	// Time Testing
+	// TIME TESTING
 	//echo 'MySQL Time: ' . current_time( 'mysql' );	
 	//date_default_timezone_set('America/New_York');
 	//echo '<br>' . date_default_timezone_get();
 	//echo ': ' . date('Y-m-d H:i:s');
-
+	
+	
+	
+	// If 'all-ensembles', get all the sub-categories
+	/*if( $ensemble == 'all-ensembles' )
+	{
+		
+		// Args
+		$all_ensembles_args = array(
+			'child_of' => get_category_by_slug($ensemble)->term_id
+		);
+		
+		
+		// Get categories
+		$all_ensembles = get_categories($all_ensembles_args);
+		
+		
+		// Array for just the category IDs
+		$all_cat_ids = array();
+		
+		
+		// Go through all the categories
+		foreach($all_ensembles as $single_ensemble) {
+			
+			// Grab its ID
+			$curr_id = $single_ensemble->cat_ID;
+			
+			// Convert to an int
+			$curr_id = intval( $curr_id );
+			
+			// Put it in the array
+			array_push( $all_cat_ids, $curr_id );
+		}
+		
+		
+		// Give $ensemble the array of all-ensembles
+		$ensemble = $all_cat_ids;
+		
+		var_dump($ensemble);
+		
+				
+	} // end if $ensembe 
+	
+	*/
+	
+	
+	
+	// Get category IDs for selected category and All Ensembles (if it's not all)	
+	//$all_ensemble_cat = get_category_by_slug( 'all-ensembles' );
+	//$all_ensemble_cat = $all_ensemble_cat->term_id;
+	//$other_cat = get_category_by_slug ( $ensemble );
+	//$other_cat = $other_cat->term_id;
+	// Put the cat ID(s) in array
+	//$ensemble_selection = array($all_ensemble_cat, $other_cat);
+	//var_dump( $ensemble_selection );
 
 
 	// Preparing the query for events
@@ -192,11 +247,14 @@ function shortcode_events( $atts ) {
 		)
 	);
 
-		
+
+	//$ensemble = get_category_by_slug($ensemble);
+
+	
 	// Query Options
 	$events_selection = array(
 		'post_type'		=> 'events',
-		'category_name'	=> $ensemble,
+		'category'		=> $ensemble,
 		'fields' 		=> 'ids', // This is so only the ID is returned instead of the WHOLE post object (Performance)
 		'meta_key'		=> '_ucfbands_event_datetime_timestamp',
 		'orderby' 		=> 'meta_value_num',
@@ -209,14 +267,13 @@ function shortcode_events( $atts ) {
 	
 	// GET POSTS //
 	$events = new WP_Query( $events_selection );
-			
+	
 	
 	// If there are no results
 	if(($events->have_posts()) == false)
 	{
 		$return_string .= '<li><div class="timeline-badge primary"><i class="fa fa-calendar"></i></div><div class="timeline-panel"><div class="timeline-heading">There are no upcoming events found for this ensemble.</div></div></li>';
 	}
-
 
 
 	// Get Posts associated with events        

@@ -113,6 +113,17 @@ function wp_bootstrap_register_sidebars() {
 	/* UCFBANDS CUSTOM SLIDERS */
 	/*=========================*/
 	
+	// Home Slider
+    register_sidebar(array(
+      'id' => 'home_slider',
+      'name' => 'Homepage Master Slider',
+      'before_widget' => '',
+      'after_widget' => '',
+      'before_title' => '',
+      'after_title' => '',
+    ));
+		
+	
 	// Home Featured 1
     register_sidebar(array(
       'id' => 'home_featured_1',

@@ -10,7 +10,7 @@ Template Name: UCFBands Home
             <!--// FIX AFFIX //-->
             <div class="top-fixed">
             
-				 <?php masterslider(3); ?>               
+				 <?php get_sidebar( 'home_slider' ) ?>               
                                     
             </div><!-- /.top-fixed -->
             
@@ -18,32 +18,8 @@ Template Name: UCFBands Home
             
             <!--// PAGE CONTENT //-->
             <div id="page-content">
-                
-				
-                
-                <?php 
-					
-					// If either Featured Block is active, may a row for it/them
-					if ( is_active_sidebar('home_featured_1') || is_active_sidebar('home_featured_2') )
-					{
-					
-						echo '<div class="row">';
-						
-							// Home Page - Featured Block 1
-							if ( is_active_sidebar('home_featured_1') )
-								get_sidebar( 'home_featured_1' );
-						
-							
-							// Home Page - Featured Block 2
-							if ( is_active_sidebar('home_featured_2') )
-								get_sidebar( 'home_featured_2' );
-								
-								
-						echo '</div>';
-                
-				
-					} // End if a featured block is active
-                	
+                                
+                <?php                 	
 					
 					// Start Row
 					echo '<div class="row">';
@@ -81,7 +57,29 @@ Template Name: UCFBands Home
 					
 					// End row
 					echo '</div>';
+		
+		
+					// If either Featured Block is active, may a row for it/them
+					if ( is_active_sidebar('home_featured_1') || is_active_sidebar('home_featured_2') )
+					{
 					
+						echo '<div class="row">';
+						
+							// Home Page - Featured Block 1
+							if ( is_active_sidebar('home_featured_1') )
+								get_sidebar( 'home_featured_1' );
+						
+							
+							// Home Page - Featured Block 2
+							if ( is_active_sidebar('home_featured_2') )
+								get_sidebar( 'home_featured_2' );
+								
+								
+						echo '</div>';
+                
+				
+					} // End if a featured block is active
+				
 				?>		
                             
                             
