@@ -51,8 +51,7 @@ Template Name: UCFBands Home
 						
 						
 						// Home Page - Upcoming Events
-						//get_sidebar( 'home_events' ); 
-						echo do_shortcode( '[events]' );
+						get_sidebar( 'home_events' ); 
 						
 					
 					// End row

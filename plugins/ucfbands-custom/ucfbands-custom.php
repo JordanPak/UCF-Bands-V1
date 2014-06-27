@@ -157,11 +157,11 @@ function shortcode_events( $atts ) {
 	// ARCHIVE: Set num to -1 for unlimited results
 	if( $archive == 'yes' )
 		$num = -1;
-	
+
 	
 	// ARCHIVE: Put UL in Row
 	if( $archive == 'yes' )
-		$return_string = '<div class="row" style="margin-top: 15px;"><ul class="timeline">';
+		$return_string = '<div class="row" style="margin-top: 15px;"><ul class="timeline">';	
 	
 	
 	// NOT Archive: Put UL in column & add title + button
@@ -186,7 +186,7 @@ function shortcode_events( $atts ) {
 	$meta_quer_args = array(
 		'relation'	=>	'AND',
 		array(
-			'key'		=>	'_ucfbands_event_datetime_timestamp',
+			'key'		=>	'_ucfbands_event_end_datetime_timestamp',
 			'value'		=>	time(),
 			'compare'	=>	'>'
 		)
@@ -198,7 +198,7 @@ function shortcode_events( $atts ) {
 		'post_type'		=> 'events',
 		'category_name'	=> $ensemble,
 		'fields' 		=> 'ids', // This is so only the ID is returned instead of the WHOLE post object (Performance)
-		'meta_key'		=> '_ucfbands_event_datetime_timestamp',
+		'meta_key'		=> '_ucfbands_event_start_datetime_timestamp',
 		'orderby' 		=> 'meta_value_num',
 		'order' 		=> 'ASC',
 		'post_count'	=> $num,
@@ -233,11 +233,34 @@ function shortcode_events( $atts ) {
 		$content = $content_post->post_content;
 		
 		
+		
 		// GET POST META //
-		$event_icon_bgcolor = get_post_meta( $event, '_ucfbands_event_icon_bgcolor', true );
-		$event_venue = get_post_meta( $event, '_ucfbands_event_venue', true);
-		$event_timestamp = get_post_meta ( $event, '_ucfbands_event_datetime_timestamp', true);
-				
+		$event_icon_bgcolor		= get_post_meta( $event, '_ucfbands_event_icon_bgcolor', true );
+		$event_venue			= get_post_meta( $event, '_ucfbands_event_venue', true);
+		$event_start_timestamp  = get_post_meta( $event, '_ucfbands_event_start_datetime_timestamp', true);
+		$event_end_timestamp	= get_post_meta( $event, '_ucfbands_event_end_datetime_timestamp', true);
+		$event_show_end_time	= get_post_meta( $event, '_ucfbands_event_show_end_time', true);
+		
+		
+		
+		// CONVERT TO TIME STRINGS //
+		$event_start_month	= date('M', $event_start_timestamp);
+		$event_start_day	= date('j', $event_start_timestamp);
+		$event_start_time 	= date('g:i A', $event_start_timestamp);
+		
+		$event_end_month	= date('M', $event_end_timestamp);
+		$event_end_day	= date('j', $event_end_timestamp);
+		$event_end_time 	= date('g:i A', $event_end_timestamp);
+		
+		
+		
+		// CHANGE TIME & VENUE FLAGS TO TEXT //
+		if( $event_start_time == '11:59 PM' )
+			$event_start_time = 'TBA';
+			
+		if( $event_start_time == '11:58 PM' )
+			$event_start_time = 'Daily';
+			
 		
 		
 		// Determine if columns are needed
@@ -270,12 +293,19 @@ function shortcode_events( $atts ) {
 					
 					
 					// Month
-					$return_string .= '<h5 class="timeline-month">' . date('M', $event_timestamp) . '<br>';
+					if( $event_start_month == $event_end_month )
+						$return_string .= '<h5 class="timeline-month">' . $event_start_month . '<br>';
+						
+					else
+						$return_string .= '<h5 class="timeline-month">' . $event_start_month . ' / ' . $event_end_month . '<br>';
 					
 					
 					// Day
-					$return_string .= '<span>' . date('d', $event_timestamp) . '</span></h5>';
-					
+					if( $event_start_day == $event_end_day )
+						$return_string .= '<span>' . $event_start_day . '</span></h5>';
+						
+					else
+						$return_string .= '<span class="event-multi-day">' . $event_start_day . ' - ' . $event_end_day . '</span></h5>';
 					
 								
 				// End Timeline Date
@@ -298,33 +328,28 @@ function shortcode_events( $atts ) {
 						
 						// EVENT DATE/TIME/VENUE //
 						$return_string .= '<p><small><b>'; 
+													
+							
+						// TIME //
+						$return_string .= '<i class="fa fa-clock-o"></i> ' . $event_start_time;
+													
+						
+						// If end time is desired and start time isn't TBA
+						if( ($event_show_end_time == 'yes') && ($event_start_time != 'TBA') )
+							$return_string .= ' - ' . date('g:i A', $event_end_timestamp);
 						
 						
-							// Date (Disabled) 
-							//$return_string .=  date('M d', $event_timestamp) . ' &nbsp|&nbsp; ';
+						// Spacer & Venue Icon
+						$return_string .= ' &nbsp;|&nbsp; <i class="fa fa-map-marker"></i> ';
+						
+						
+						
+						// Place/Venue
+						if( $event_venue != '')
+							$return_string .= $event_venue;
 							
-							
-							
-							// Time
-							if( date('g:i A', $event_timestamp) != '11:59 PM')
-								$return_string .= '<i class="fa fa-clock-o"></i> ' . date('g:i A', $event_timestamp);
-							
-							else // Empty, so TBA
-								$return_string .= '<i class="fa fa-clock-o"></i> TBA';
-								
-							
-							
-							// Spacer & Venue Icon
-							$return_string .= ' &nbsp;|&nbsp; <i class="fa fa-map-marker"></i> ';
-							
-							
-							
-							// Place/Venue
-							if( $event_venue != '')
-								$return_string .= $event_venue;
-								
-							else // Empty, so TBA
-								$return_string .= 'Venue TBA';
+						else // Empty, so TBA
+							$return_string .= 'Venue TBA';
 						
 						
 						
@@ -605,11 +630,27 @@ function be_sample_metaboxes( $meta_boxes ) {
         'show_names' => true, // Show field names on the left
         'fields' => array(
 			array(
-				'name' => 'Date & Time',
-				'desc' => '<b>Date is required</b>. Set time to 11:59 PM for "TBA"!',
-				'id'   => $prefix . 'event_datetime_timestamp',
+				'name' => 'Start Date & Time',
+				'desc' => '<b>Both Date and time are required.</b><br><br>Set time to 11:59 PM for "TBA".<br>Set time to 11:58 PM for "Daily".',
+				'id'   => $prefix . 'event_start_datetime_timestamp',
 				'type' => 'text_datetime_timestamp',
 			),
+			array(
+				'name' => 'End Date & Time',
+				'desc' => '<b>Both Date and Time are required. </b><br><br>End dates do not show in UE section if they are the same as the start date.<br>Set time to 11:59 PM for TBA/Unknown end time.',
+				'id'   => $prefix . 'event_end_datetime_timestamp',
+				'type' => 'text_datetime_timestamp',
+			),
+			array(
+				'name'    => 'Show End Time',
+				'id'      => $prefix . 'event_show_end_time',
+				'type'    => 'radio',
+				'default' => 'no',
+				'options' => array(
+					'no'	=> __( 'No', 'cmb' ),
+					'yes'   => __( 'Yes', 'cmb' ),
+				),
+			),			
             array(
                 'name' => 'Location/Venue',
                 'desc' => 'Leave empty for "TBA"',
@@ -620,6 +661,7 @@ function be_sample_metaboxes( $meta_boxes ) {
 				'name'    => 'Icon Background Color',
 				'id'      => $prefix . 'event_icon_bgcolor',
 				'type'    => 'radio',
+				'default' => 'ucf-gray',
 				'options' => array(
 					'ucf-gray'	=> __( 'UCF Gray', 'cmb' ),
 					'gold'   	=> __( 'Gold', 'cmb' ),

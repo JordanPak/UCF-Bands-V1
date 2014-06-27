@@ -166,10 +166,10 @@ a.navbar-brand img {
 }
 
 .timeline-date {
-	width: 70px;
+	min-width: 70px;
 	float: left;
 	display: block;
-	padding: 18px;
+	padding: 15px;
 	padding-top: 5px;
 	padding-bottom: 4px;
 	margin-right: 20px;
@@ -218,6 +218,13 @@ a.navbar-brand img {
 
 .timeline-date h5 span {
 	font-size: 28px;
+	margin: 0px;
+	position: relative;
+	top: 4px;
+}
+
+.timeline-date h5 span.event-multi-day {
+	font-size: 20px;
 	margin: 0px;
 	position: relative;
 	top: 4px;
@@ -1034,6 +1041,7 @@ h1.section-page-title {
 }
 
 
+
 /*=====================*/
 /*==  MEDIA QUERIES  ==*/
 /*=====================*/
@@ -1193,6 +1201,8 @@ h1.section-page-title {
 		/*background-position: 330px 0px;*/
 	}
 }
+
+
 
 
 
