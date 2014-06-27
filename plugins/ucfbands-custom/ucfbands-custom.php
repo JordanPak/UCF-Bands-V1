@@ -236,10 +236,12 @@ function shortcode_events( $atts ) {
 		
 		// GET POST META //
 		$event_icon_bgcolor		= get_post_meta( $event, '_ucfbands_event_icon_bgcolor', true );
-		$event_venue			= get_post_meta( $event, '_ucfbands_event_venue', true);
-		$event_start_timestamp  = get_post_meta( $event, '_ucfbands_event_start_datetime_timestamp', true);
-		$event_end_timestamp	= get_post_meta( $event, '_ucfbands_event_end_datetime_timestamp', true);
-		$event_show_end_time	= get_post_meta( $event, '_ucfbands_event_show_end_time', true);
+		$event_venue			= get_post_meta( $event, '_ucfbands_event_venue', true );
+		$event_start_timestamp  = get_post_meta( $event, '_ucfbands_event_start_datetime_timestamp', true );
+		$event_end_timestamp	= get_post_meta( $event, '_ucfbands_event_end_datetime_timestamp', true );
+		$event_all_day_event	= get_post_meta( $event, '_ucfbands_event_all_day_event', true );
+		$event_show_start_time	= get_post_meta( $event, '_ucfbands_event_show_start_time', true );
+		$event_show_end_time	= get_post_meta( $event, '_ucfbands_event_show_end_time', true );
 		
 		
 		
@@ -255,10 +257,10 @@ function shortcode_events( $atts ) {
 		
 		
 		// CHANGE TIME & VENUE FLAGS TO TEXT //
-		if( $event_start_time == '11:59 PM' )
+		if( $event_show_start_time == 'no' )
 			$event_start_time = 'TBA';
 			
-		if( $event_start_time == '11:58 PM' )
+		if( $event_all_day_event == true )
 			$event_start_time = 'Daily';
 			
 		
@@ -631,24 +633,40 @@ function be_sample_metaboxes( $meta_boxes ) {
         'fields' => array(
 			array(
 				'name' => 'Start Date & Time',
-				'desc' => '<b>Both Date and time are required.</b><br><br>Set time to 11:59 PM for "TBA".<br>Set time to 11:58 PM for "Daily".',
+				'desc' => '<b>Both Date and time are required.</b>',
 				'id'   => $prefix . 'event_start_datetime_timestamp',
 				'type' => 'text_datetime_timestamp',
 			),
 			array(
 				'name' => 'End Date & Time',
-				'desc' => '<b>Both Date and Time are required. </b><br><br>End dates do not show in UE section if they are the same as the start date.<br>Set time to 11:59 PM for TBA/Unknown end time.',
+				'desc' => '<b>Both Date and Time are required.</b><br><br>End dates do not show if they are the same as the start date.',
 				'id'   => $prefix . 'event_end_datetime_timestamp',
 				'type' => 'text_datetime_timestamp',
 			),
+			array(
+				'name' => 'All-Day Event',
+				'desc' => '<br><br>Checking this will display "Daily" instead of the start/end time or "TBA".<br><b>Start and end times must still be set so the item stays on the website for the appropriate time!',
+				'id' => $prefix . 'event_all_day_event',
+				'type' => 'checkbox'
+			),
+			array(
+				'name'    => 'Show Start Time',
+				'id'      => $prefix . 'event_show_start_time',
+				'type'    => 'radio',
+				'default' => 'yes',
+				'options' => array(
+					'yes'	=> __( 'Yes', 'cmb' ),
+					'no'   => __( 'No (Time TBA)', 'cmb' ),
+				),
+			),			
 			array(
 				'name'    => 'Show End Time',
 				'id'      => $prefix . 'event_show_end_time',
 				'type'    => 'radio',
 				'default' => 'no',
 				'options' => array(
-					'no'	=> __( 'No', 'cmb' ),
-					'yes'   => __( 'Yes', 'cmb' ),
+					'yes'	=> __( 'Yes', 'cmb' ),
+					'no'   => __( 'No', 'cmb' ),
 				),
 			),			
             array(
@@ -663,13 +681,13 @@ function be_sample_metaboxes( $meta_boxes ) {
 				'type'    => 'radio',
 				'default' => 'ucf-gray',
 				'options' => array(
-					'ucf-gray'	=> __( 'UCF Gray', 'cmb' ),
-					'gold'   	=> __( 'Gold', 'cmb' ),
+					'ucf-gray'	=> __( '<b>Concert Ensemble:</b> UCF Gray', 'cmb' ),
+					'gold'   	=> __( '<b>Athletic:</b> Gold', 'cmb' ),
+					'success'	=> __( '<b>General/Clinic:</b> Green', 'cmb' ),
+					'danger'	=> __( '<b>Audition:</b> Red', 'cmb' ),
 					'primary'	=> __( 'Blue', 'cmb' ),
-					'success'	=> __( 'Green', 'cmb' ),
 					'warning'	=> __( 'Orange', 'cmb' ),
-					'default'	=> __( 'Gray', 'cmb' ),
-					'danger'	=> __( 'Red', 'cmb' )
+					'default'	=> __( 'Gray', 'cmb' )
 				),
 			),			
         ),

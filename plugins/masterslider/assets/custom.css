@@ -5,14 +5,11 @@
  - Every changes here will be overwritten
 ===============================================================*/
 
-.msp-cn-3-3 { background-color:#ffca06;padding-top:15px;padding-right:30px;padding-bottom:15px;padding-left:30px;font-family:"Droid Serif";font-weight:normal;font-size:50px;line-height:normal;color:#ffffff; } 
-.msp-cn-6-5 { background-color:#cc1e72;padding-top:15px;padding-right:30px;padding-bottom:15px;padding-left:30px;font-family:"Lato";font-weight:normal;font-size:35px;line-height:normal;color:#ffffff; } 
 .msp-cn-3-8 { background-color:#252525;padding-top:10px;padding-right:15px;padding-bottom:13px;padding-left:15px;border-bottom:4px;border-color:#ffca06;border-style:solid;font-family:"Oswald";font-weight:normal;font-size:35px;line-height:normal;color:#ffffff; } 
-.msp-cn-3-11 { font-family:"Lato";font-weight:300;font-size:30px;line-height:normal;color:#ffffff; } 
-.msp-cn-6-24 { font-family:"Lato";font-weight:300;font-size:25px;line-height:normal; } 
 .msp-cn-3-34 { background-color:#0b0b0b;padding-top:15px;padding-right:30px;padding-bottom:15px;padding-left:30px;font-family:"Lato";font-weight:normal;font-size:35px;line-height:normal;color:#ffffff; } 
 .msp-cn-3-35 { font-family:"Lato";font-weight:300;font-size:25px;line-height:normal; } 
 .msp-cn-3-37 { font-family:"Oswald";font-weight:normal;font-size:42px;line-height:normal;color:#ffffff;color: #fff !important; } 
+.msp-cn-3-38 { background-color:#ffca06;padding-top:10px;padding-right:15px;padding-bottom:10px;padding-left:15px;font-family:"Droid Serif";font-weight:normal;font-size:42px;line-height:normal;color:#ffffff; } 
 
 .msp-cn-50-5 { font-family:"Open Sans";font-weight:700;font-size:60px;line-height:normal;color:#ffffff; } 
 .msp-cn-50-6 { background-color:#ffffff;padding-top:15px;padding-right:30px;padding-bottom:15px;padding-left:30px;font-weight:normal;font-size:20px;line-height:normal;color:#000000; } 

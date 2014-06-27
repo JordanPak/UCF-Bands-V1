@@ -35,19 +35,6 @@ Template Name: Contact
                         ?>
                         
                         
-                        <!--// ADDRESS //-->
-                        <div class="col-lg-3">
-                        	<div class="block">
-                            	<p><b>
-                                	University of Central Florida Bands<br>
-                                    Department of Music<br>
-                                    4000 Central Florida Blvd.<br>
-                                    Orlando, FL 32816-1354
-                                </b></p>
-                        	</div><!-- /.block -->
-                        </div><!-- /.col -->
-                        
-                        
                         <!--// GOOGLE MAP //-->
                         <div class="col-lg-6">
                         	<div class="block">
