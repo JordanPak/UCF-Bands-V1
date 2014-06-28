@@ -26,6 +26,10 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+img.logo-social {
+	display: none;
+}
+
 #wrapper {
 	background-color: #221e1f; /* RECOLOR */
 }

@@ -37,6 +37,9 @@
     
 <body>
 
+	<!-- "LIGHT" LOGO FOR SOCIAL MEDIA LINKS -->
+    <img class="logo-social" src="<?php echo home_url(); ?>/wp-content/themes/ucfbands/images/logo-header.png" alt="UCFBands.com">
+
 	<!-- TOP LINE -->
     <div class="top-line"></div>
 
