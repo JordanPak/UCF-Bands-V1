@@ -559,10 +559,12 @@ if( !function_exists("theme_styles") ) {
         wp_enqueue_style( 'music-distro' );
 		
 
-		// Font Awesome CSS // NOW HAVE PLUGIN, but this apparently adds new icons //
-        wp_register_style( 'font-awesome', get_template_directory_uri() . '/library/font-awesome/css/font-awesome.min.css', array(), '1.0', 'all' );
+		// Font Awesome CSS // CDN //
+        //wp_register_style( 'font-awesome', get_template_directory_uri() . '/library/font-awesome/css/font-awesome.min.css', array(), '1.0', 'all' );
+        //wp_enqueue_style( 'font-awesome' );
+        wp_register_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', array(), '1.0', 'all' );
         wp_enqueue_style( 'font-awesome' );
-
+		
 
 		// Google Fonts
         wp_register_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic|Oswald', array(), '1.0', 'all' );

@@ -274,3 +274,15 @@ margin-top: 10px;
 	-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
+
+
+.block .gform_body ul li {
+	margin-bottom: 0px;
+    padding-left: 0px; 
+    text-indent: 0px;
+}
+
+
+.block .gform_body ul li:before {
+	display: none;
+}

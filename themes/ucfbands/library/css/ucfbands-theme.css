@@ -20,7 +20,7 @@
 }
 
 body {
-	padding-top: 50px;
+	padding-top: 70px;
 	background-color: #fff;
 	font-size: 16px;
 	font-family: Arial, Helvetica, sans-serif;
@@ -141,9 +141,9 @@ a.navbar-brand img {
 }
 
 
-/*=================*/
-/*==  HOME PAGE  ==*/
-/*=================*/
+/*=======================*/
+/*==  UPCOMING EVENTS  ==*/
+/*=======================*/
 
 .timeline:before { 
 	display: none; /* Disabled */
@@ -153,6 +153,21 @@ a.navbar-brand img {
 
 .timeline > li > .timeline-panel:after, .timeline > li > .timeline-panel:before {
 	display: none; /* Disabled */
+}
+
+.block ul.timeline li {
+	margin-bottom: 0px;
+    padding-left: 0px; 
+    text-indent: 0px;
+}
+
+.block ul.timeline {
+	list-style-image: none;
+	padding-left: 0px;
+}
+
+.block ul.timeline li:last-child hr {
+	display: none;
 }
 
 .timeline > li > .timeline-panel {
@@ -527,12 +542,12 @@ nav.sub ul.dropdown-menu li a:hover {
 	height: auto;
 }
 
-img.pull-right, img.alignright {
+img.pull-right, img.alignright, div.alignright {
 	margin-left: 30px;
 	margin-bottom: 30px;
 }
 
-img.pull-left {
+img.pull-left, img.alignleft, div.alignleft {
 	margin-right: 30px;
 	margin-bottom: 30px;
 }
@@ -548,6 +563,12 @@ img.no-frame {
 	padding: 0px;
 	background: none;
 	border: none;
+}
+
+.wp-caption p {
+	margin-top: 8px;
+	text-align: center;
+	color: #777;
 }
 
 /*.attachment-wpbs-featured {
@@ -567,8 +588,43 @@ img.no-frame {
 /*==  LISTS  ==*/
 /*=============*/
 
+.block ul {
+    list-style: none;
+	list-style-image: url(../../images/bullet-gold.png);
+	list-style-position: outside;
+    padding: 0;
+	padding-left: 30px;
+    margin: 0;
+}
+
 .block ul li {
 	margin-bottom: 10px;
+	padding-left:
+}
+
+.block ul.black {
+	list-style-image: url(../../images/bullet-black.png);
+}
+
+.block ul.green {
+	list-style-image: url(../../images/bullet-green.png);
+}
+
+.block ul.blue {
+	list-style-image: url(../../images/bullet-blue.png);
+}
+
+.block ul.red {
+	list-style-image: url(../../images/bullet-red.png);
+}
+
+.block ul.checkmark {
+	list-style-image: url(../../images/bullet-checkmark.png);
+}
+
+
+.block ul.list-group li {
+	margin-bottom: 0px;
 }
 
 
@@ -581,10 +637,54 @@ img.no-frame {
 	box-shadow: 0px 4px 0px #ffca06; /* RECOLOR */
 }
 
+.slider-white-text-button a {
+	color: #fff;
+}
+
+.slider-white-text-button a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+	
+
+.slider-athletic-button-lg a {
+	color: #fff;
+    -webkit-transition: 300ms ease-in-out;
+    -moz-transition: 300ms ease-in-out;
+    -o-transition: 300ms ease-in-out;
+	transition: 300ms ease-in-out;
+}
+
+.slider-athletic-button-lg a:hover {
+	text-decoration: none;
+}
+
+.slider-athletic-metallic-button-lg a {
+	color: #fff;
+    -webkit-transition: 250ms ease-in-out;
+    -moz-transition: 250ms ease-in-out;
+    -o-transition: 250ms ease-in-out;
+	transition: 250ms ease-in-out;
+}
+
+.slider-athletic-metallic-button-lg a:hover {
+	text-decoration: none;
+	color: #b5985a;
+}
+
 
 /*======================*/
 /*==  ESSENTIAL GRID  ==*/
 /*======================*/
+
+.esg-grid ul li {
+	padding-left: 0px;
+	text-indent: 0px;
+}
+
+.esg-grid ul li:before {
+	display: none;
+}
 
 .esg-overflowtrick {
 	overflow: visible !important;
@@ -1144,7 +1244,6 @@ h1.section-page-title {
 	}
 
 	.section-title {
-		/*background-position: 250px 0px;*/
 	}
 	
 	.section-title h1 {
@@ -1200,13 +1299,23 @@ h1.section-page-title {
 	}
 
 	.section-title {
-		/*background-position: 330px 0px;*/
 	}
 }
 
+@media(min-width:1922px) {
+	
+	.section-title {
+		background-size: cover;
+	  	-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+		padding: 100px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
 
-
-
+}
 
 
 

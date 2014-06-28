@@ -149,7 +149,8 @@ function shortcode_events( $atts ) {
 			'archive'	  => 'no',
 			'num'		  => 3,
 			'width'		  => 4,
-			'title'		  => 'Upcoming Events'
+			'title'		  => 'Upcoming Events',
+			'block'		  => 'yes'
 		), $atts )
 	);
 	
@@ -166,11 +167,18 @@ function shortcode_events( $atts ) {
 	
 	// NOT Archive: Put UL in column & add title + button
 	else
-		$return_string = '
-			<div class="col-lg-' . $width . '">
+	{
+		
+		if( $block == 'yes' )
+			$return_string = '<div class="col-lg-' . $width . '">
 				<h2><i class="fa fa-calendar"></i> ' . $title . ' <a class="btn btn-default btn-xs" href="' . get_site_url() . '/events">View All</a></h2>
 				<ul class="timeline">';
-	
+				
+		else
+			$return_string = '
+				<h2><i class="fa fa-calendar"></i> ' . $title . ' <a class="btn btn-default btn-xs" href="' . get_site_url() . '/events">View All</a></h2>
+				<ul class="timeline" style="padding-top: 10px;">';
+	}
 
 
 	// Time Testing
@@ -268,6 +276,9 @@ function shortcode_events( $atts ) {
 		// Determine if columns are needed
 		if( $archive == 'yes' )
 			$li_class = 'col-lg-4';
+			
+		else if( $block == 'no' )
+			$li_class = '';
 		
 		else
 			$li_class = '';
@@ -287,7 +298,8 @@ function shortcode_events( $atts ) {
 			
 			
 			// TIMELINE PANEL //
-			$return_string .= '<div class="timeline-panel">';
+			if( $block == 'yes' )
+				$return_string .= '<div class="timeline-panel">';
 			
 			
 				// Date "Icon"
@@ -375,9 +387,12 @@ function shortcode_events( $atts ) {
 			
 			
 			
-			// End Timeline Panel
-			$return_string .= '</div>';
+			// End Timeline Panel, unless there's no block.
+			if( $block == 'yes' )
+				$return_string .= '</div>';
 			
+			else
+				$return_string .= '<div style="clear:both; width: 100%; height: 1px;"></div><hr>';
 			
 		
 		// Close List Item
@@ -391,8 +406,9 @@ function shortcode_events( $atts ) {
 	$return_string .= '</ul>';
 	
 	
-	// Close div (whether it's an archive or not there is one!
-	$return_string .= '</div>';
+	// Close div (whether it's an archive or not there is one!, unless there's no block!)
+	if( $block == 'yes' )
+		$return_string .= '</div>';
 	
 
 	// RETURN CODE
