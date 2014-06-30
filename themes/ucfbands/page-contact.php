@@ -55,7 +55,7 @@ Template Name: Contact
 							<div class="col-lg-6">
 								<div class="block">
 									
-									<iframe width="100%" height="600px%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=University%20of%20Central%20Florida%20Bands%20Department%20of%20Music&key=AIzaSyBwRMGuuEA0HhosFyJCAGz6-AY1de5JKHc"></iframe>
+									<iframe width="100%" height="600px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=12488%20Centaurus%20Boulevard%2C%20Orlando%2C%20FL%2C%20United%20States&key=AIzaSyBwRMGuuEA0HhosFyJCAGz6-AY1de5JKHc"></iframe>
 									
 								</div>
 							</div>

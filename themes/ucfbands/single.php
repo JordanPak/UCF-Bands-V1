@@ -3,6 +3,7 @@
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
             
+            <?php /* Disabled 
             <!--// FIX AFFIX //-->
             <div class="top-fixed">
             
@@ -10,7 +11,7 @@
                 <?php 
 				
 					// Get Featured Image Link // 
-					$single_featured_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+					//$single_featured_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 						
 				?>
             
@@ -23,12 +24,17 @@
                 
                                     
             </div><!-- /.top-fixed -->
+			*/ ?>
 
             
             <!--// PAGE CONTENT //-->
             <div id="page-content">
                 
                 <br><br>
+ 
+                 <!--// PAGE TITLE //-->
+                <h1 class="page-title"><?php the_title(); ?></h1>    
+
                 
 				<div class="row">
 				

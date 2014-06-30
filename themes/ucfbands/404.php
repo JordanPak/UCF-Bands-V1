@@ -1,5 +1,46 @@
 <?php get_header(); ?>
 			
+            <!--// PAGE CONTENT //-->
+            <div id="page-content">
+                
+                <br><br>
+                 
+				<div class="row">
+				
+                    <!--// MAIN VERBIAGE //-->
+                    <div class="col-lg-8">
+                                        
+                        <div class="block">
+                                                    
+                                                            
+								<h1><?php _e("Page Not Found","wpbootstrap"); ?><small> 404</small></h1>
+								<p><?php _e("Sorry, it looks like what you're looking for isn't here! :(","wpbootstrap"); ?></p>
+                        		
+                                <br>
+                                
+                           		<p><a class="btn btn-lg btn-gold" href="<?php echo home_url(); ?>"><i class="fa fa-home"></i> UCF Bands Home</a></p>
+                                
+                        </div><!-- /.block -->
+                                            
+                    </div><!-- / Main Verbiage -->   
+                    
+                    
+                    
+					<?php get_sidebar(); // sidebar 1 ?>
+                                                        
+                
+                
+                
+            	</div><!-- /.row -->
+                
+            </div><!-- /#page-content -->
+
+<?php get_footer(); ?>
+
+
+<?php /* ORIGINAL 
+<?php get_header(); ?>
+			
 			<div id="content" class="clearfix row">
 			
 				<div id="main" class="col-sm-12 clearfix" role="main">
@@ -40,3 +81,4 @@
 			</div> <!-- end #content -->
 
 <?php get_footer(); ?>
+*/ ?>

@@ -78,6 +78,7 @@ a.navbar-brand img {
 	background-repeat: no-repeat;
 	/*background-attachment: fixed;*/
 	background-color: #231f20;
+	background-position: top center;
 	padding: 75px;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -699,12 +700,28 @@ img.no-frame {
 	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
 }
 
+.eg-ucfbands-announcement-no-cat-wrapper {
+	-webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+}
+
 #page-content .esg-entry-media img {
 	padding: 0px;
 	border: 0px;
 }
 
 .esg-content a {
+	display: inline-block;
+	/*color: #efbc00 !important;*/
+	color: #000;
+    -webkit-transition: 300ms ease-in-out;
+    -moz-transition: 300ms ease-in-out;
+    -o-transition: 300ms ease-in-out;
+	transition: 300ms ease-in-out;
+}
+
+.esg-content a:hover {
+	text-decoration: none;
 }
 
 .esg-loadmore {
