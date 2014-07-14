@@ -325,8 +325,7 @@ $panel_header = 'h4';
                                 	
                                     
                                     <form class="form-horizontal" role="form">
-                                                                             
-                                        
+                                                                                
                                         <?php 										
                                             
     
@@ -365,6 +364,7 @@ $panel_header = 'h4';
                                             // Display dropdown for categories
                                             wp_dropdown_categories( $catArgs );
                                         ?>                 
+                                                
                                                                                 
                                         <!-- Submit Button for Selecting Instrument -->
                                         <button type="submit" class="btn <?php echo $select_instrument_theme;?>"><?php echo $select_instrument_text; ?></button>

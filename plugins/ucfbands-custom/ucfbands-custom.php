@@ -165,6 +165,25 @@ function shortcode_events( $atts ) {
 		$return_string = '<div class="row" style="margin-top: 15px;"><ul class="timeline">';	
 	
 	
+
+	// NOT Archive: Put UL in column & add title + button
+	else
+	{
+		
+		if( $block == 'yes' )
+			$return_string = '<div class="col-lg-' . $width . '">
+				<h2><i class="fa fa-calendar"></i> ' . $title . ' <a class="btn btn-default btn-xs" href="http://ucfbands.com/?page_id=812">View All</a></h2>
+				<ul class="timeline">';
+				
+		else
+			$return_string = '
+				<h2><i class="fa fa-calendar"></i> ' . $title . ' <a class="btn btn-default btn-xs" href="http://ucfbands.com/?page_id=812">View All</a></h2>
+				<ul class="timeline" style="padding-top: 10px;">';
+	}
+
+
+
+/* BACKUP FROM TEMPORARY
 	// NOT Archive: Put UL in column & add title + button
 	else
 	{
@@ -179,6 +198,7 @@ function shortcode_events( $atts ) {
 				<h2><i class="fa fa-calendar"></i> ' . $title . ' <a class="btn btn-default btn-xs" href="' . get_site_url() . '/events">View All</a></h2>
 				<ul class="timeline" style="padding-top: 10px;">';
 	}
+*/
 
 
 	// Time Testing
@@ -415,6 +435,221 @@ function shortcode_events( $atts ) {
 	return $return_string;
 }
 add_shortcode( 'events', 'shortcode_events' );
+
+
+
+//---------------------------//
+// FACULTY & STAFF SHORTCODE //
+//---------------------------//
+function shortcode_staff( $atts ) {
+
+	// ATTRIBUTES //
+	extract( shortcode_atts(
+		array(
+		), $atts )
+	);
+	 
+	
+	$return_string = '';
+	
+
+	$return_string .= '<div class="row">';
+
+
+	// SHOW FACULTY FIRST //
+
+		
+		// Post Variable
+		global $post;
+				
+	
+		// FACULTY CHECK //
+		if( get_post_meta( $post->ID, '_ucfbands_staff_is_faculty', true ) == 'is_faculty' ) {
+		 
+				
+		
+		// STAFF MEMEBER //
+		$return_string .= '<div class="col-lg-6"><div class="block block-staff">';
+				
+				
+					//-------------------//
+					// SHOW FACULTY INFO //
+					//-------------------//	
+					
+					// Display Portrait / Featured Image
+					the_post_thumbnail('medium');
+					
+					
+					// Get staff info
+					$staff_position = get_post_meta( $post->ID, '_ucfbands_staff_position', true );
+					$staff_email	= get_post_meta( $post->ID, '_ucfbands_staff_email', true );
+					$staff_phone	= get_post_meta( $post->ID, '_ucfbands_staff_phone', true );
+					
+					
+					// Display staff name
+					$return_string .= '<h3>' . get_the_title() . '</h3>';
+					
+					
+					// Display staff position
+					$return_string .= '<b><i>' . $staff_position . '</i></b>';
+					
+					
+					// Do not display spacers if not needed
+					if( $staff_email != '' && $staff_phone != '')
+					{
+					
+						// Spacer
+						$return_string .= '<br><br>';
+						
+						
+						// Email (If available)
+						if( $staff_email != '' )
+						{	
+							// Icon
+							$return_string .= '<i class="fa fa-envelope"></i> ';
+							
+							// Mailto link
+							$return_string .= '<a href="mailto:' . $staff_email . '">' . $staff_email . '</a>';
+						}
+						
+						
+						// Phone (If available) 
+						if( ($staff_phone != '') && ($staff_phone != '(407) 823-') )
+						{	
+							// Break, then Icon
+							$return_string .= '<br><i class="fa fa-phone"></i> ';
+							
+							// Number
+							$return_string .= $staff_phone;
+						}
+					
+					} // If no email & phone
+						
+					// Spacer
+					$return_string .= '<br><br>';
+					
+					
+					// Staff Bio
+					the_content();
+													
+				
+			$return_string .= '</div><!-- /.staff --></div><!-- /.col-lg-6 (Staff)';
+		
+
+		
+			} // Faculty Checl
+		
+			
+						
+	$return_string .= '</div><!-- /.row -->	<br><br>';
+
+
+
+	// STAFF TITLE //
+	$return_string .= '<h1 class="page-title" id="ucfbands-staff">Staff</h1>';
+
+
+	$return_string .= '<div class="row">';
+
+
+		
+		// Post Variable
+		global $post;
+				
+	
+		// FACULTY CHECK //
+		if( get_post_meta( $post->ID, '_ucfbands_staff_is_faculty', true ) == 'not_faculty' ) {
+		 				
+		
+		// STAFF MEMEBER //
+		$return_string .= '<div class="col-lg-6">
+			
+			<div class="block block-staff">';
+				
+				
+					//-------------------//
+					// SHOW FACULTY INFO //
+					//-------------------//	
+					
+					// Display Portrait / Featured Image
+					the_post_thumbnail('medium');
+					
+					
+					// Get staff info
+					$staff_position = get_post_meta( $post->ID, '_ucfbands_staff_position', true );
+					$staff_email	= get_post_meta( $post->ID, '_ucfbands_staff_email', true );
+					$staff_phone	= get_post_meta( $post->ID, '_ucfbands_staff_phone', true );
+					
+					
+					// Display staff name
+					$return_string .= '<h3>' . get_the_title() . '</h3>';
+					
+					
+					// Display staff position
+					$return_string .= '<b><i>' . $staff_position . '</i></b>';
+
+
+					// Do not display spacers if not needed
+					if( $staff_email != '' && $staff_phone != '')
+					{
+					
+						// Spacer
+						$return_string .= '<br><br>';
+						
+						
+						// Email (If available)
+						if( $staff_email != '' )
+						{	
+							// Icon
+							$return_string .= '<i class="fa fa-envelope"></i> ';
+							
+							// Mailto link
+							$return_string .= '<a href="mailto:' . $staff_email . '">' . $staff_email . '</a>';
+						}
+						
+						
+						// Phone (If available) 
+						if( ($staff_phone != '') && ($staff_phone != '(407) 823-') )
+						{	
+							// Break, then Icon
+							$return_string .= '<br><i class="fa fa-phone"></i> ';
+							
+							// Number
+							$return_string .= $staff_phone;
+						}
+						
+						
+					} // if no email and phone
+
+						
+					// Spacer
+					$return_string .= '<br><br>';
+														
+					
+					// Staff Bio
+					the_content();
+													
+				
+			$return_string .= '</div><!-- /.staff -->
+			
+		</div><!-- /.col-lg-6 (Staff) -->';
+		
+
+		
+			} // Faculty Checl
+		
+
+						
+	$return_string .= '</div><!-- /.row -->';
+
+
+
+	// RETURN STRING
+	return $return_string;
+
+	
+}
+add_shortcode( 'staff', 'shortcode_staff' );
 
 
 
