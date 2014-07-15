@@ -27,7 +27,7 @@
     		?>
                         
             <div class="credits">
-            	<p><a href="<?php echo home_url(); ?>/website-credits">Website Credits</a> | &copy; UCFBands 2014</p>
+            	<p><a href="<?php echo home_url(); ?>/index.php/website-credits">Website Credits</a> | &copy; UCFBands 2014</p>
             </div>
 
 		
@@ -43,7 +43,6 @@
     <![endif]-->
     
     <?php wp_footer(); // js scripts are inserted using this function ?>
-
 
 </body>
 

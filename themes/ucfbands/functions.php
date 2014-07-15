@@ -153,8 +153,9 @@ function wp_bootstrap_register_sidebars() {
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget' => '</div>',
       'before_title' => '<h2 class="widgettitle">',
+	  // Temp index.php fix
+      'after_title' => ' <a href="' . get_site_url() . '/index.php/announcements" class="btn btn-default btn-xs">View All</a></h2>',
 //      'after_title' => ' <a href="' . get_site_url() . '/announcements" class="btn btn-default btn-xs">View All</a></h2>',
-      'after_title' => ' <a href="http://ucfbands.com/?page_id=53" class="btn btn-default btn-xs">View All</a></h2>',
     ));
 
 
