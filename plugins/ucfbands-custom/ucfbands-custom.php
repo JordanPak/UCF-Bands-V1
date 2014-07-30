@@ -22,7 +22,8 @@ function ucfbands_section_menus() {
 		'concert-band'	 	=> __( 'Concert Band', 'text_domain' ),
 		'marching-knights' 	=> __( 'Marching Knights', 'text_domain' ),
 		'jammin-knights' 	=> __( 'Jammin Knights', 'text_domain' ),
-		'mk-armory' 		=> __( 'MK Armory', 'text_domain' )
+		'mk-armory' 		=> __( 'MK Armory', 'text_domain' ),
+		'mkmc'				=> __( 'MKMC Docs', 'text_domain' )
 	);
 	register_nav_menus( $locations );
 
@@ -438,6 +439,238 @@ add_shortcode( 'events', 'shortcode_events' );
 
 
 
+
+//---------------------//
+// REHEARSAL SHORTCODE //
+//---------------------//
+function shortcode_rehearsals( $atts ) {
+
+	// ATTRIBUTES //
+	extract( shortcode_atts(
+		array(
+			'band'	      => 'marching-knights',
+			'width'		  => 4,
+			'title'		  => 'Rehearsal Schedules',
+			'block'		  => 'no'
+		), $atts )
+	);	
+	
+	
+	// String for return
+	$return_string;
+	
+	
+	// Start columm & Title
+	$return_string = '<div class="col-lg-' . $width . '">';
+	
+
+	// If a block is requested
+	if( $block == 'yes' )
+		$return_string .= '<div class="block">';
+
+
+		// Block Header
+		$return_string .= '<h2 style="margin-bottom: 17px;"><i class="fa fa-list"></i> ' . $title . '</h2>';
+		
+
+	
+		// GET REHEARSAL DATA //
+	
+		// Preparing the query for rehearsals
+		// Only get rehearsals that haven't passed!
+		$meta_quer_args = array(
+			'relation'	=>	'AND',
+			array(
+				'key'		=>	'_ucfbands_rehearsal_date_timestamp',
+				'value'		=>	time(),
+				'compare'	=>	'>'
+			)
+		);
+	
+			
+		// Query Options
+		$rehearsal_selection = array(
+			'post_type'		=> 'rehearsal',
+			//'category_name'	=> $band, Do this at next level since there aren't cats technically involved.
+			'fields' 		=> 'ids', // This is so only the ID is returned instead of the WHOLE post object (Performance)
+			'meta_key'		=> '_ucfbands_rehearsal_date_timestamp',
+			'orderby' 		=> 'meta_value_num',
+			'order' 		=> 'ASC',
+			'post_count'	=> 3,
+			'posts_per_page'=> 3,
+			'meta_query'	=> $meta_quer_args
+		);
+		
+		
+		// GET POSTS //
+		$rehearsals = new WP_Query( $rehearsal_selection );
+			
+				
+		
+		// If there are no results
+		if(($rehearsals->have_posts()) == false)
+		{
+			$return_string .= 'There are no upcoming rehearsal schedules found for this band.<br><br>Please Note: This <b>does not</b> mean any upcoming rehearsals are cancelled.';
+		}
+	
+		// If there ARE results
+		else {
+	
+			// Start Accordion
+			$return_string .= '<div class="panel-group" id="accordion">';
+			
+		
+			// Get Posts associated with rehearsals      
+			$rehearsals = $rehearsals->get_posts();
+		
+			
+			// Counter for Panel Collapse IDs
+			$collapse_num = 1;
+			
+	
+			// LOOP THROUGH THE IDS OF EACH REHEARSALS
+			foreach($rehearsals as $rehearsal)
+			{
+				
+				// GET POST CONTENT //
+				$content_post = get_post($rehearsal);
+				$content = $content_post->post_content;
+				
+				
+				// GET POST META //
+				$rehearsal_date_timestamp  		  = get_post_meta( $rehearsal, '_ucfbands_rehearsal_date_timestamp', true );
+				$rehearsal_schedule		          = get_post_meta( $rehearsal, '_ucfbands_rehearsal_schedule', true );
+				$rehearsal_announcements          = get_post_meta( $rehearsal, '_ucfbands_rehearsal_announcements', true );
+				$rehearsal_cancelled	          = get_post_meta( $rehearsal, '_ucfbands_rehearsal_cancelled', true );
+				$rehearsal_cancelled_announcement = get_post_meta( $rehearsal, '_ucfbands_rehearsal_cancelled_announcement', true );
+				$rehearsal_band			          = get_post_meta( $rehearsal, '_ucfbands_rehearsal_band', true );
+				
+				
+				// CONVERT TO DATE STRINGS //
+				$rehearsal_week_day	= date('l', $rehearsal_date_timestamp);
+				$rehearsal_date		= date('n/j', $rehearsal_date_timestamp);
+				
+								
+				
+				// Start Collapsible Group
+				$return_string .= '<div class="panel panel-default">';
+				
+					
+					// Panel Heading
+					$return_string .= '<a data-toggle="collapse" data-parent="#accordion" href="#collapse' . $collapse_num . '"><div class="panel-heading">';
+					
+					
+						// Panel Title
+						$return_string .= '<h3 class="panel-title" style="font-size: 1.25em;">';
+						
+						
+							// Toggle
+						 	$return_string .= $rehearsal_week_day . ', ' . $rehearsal_date;
+					
+						
+						// End Panel Title
+						$return_string .= '</h3>';
+					
+					
+					// End Panel Heading
+					$return_string .= '</div></a>';
+					
+				
+					// Panel "Collapse"
+					$return_string .= '<div id="collapse' . $collapse_num . '" class="panel-collapse collapse in">';
+					
+					
+						// Panel Body
+						$return_string .= '<div class="panel-body" style="height: auto;">';
+							
+							
+							// Check if rehearsal is cancelled
+							if( $rehearsal_cancelled == true )
+							{
+								
+								// Display Notice
+								$return_string .= '<h4><i class="fa fa-exclamation-triangle"></i> Rehearsal Cancelled</h4>';
+								
+								
+								// Rehearsal Cancelled announcement
+								if( $rehearsal_cancelled_announcement != '' )
+									$return_string .= $rehearsal_cancelled_announcement;
+								
+								
+							} // If rehearsal cancelled
+							
+							else {
+							
+								// Schedule Title
+								$return_string .= '<h4 style="font-size: 1em;">Schedule</h4>';
+								
+	
+								// Schedule
+								$return_string .= '<ul>' . $rehearsal_schedule . '</ul>';
+								
+												
+								
+								// If there are announcements, show them
+								if( $rehearsal_announcements != '' )
+								{
+									
+									// Divider
+									$return_string .= '<hr style="margin-top: 20px; margin-bottom: 20px;">';
+
+									
+									// Announcements Title
+									$return_string .= '<h4 style="font-size: 1em;">Announcements</h4>';
+									
+									// Announcements
+									$return_string .= '<ul class="red">' . $rehearsal_announcements . '</ul>';
+									
+								} // End if announcements
+						
+							
+						
+							} // Else (cancelled rehearsal)
+						
+						
+						// End Panel Body & Collapse
+						$return_string .= '</div></div>';
+						
+						
+					// End Panel
+					$return_string .= '</div>';
+				
+				
+				// Increase ID num
+				$collapse_num++;
+	
+	
+			} // End foreach rehearsal in rehearsals
+
+
+			// End Collapsible Group
+			$return_string .= '</div>';
+
+		
+		} // End else (if there are results from query)
+	
+	// End Block (if applicable)
+	if( $block == 'yes' )
+		$return_string .= '</div>';
+		
+	
+	// End col
+	$return_string .= '</div>';
+	
+
+	// Return the String
+	return $return_string;
+	
+}
+add_shortcode( 'rehearsals', 'shortcode_rehearsals' );
+
+
+
+
+
 //--------------------//
 // REGISTER STAFF CPT //
 //--------------------//
@@ -606,6 +839,54 @@ add_action( 'init', 'ucfbands_event', 0 );
 
 
 
+//--------------------//
+// REGISTER REHEARSAL //
+//--------------------//
+function ucfbands_rehearsal() {
+
+	$labels = array(
+		'name'                => _x( 'Rehearsals', 'Post Type General Name', 'text_domain' ),
+		'singular_name'       => _x( 'Rehearsal', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'           => __( 'Rehearsals', 'text_domain' ),
+		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
+		'all_items'           => __( 'All Rehearsals', 'text_domain' ),
+		'view_item'           => __( 'View Rehearsal', 'text_domain' ),
+		'add_new_item'        => __( 'Add New Rehearsal', 'text_domain' ),
+		'add_new'             => __( 'Add New', 'text_domain' ),
+		'edit_item'           => __( 'Edit Rehearsal', 'text_domain' ),
+		'update_item'         => __( 'Update Rehearsal', 'text_domain' ),
+		'search_items'        => __( 'Search Rehearsals', 'text_domain' ),
+		'not_found'           => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
+	);
+	$args = array(
+		'label'               => __( 'ucfbands_rehearsal', 'text_domain' ),
+		'description'         => __( 'Rehearsal Schedule with Details', 'text_domain' ),
+		'labels'              => $labels,
+		'supports'            => array( 'title', /*'editor',*/ 'revisions', 'page-attributes', ),
+		'taxonomies'          => array( /*'category'*/ ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'menu_icon'           => 'dashicons-list-view',
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'page',
+	);
+	register_post_type( 'rehearsal', $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'ucfbands_rehearsal', 0 );
+
+
 
 //-------------------//
 // CUSTOM META BOXES //
@@ -730,9 +1011,96 @@ function be_sample_metaboxes( $meta_boxes ) {
     );
 
 
+
+	//-- REHEASAL CPT --//
+    $meta_boxes['ucfbands_rehearsal'] = array(
+        'id' => 'ucfbands_rehearsal',
+        'title' => 'Rehearsal Details',
+        'pages' => array('rehearsal'), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => true, // Show field names on the left
+        'fields' => array(
+			array(
+				'name' => 'Date',
+				'id'   => $prefix . 'rehearsal_date_timestamp',
+				'type' => 'text_date_timestamp',
+				// 'timezone_meta_key' => $prefix . 'timezone',
+				// 'date_format' => 'l jS \of F Y',
+			),
+			array(
+				'name' => 'Schedule',
+				'desc' => '<u>Instructions</u>
+- Remove unused list items (the &lt;li&gt; &amp; &lt;/li&gt; tags)
+- Common HTML styling tags:
+	&lt;b&gt;Bold Text&lt;/b&gt;
+	&lt;i&gt;Italics Text&lt;/i&gt;
+	
+- To put another bulleted list inside the existing bulleted list, add &lt;ul&gt; tags and &lt;li&gt; tags like this:
+
+	&lt;li&gt;&lt;b&gt;6:00 PM: &lt;/b&gt; Existing thing&lt;/li&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Second-level item&lt;/li&gt;
+		&lt;li&gt;Another second-level item&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;li&gt;&lt;b&gt;6:00 PM: &lt;/b&gt; Another Existing thing&lt;/li&gt;
+	',
+				'default' => "<li><b>6:00 PM: </b>Thing</li>
+<li><b>:00 PM: </b></li>
+<li><b>:00 PM: </b></li>
+<li><b>:00 PM: </b></li>
+<li><b>:00 PM: </b></li>",
+				'id' => $prefix . 'rehearsal_schedule',
+				'type' => 'textarea_code'
+			),
+			
+			
+			array(
+				'name' => 'Announcements',
+				'desc' => '<span style="color:#a94442;">Remove default code above if there are no announcements!</span><br>Refer to the schedule field instructions above.',
+				'default' => "<li>Thing</li>
+<li></li>",
+				'id' => $prefix . 'rehearsal_announcements',
+				'type' => 'textarea_code'
+			),
+			array(
+				'name' => '<b><span style="color:#a94442;">Cancelled Rehearsal</span></b>',
+				'desc' => 'This will not <i>remove</i> the rehearsal, but post a notice!',
+				'id' => $prefix . 'rehearsal_cancelled',
+				'type' => 'checkbox'
+			),
+			array(
+				'name' => 'Cancelled Rehearsal Announcement',
+				'desc' => 'Optional! Displays under "Rehearsal Cancelled" Notice.<br>Only shows if the rehearsal is cancelled and there is an announcement entered.',
+				'default' => '',
+				'id' => $prefix . 'rehearsal_cancelled_announcement',
+				'type' => 'textarea_small'
+			),
+			array(
+				'name'    => 'Band',
+				'id'      => $prefix . 'rehearsal_band',
+				'type'    => 'radio',
+				'default' => 'marching-knights',
+				'options' => array(
+					'marching-knights' => __( 'Marching Knights', 'cmb' ),
+					'jammin-knights'   => __( "Jammin' Knights", 'cmb' ),
+					'concert-band'     => __( 'concert-band', 'cmb' ),
+					'symphonic-band'   => __( 'symphonic-band', 'cmb' ),
+					'wind-ensemble'    => __( 'wind-ensemble', 'cmb' ),
+				),
+			),
+        ),
+    );
+
+
+
     return $meta_boxes;
 }
 add_filter( 'cmb_meta_boxes', 'be_sample_metaboxes' );
+
+
+
+
 
 
 

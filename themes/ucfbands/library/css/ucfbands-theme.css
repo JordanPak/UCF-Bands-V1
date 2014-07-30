@@ -535,6 +535,28 @@ nav.sub ul.dropdown-menu li a:hover {
 }
 
 
+#accordion .panel {
+	border-radius: 0px !important;
+	margin-bottom: 10px;
+}
+
+#accordion .panel a:hover {
+	text-decoration: none;
+}
+
+#accordion .panel-heading {
+	background-color: #333 !important;
+    -webkit-transition: 300ms ease-in-out;
+    -moz-transition: 300ms ease-in-out;
+    -o-transition: 300ms ease-in-out;
+	transition: 300ms ease-in-out;
+}
+
+#accordion .panel-heading:hover {
+	background-color: #000 !important;
+}
+
+
 /*==============*/
 /*==  IMAGES  ==*/
 /*==============*/
@@ -589,11 +611,13 @@ img.no-frame {
 }
 
 
+
+
 /*=============*/
 /*==  LISTS  ==*/
 /*=============*/
 
-.block ul {
+.block ul, .panel-group ul {
     list-style: none;
 	list-style-image: url(../../images/bullet-gold.png);
 	list-style-position: outside;
@@ -602,28 +626,28 @@ img.no-frame {
     margin: 0;
 }
 
-.block ul li {
+.block ul li, .panel-group ul li {
 	margin-bottom: 10px;
 	padding-left:
 }
 
-.block ul.black {
+.block ul.black, .panel-group ul.black {
 	list-style-image: url(../../images/bullet-black.png);
 }
 
-.block ul.green {
+.block ul.green, .panel-group ul.green {
 	list-style-image: url(../../images/bullet-green.png);
 }
 
-.block ul.blue {
+.block ul.blue, .panel-group ul.blue {
 	list-style-image: url(../../images/bullet-blue.png);
 }
 
-.block ul.red {
+.block ul.red, .panel-group ul.red {
 	list-style-image: url(../../images/bullet-red.png);
 }
 
-.block ul.checkmark {
+.block ul.checkmark, .panel-group ul.checkmark {
 	list-style-image: url(../../images/bullet-checkmark.png);
 }
 

@@ -107,5 +107,7 @@ jQuery(document).ready(function($) {
 	$('.ucfbands-tooltip').tooltip();
 	$('.ucfbands_popover').popover();
 	
+	$('.collapse').collapse()
+	
  
 });
