@@ -889,6 +889,53 @@ add_action( 'init', 'ucfbands_rehearsal', 0 );
 
 
 //-------------------//
+// REGISTER PEP BAND //
+//-------------------//
+function ucfbands_pep_band() {
+
+	$labels = array(
+		'name'                => _x( 'Pep Bands', 'Post Type General Name', 'text_domain' ),
+		'singular_name'       => _x( 'Pep Band', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'           => __( 'Pep Bands', 'text_domain' ),
+		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
+		'all_items'           => __( 'All Pep Bands', 'text_domain' ),
+		'view_item'           => __( 'View Pep Band', 'text_domain' ),
+		'add_new_item'        => __( 'Add Pep Band', 'text_domain' ),
+		'add_new'             => __( 'Add New', 'text_domain' ),
+		'edit_item'           => __( 'Edit Pep Band', 'text_domain' ),
+		'update_item'         => __( 'Update Pep Band', 'text_domain' ),
+		'search_items'        => __( 'Search Pep Band', 'text_domain' ),
+		'not_found'           => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
+	);
+	$args = array(
+		'label'               => __( 'ucfbands_pep_band', 'text_domain' ),
+		'description'         => __( 'Pep Band Gig/Event Details', 'text_domain' ),
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'revisions', ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'menu_icon'           => 'dashicons-format-audio',
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'page',
+	);
+	register_post_type( 'pep_band', $args );
+
+}
+// Hook into the 'init' action
+add_action( 'init', 'ucfbands_pep_band', 0 );
+
+
+
+//-------------------//
 // CUSTOM META BOXES //
 //-------------------//
 function be_sample_metaboxes( $meta_boxes ) {
@@ -1094,12 +1141,97 @@ function be_sample_metaboxes( $meta_boxes ) {
 
 
 
+	//-- PEP BAND CPT --//
+    $meta_boxes['ucfbands_pep_band'] = array(
+        'id' => 'ucfbands_pep_band',
+        'title' => 'Pep Band Details',
+        'pages' => array('pep_band'), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => true, // Show field names on the left
+        'fields' => array(
+			array(
+				'name' => 'Start Date & Time',
+				'desc' => '<b>Both Date and time are required.</b>',
+				'id'   => $prefix . 'pep_band_start_datetime_timestamp',
+				'type' => 'text_datetime_timestamp',
+			),
+			array(
+				'name' => 'End Date & Time',
+				'desc' => '<b>Both Date and Time are required.</b><br><br>End dates do not show if they are the same as the start date.',
+				'id'   => $prefix . 'pep_band_end_datetime_timestamp',
+				'type' => 'text_datetime_timestamp',
+			),
+			array(
+				'name'    => 'Show Start Time',
+				'id'      => $prefix . 'pep_band_show_start_time',
+				'type'    => 'radio',
+				'default' => 'yes',
+				'options' => array(
+					'yes'	=> __( 'Yes', 'cmb' ),
+					'no'   => __( 'No (Time TBA)', 'cmb' ),
+				),
+			),			
+			array(
+				'name'    => 'Show End Time',
+				'id'      => $prefix . 'pep_band_show_end_time',
+				'type'    => 'radio',
+				'default' => 'no',
+				'options' => array(
+					'yes'	=> __( 'Yes', 'cmb' ),
+					'no'   => __( 'No', 'cmb' ),
+				),
+			),			
+			array(
+				'name' => 'Schedule',
+				'desc' => '<u>Instructions</u>
+- Remove unused list items (the &lt;li&gt; &amp; &lt;/li&gt; tags)
+- Common HTML styling tags:
+	&lt;b&gt;Bold Text&lt;/b&gt;
+	&lt;i&gt;Italics Text&lt;/i&gt;
+	
+- To put another bulleted list inside the existing bulleted list, add &lt;ul&gt; tags and &lt;li&gt; tags like this:
+
+	&lt;li&gt;&lt;b&gt;6:00 PM: &lt;/b&gt; Existing thing&lt;/li&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Second-level item&lt;/li&gt;
+		&lt;li&gt;Another second-level item&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;li&gt;&lt;b&gt;6:00 PM: &lt;/b&gt; Another Existing thing&lt;/li&gt;
+	',
+				'default' => "<li><b>6:00 PM: </b>Thing</li>
+<li><b>:00 PM: </b></li>
+<li><b>:00 PM: </b></li>
+<li><b>:00 PM: </b></li>
+<li><b>:00 PM: </b></li>",
+				'id' => $prefix . 'pep_band_schedule',
+				'type' => 'textarea_code'
+			),
+            array(
+                'name' => 'Location/Venue',
+                'desc' => 'Leave empty for "TBA"',
+                'id' => $prefix . 'pep_band_venue',
+                'type' => 'text_medium'
+            ),
+			array(
+				'name'    => 'Band',
+				'id'      => $prefix . 'pep_band_band',
+				'type'    => 'radio',
+				'default' => 'marching-knights',
+				'options' => array(
+					'marching-knights' => __( 'Marching Knights', 'cmb' ),
+					'jammin-knights'   => __( "Jammin' Knights", 'cmb' ),
+				),
+			),
+        ),
+    );
+
+
+
+
     return $meta_boxes;
 }
 add_filter( 'cmb_meta_boxes', 'be_sample_metaboxes' );
-
-
-
 
 
 

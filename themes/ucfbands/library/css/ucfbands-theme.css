@@ -626,9 +626,32 @@ img.no-frame {
     margin: 0;
 }
 
+.block .gfield ul {
+    list-style: none !important;
+	list-style-image: url(../../images/bullet-gold.png) !important;
+	list-style-position: outside !important;
+    padding: 0px !important;
+	padding-left: 30px !important;
+    margin: 0px !important;
+	margin-top: 5px;
+}
+
+.block .gfield ul li {
+	margin-bottom: 10px !important;
+	list-style-image: url(../../images/bullet-gold.png) !important;
+}
+
+.block .gfield ul.gfield_checkbox li {
+	list-style: none !important;
+	list-style-image: none !important;
+}
+
+.block .gfield ul.gfield_checkbox li input {
+	height: auto !important;
+}
+
 .block ul li, .panel-group ul li {
 	margin-bottom: 10px;
-	padding-left:
 }
 
 .block ul.black, .panel-group ul.black {
@@ -893,6 +916,11 @@ input.bootstrap_input {
 	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
+#page-content .gform_wrapper img {
+	padding: 0px;
+	border: none;
+	background: none;
+}
 
 /*==========================*/
 /*==  POPOVERS & TOOLTIPS ==*/
