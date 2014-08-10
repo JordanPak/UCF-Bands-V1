@@ -103,12 +103,22 @@ a.navbar-brand img {
 
 #page-content {
 	padding: 0px 30px; 
+	padding-top: 13px;
 	background-image: url(../../images/pegasus-bg.png);
 	background-repeat: no-repeat;
 	background-position: -100px 25px;
 	min-height: 550px;
 	border-bottom: 5px solid #ffca06;
 }
+
+#page-content-fluid {
+	padding: 0px; 
+	background-image: url(../../images/pegasus-bg.png);
+	background-repeat: no-repeat;
+	background-position: -100px 25px;
+	min-height: 550px;
+}
+
 
 .block {
 	background-color: #fff;
@@ -414,7 +424,7 @@ a.navbar-brand img {
 
 nav.sub {
 	margin: 0px;
-	margin-bottom: 13px;
+	margin-bottom: 0px;
 	padding: 0px;
 	padding-left: 20px;
 	display: block;
