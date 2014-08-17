@@ -752,12 +752,10 @@ img.no-frame {
 	overflow: visible !important;
 }
 
-.eg-ucfbands-announcement-wrapper {
-	-webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.175);
-	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
-}
-
-.eg-ucfbands-announcement-no-cat-wrapper {
+.eg-ucfbands-announcement-wrapper,
+.eg-ucfbands-announcement-no-cat-wrapper,
+.eg-armory-videos-wrapper
+{
 	-webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.175);
 	box-shadow: 0 1px 6px rgba(0,0,0,0.175);
 }
