@@ -72,7 +72,8 @@
                 <a class="logo-header" href="<?php echo home_url(); ?>"><img src="<?php echo home_url(); ?>/wp-content/themes/ucfbands/images/logo-header-dark.png"></a>
             
                 
-                <div class="sidebar-collapse collapse">
+                <!-- // REMOVED EXTRA "COLLAPSE" CLASS BELOW TO FIX MOBILE ISSUE // -->
+                <div class="sidebar-collapse">
                     	<?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>                        
                 </div><!-- /.sidebar-collapse -->
                 
