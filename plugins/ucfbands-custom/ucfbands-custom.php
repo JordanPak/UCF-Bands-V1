@@ -23,7 +23,8 @@ function ucfbands_section_menus() {
 		'marching-knights' 	=> __( 'Marching Knights', 'text_domain' ),
 		'jammin-knights' 	=> __( 'Jammin Knights', 'text_domain' ),
 		'mk-armory' 		=> __( 'MK Armory', 'text_domain' ),
-		'mkmc'				=> __( 'MKMC Docs', 'text_domain' )
+		'mkmc'				=> __( 'MKMC Docs', 'text_domain' ),
+		'jk-dungeon'		=> __( 'JK Dungeon', 'text_domain' ),
 	);
 	register_nav_menus( $locations );
 
