@@ -655,4 +655,12 @@ return '%s';
 add_filter('private_title_format', 'title_format');
 add_filter('protected_title_format', 'title_format');
 
+
+
+// UCFBands Admin Styles
+function UCFBands_Admin_Styles() {
+    wp_enqueue_style('ucfb-admin', get_template_directory_uri() . '/library/css/ucfb-admin.css');
+}
+add_action('admin_enqueue_scripts', 'UCFBands_Admin_Styles');
+
 ?>

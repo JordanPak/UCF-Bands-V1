@@ -1,0 +1,16 @@
+/*===============================================*/
+/*                    UCFBANDS                   */
+/*===============================================*/
+/*	                                             */
+/*	Author: Jordan Pakrosnis (JpakMedia.com)     */
+/*	                                             */
+/*===============================================*/
+
+/*====================*/
+/*==  Admin Styles  ==*/
+/*====================*/
+
+#download_categorydiv .categorydiv div.tabs-panel, .customlinkdiv div.tabs-panel, .posttypediv div.tabs-panel, .taxonomydiv div.tabs-panel, .wp-tab-panel
+{
+	max-height: 650px;
+}
