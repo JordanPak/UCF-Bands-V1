@@ -504,7 +504,7 @@ $panel_header = 'h4';
                                                                         
 																		
                                                                         //-- Display Arrangement Title --//
-                                                                        echo '<b>' . get_the_title($arrangement) . ': </b><div class="dl-btns">';
+                                                                        echo '<b>' . get_the_title($arrangement) . '</b><div class="dl-btns">';
                                                                         
                                                                         
 																		//-- Get Files (Names & URLSs) For Current Arrangement --//
